@@ -69,59 +69,7 @@
       "basis": "tmts89ruo3taede7"
     }
   ],
-  "cashDocuments": [
-    {
-      "id": "_1788845243711_0pp0",
-      "type": "rko",
-      "number": "РКО-001",
-      "date": "2026-08-14",
-      "status": "posted",
-      "account": "_3",
-      "contractor": "ОсОО «Гамма Логистик»",
-      "article": "_5",
-      "currency": "_1",
-      "sum": 0,
-      "rate": 1,
-      "purpose": "Оплата по документу Поступление ПТ-000002 от 14.08.2026",
-      "note": "Оплата наличными",
-      "created": "2026-09-08T05:27:23.711Z",
-      "basis": "tmts89run2b8f7za"
-    },
-    {
-      "id": "_1788845243711_16ns",
-      "type": "pko",
-      "number": "ПКО-001",
-      "date": "2026-08-20",
-      "status": "posted",
-      "account": "_3",
-      "contractor": "ИП Асанов А.А.",
-      "article": "_1",
-      "currency": "_1",
-      "sum": 11305,
-      "rate": 1,
-      "purpose": "Оплата по документу Счет покупателю СЧ-000002 от 19.08.2026, в т.ч. НДС 2 422.50",
-      "note": "Аванс наличными",
-      "created": "2026-09-08T05:27:23.711Z",
-      "basis": "tmts89runyicmntd"
-    },
-    {
-      "id": "_1788845243714_n1b",
-      "type": "rko",
-      "number": "РКО-002",
-      "date": "2026-09-08",
-      "status": "posted",
-      "account": "_3",
-      "contractor": "Сотрудники организации",
-      "article": "_7",
-      "currency": "_1",
-      "sum": 28350,
-      "rate": 1,
-      "purpose": "Выплата заработной платы за 2026-08 по ведомости ВК-000001",
-      "note": "Создано на основании Ведомость в кассу ВК-000001 от 05.09.2026",
-      "created": "2026-09-08T05:27:23.714Z",
-      "basis": "tmts89ruq3azka3b"
-    }
-  ],
+  "cashDocuments": [],
   "accounts": [
     {
       "id": "_1",
