@@ -4,5 +4,11 @@
     "pass": "240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9",
     "name": "Администратор",
     "role": "admin"
+  },
+  {
+    "login": "9e69e7e29351ad837503c44a5971edebc9b7e6d8601c89c284b1b59bf37afa80",
+    "pass": "3bdd83d58966680a455d2578aa9610944edb693d0bd577987da7310537edfc42",
+    "name": "Эльмырза",
+    "role": "user"
   }
 ]
