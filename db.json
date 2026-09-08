@@ -6999,7 +6999,8 @@
         "price": 22000,
         "cost": 17500,
         "account": "41.01",
-        "country": "Китай"
+        "country": "Китай",
+        "nomGroup": "ng2"
       },
       {
         "id": "n10",
@@ -7011,7 +7012,8 @@
         "price": 5000,
         "cost": 0,
         "account": "44.01",
-        "country": ""
+        "country": "",
+        "nomGroup": "ng3"
       },
       {
         "id": "n11",
@@ -7023,7 +7025,8 @@
         "price": 4500,
         "cost": 0,
         "account": "20.01",
-        "country": ""
+        "country": "",
+        "nomGroup": "ng3"
       }
     ],
     "warehouses": [
