@@ -3167,6 +3167,38 @@
       "purpose": "Оплата за Мюсли батончик 50г",
       "basis": "tmtsg549egglyt",
       "created": "2026-09-08T09:07:43.442Z"
+    },
+    {
+      "id": "tmtsg7ltgvg2u",
+      "type": "payment_out",
+      "number": "ПП-199",
+      "date": "2026-09-08",
+      "status": "posted",
+      "account": "acc1",
+      "contractor": "ОсОО «Сырьё Плюс»",
+      "article": "art2",
+      "currency": "cur1",
+      "sum": 22.4,
+      "rate": 1,
+      "purpose": "Оплата за сырьё: Пастила",
+      "basis": "tmtsg7ltg8f05",
+      "created": "2026-09-08T09:09:39.508Z"
+    },
+    {
+      "id": "tmtsg7lthd6e8",
+      "type": "payment_in",
+      "number": "ПП-200",
+      "date": "2026-09-08",
+      "status": "posted",
+      "account": "acc1",
+      "contractor": "ОсОО «МегаМаркет»",
+      "article": "art1",
+      "currency": "cur1",
+      "sum": 900,
+      "rate": 1,
+      "purpose": "Оплата за Пастилу",
+      "basis": "tmtsg7ltg0kg6",
+      "created": "2026-09-08T09:09:39.509Z"
     }
   ],
   "cashDocuments": [],
@@ -28379,6 +28411,256 @@
         "total": 300,
         "vatTotal": 32.14,
         "sum": 300
+      },
+      {
+        "id": "tmtsg7ltg8f05",
+        "type": "purchase",
+        "number": "ПТ-000397",
+        "date": "2026-09-08",
+        "status": "posted",
+        "opKind": "Товары (накладная, УПД)",
+        "contractor": "c1",
+        "contract": "d1",
+        "warehouse": "w1",
+        "vatMode": "in",
+        "settle": {
+          "acc": "60.01",
+          "adv": "60.02",
+          "offset": "Автоматически"
+        },
+        "priceType": "pt2",
+        "discount": 0,
+        "goods": [
+          {
+            "nom": "rm28",
+            "qty": 0.15,
+            "price": 100,
+            "vat": 12,
+            "account": "10.01",
+            "country": "Кыргызстан",
+            "sum": 15,
+            "vatSum": 1.61,
+            "total": 15
+          },
+          {
+            "nom": "rm25",
+            "qty": 0.05,
+            "price": 100,
+            "vat": 12,
+            "account": "10.01",
+            "country": "Кыргызстан",
+            "sum": 5,
+            "vatSum": 0.54,
+            "total": 5
+          },
+          {
+            "nom": "rm27",
+            "qty": 0.03,
+            "price": 80,
+            "vat": 12,
+            "account": "10.01",
+            "country": "Кыргызстан",
+            "sum": 2.4,
+            "vatSum": 0.26,
+            "total": 2.4
+          }
+        ],
+        "services": [],
+        "agent": [],
+        "tara": [],
+        "materials": [],
+        "products": [],
+        "extra": {
+          "comment": "Закуп сырья для Пастила яблочная"
+        },
+        "sf": {
+          "number": "ВХ-100",
+          "date": "2026-09-08",
+          "code": "01"
+        },
+        "total": 22.4,
+        "vatTotal": 2.41,
+        "sum": 22.4
+      },
+      {
+        "id": "tmtsg7ltghgew",
+        "type": "requisition",
+        "number": "ТН-000398",
+        "date": "2026-09-08",
+        "status": "posted",
+        "contractor": "",
+        "contract": "",
+        "warehouse": "w1",
+        "vatMode": "in",
+        "department": "dep1",
+        "costAccount": "20.01",
+        "costItem": "ci1",
+        "goods": [],
+        "services": [],
+        "agent": [],
+        "tara": [],
+        "materials": [
+          {
+            "nom": "rm28",
+            "qty": 0.15,
+            "price": 100,
+            "vat": 12,
+            "account": "10.01",
+            "country": "Кыргызстан",
+            "sum": 15,
+            "vatSum": 1.61,
+            "total": 15
+          },
+          {
+            "nom": "rm25",
+            "qty": 0.05,
+            "price": 100,
+            "vat": 12,
+            "account": "10.01",
+            "country": "Кыргызстан",
+            "sum": 5,
+            "vatSum": 0.54,
+            "total": 5
+          },
+          {
+            "nom": "rm27",
+            "qty": 0.03,
+            "price": 80,
+            "vat": 12,
+            "account": "10.01",
+            "country": "Кыргызстан",
+            "sum": 2.4,
+            "vatSum": 0.26,
+            "total": 2.4
+          }
+        ],
+        "products": [],
+        "extra": {
+          "comment": "Списание сырья для Пастила яблочная"
+        },
+        "total": 22.4,
+        "vatTotal": 0,
+        "sum": 22.4
+      },
+      {
+        "id": "tmtsg7ltgs0wb",
+        "type": "shift_report",
+        "number": "ОПС-000399",
+        "date": "2026-09-08",
+        "status": "posted",
+        "contractor": "",
+        "contract": "",
+        "warehouse": "w2",
+        "vatMode": "in",
+        "department": "dep1",
+        "costAccount": "20.01",
+        "costItem": "ci1",
+        "goods": [],
+        "services": [],
+        "agent": [],
+        "tara": [],
+        "materials": [
+          {
+            "nom": "rm28",
+            "qty": 0.15,
+            "price": 100,
+            "vat": 12,
+            "account": "10.01",
+            "country": "Кыргызстан",
+            "sum": 15,
+            "vatSum": 1.61,
+            "total": 15
+          },
+          {
+            "nom": "rm25",
+            "qty": 0.05,
+            "price": 100,
+            "vat": 12,
+            "account": "10.01",
+            "country": "Кыргызстан",
+            "sum": 5,
+            "vatSum": 0.54,
+            "total": 5
+          },
+          {
+            "nom": "rm27",
+            "qty": 0.03,
+            "price": 80,
+            "vat": 12,
+            "account": "10.01",
+            "country": "Кыргызстан",
+            "sum": 2.4,
+            "vatSum": 0.26,
+            "total": 2.4
+          }
+        ],
+        "products": [
+          {
+            "nom": "prod99",
+            "qty": 10,
+            "price": 38,
+            "vat": 12,
+            "account": "10.01",
+            "country": "Кыргызстан",
+            "sum": 380,
+            "vatSum": 40.71,
+            "total": 380
+          }
+        ],
+        "extra": {
+          "comment": "Производство: Пастила яблочная — 10 шт"
+        },
+        "total": 380,
+        "vatTotal": 40.71,
+        "sum": 380
+      },
+      {
+        "id": "tmtsg7ltg0kg6",
+        "type": "sale",
+        "number": "РТ-000400",
+        "date": "2026-09-08",
+        "status": "posted",
+        "opKind": "Товары (накладная, УПД)",
+        "contractor": "c3",
+        "contract": "d3",
+        "warehouse": "w2",
+        "vatMode": "in",
+        "settle": {
+          "acc": "62.01",
+          "adv": "62.02",
+          "offset": "Автоматически"
+        },
+        "priceType": "pt1",
+        "discount": 0,
+        "goods": [
+          {
+            "nom": "prod99",
+            "qty": 10,
+            "price": 90,
+            "vat": 12,
+            "account": "43",
+            "country": "Кыргызстан",
+            "sum": 900,
+            "vatSum": 96.43,
+            "total": 900
+          }
+        ],
+        "services": [],
+        "agent": [],
+        "tara": [],
+        "materials": [],
+        "products": [],
+        "extra": {
+          "comment": "Продажа: Пастила яблочная — 10 шт"
+        },
+        "sf": {
+          "number": "100",
+          "date": "2026-09-08",
+          "code": "01"
+        },
+        "total": 900,
+        "vatTotal": 96.43,
+        "sum": 900
       }
     ],
     "org": {
@@ -28389,7 +28671,7 @@
     },
     "sfCounter": {
       "in": 0,
-      "out": 99
+      "out": 100
     },
     "contractors": [
       {
@@ -30785,6 +31067,18 @@
         "vat": 12,
         "price": 30,
         "cost": 10,
+        "account": "43",
+        "country": "Кыргызстан"
+      },
+      {
+        "id": "prod99",
+        "name": "Пастила яблочная 200г",
+        "article": "PROD-100",
+        "kind": "Продукция",
+        "unit": "шт",
+        "vat": 12,
+        "price": 90,
+        "cost": 38,
         "account": "43",
         "country": "Кыргызстан"
       }
