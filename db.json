@@ -1,9 +1,864 @@
 {
-  "bankDocuments": [],
+  "bankDocuments": [
+    {
+      "id": "tmtsfyk7y1r90",
+      "type": "payment_out",
+      "number": "ПП-001",
+      "date": "2026-09-02",
+      "status": "posted",
+      "account": "acc1",
+      "contractor": "ОсОО «Сырьё Плюс»",
+      "article": "art2",
+      "currency": "cur1",
+      "sum": 32400,
+      "rate": 1,
+      "purpose": "Оплата за сырьё по ПТ-000001",
+      "note": "",
+      "created": "2026-09-08T09:02:37.534Z",
+      "basis": "tmtsfyk7x00fd"
+    },
+    {
+      "id": "tmtsfyk807w3j",
+      "type": "payment_in",
+      "number": "ПП-002",
+      "date": "2026-09-08",
+      "status": "posted",
+      "account": "acc1",
+      "contractor": "ОсОО «МегаМаркет»",
+      "article": "art1",
+      "currency": "cur1",
+      "sum": 85000,
+      "rate": 1,
+      "purpose": "Оплата за 100 тортов по РТ-000006",
+      "note": "",
+      "created": "2026-09-08T09:02:37.536Z",
+      "basis": "tmtsfyk80635d"
+    }
+  ],
   "cashDocuments": [],
-  "accounts": [],
-  "banks": [],
-  "cashs": [],
-  "currencies": [],
-  "articles": []
+  "accounts": [
+    {
+      "id": "acc1",
+      "name": "Сомовый счёт",
+      "number": "1280010000000100",
+      "bank": "АБ Кыргызстан",
+      "type": "bank"
+    },
+    {
+      "id": "acc2",
+      "name": "Касса офиса",
+      "number": "",
+      "bank": "",
+      "type": "cash"
+    }
+  ],
+  "banks": [
+    {
+      "id": "b1",
+      "name": "АБ Кыргызстан",
+      "bik": "170201001",
+      "corrAccount": "1234567890"
+    }
+  ],
+  "cashs": [
+    {
+      "id": "cs1",
+      "name": "Касса офиса",
+      "responsible": "Иванов И.И."
+    }
+  ],
+  "currencies": [
+    {
+      "id": "cur1",
+      "code": "KGS",
+      "name": "Киргизский сом",
+      "rate": 1
+    },
+    {
+      "id": "cur2",
+      "code": "USD",
+      "name": "Доллар США",
+      "rate": 89
+    }
+  ],
+  "articles": [
+    {
+      "id": "art1",
+      "name": "Оплата от покупателя",
+      "type": "in"
+    },
+    {
+      "id": "art2",
+      "name": "Оплата поставщику",
+      "type": "out"
+    },
+    {
+      "id": "art3",
+      "name": "Зарплата",
+      "type": "out"
+    }
+  ],
+  "trade": {
+    "docs": [
+      {
+        "id": "tmtsfyk7x00fd",
+        "type": "purchase",
+        "number": "ПТ-000001",
+        "date": "2026-09-01",
+        "status": "posted",
+        "opKind": "Товары (накладная, УПД)",
+        "contractor": "c1",
+        "contract": "d1",
+        "warehouse": "w1",
+        "basis": "",
+        "settle": {
+          "acc": "60.01",
+          "adv": "60.02",
+          "offset": "Автоматически"
+        },
+        "priceType": "pt2",
+        "vatMode": "in",
+        "discount": 0,
+        "goods": [
+          {
+            "nom": "n1",
+            "qty": 200,
+            "price": 45,
+            "vat": 12,
+            "account": "10.01",
+            "country": "Кыргызстан",
+            "sum": 9000,
+            "vatSum": 964.29,
+            "total": 9000
+          },
+          {
+            "nom": "n2",
+            "qty": 50,
+            "price": 70,
+            "vat": 12,
+            "account": "10.01",
+            "country": "Кыргызстан",
+            "sum": 3500,
+            "vatSum": 375,
+            "total": 3500
+          },
+          {
+            "nom": "n3",
+            "qty": 30,
+            "price": 350,
+            "vat": 12,
+            "account": "10.01",
+            "country": "Кыргызстан",
+            "sum": 10500,
+            "vatSum": 1125,
+            "total": 10500
+          },
+          {
+            "nom": "n4",
+            "qty": 500,
+            "price": 12,
+            "vat": 12,
+            "account": "10.01",
+            "country": "Кыргызстан",
+            "sum": 6000,
+            "vatSum": 642.86,
+            "total": 6000
+          },
+          {
+            "nom": "n5",
+            "qty": 5,
+            "price": 180,
+            "vat": 12,
+            "account": "10.01",
+            "country": "Кыргызстан",
+            "sum": 900,
+            "vatSum": 96.43,
+            "total": 900
+          },
+          {
+            "nom": "n7",
+            "qty": 100,
+            "price": 25,
+            "vat": 12,
+            "account": "10.01",
+            "country": "Кыргызстан",
+            "sum": 2500,
+            "vatSum": 267.86,
+            "total": 2500
+          }
+        ],
+        "services": [],
+        "agent": [],
+        "tara": [],
+        "materials": [],
+        "products": [],
+        "extra": {
+          "comment": "Закуп сырья для производства 100 тортов «Наполеон»",
+          "signHead": "Директор",
+          "signAcc": "Гл. бухгалтер"
+        },
+        "sf": {
+          "number": "ВХ-001",
+          "date": "2026-09-01",
+          "code": "01"
+        },
+        "department": "",
+        "costAccount": "",
+        "nomGroup": "",
+        "costItem": "",
+        "warehouseTo": "",
+        "total": 32400,
+        "vatTotal": 3471.44,
+        "sum": 32400
+      },
+      {
+        "id": "tmtsfyk7y2etv",
+        "type": "spec",
+        "number": "СПЦ-000002",
+        "date": "2026-09-01",
+        "status": "posted",
+        "opKind": "",
+        "contractor": "",
+        "contract": "",
+        "warehouse": "w1",
+        "basis": "",
+        "settle": {
+          "acc": "60.01",
+          "adv": "60.02",
+          "offset": "Автоматически"
+        },
+        "priceType": "pt2",
+        "vatMode": "in",
+        "discount": 0,
+        "goods": [],
+        "services": [],
+        "agent": [],
+        "tara": [],
+        "materials": [
+          {
+            "nom": "n1",
+            "qty": 2,
+            "price": 45,
+            "vat": 12,
+            "account": "10.01",
+            "country": "Кыргызстан",
+            "sum": 90,
+            "vatSum": 9.64,
+            "total": 90
+          },
+          {
+            "nom": "n2",
+            "qty": 0.5,
+            "price": 70,
+            "vat": 12,
+            "account": "10.01",
+            "country": "Кыргызстан",
+            "sum": 35,
+            "vatSum": 3.75,
+            "total": 35
+          },
+          {
+            "nom": "n3",
+            "qty": 0.3,
+            "price": 350,
+            "vat": 12,
+            "account": "10.01",
+            "country": "Кыргызстан",
+            "sum": 105,
+            "vatSum": 11.25,
+            "total": 105
+          },
+          {
+            "nom": "n4",
+            "qty": 5,
+            "price": 12,
+            "vat": 12,
+            "account": "10.01",
+            "country": "Кыргызстан",
+            "sum": 60,
+            "vatSum": 6.43,
+            "total": 60
+          },
+          {
+            "nom": "n5",
+            "qty": 0.05,
+            "price": 180,
+            "vat": 12,
+            "account": "10.01",
+            "country": "Кыргызстан",
+            "sum": 9,
+            "vatSum": 0.96,
+            "total": 9
+          },
+          {
+            "nom": "n7",
+            "qty": 1,
+            "price": 25,
+            "vat": 12,
+            "account": "10.01",
+            "country": "Кыргызстан",
+            "sum": 25,
+            "vatSum": 2.68,
+            "total": 25
+          }
+        ],
+        "products": [],
+        "extra": {
+          "comment": "Спецификация: Торт «Наполеон» 1кг — рецептура на 1 единицу",
+          "signHead": "Директор",
+          "signAcc": "Гл. бухгалтер"
+        },
+        "sf": null,
+        "department": "",
+        "costAccount": "",
+        "nomGroup": "",
+        "costItem": "",
+        "warehouseTo": "",
+        "total": 324,
+        "vatTotal": 34.71,
+        "sum": 324,
+        "productNom": "n6",
+        "productQty": 1,
+        "specName": "Основная"
+      },
+      {
+        "id": "tmtsfyk7y33ds",
+        "type": "requisition",
+        "number": "ТН-000003",
+        "date": "2026-09-03",
+        "status": "posted",
+        "opKind": "",
+        "contractor": "",
+        "contract": "",
+        "warehouse": "w1",
+        "basis": "",
+        "settle": {
+          "acc": "60.01",
+          "adv": "60.02",
+          "offset": "Автоматически"
+        },
+        "priceType": "pt2",
+        "vatMode": "in",
+        "discount": 0,
+        "goods": [],
+        "services": [],
+        "agent": [],
+        "tara": [],
+        "materials": [
+          {
+            "nom": "n1",
+            "qty": 200,
+            "price": 45,
+            "vat": 12,
+            "account": "10.01",
+            "country": "Кыргызстан",
+            "sum": 9000,
+            "vatSum": 964.29,
+            "total": 9000
+          },
+          {
+            "nom": "n2",
+            "qty": 50,
+            "price": 70,
+            "vat": 12,
+            "account": "10.01",
+            "country": "Кыргызстан",
+            "sum": 3500,
+            "vatSum": 375,
+            "total": 3500
+          },
+          {
+            "nom": "n3",
+            "qty": 30,
+            "price": 350,
+            "vat": 12,
+            "account": "10.01",
+            "country": "Кыргызстан",
+            "sum": 10500,
+            "vatSum": 1125,
+            "total": 10500
+          },
+          {
+            "nom": "n4",
+            "qty": 500,
+            "price": 12,
+            "vat": 12,
+            "account": "10.01",
+            "country": "Кыргызстан",
+            "sum": 6000,
+            "vatSum": 642.86,
+            "total": 6000
+          },
+          {
+            "nom": "n5",
+            "qty": 5,
+            "price": 180,
+            "vat": 12,
+            "account": "10.01",
+            "country": "Кыргызстан",
+            "sum": 900,
+            "vatSum": 96.43,
+            "total": 900
+          },
+          {
+            "nom": "n7",
+            "qty": 100,
+            "price": 25,
+            "vat": 12,
+            "account": "10.01",
+            "country": "Кыргызстан",
+            "sum": 2500,
+            "vatSum": 267.86,
+            "total": 2500
+          }
+        ],
+        "products": [],
+        "extra": {
+          "comment": "Списание сырья в производство для 100 тортов «Наполеон»",
+          "signHead": "Директор",
+          "signAcc": "Гл. бухгалтер"
+        },
+        "sf": null,
+        "department": "dep1",
+        "costAccount": "20.01",
+        "nomGroup": "",
+        "costItem": "ci1",
+        "warehouseTo": "",
+        "total": 32400,
+        "vatTotal": 3471.44,
+        "sum": 32400
+      },
+      {
+        "id": "tmtsfyk804leu",
+        "type": "shift_report",
+        "number": "ОПС-000004",
+        "date": "2026-09-05",
+        "status": "posted",
+        "opKind": "",
+        "contractor": "",
+        "contract": "",
+        "warehouse": "w2",
+        "basis": "",
+        "settle": {
+          "acc": "60.01",
+          "adv": "60.02",
+          "offset": "Автоматически"
+        },
+        "priceType": "pt2",
+        "vatMode": "in",
+        "discount": 0,
+        "goods": [],
+        "services": [],
+        "agent": [],
+        "tara": [],
+        "materials": [
+          {
+            "nom": "n1",
+            "qty": 200,
+            "price": 45,
+            "vat": 12,
+            "account": "10.01",
+            "country": "Кыргызстан",
+            "sum": 9000,
+            "vatSum": 964.29,
+            "total": 9000
+          },
+          {
+            "nom": "n2",
+            "qty": 50,
+            "price": 70,
+            "vat": 12,
+            "account": "10.01",
+            "country": "Кыргызстан",
+            "sum": 3500,
+            "vatSum": 375,
+            "total": 3500
+          },
+          {
+            "nom": "n3",
+            "qty": 30,
+            "price": 350,
+            "vat": 12,
+            "account": "10.01",
+            "country": "Кыргызстан",
+            "sum": 10500,
+            "vatSum": 1125,
+            "total": 10500
+          },
+          {
+            "nom": "n4",
+            "qty": 500,
+            "price": 12,
+            "vat": 12,
+            "account": "10.01",
+            "country": "Кыргызстан",
+            "sum": 6000,
+            "vatSum": 642.86,
+            "total": 6000
+          },
+          {
+            "nom": "n5",
+            "qty": 5,
+            "price": 180,
+            "vat": 12,
+            "account": "10.01",
+            "country": "Кыргызстан",
+            "sum": 900,
+            "vatSum": 96.43,
+            "total": 900
+          },
+          {
+            "nom": "n7",
+            "qty": 100,
+            "price": 25,
+            "vat": 12,
+            "account": "10.01",
+            "country": "Кыргызстан",
+            "sum": 2500,
+            "vatSum": 267.86,
+            "total": 2500
+          }
+        ],
+        "products": [
+          {
+            "nom": "n6",
+            "qty": 100,
+            "price": 420,
+            "vat": 12,
+            "account": "43",
+            "country": "Кыргызстан",
+            "sum": 42000,
+            "vatSum": 4500,
+            "total": 42000
+          }
+        ],
+        "extra": {
+          "comment": "Выпуск 100 тортов «Наполеон» за смену 05.09.2026",
+          "signHead": "Директор",
+          "signAcc": "Гл. бухгалтер"
+        },
+        "sf": null,
+        "department": "dep1",
+        "costAccount": "20.01",
+        "nomGroup": "",
+        "costItem": "ci1",
+        "warehouseTo": "",
+        "total": 74400,
+        "vatTotal": 7971.44,
+        "sum": 74400
+      },
+      {
+        "id": "tmtsfyk8055it",
+        "type": "customer_invoice",
+        "number": "СЧ-000005",
+        "date": "2026-09-06",
+        "status": "posted",
+        "opKind": "",
+        "contractor": "c2",
+        "contract": "d2",
+        "warehouse": "w2",
+        "basis": "",
+        "settle": {
+          "acc": "62.01",
+          "adv": "62.02",
+          "offset": "Автоматически"
+        },
+        "priceType": "pt1",
+        "vatMode": "in",
+        "discount": 0,
+        "goods": [
+          {
+            "nom": "n6",
+            "qty": 100,
+            "price": 850,
+            "vat": 12,
+            "account": "43",
+            "country": "Кыргызстан",
+            "sum": 85000,
+            "vatSum": 9107.14,
+            "total": 85000
+          }
+        ],
+        "services": [],
+        "agent": [],
+        "tara": [],
+        "materials": [],
+        "products": [],
+        "extra": {
+          "comment": "Счет на 100 тортов «Наполеон»",
+          "signHead": "Директор",
+          "signAcc": "Гл. бухгалтер"
+        },
+        "sf": null,
+        "department": "",
+        "costAccount": "",
+        "nomGroup": "",
+        "costItem": "",
+        "warehouseTo": "",
+        "total": 85000,
+        "vatTotal": 9107.14,
+        "sum": 85000
+      },
+      {
+        "id": "tmtsfyk80635d",
+        "type": "sale",
+        "number": "РТ-000006",
+        "date": "2026-09-07",
+        "status": "posted",
+        "opKind": "Товары (накладная, УПД)",
+        "contractor": "c2",
+        "contract": "d2",
+        "warehouse": "w2",
+        "basis": "tmtsfyk8055it",
+        "settle": {
+          "acc": "62.01",
+          "adv": "62.02",
+          "offset": "Автоматически"
+        },
+        "priceType": "pt1",
+        "vatMode": "in",
+        "discount": 0,
+        "goods": [
+          {
+            "nom": "n6",
+            "qty": 100,
+            "price": 850,
+            "vat": 12,
+            "account": "43",
+            "country": "Кыргызстан",
+            "sum": 85000,
+            "vatSum": 9107.14,
+            "total": 85000
+          }
+        ],
+        "services": [],
+        "agent": [],
+        "tara": [],
+        "materials": [],
+        "products": [],
+        "extra": {
+          "comment": "Реализация 100 тортов «Наполеон» по счету СЧ-000005",
+          "signHead": "Директор",
+          "signAcc": "Гл. бухгалтер"
+        },
+        "sf": {
+          "number": "1",
+          "date": "2026-09-07",
+          "code": "01"
+        },
+        "department": "",
+        "costAccount": "",
+        "nomGroup": "",
+        "costItem": "",
+        "warehouseTo": "",
+        "total": 85000,
+        "vatTotal": 9107.14,
+        "sum": 85000
+      }
+    ],
+    "org": {
+      "name": "ОсОО «Эльмырза»",
+      "inn": "01234567890123",
+      "director": "Директор",
+      "accountant": "Главный бухгалтер"
+    },
+    "sfCounter": {
+      "in": 0,
+      "out": 1
+    },
+    "contractors": [
+      {
+        "id": "c1",
+        "name": "ОсОО «Сырьё Плюс»",
+        "full": "ОсОО «Сырьё Плюс»",
+        "inn": "02001201010101",
+        "kind": "Юридическое лицо",
+        "address": "г. Бишкек, ул. Промышленная, 15",
+        "phone": "+996 555 100100",
+        "account": "1280010000000201",
+        "bank": "АБ Кыргызстан"
+      },
+      {
+        "id": "c2",
+        "name": "ОсОО «МегаМаркет»",
+        "full": "ОсОО «МегаМаркет»",
+        "inn": "02002202020202",
+        "kind": "Юридическое лицо",
+        "address": "г. Бишкек, пр. Чуй, 200",
+        "phone": "+996 555 200200",
+        "account": "1280010000000202",
+        "bank": "АБ Кыргызстан"
+      }
+    ],
+    "contracts": [
+      {
+        "id": "d1",
+        "contractor": "c1",
+        "kind": "С поставщиком",
+        "number": "1",
+        "date": "2026-01-10",
+        "name": "Договор поставки сырья",
+        "currency": "KGS",
+        "priceType": "pt2"
+      },
+      {
+        "id": "d2",
+        "contractor": "c2",
+        "kind": "С покупателем",
+        "number": "2",
+        "date": "2026-01-15",
+        "name": "Договор продажи готовой продукции",
+        "currency": "KGS",
+        "priceType": "pt1"
+      }
+    ],
+    "nomenclature": [
+      {
+        "id": "n1",
+        "name": "Мука пшеничная в/с",
+        "article": "RAW-001",
+        "kind": "Материал",
+        "unit": "кг",
+        "vat": 12,
+        "price": 50,
+        "cost": 45,
+        "account": "10.01",
+        "country": "Кыргызстан"
+      },
+      {
+        "id": "n2",
+        "name": "Сахар",
+        "article": "RAW-002",
+        "kind": "Материал",
+        "unit": "кг",
+        "vat": 12,
+        "price": 80,
+        "cost": 70,
+        "account": "10.01",
+        "country": "Кыргызстан"
+      },
+      {
+        "id": "n3",
+        "name": "Масло сливочное",
+        "article": "RAW-003",
+        "kind": "Материал",
+        "unit": "кг",
+        "vat": 12,
+        "price": 400,
+        "cost": 350,
+        "account": "10.01",
+        "country": "Кыргызстан"
+      },
+      {
+        "id": "n4",
+        "name": "Яйцо куриное",
+        "article": "RAW-004",
+        "kind": "Материал",
+        "unit": "шт",
+        "vat": 12,
+        "price": 15,
+        "cost": 12,
+        "account": "10.01",
+        "country": "Кыргызстан"
+      },
+      {
+        "id": "n5",
+        "name": "Дрожжи",
+        "article": "RAW-005",
+        "kind": "Материал",
+        "unit": "кг",
+        "vat": 12,
+        "price": 200,
+        "cost": 180,
+        "account": "10.01",
+        "country": "Кыргызстан"
+      },
+      {
+        "id": "n6",
+        "name": "Торт «Наполеон» 1кг",
+        "article": "PROD-001",
+        "kind": "Продукция",
+        "unit": "шт",
+        "vat": 12,
+        "price": 850,
+        "cost": 420,
+        "account": "43",
+        "country": "Кыргызстан"
+      },
+      {
+        "id": "n7",
+        "name": "Упаковка (коробка)",
+        "article": "MAT-001",
+        "kind": "Материал",
+        "unit": "шт",
+        "vat": 12,
+        "price": 30,
+        "cost": 25,
+        "account": "10.01",
+        "country": "Кыргызстан"
+      }
+    ],
+    "warehouses": [
+      {
+        "id": "w1",
+        "name": "Склад сырья",
+        "kind": "Оптовый склад",
+        "responsible": "Иванов И.И."
+      },
+      {
+        "id": "w2",
+        "name": "Склад готовой продукции",
+        "kind": "Оптовый склад",
+        "responsible": "Петрова М.М."
+      }
+    ],
+    "priceTypes": [
+      {
+        "id": "pt1",
+        "name": "Розничная",
+        "vatIncluded": true,
+        "markup": 100
+      },
+      {
+        "id": "pt2",
+        "name": "Закупочная",
+        "vatIncluded": true,
+        "markup": 0
+      }
+    ],
+    "departments": [
+      {
+        "id": "dep1",
+        "name": "Цех производства",
+        "responsible": "Мастер"
+      }
+    ],
+    "nomGroups": [
+      {
+        "id": "ng1",
+        "name": "Кондитерские изделия"
+      }
+    ],
+    "costItems": [
+      {
+        "id": "ci1",
+        "name": "Материальные затраты"
+      }
+    ],
+    "units": [
+      {
+        "id": "u1",
+        "name": "шт"
+      },
+      {
+        "id": "u2",
+        "name": "кг"
+      }
+    ],
+    "employees": [],
+    "positions": [],
+    "schedules": [],
+    "accruals": [],
+    "deductions": []
+  }
 }
