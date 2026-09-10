@@ -20,9 +20,22 @@ const DbSync = (function() {
     let _lastHash = '';
     let _pollTimer = null;
     let _pendingSave = null; // queued save while _saving is true
+    let _offlinePending = null; // data queued while offline
+    let _inited = false;
 
     function init() {
+        if (_inited) { _token = localStorage.getItem('gh_token'); return; }
+        _inited = true;
         _token = localStorage.getItem('gh_token');
+        // When browser comes back online, send queued offline data
+        window.addEventListener('online', () => {
+            if (_offlinePending) {
+                const data = _offlinePending;
+                _offlinePending = null;
+                showSyncStatus('saving');
+                setTimeout(() => saveData(data), 1000);
+            }
+        });
     }
 
     function getToken() { return _token; }
@@ -39,7 +52,7 @@ const DbSync = (function() {
 
     async function validateToken(token) {
         try {
-            const res = await fetch(API_BASE + '/user', {
+            const res = await fetchWithTimeout(API_BASE + '/user', {
                 headers: { 'Authorization': 'token ' + token }
             });
             if (!res.ok) return null;
@@ -47,6 +60,13 @@ const DbSync = (function() {
         } catch(e) {
             return null;
         }
+    }
+
+    // --- Fetch with timeout ---
+    function fetchWithTimeout(url, options, timeout = 30000) {
+        const controller = new AbortController();
+        const timer = setTimeout(() => controller.abort(), timeout);
+        return fetch(url, { ...options, signal: controller.signal }).finally(() => clearTimeout(timer));
     }
 
     // --- UTF-8 safe base64 decode ---
@@ -77,7 +97,7 @@ const DbSync = (function() {
         try {
             // Step 1: Get file metadata (sha, size)
             const metaUrl = `${API_BASE}/repos/${REPO_OWNER}/${REPO_NAME}/contents/${DATA_FILE}?ref=${DATA_BRANCH}&_t=${Date.now()}`;
-            const metaRes = await fetch(metaUrl, {
+            const metaRes = await fetchWithTimeout(metaUrl, {
                 headers: {
                     'Authorization': 'token ' + _token,
                     'Accept': 'application/vnd.github+json'
@@ -116,7 +136,7 @@ const DbSync = (function() {
             } else {
                 // Large file — download via raw URL
                 const rawUrl = `https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/${DATA_BRANCH}/${DATA_FILE}?_t=${Date.now()}`;
-                const rawRes = await fetch(rawUrl, { cache: 'no-store' });
+                const rawRes = await fetchWithTimeout(rawUrl, { cache: 'no-store' });
                 if (!rawRes.ok) throw new Error('Raw download error: ' + rawRes.status);
                 parsed = await rawRes.json();
             }
@@ -132,7 +152,7 @@ const DbSync = (function() {
 
             return parsed;
         } catch(err) {
-            console.error('Load error:', err);
+            console.error('Load error');
             // Fallback to local cache ONLY if GitHub is unreachable
             try {
                 const cached = localStorage.getItem('db_cache');
@@ -168,7 +188,7 @@ const DbSync = (function() {
             return;
         }
 
-        retryCount = retryCount || 0;
+        retryCount = retryCount ?? 0;
 
         const currentHash = hashData(dbObject);
         if (currentHash === _lastHash) return;
@@ -180,6 +200,7 @@ const DbSync = (function() {
             if (!navigator.onLine) {
                 showSyncStatus('offline');
                 _saving = false;
+                _offlinePending = dbObject;
                 return;
             }
 
@@ -197,7 +218,7 @@ const DbSync = (function() {
             }
 
             const url = `${API_BASE}/repos/${REPO_OWNER}/${REPO_NAME}/contents/${DATA_FILE}`;
-            const res = await fetch(url, {
+            const res = await fetchWithTimeout(url, {
                 method: 'PUT',
                 headers: {
                     'Authorization': 'token ' + _token,
@@ -214,8 +235,23 @@ const DbSync = (function() {
                     console.warn('SHA conflict, retry', retryCount + 1);
                     await reloadSha();
                     _saving = false;
-                    // Small delay before retry
                     await new Promise(r => setTimeout(r, 500 * (retryCount + 1)));
+                    return await saveData(dbObject, retryCount + 1);
+                }
+                // Rate limiting - wait and retry
+                if (res.status === 429 && retryCount < MAX_RETRIES) {
+                    const retryAfter = parseInt(res.headers.get('Retry-After')) || 10;
+                    console.warn('Rate limited, waiting', retryAfter, 'sec');
+                    showSyncStatus('offline');
+                    _saving = false;
+                    await new Promise(r => setTimeout(r, retryAfter * 1000));
+                    return await saveData(dbObject, retryCount + 1);
+                }
+                // Server error - retry with backoff
+                if (res.status >= 500 && retryCount < MAX_RETRIES) {
+                    console.warn('Server error', res.status, ', retry', retryCount + 1);
+                    _saving = false;
+                    await new Promise(r => setTimeout(r, 2000 * (retryCount + 1)));
                     return await saveData(dbObject, retryCount + 1);
                 }
                 throw new Error('Save failed: ' + res.status + ' ' + (errData.message || ''));
@@ -228,7 +264,7 @@ const DbSync = (function() {
             try { localStorage.setItem('db_cache_sha', _fileSha); } catch(e) {}
             showSyncStatus('saved');
         } catch(err) {
-            console.error('Save error:', err);
+            console.error('Save error');
             showSyncStatus('error');
         } finally {
             _saving = false;
@@ -249,7 +285,7 @@ const DbSync = (function() {
     async function reloadSha() {
         try {
             const url = `${API_BASE}/repos/${REPO_OWNER}/${REPO_NAME}/contents/${DATA_FILE}?ref=${DATA_BRANCH}&_t=${Date.now()}`;
-            const res = await fetch(url, {
+            const res = await fetchWithTimeout(url, {
                 headers: {
                     'Authorization': 'token ' + _token,
                     'Accept': 'application/vnd.github+json'
@@ -261,7 +297,7 @@ const DbSync = (function() {
                 _fileSha = data.sha;
             }
         } catch(e) {
-            console.error('reloadSha error:', e);
+            console.error('reloadSha error');
         }
     }
 
@@ -272,7 +308,7 @@ const DbSync = (function() {
             if (_saving || !_token || !navigator.onLine) return;
             try {
                 const url = `${API_BASE}/repos/${REPO_OWNER}/${REPO_NAME}/contents/${DATA_FILE}?ref=${DATA_BRANCH}&_t=${Date.now()}`;
-                const res = await fetch(url, {
+                const res = await fetchWithTimeout(url, {
                     headers: {
                         'Authorization': 'token ' + _token,
                         'Accept': 'application/vnd.github+json'
@@ -290,7 +326,7 @@ const DbSync = (function() {
                         parsed = JSON.parse(decoded);
                     } else {
                         const rawUrl = `https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/${DATA_BRANCH}/${DATA_FILE}?_t=${Date.now()}`;
-                        const rawRes = await fetch(rawUrl, { cache: 'no-store' });
+                        const rawRes = await fetchWithTimeout(rawUrl, { cache: 'no-store' });
                         if (!rawRes.ok) return;
                         parsed = await rawRes.json();
                     }
@@ -322,7 +358,7 @@ const DbSync = (function() {
         if (!_token) return [];
         try {
             const url = `${API_BASE}/repos/${REPO_OWNER}/${REPO_NAME}/commits?sha=${DATA_BRANCH}&path=${DATA_FILE}&per_page=${limit || 20}`;
-            const res = await fetch(url, {
+            const res = await fetchWithTimeout(url, {
                 headers: {
                     'Authorization': 'token ' + _token,
                     'Accept': 'application/vnd.github+json'
@@ -338,7 +374,7 @@ const DbSync = (function() {
         if (!_token) return null;
         try {
             const url = `${API_BASE}/repos/${REPO_OWNER}/${REPO_NAME}/contents/${DATA_FILE}?ref=${commitSha}`;
-            const res = await fetch(url, {
+            const res = await fetchWithTimeout(url, {
                 headers: {
                     'Authorization': 'token ' + _token,
                     'Accept': 'application/vnd.github+json'
@@ -354,6 +390,10 @@ const DbSync = (function() {
     function logout() {
         stopPolling();
         localStorage.removeItem('auth_session');
+        localStorage.removeItem('db_cache');
+        localStorage.removeItem('db_cache_sha');
+        localStorage.removeItem('gh_token');
+        _token = null;
         window.location.href = 'index.html';
     }
 
@@ -365,7 +405,7 @@ const DbSync = (function() {
         if (!_token) return [];
         try {
             const url = `${API_BASE}/repos/${REPO_OWNER}/${REPO_NAME}/contents/${USERS_FILE}?ref=${DATA_BRANCH}&_t=${Date.now()}`;
-            const res = await fetch(url, {
+            const res = await fetchWithTimeout(url, {
                 headers: { 'Authorization': 'token ' + _token, 'Accept': 'application/vnd.github+json' },
                 cache: 'no-store'
             });
@@ -375,7 +415,7 @@ const DbSync = (function() {
             const decoded = b64DecodeUTF8(fileData.content);
             return JSON.parse(decoded);
         } catch(e) {
-            console.error('loadUsers error:', e);
+            console.error('loadUsers error');
             return [];
         }
     }
@@ -385,7 +425,7 @@ const DbSync = (function() {
         try {
             // Reload SHA to avoid conflicts
             if (!_usersSha) {
-                const chk = await fetch(`${API_BASE}/repos/${REPO_OWNER}/${REPO_NAME}/contents/${USERS_FILE}?ref=${DATA_BRANCH}&_t=${Date.now()}`, {
+                const chk = await fetchWithTimeout(`${API_BASE}/repos/${REPO_OWNER}/${REPO_NAME}/contents/${USERS_FILE}?ref=${DATA_BRANCH}&_t=${Date.now()}`, {
                     headers: { 'Authorization': 'token ' + _token, 'Accept': 'application/vnd.github+json' },
                     cache: 'no-store'
                 });
@@ -397,7 +437,7 @@ const DbSync = (function() {
                 branch: DATA_BRANCH
             };
             if (_usersSha) body.sha = _usersSha;
-            const res = await fetch(`${API_BASE}/repos/${REPO_OWNER}/${REPO_NAME}/contents/${USERS_FILE}`, {
+            const res = await fetchWithTimeout(`${API_BASE}/repos/${REPO_OWNER}/${REPO_NAME}/contents/${USERS_FILE}`, {
                 method: 'PUT',
                 headers: { 'Authorization': 'token ' + _token, 'Content-Type': 'application/json', 'Accept': 'application/vnd.github+json' },
                 body: JSON.stringify(body)
@@ -407,7 +447,7 @@ const DbSync = (function() {
             _usersSha = result.content.sha;
             return true;
         } catch(e) {
-            console.error('saveUsers error:', e);
+            console.error('saveUsers error');
             return false;
         }
     }

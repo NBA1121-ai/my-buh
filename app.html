@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self' https://api.github.com https://raw.githubusercontent.com; img-src 'self' data:;">
     <title>1s Бухгалтерия - Банк, Покупки, Продажи, Склад, Производство, Зарплата и кадры</title>
     <style>
         * {
@@ -15,6 +16,7 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background: #f5f5f5;
             color: #333;
+            overflow-x: hidden;
         }
 
         .app {
@@ -54,8 +56,11 @@
             border-radius: 5px;
             cursor: pointer;
             font-size: 14px;
-            transition: all 0.3s;
+            transition: background 0.3s, border-color 0.3s;
             border-left: 3px solid transparent;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .nav-item:hover {
@@ -101,7 +106,7 @@
             background: #fff;
             cursor: pointer;
             font-size: 13px;
-            transition: all 0.3s;
+            transition: background 0.3s, border-color 0.3s, color 0.3s;
             display: inline-flex;
             align-items: center;
             gap: 6px;
@@ -187,7 +192,7 @@
             border-radius: 3px;
             cursor: pointer;
             font-size: 12px;
-            transition: all 0.3s;
+            transition: background 0.3s, color 0.3s;
         }
 
         .quick-btn:hover {
@@ -202,7 +207,8 @@
         .table-container {
             background: #fff;
             border-radius: 4px;
-            overflow: hidden;
+            overflow: visible;
+            overflow-x: auto;
             box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         }
 
@@ -241,13 +247,15 @@
         }
 
         .action-btn {
-            padding: 4px 8px;
-            font-size: 11px;
+            padding: 6px 10px;
+            font-size: 12px;
+            min-height: 32px;
+            min-width: 32px;
             border: 1px solid #ddd;
             background: #fff;
             border-radius: 3px;
             cursor: pointer;
-            transition: all 0.2s;
+            transition: background 0.2s, border-color 0.2s;
         }
 
         .action-btn:hover {
@@ -414,7 +422,7 @@
 
         .stat-label {
             font-size: 12px;
-            color: #999;
+            color: #767676;
             margin-bottom: 8px;
         }
 
@@ -424,12 +432,8 @@
             color: #2a6fb8;
         }
 
-        .print-hide {
-            display: none;
-        }
-
         @media print {
-            .sidebar, .header, .filters, .print-hide {
+            .sidebar, .header, .filters, .toolbar, .tcmd, .tabs, .print-hide {
                 display: none !important;
             }
             .content {
@@ -438,6 +442,13 @@
             .table-container {
                 box-shadow: none;
             }
+            table tr { page-break-inside: avoid; }
+            @page { margin: 15mm; }
+            body { color: #000; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
         }
 
         .num {
@@ -499,7 +510,7 @@
             border-bottom: 2px solid transparent;
             margin-bottom: -2px;
             color: #666;
-            transition: all 0.3s;
+            transition: color 0.3s, border-color 0.3s;
         }
 
         .tab:hover {
@@ -526,7 +537,7 @@
         .tcmd.small { padding: 6px 8px; margin-bottom: 8px; background: #f8f9fb; box-shadow: none; }
         .tcmd .btn:disabled { opacity: .5; cursor: default; }
         .tdd { position: relative; display: inline-block; }
-        .tdd-menu { display: none; position: absolute; top: 100%; left: 0; min-width: 260px; background: #fff; border: 1px solid #ddd; border-radius: 4px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); z-index: 1500; padding: 4px 0; max-height: 60vh; overflow-y: auto; }
+        .tdd-menu { display: none; position: absolute; top: 100%; left: 0; min-width: 260px; max-width: calc(100vw - 20px); background: #fff; border: 1px solid #ddd; border-radius: 4px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); z-index: 900; padding: 4px 0; max-height: 60vh; overflow-y: auto; }
         .tdd.open .tdd-menu { display: block; }
         .tdd-item { padding: 8px 14px; font-size: 13px; cursor: pointer; white-space: nowrap; }
         .tdd-item:hover { background: #e8f0f8; }
@@ -537,7 +548,7 @@
         tr.trow.sel td { background: #e3eefa; }
         tr.trow.del td { color: #999; text-decoration: line-through; }
         .tmodal-content { max-width: 1400px; width: 96%; display: flex; flex-direction: column; max-height: 94vh; }
-        .tmodal-content .modal-body { overflow-y: auto; flex: 1; padding: 12px 20px; }
+        .tmodal-content .modal-body { overflow-y: auto; overflow-x: auto; flex: 1; padding: 12px 20px; }
         .thead-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px 14px; }
         .thead-grid .fg { display: flex; flex-direction: column; gap: 4px; }
         .thead-grid .fg.wide { grid-column: span 2; }
@@ -603,7 +614,9 @@
             border: none;
             font-size: 24px;
             cursor: pointer;
-            padding: 5px;
+            padding: 10px;
+            min-width: 44px;
+            min-height: 44px;
             color: #333;
         }
         .sidebar-overlay {
@@ -612,7 +625,7 @@
             top: 0; left: 0;
             width: 100%; height: 100%;
             background: rgba(0,0,0,0.5);
-            z-index: 99;
+            z-index: 950;
         }
         .sidebar-overlay.active { display: block; }
 
@@ -645,7 +658,7 @@
                 position: fixed;
                 top: 0; left: -300px;
                 height: 100vh;
-                z-index: 100;
+                z-index: 960;
                 transition: left 0.3s ease;
                 width: 280px;
             }
@@ -671,13 +684,14 @@
             .thead-grid { grid-template-columns: 1fr !important; }
             .thead-grid .fg.wide, .thead-grid .fg.wide2 { grid-column: span 1; }
             .tmodal-content { width: 100% !important; max-height: 100vh !important; border-radius: 0; }
-            .modal-content { width: 95%; }
+            .modal-content { width: 98%; max-height: 95vh; border-radius: 4px; }
             .stats { grid-template-columns: 1fr 1fr; gap: 8px; }
             .stat-card { padding: 12px; }
             .stat-value { font-size: 18px; }
             .tcmd { padding: 8px; gap: 5px; }
-            .tcmd .btn { padding: 5px 8px; font-size: 11px; }
-            table { font-size: 12px; }
+            .tcmd .btn { padding: 7px 10px; font-size: 12px; min-height: 36px; }
+            .table-container, table { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+            table { font-size: 12px; min-width: 600px; }
             th, td { padding: 6px 8px; }
             .action-buttons { flex-direction: column; gap: 3px; }
             .user-email { display: none; }
@@ -686,9 +700,24 @@
             #tCmd { flex-wrap: wrap; gap: 5px; padding: 8px 12px; }
         }
 
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .sidebar { width: 220px; }
+            .sidebar .nav-item { padding: 8px 12px; font-size: 12px; }
+            .sidebar .logo { font-size: 14px; padding: 12px; }
+            .content { padding: 12px; }
+            .stats { grid-template-columns: 1fr 1fr; }
+        }
+
         @media (max-width: 480px) {
             .stats { grid-template-columns: 1fr; }
             .header h1 { font-size: 14px; }
+            .toolbar .btn { padding: 6px 8px; font-size: 11px; }
+            .filters { flex-direction: column; }
+            .filter-group { width: 100%; }
+            .filter-group input, .filter-group select { width: 100%; }
+            #globalSearch { width: 100% !important; }
+            .modal-content { width: 100%; max-height: 100vh; border-radius: 0; }
+            .notif-dropdown { width: 100vw; right: -10px; border-radius: 0; }
         }
 
         /* Dashboard */
@@ -697,7 +726,7 @@
         .dash-card h3 { font-size: 13px; color: #999; margin-bottom: 8px; text-transform: uppercase; }
         .dash-card .dash-value { font-size: 28px; font-weight: 700; color: #333; }
         .dash-card .dash-sub { font-size: 12px; color: #999; margin-top: 4px; }
-        .dash-recent { background: #fff; border-radius: 8px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .dash-recent { background: #fff; border-radius: 8px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); overflow-x: auto; }
         .dash-recent h3 { margin-bottom: 12px; }
         .dash-recent table { width: 100%; }
         .dash-recent td, .dash-recent th { padding: 8px; text-align: left; border-bottom: 1px solid #eee; font-size: 13px; }
@@ -717,12 +746,20 @@
         body.dark input, body.dark select, body.dark textarea { background: #2a2a40; color: #e0e0e0; border-color: #444; }
         body.dark .modal-content { background: #252540; color: #e0e0e0; }
         body.dark .modal-header { background: #1a1a2e; color: #e0e0e0; }
-        body.dark .empty-state { color: #888; }
+        body.dark .empty-state { color: #aaa; }
+        body.dark .sidebar { background: #151525; }
+        body.dark .nav-item { color: #ccc; }
         body.dark .nav-item:hover { background: #333; }
-        body.dark .section-title { color: #777; }
+        body.dark .nav-item.active { background: #2a6fb8; color: #fff; }
+        body.dark .section-title { color: #aaa; }
+        body.dark .stat-card { background: #252540; color: #e0e0e0; }
+        body.dark .filters { background: transparent; }
+        body.dark .badge { opacity: 0.9; }
+        body.dark .form-group label { color: #bbb; }
+        body.dark .tcmd { border-bottom-color: #333; }
 
         /* Notifications dropdown */
-        .notif-dropdown { display:none; position:absolute; top:100%; right:0; background:#fff; border:1px solid #ddd; border-radius:8px; box-shadow:0 8px 24px rgba(0,0,0,0.15); width:360px; max-height:400px; overflow-y:auto; z-index:1000; }
+        .notif-dropdown { display:none; position:absolute; top:100%; right:0; background:#fff; border:1px solid #ddd; border-radius:8px; box-shadow:0 8px 24px rgba(0,0,0,0.15); width:360px; max-width:calc(100vw - 20px); max-height:400px; overflow-y:auto; z-index:1000; }
         body.dark .notif-dropdown { background:#252540; border-color:#444; }
         .notif-dropdown.open { display:block; }
         .notif-item { padding:12px 16px; border-bottom:1px solid #eee; font-size:13px; cursor:pointer; }
@@ -744,13 +781,13 @@
         <!-- Mobile overlay -->
         <div class="sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
         <!-- Sidebar -->
-        <div class="sidebar" id="sidebar">
+        <aside class="sidebar" id="sidebar" role="navigation" aria-label="Главное меню">
             <div class="logo">📊 1s Бухгалтерия</div>
 
             <div class="nav-item active" onclick="selectPage('dashboard')">📋 Главная (Дашборд)</div>
 
             <div class="section-title" onclick="tToggleGroup(this)">Банк и касса</div>
-            <div class="nav-item active" onclick="selectPage('bank')">🏦 Банковские документы</div>
+            <div class="nav-item" onclick="selectPage('bank')">🏦 Банковские документы</div>
             <div class="nav-item" onclick="selectPage('cash')">💰 Кассовые документы</div>
             <div class="nav-item" onclick="selectPage('reports')">📊 Отчеты по ДДС</div>
             <div class="nav-item" onclick="selectPage('cashbook')">📔 Кассовая книга</div>
@@ -851,41 +888,45 @@
             <div class="nav-item" onclick="selectPage('cashs')">💵 Кассы</div>
             <div class="nav-item" onclick="selectPage('currencies')">💱 Валюты</div>
 
+            <div class="section-title" onclick="tToggleGroup(this)">Сервис</div>
+            <div class="nav-item" onclick="selectPage('import_data')">📥 Импорт и резервные копии</div>
+            <div class="nav-item" onclick="selectPage('export_data')">📤 Экспорт данных</div>
+
             <div class="section-title admin-only" onclick="tToggleGroup(this)" style="display:none">Администрирование</div>
             <div class="nav-item admin-only" onclick="selectPage('users')" style="display:none">👥 Пользователи</div>
             <div class="nav-item admin-only" onclick="selectPage('actlog')" style="display:none">📜 Журнал действий</div>
-        </div>
+        </aside>
 
         <!-- Main -->
-        <div class="main">
+        <main class="main" role="main">
             <div class="header">
-                <button class="burger" onclick="toggleSidebar()">&#9776;</button>
-                <h1 id="pageTitle">Главная</h1>
+                <button class="burger" onclick="toggleSidebar()" aria-label="Открыть меню">&#9776;</button>
+                <div><h1 id="pageTitle" style="margin:0">Главная</h1><div id="breadcrumb" style="font-size:11px;color:#999"></div></div>
                 <div class="toolbar">
                     <button class="btn primary" onclick="openCreateModal()">+ Создать</button>
                     <button class="btn" onclick="exportToCSV()">📥 Экспорт</button>
                     <button class="btn" onclick="window.print()">🖨 Печать</button>
                 </div>
                 <div class="user-panel">
-                    <input type="text" id="globalSearch" placeholder="Поиск..." style="padding:6px 10px;border:1px solid #ddd;border-radius:4px;font-size:13px;width:160px" onkeydown="if(event.key==='Enter')doGlobalSearch()">
-                    <button class="btn" onclick="doGlobalSearch()" title="Поиск">🔍</button>
-                    <button class="btn" onclick="showNotifications()" title="Уведомления" style="position:relative">🔔<span id="notifBadge" style="display:none;position:absolute;top:-4px;right:-4px;background:#f44336;color:#fff;border-radius:50%;font-size:10px;width:16px;height:16px;line-height:16px;text-align:center">0</span></button>
-                    <button class="btn" onclick="toggleTheme()" title="Тема">🌓</button>
-                    <button class="btn" onclick="downloadBackup()" title="Скачать резервную копию">💾</button>
+                    <input type="text" id="globalSearch" placeholder="Поиск..." style="padding:6px 10px;border:1px solid #ddd;border-radius:4px;font-size:13px;width:160px;max-width:100%" onkeydown="if(event.key==='Enter')doGlobalSearch()">
+                    <button class="btn" onclick="doGlobalSearch()" title="Поиск" aria-label="Поиск">🔍</button>
+                    <button class="btn" onclick="showNotifications()" title="Уведомления" aria-label="Уведомления" style="position:relative">🔔<span id="notifBadge" style="display:none;position:absolute;top:-4px;right:-4px;background:#f44336;color:#fff;border-radius:50%;font-size:10px;width:16px;height:16px;line-height:16px;text-align:center">0</span></button>
+                    <button class="btn" onclick="toggleTheme()" title="Тема" aria-label="Переключить тему">🌓</button>
+                    <button class="btn" onclick="downloadBackup()" title="Скачать резервную копию" aria-label="Скачать резервную копию">💾</button>
                     <span id="syncStatus" style="color:#4caf50">Облако</span>
                     <span class="user-email" id="userEmail" style="cursor:pointer" onclick="selectPage('profile')"></span>
-                    <button class="btn-logout" onclick="localStorage.removeItem('auth_session');window.location.href='index.html'">Выход</button>
+                    <button class="btn-logout" onclick="DbSync.logout()" aria-label="Выход из системы">Выход</button>
                 </div>
             </div>
 
             <div class="content" id="content">
                 <!-- Content will be loaded here -->
             </div>
-        </div>
+        </main>
     </div>
 
     <!-- Create/Edit Modal -->
-    <div class="modal" id="documentModal">
+    <div class="modal" id="documentModal" onclick="if(event.target===this)closeModal()" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
         <div class="modal-content">
             <div class="modal-header">
                 <h2 id="modalTitle">Создать документ</h2>
@@ -917,7 +958,7 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label>Дата *</label>
-                            <input type="date" id="docDate" value="" required>
+                            <input type="date" id="docDate" value="" min="2000-01-01" max="2099-12-31" required>
                         </div>
                         <div class="form-group">
                             <label>Статус</label>
@@ -959,11 +1000,11 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label>Сумма *</label>
-                            <input type="number" id="docSum" step="0.01" placeholder="0.00" required>
+                            <input type="number" id="docSum" step="0.01" min="0.01" placeholder="0.00" required>
                         </div>
                         <div class="form-group">
                             <label>Курс</label>
-                            <input type="number" id="docRate" step="0.01" value="1" placeholder="1.00">
+                            <input type="number" id="docRate" step="0.01" min="0.01" value="1" placeholder="1.00">
                         </div>
                     </div>
 
@@ -991,7 +1032,7 @@
 
 
     <!-- ===== Форма документа Покупки/Продажи ===== -->
-    <div class="modal" id="tModal">
+    <div class="modal" id="tModal" onclick="if(event.target===this)tCloseForm()" role="dialog" aria-modal="true" aria-labelledby="tModalTitle">
         <div class="modal-content tmodal-content">
             <div class="modal-header">
                 <h2 id="tModalTitle">Документ</h2>
@@ -1008,7 +1049,7 @@
     </div>
 
     <!-- Подбор номенклатуры -->
-    <div class="modal" id="tPickModal" style="z-index:1100">
+    <div class="modal" id="tPickModal" style="z-index:1100" onclick="if(event.target===this)tClosePick()" role="dialog" aria-modal="true">
         <div class="modal-content" style="max-width:900px">
             <div class="modal-header"><h2>Подбор номенклатуры</h2><button class="modal-close" onclick="tClosePick()">×</button></div>
             <div class="modal-body">
@@ -1023,7 +1064,7 @@
     </div>
 
     <!-- Движения документа Дт/Кт -->
-    <div class="modal" id="tPostModal" style="z-index:1100">
+    <div class="modal" id="tPostModal" style="z-index:1100" onclick="if(event.target===this)this.classList.remove('active')" role="dialog" aria-modal="true" aria-labelledby="tPostTitle">
         <div class="modal-content" style="max-width:900px">
             <div class="modal-header"><h2 id="tPostTitle">Движения документа</h2><button class="modal-close" onclick="document.getElementById('tPostModal').classList.remove('active')">×</button></div>
             <div class="modal-body"><div class="table-container" id="tPostBody"></div></div>
@@ -1032,7 +1073,7 @@
     </div>
 
     <!-- Элемент справочника -->
-    <div class="modal" id="tRefModal" style="z-index:1200">
+    <div class="modal" id="tRefModal" style="z-index:1200" onclick="if(event.target===this)this.classList.remove('active')" role="dialog" aria-modal="true" aria-labelledby="tRefTitle">
         <div class="modal-content" style="max-width:800px">
             <div class="modal-header"><h2 id="tRefTitle">Справочник</h2><button class="modal-close" onclick="document.getElementById('tRefModal').classList.remove('active')">×</button></div>
             <div class="modal-body" id="tRefBody"></div>
@@ -1042,6 +1083,8 @@
 
     <div class="toast" id="toast"></div>
 
+    <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
     <script src="js/db-sync.js"></script>
     <script>
         // ==================== DATA ====================
@@ -1094,7 +1137,7 @@
                 await loadData();
             } catch(e) {
                 console.error('Failed to load data:', e);
-                // Continue with defaults — data will load from local cache or be empty
+                showToast('Не удалось загрузить данные с сервера. Работа с локальным кэшем.');
             }
 
             initializeDefaults();
@@ -1110,10 +1153,12 @@
 
             // Poll for changes from other devices (every 30 sec)
             DbSync.startPolling((newData) => {
-                Object.keys(db).forEach(k => delete db[k]);
-                Object.assign(db, newData);
-                renderPage();
-                showToast('Данные синхронизированы с другого устройства');
+                if (confirm('Данные были изменены с другого устройства. Загрузить обновлённые данные?\n\nОК — загрузить новые данные\nОтмена — оставить текущие (ваши изменения сохранятся при следующем сохранении)')) {
+                    Object.keys(db).forEach(k => delete db[k]);
+                    Object.assign(db, newData);
+                    renderPage();
+                    showToast('Данные синхронизированы с другого устройства');
+                }
             });
 
             // Periodic session check (every 5 min)
@@ -1130,6 +1175,7 @@
         async function loadData() {
             const cloudData = await DbSync.loadData();
             if (cloudData && typeof cloudData === 'object') {
+                Object.keys(db).forEach(k => delete db[k]);
                 Object.assign(db, cloudData);
             }
         }
@@ -1142,6 +1188,23 @@
         // Save data before browser/tab close
         window.addEventListener('beforeunload', () => {
             try { localStorage.setItem('db_cache', JSON.stringify(db)); } catch(e) {}
+        });
+
+        // Periodic auto-save to localStorage every 30s (crash protection)
+        setInterval(() => {
+            try { localStorage.setItem('db_cache', JSON.stringify(db)); } catch(e) {}
+        }, 30000);
+
+        // Sync between browser tabs via storage event
+        window.addEventListener('storage', (e) => {
+            if (e.key === 'db_cache' && e.newValue) {
+                try {
+                    const newData = JSON.parse(e.newValue);
+                    Object.keys(db).forEach(k => delete db[k]);
+                    Object.assign(db, newData);
+                    renderPage();
+                } catch(err) {}
+            }
         });
 
         // Mobile sidebar functions
@@ -1212,17 +1275,17 @@
             // Accounts
             const accountSelect = document.getElementById('docAccount');
             accountSelect.innerHTML = '<option value="">Выбрать...</option>' +
-                db.accounts.map(a => `<option value="${a.id}">${a.name}</option>`).join('');
+                db.accounts.map(a => `<option value="${esc(a.id)}">${esc(a.name)}</option>`).join('');
 
             // Articles
             const articleSelect = document.getElementById('docArticle');
             articleSelect.innerHTML = '<option value="">Выбрать...</option>' +
-                db.articles.map(a => `<option value="${a.id}">${a.name}</option>`).join('');
+                db.articles.map(a => `<option value="${esc(a.id)}">${esc(a.name)}</option>`).join('');
 
             // Currencies
             const currencySelect = document.getElementById('docCurrency');
             currencySelect.innerHTML = '<option value="">Выбрать...</option>' +
-                db.currencies.map(c => `<option value="${c.id}">${c.code} - ${c.name}</option>`).join('');
+                db.currencies.map(c => `<option value="${esc(c.id)}">${esc(c.code)} - ${esc(c.name)}</option>`).join('');
         }
 
         // ==================== NAVIGATION ====================
@@ -1230,8 +1293,12 @@
             currentPage = page;
             tSelected = null;
             tFilters.search = '';
+            if (page === 'bank' || page === 'cash') _finFilter = { from: '', to: '', search: '' };
             document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
-            if (event && event.target && event.target.classList.contains('nav-item')) event.target.classList.add('active');
+            const navItems = document.querySelectorAll('.nav-item');
+            navItems.forEach(el => {
+                if (el.getAttribute('onclick') && el.getAttribute('onclick').includes("'" + page + "'")) el.classList.add('active');
+            });
             closeSidebar();
             renderPage();
         }
@@ -1244,8 +1311,8 @@
                 document.getElementById('content').innerHTML = renderTradePage(currentPage);
                 return;
             }
-            const noToolbar = ['dashboard','users','actlog','profile','search_results'];
-            document.querySelector('.header .toolbar').style.display = noToolbar.includes(currentPage) ? 'none' : '';
+            const toolbarPages = ['bank','cash'];
+            document.querySelector('.header .toolbar').style.display = toolbarPages.includes(currentPage) ? '' : 'none';
             const pages = {
                 dashboard: renderDashboard,
                 bank: renderBankDocuments,
@@ -1260,7 +1327,9 @@
                 users: renderUsers,
                 actlog: renderActivityLog,
                 profile: renderProfile,
-                search_results: renderSearchResults
+                search_results: renderSearchResults,
+                import_data: renderImport,
+                export_data: renderExport
             };
 
             const titles = {
@@ -1277,31 +1346,53 @@
                 actlog: 'Журнал действий',
                 profile: 'Профиль',
                 search_results: 'Результаты поиска',
+                import_data: 'Импорт и резервные копии',
+                export_data: 'Экспорт данных',
                 dashboard: 'Главная'
             };
 
-            document.getElementById('pageTitle').textContent = titles[currentPage] || 'Документы';
+            const title = titles[currentPage] || 'Документы';
+            document.getElementById('pageTitle').textContent = title;
+            // Breadcrumb
+            const sections = { bank: 'Банк и касса', cash: 'Банк и касса', reports: 'Банк и касса', cashbook: 'Банк и касса', articles: 'Справочники', accounts: 'Справочники', banks: 'Справочники', cashs: 'Справочники', currencies: 'Справочники', users: 'Администрирование', actlog: 'Администрирование' };
+            const bc = document.getElementById('breadcrumb');
+            if (bc) bc.innerHTML = sections[currentPage] ? '<a href="#" onclick="selectPage(\'dashboard\');return false" style="color:#999;text-decoration:none">Главная</a> / ' + sections[currentPage] + ' / ' + esc(title) : '';
             document.getElementById('content').innerHTML = pages[currentPage]();
+            if (currentPage === 'dashboard') initDashCharts();
         }
 
         // ==================== RENDER FUNCTIONS ====================
+        let _finFilter = { from: '', to: '', search: '' };
         function renderBankDocuments() {
-            const docs = db.bankDocuments.filter(d => ['payment_out', 'payment_in', 'payment_order', 'conversion', 'statement', 'directbank'].includes(d.type));
+            let docs = db.bankDocuments.filter(d => ['payment_out', 'payment_in', 'payment_order', 'conversion', 'statement', 'directbank'].includes(d.type));
+            if (_finFilter.from) docs = docs.filter(d => d.date >= _finFilter.from);
+            if (_finFilter.to) docs = docs.filter(d => d.date <= _finFilter.to);
+            if (_finFilter.search) { const q = _finFilter.search.toLowerCase(); docs = docs.filter(d => (d.number + ' ' + (d.contractor || '') + ' ' + (d.purpose || '') + ' ' + (d.note || '') + ' ' + d.sum).toLowerCase().includes(q)); }
+            docs.sort(docCmp);
 
-            if (docs.length === 0) {
-                return '<div class="empty-state">Нет банковских документов</div>';
-            }
+            const totalIn = docs.filter(d => ['payment_in'].includes(d.type)).reduce((s, d) => s + Number(d.sum || 0), 0);
+            const totalOut = docs.filter(d => ['payment_out', 'payment_order', 'conversion', 'statement', 'directbank'].includes(d.type) && d.type !== 'payment_in').reduce((s, d) => s + Number(d.sum || 0), 0);
 
             return `
-                <table class="table-container">
+                <div class="filters" style="display:flex;gap:10px;align-items:end;margin-bottom:12px;flex-wrap:wrap">
+                    <div class="filter-group"><label>Период с</label><input type="date" value="${_finFilter.from}" onchange="_finFilter.from=this.value;renderPage()"></div>
+                    <div class="filter-group"><label>по</label><input type="date" value="${_finFilter.to}" onchange="_finFilter.to=this.value;renderPage()"></div>
+                    <div class="filter-group"><label>Поиск</label><input type="text" placeholder="Номер, контрагент..." value="${esc(_finFilter.search)}" oninput="_finFilter.search=this.value;renderPage()"></div>
+                    <button class="btn" onclick="_finFilter={from:'',to:'',search:''};renderPage()">Сбросить</button>
+                    <span style="flex:1"></span>
+                    <button class="btn" onclick="exportBankExcel()" title="Экспорт в Excel">📥 Excel</button>
+                    <span style="font-size:13px;color:#666">Приход: <b style="color:#2e7d32">${formatAmount(totalIn)}</b> | Расход: <b style="color:#d32f2f">${formatAmount(totalOut)}</b></span>
+                </div>
+                ${docs.length === 0 ? '<div class="empty-state">Нет банковских документов</div>' : `
+                <div class="table-container"><table>
                     <thead>
                         <tr>
-                            <th>Номер</th>
-                            <th>Дата</th>
-                            <th>Тип</th>
-                            <th>Счет/Касса</th>
-                            <th>Контрагент</th>
-                            <th style="text-align: right;">Сумма</th>
+                            <th scope="col">Номер</th>
+                            <th scope="col">Дата</th>
+                            <th scope="col">Тип</th>
+                            <th scope="col">Счет/Касса</th>
+                            <th scope="col">Контрагент</th>
+                            <th scope="col" style="text-align: right;">Сумма</th>
                             <th>Статус</th>
                             <th>Действия</th>
                         </tr>
@@ -1309,76 +1400,89 @@
                     <tbody>
                         ${docs.map(d => `
                             <tr>
-                                <td><strong>${d.number}</strong></td>
+                                <td><strong>${esc(d.number)}</strong></td>
                                 <td>${formatDate(d.date)}</td>
                                 <td>${getDocTypeLabel(d.type)}</td>
                                 <td>${getAccountName(d.account)}</td>
-                                <td>${d.contractor || '-'}</td>
+                                <td>${esc(d.contractor || '-')}</td>
                                 <td class="num amount">${formatAmount(d.sum)}</td>
                                 <td><span class="badge ${d.status === 'posted' ? 'posted' : 'draft'}">${d.status === 'posted' ? 'Проведено' : 'Черновик'}</span></td>
                                 <td>
                                     <div class="action-buttons">
-                                        <button class="action-btn" onclick="editDoc('${d.id}')">✏️</button>
-                                        <button class="action-btn" onclick="deleteDoc('${d.id}')">🗑️</button>
-                                        <button class="action-btn" onclick="printDoc('${d.id}')">🖨️</button>
+                                        <button class="action-btn" onclick="editDoc('${d.id}')" title="Редактировать" aria-label="Редактировать">✏️</button>
+                                        <button class="action-btn" onclick="deleteDoc('${d.id}')" title="Удалить" aria-label="Удалить">🗑️</button>
+                                        <button class="action-btn" onclick="printDoc('${d.id}')" title="Печать" aria-label="Печать">🖨️</button>
                                     </div>
                                 </td>
                             </tr>
                         `).join('')}
                     </tbody>
-                </table>
+                </table></div>`}
             `;
         }
 
         function renderCashDocuments() {
-            const docs = db.cashDocuments;
+            let docs = [...db.cashDocuments];
+            if (_finFilter.from) docs = docs.filter(d => d.date >= _finFilter.from);
+            if (_finFilter.to) docs = docs.filter(d => d.date <= _finFilter.to);
+            if (_finFilter.search) { const q = _finFilter.search.toLowerCase(); docs = docs.filter(d => (d.number + ' ' + (d.contractor || '') + ' ' + (d.purpose || '') + ' ' + (d.note || '') + ' ' + d.sum).toLowerCase().includes(q)); }
+            docs.sort(docCmp);
 
-            if (docs.length === 0) {
-                return '<div class="empty-state">Нет кассовых документов</div>';
-            }
+            const totalIn = docs.filter(d => d.type === 'pko').reduce((s, d) => s + Number(d.sum || 0), 0);
+            const totalOut = docs.filter(d => d.type === 'rko').reduce((s, d) => s + Number(d.sum || 0), 0);
 
             return `
-                <table class="table-container">
+                <div class="filters" style="display:flex;gap:10px;align-items:end;margin-bottom:12px;flex-wrap:wrap">
+                    <div class="filter-group"><label>Период с</label><input type="date" value="${_finFilter.from}" onchange="_finFilter.from=this.value;renderPage()"></div>
+                    <div class="filter-group"><label>по</label><input type="date" value="${_finFilter.to}" onchange="_finFilter.to=this.value;renderPage()"></div>
+                    <div class="filter-group"><label>Поиск</label><input type="text" placeholder="Номер, контрагент..." value="${esc(_finFilter.search)}" oninput="_finFilter.search=this.value;renderPage()"></div>
+                    <button class="btn" onclick="_finFilter={from:'',to:'',search:''};renderPage()">Сбросить</button>
+                    <span style="flex:1"></span>
+                    <button class="btn" onclick="exportCashExcel()" title="Экспорт в Excel">📥 Excel</button>
+                    <span style="font-size:13px;color:#666">Приход: <b style="color:#2e7d32">${formatAmount(totalIn)}</b> | Расход: <b style="color:#d32f2f">${formatAmount(totalOut)}</b></span>
+                </div>
+                ${docs.length === 0 ? '<div class="empty-state">Нет кассовых документов</div>' : `
+                <div class="table-container"><table>
                     <thead>
                         <tr>
-                            <th>Номер</th>
-                            <th>Дата</th>
-                            <th>Тип</th>
-                            <th>Касса</th>
-                            <th>От/Кому</th>
-                            <th style="text-align: right;">Сумма</th>
-                            <th>Статус</th>
-                            <th>Действия</th>
+                            <th scope="col">Номер</th>
+                            <th scope="col">Дата</th>
+                            <th scope="col">Тип</th>
+                            <th scope="col">Касса</th>
+                            <th scope="col">От/Кому</th>
+                            <th scope="col" style="text-align: right;">Сумма</th>
+                            <th scope="col">Статус</th>
+                            <th scope="col">Действия</th>
                         </tr>
                     </thead>
                     <tbody>
                         ${docs.map(d => `
                             <tr>
-                                <td><strong>${d.number}</strong></td>
+                                <td><strong>${esc(d.number)}</strong></td>
                                 <td>${formatDate(d.date)}</td>
                                 <td>${getDocTypeLabel(d.type)}</td>
                                 <td>${getAccountName(d.account)}</td>
-                                <td>${d.contractor || '-'}</td>
+                                <td>${esc(d.contractor || '-')}</td>
                                 <td class="num amount">${formatAmount(d.sum)}</td>
                                 <td><span class="badge ${d.status === 'posted' ? 'posted' : 'draft'}">${d.status === 'posted' ? 'Проведено' : 'Черновик'}</span></td>
                                 <td>
                                     <div class="action-buttons">
-                                        <button class="action-btn" onclick="editDoc('${d.id}')">✏️</button>
-                                        <button class="action-btn" onclick="deleteDoc('${d.id}')">🗑️</button>
-                                        <button class="action-btn" onclick="printDoc('${d.id}')">🖨️</button>
+                                        <button class="action-btn" onclick="editDoc('${d.id}')" title="Редактировать" aria-label="Редактировать">✏️</button>
+                                        <button class="action-btn" onclick="deleteDoc('${d.id}')" title="Удалить" aria-label="Удалить">🗑️</button>
+                                        <button class="action-btn" onclick="printDoc('${d.id}')" title="Печать" aria-label="Печать">🖨️</button>
                                     </div>
                                 </td>
                             </tr>
                         `).join('')}
                     </tbody>
-                </table>
+                </table></div>`}
             `;
         }
 
         function renderReports() {
             const allDocs = [...db.bankDocuments, ...db.cashDocuments];
-            const totalIn = allDocs.filter(d => d.type === 'payment_in' || d.type === 'pko').reduce((s, d) => s + d.sum, 0);
-            const totalOut = allDocs.filter(d => d.type === 'payment_out' || d.type === 'rko').reduce((s, d) => s + d.sum, 0);
+            const totalIn = allDocs.filter(d => d.type === 'payment_in' || d.type === 'pko').reduce((s, d) => s + Number(d.sum || 0), 0);
+            const totalOut = allDocs.filter(d => d.type === 'payment_out' || d.type === 'rko').reduce((s, d) => s + Number(d.sum || 0), 0);
             const postedDocs = allDocs.filter(d => d.status === 'posted').length;
 
             return `
@@ -1402,36 +1506,36 @@
                 </div>
 
                 <h3 style="margin-top: 30px; margin-bottom: 15px;">Движение денежных средств</h3>
-                <table class="table-container">
+                ${!allDocs.length ? '<div class="empty-state">Нет документов для отчёта</div>' : `<div class="table-container"><table>
                     <thead>
                         <tr>
-                            <th>Документ</th>
-                            <th>Дата</th>
-                            <th>Контрагент</th>
-                            <th style="text-align: right;">Приход</th>
-                            <th style="text-align: right;">Расход</th>
+                            <th scope="col">Документ</th>
+                            <th scope="col">Дата</th>
+                            <th scope="col">Контрагент</th>
+                            <th scope="col" style="text-align: right;">Приход</th>
+                            <th scope="col" style="text-align: right;">Расход</th>
                         </tr>
                     </thead>
                     <tbody>
-                        ${allDocs.slice(0, 20).map(d => {
+                        ${allDocs.map(d => {
                             const isIn = d.type === 'payment_in' || d.type === 'pko';
                             return `
                                 <tr>
-                                    <td>${d.number}</td>
+                                    <td>${esc(d.number)}</td>
                                     <td>${formatDate(d.date)}</td>
-                                    <td>${d.contractor || '-'}</td>
+                                    <td>${esc(d.contractor || '-')}</td>
                                     <td class="num">${isIn ? formatAmount(d.sum) : '-'}</td>
                                     <td class="num">${!isIn && d.type !== 'payment_in' && d.type !== 'pko' ? formatAmount(d.sum) : '-'}</td>
                                 </tr>
                             `;
                         }).join('')}
                     </tbody>
-                </table>
+                </table></div>`}
             `;
         }
 
         function renderCashbook() {
-            const cashDocs = db.cashDocuments.filter(d => (d.type === 'pko' || d.type === 'rko') && d.status !== 'deleted').sort((a, b) => (a.date + a.number).localeCompare(b.date + b.number));
+            const cashDocs = db.cashDocuments.filter(d => (d.type === 'pko' || d.type === 'rko') && d.status !== 'deleted').sort((a, b) => docCmp(b, a));
             const byDay = {};
             cashDocs.forEach(d => { (byDay[d.date] = byDay[d.date] || []).push(d); });
             const days = Object.keys(byDay).sort();
@@ -1455,8 +1559,8 @@
                         <tbody>
                             <tr><td colspan="3"><i>Остаток на начало дня</i></td><td class="num">${formatAmount(opening)}</td><td></td></tr>
                             ${docs.map(d => { const art = db.articles.find(a => a.id === d.article); return `<tr ondblclick="editDoc('${d.id}')" style="cursor:pointer">
-                                <td><strong>${d.number}</strong> <span style="color:#777">(${d.type === 'pko' ? 'ПКО' : 'РКО'})</span></td>
-                                <td>${d.contractor || '-'}${d.purpose ? '<br><span style="color:#777;font-size:12px">' + d.purpose + '</span>' : ''}</td>
+                                <td><strong>${esc(d.number)}</strong> <span style="color:#777">(${d.type === 'pko' ? 'ПКО' : 'РКО'})</span></td>
+                                <td>${esc(d.contractor || '-')}${d.purpose ? '<br><span style="color:#777;font-size:12px">' + esc(d.purpose) + '</span>' : ''}</td>
                                 <td>${art ? (art.type === 'in' ? '62.01' : '60.01') : (d.type === 'pko' ? '62.01' : '71.01')}</td>
                                 <td class="num">${d.type === 'pko' ? formatAmount(d.sum) : ''}</td><td class="num">${d.type === 'rko' ? formatAmount(d.sum) : ''}</td></tr>`; }).join('')}
                             <tr style="background:#fafafa"><td colspan="3"><b>Итого за день</b></td><td class="num"><b>${formatAmount(inSum)}</b></td><td class="num"><b>${formatAmount(outSum)}</b></td></tr>
@@ -1471,28 +1575,87 @@
         }
         function printCashbook() {
             const el = document.getElementById('cashbook'); if (!el) return;
-            tPrintWindow('<h2>Кассовая книга (КО-4)</h2><p>' + esc(db.trade.org.name) + '</p>' + el.innerHTML.replace(/ondblclick="[^"]*"/g, ''), 'Кассовая книга');
+            const orgName = db.trade && db.trade.org ? db.trade.org.name : '';
+            tPrintWindow('<h2>Кассовая книга (КО-4)</h2><p>' + esc(orgName) + '</p>' + el.innerHTML.replace(/ondblclick="[^"]*"/g, ''), 'Кассовая книга');
         }
 
         function renderArticles() {
             return `
+                <div style="margin-bottom:12px">
+                    <button class="btn btn-primary" onclick="showAddArticle()">+ Добавить статью</button>
+                </div>
+                <div id="articleFormWrap" style="display:none;background:#fff;padding:16px;border-radius:8px;margin-bottom:16px;box-shadow:0 2px 8px rgba(0,0,0,0.08)">
+                    <h4 id="articleFormTitle" style="margin-bottom:12px">Новая статья ДДС</h4>
+                    <input type="hidden" id="artEditId">
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+                        <div class="form-group"><label>Название</label><input id="artName" class="form-control" placeholder="Оплата поставщикам"></div>
+                        <div class="form-group"><label>Тип</label><select id="artType" class="form-control"><option value="in">Приход</option><option value="out">Расход</option></select></div>
+                    </div>
+                    <div style="margin-top:10px;display:flex;gap:8px">
+                        <button class="btn btn-primary" onclick="saveArticle()">Сохранить</button>
+                        <button class="btn" onclick="document.getElementById('articleFormWrap').style.display='none'">Отмена</button>
+                    </div>
+                </div>
                 <table class="table-container">
                     <thead>
                         <tr>
                             <th>Статья</th>
                             <th>Тип</th>
+                            <th style="width:100px">Действия</th>
                         </tr>
                     </thead>
                     <tbody>
                         ${db.articles.map(a => `
                             <tr>
-                                <td>${a.name}</td>
+                                <td>${esc(a.name)}</td>
                                 <td><span class="badge ${a.type === 'in' ? 'incoming' : 'draft'}">${a.type === 'in' ? 'Приход' : 'Расход'}</span></td>
+                                <td>
+                                    <button class="btn" style="padding:4px 8px;font-size:12px" onclick="editArticle('${a.id}')">✏️</button>
+                                    <button class="btn" style="padding:4px 8px;font-size:12px;color:#d32f2f" onclick="deleteArticle('${a.id}')">🗑</button>
+                                </td>
                             </tr>
                         `).join('')}
                     </tbody>
                 </table>
             `;
+        }
+        function showAddArticle() {
+            document.getElementById('articleFormWrap').style.display = 'block';
+            document.getElementById('articleFormTitle').textContent = 'Новая статья ДДС';
+            document.getElementById('artEditId').value = '';
+            document.getElementById('artName').value = '';
+            document.getElementById('artType').value = 'out';
+        }
+        function editArticle(id) {
+            const a = db.articles.find(x => x.id === id);
+            if (!a) return;
+            document.getElementById('articleFormWrap').style.display = 'block';
+            document.getElementById('articleFormTitle').textContent = 'Редактировать статью';
+            document.getElementById('artEditId').value = id;
+            document.getElementById('artName').value = a.name || '';
+            document.getElementById('artType').value = a.type || 'out';
+        }
+        function saveArticle() {
+            const name = document.getElementById('artName').value.trim();
+            if (!name) { alert('Укажите название'); return; }
+            const editId = document.getElementById('artEditId').value;
+            if (editId) {
+                const a = db.articles.find(x => x.id === editId);
+                if (a) { a.name = name; a.type = document.getElementById('artType').value; }
+            } else {
+                db.articles.push({ id: uid(), name, type: document.getElementById('artType').value });
+            }
+            saveData(); populateSelects(); renderPage();
+        }
+        function deleteArticle(id) {
+            const a = db.articles.find(x => x.id === id);
+            if (!a) return;
+            const usedIn = (db.bankDocuments || []).filter(d => d.article === id)
+                .concat((db.cashDocuments || []).filter(d => d.article === id));
+            if (usedIn.length) { alert('Нельзя удалить статью «' + a.name + '» — она используется в ' + usedIn.length + ' документе(ах). Сначала измените статью в этих документах.'); return; }
+            if (!confirm('Удалить статью «' + a.name + '»?')) return;
+            db.articles = db.articles.filter(x => x.id !== id);
+            saveData(); populateSelects(); renderPage();
         }
 
         function renderAccounts() {
@@ -1570,13 +1733,17 @@
                 const a = db.accounts.find(x => x.id === editId);
                 if (a) { a.name = name; a.number = document.getElementById('accNumber').value.trim(); a.bank = document.getElementById('accBank').value.trim(); a.type = document.getElementById('accType').value; }
             } else {
-                db.accounts.push({ id: '_' + Date.now(), name, number: document.getElementById('accNumber').value.trim(), bank: document.getElementById('accBank').value.trim(), type: document.getElementById('accType').value });
+                db.accounts.push({ id: uid(), name, number: document.getElementById('accNumber').value.trim(), bank: document.getElementById('accBank').value.trim(), type: document.getElementById('accType').value });
             }
             saveData(); populateSelects(); renderPage();
         }
         function deleteAccount(id) {
             const a = db.accounts.find(x => x.id === id);
-            if (!a || !confirm('Удалить счёт «' + a.name + '»?')) return;
+            if (!a) return;
+            const usedIn = (db.bankDocuments || []).filter(d => d.account === id)
+                .concat((db.cashDocuments || []).filter(d => d.account === id));
+            if (usedIn.length) { alert('Нельзя удалить счёт «' + a.name + '» — он используется в ' + usedIn.length + ' документе(ах). Сначала измените счёт в этих документах.'); return; }
+            if (!confirm('Удалить счёт «' + a.name + '»?')) return;
             db.accounts = db.accounts.filter(x => x.id !== id);
             saveData(); populateSelects(); renderPage();
         }
@@ -1651,13 +1818,16 @@
                 const b = db.banks.find(x => x.id === editId);
                 if (b) { b.name = name; b.bik = document.getElementById('bankBik').value.trim(); b.corrAccount = document.getElementById('bankCorr').value.trim(); }
             } else {
-                db.banks.push({ id: '_' + Date.now(), name, bik: document.getElementById('bankBik').value.trim(), corrAccount: document.getElementById('bankCorr').value.trim() });
+                db.banks.push({ id: uid(), name, bik: document.getElementById('bankBik').value.trim(), corrAccount: document.getElementById('bankCorr').value.trim() });
             }
             saveData(); renderPage();
         }
         function deleteBankItem(id) {
             const b = db.banks.find(x => x.id === id);
-            if (!b || !confirm('Удалить банк «' + b.name + '»?')) return;
+            if (!b) return;
+            const usedIn = (db.accounts || []).filter(a => a.bank === b.name || a.bank === id);
+            if (usedIn.length) { alert('Нельзя удалить банк «' + b.name + '» — он привязан к ' + usedIn.length + ' счёту(ам). Сначала измените банк в этих счетах.'); return; }
+            if (!confirm('Удалить банк «' + b.name + '»?')) return;
             db.banks = db.banks.filter(x => x.id !== id);
             saveData(); renderPage();
         }
@@ -1727,38 +1897,104 @@
                 const c = db.cashs.find(x => x.id === editId);
                 if (c) { c.name = name; c.responsible = document.getElementById('cashResp').value.trim(); }
             } else {
-                db.cashs.push({ id: '_' + Date.now(), name, responsible: document.getElementById('cashResp').value.trim() });
+                db.cashs.push({ id: uid(), name, responsible: document.getElementById('cashResp').value.trim() });
             }
             saveData(); renderPage();
         }
         function deleteCashItem(id) {
             const c = db.cashs.find(x => x.id === id);
-            if (!c || !confirm('Удалить кассу «' + c.name + '»?')) return;
+            if (!c) return;
+            const usedIn = (db.cashDocuments || []).filter(d => d.account === id);
+            if (usedIn.length) { alert('Нельзя удалить кассу «' + c.name + '» — она используется в ' + usedIn.length + ' документе(ах). Сначала измените кассу в этих документах.'); return; }
+            if (!confirm('Удалить кассу «' + c.name + '»?')) return;
             db.cashs = db.cashs.filter(x => x.id !== id);
             saveData(); renderPage();
         }
 
         function renderCurrencies() {
             return `
+                <div style="margin-bottom:12px">
+                    <button class="btn btn-primary" onclick="showAddCurrency()">+ Добавить валюту</button>
+                </div>
+                <div id="currFormWrap" style="display:none;background:#fff;padding:16px;border-radius:8px;margin-bottom:16px;box-shadow:0 2px 8px rgba(0,0,0,0.08)">
+                    <h4 id="currFormTitle" style="margin-bottom:12px">Новая валюта</h4>
+                    <input type="hidden" id="currEditId">
+                    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px">
+                        <div class="form-group"><label>Код</label><input id="currCode" class="form-control" placeholder="USD" maxlength="5"></div>
+                        <div class="form-group"><label>Название</label><input id="currName" class="form-control" placeholder="Доллар США"></div>
+                        <div class="form-group"><label>Курс</label><input id="currRate" class="form-control" type="number" step="0.0001" placeholder="1.0000"></div>
+                    </div>
+                    <div style="margin-top:10px;display:flex;gap:8px">
+                        <button class="btn btn-primary" onclick="saveCurrency()">Сохранить</button>
+                        <button class="btn" onclick="document.getElementById('currFormWrap').style.display='none'">Отмена</button>
+                    </div>
+                </div>
                 <table class="table-container">
                     <thead>
                         <tr>
                             <th>Код</th>
                             <th>Название</th>
                             <th style="text-align: right;">Курс</th>
+                            <th style="width:100px">Действия</th>
                         </tr>
                     </thead>
                     <tbody>
                         ${db.currencies.map(c => `
                             <tr>
-                                <td><strong>${c.code}</strong></td>
-                                <td>${c.name}</td>
+                                <td><strong>${esc(c.code)}</strong></td>
+                                <td>${esc(c.name)}</td>
                                 <td class="num">${formatAmount(c.rate)}</td>
+                                <td>
+                                    <button class="btn" style="padding:4px 8px;font-size:12px" onclick="editCurrency('${c.id}')">✏️</button>
+                                    <button class="btn" style="padding:4px 8px;font-size:12px;color:#d32f2f" onclick="deleteCurrency('${c.id}')">🗑</button>
+                                </td>
                             </tr>
                         `).join('')}
                     </tbody>
                 </table>
             `;
+        }
+        function showAddCurrency() {
+            document.getElementById('currFormWrap').style.display = 'block';
+            document.getElementById('currFormTitle').textContent = 'Новая валюта';
+            document.getElementById('currEditId').value = '';
+            document.getElementById('currCode').value = '';
+            document.getElementById('currName').value = '';
+            document.getElementById('currRate').value = '';
+        }
+        function editCurrency(id) {
+            const c = db.currencies.find(x => x.id === id);
+            if (!c) return;
+            document.getElementById('currFormWrap').style.display = 'block';
+            document.getElementById('currFormTitle').textContent = 'Редактировать валюту';
+            document.getElementById('currEditId').value = id;
+            document.getElementById('currCode').value = c.code || '';
+            document.getElementById('currName').value = c.name || '';
+            document.getElementById('currRate').value = c.rate || '';
+        }
+        function saveCurrency() {
+            const code = document.getElementById('currCode').value.trim().toUpperCase();
+            const name = document.getElementById('currName').value.trim();
+            if (!code || !name) { alert('Заполните код и название'); return; }
+            const rate = parseFloat(document.getElementById('currRate').value) || 1;
+            const editId = document.getElementById('currEditId').value;
+            if (editId) {
+                const c = db.currencies.find(x => x.id === editId);
+                if (c) { c.code = code; c.name = name; c.rate = rate; }
+            } else {
+                db.currencies.push({ id: uid(), code, name, rate });
+            }
+            saveData(); renderPage();
+        }
+        function deleteCurrency(id) {
+            const c = db.currencies.find(x => x.id === id);
+            if (!c) return;
+            const usedIn = (db.bankDocuments || []).filter(d => d.currency === id)
+                .concat((db.cashDocuments || []).filter(d => d.currency === id));
+            if (usedIn.length) { alert('Нельзя удалить валюту «' + c.name + '» — она используется в ' + usedIn.length + ' документе(ах). Сначала измените валюту в этих документах.'); return; }
+            if (!confirm('Удалить валюту «' + c.name + '»?')) return;
+            db.currencies = db.currencies.filter(x => x.id !== id);
+            saveData(); renderPage();
         }
 
         // ==================== DASHBOARD ====================
@@ -1767,6 +2003,27 @@
             const cashCount = db.cashDocuments ? db.cashDocuments.length : 0;
             const tradeCount = db.trade && db.trade.docs ? db.trade.docs.length : 0;
             const contractorCount = db.trade && db.trade.contractors ? db.trade.contractors.length : 0;
+
+            // Пустая база — показываем приветствие
+            const totalDocs = bankCount + cashCount + tradeCount;
+            if (totalDocs === 0 && contractorCount === 0) {
+                return '<div style="padding:40px;text-align:center;max-width:600px;margin:0 auto">' +
+                    '<div style="font-size:64px;margin-bottom:20px">📊</div>' +
+                    '<h2 style="margin-bottom:12px;color:#333">Добро пожаловать в 1s Бухгалтерия!</h2>' +
+                    '<p style="color:#666;margin-bottom:30px;line-height:1.6">База данных пуста. Вы можете начать работу с нуля или загрузить тестовые данные для ознакомления с системой.</p>' +
+                    '<div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">' +
+                    '<button class="btn primary" onclick="tSeedDemo(true)" style="padding:12px 24px;font-size:15px">📦 Загрузить тестовые данные</button>' +
+                    '<button class="btn" onclick="selectPage(\'bank\')" style="padding:12px 24px;font-size:15px">➕ Начать с нуля</button>' +
+                    '</div>' +
+                    '<div style="margin-top:40px;text-align:left;background:#f8f9fa;border-radius:8px;padding:20px">' +
+                    '<h3 style="margin-bottom:12px;font-size:15px">Быстрый старт:</h3>' +
+                    '<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">' +
+                    '<div style="cursor:pointer;padding:10px;border-radius:6px;background:#fff;border:1px solid #e0e0e0" onclick="selectPage(\'accounts\')">🏦 Настроить счета</div>' +
+                    '<div style="cursor:pointer;padding:10px;border-radius:6px;background:#fff;border:1px solid #e0e0e0" onclick="selectPage(\'ref_contractors\')">👥 Добавить контрагентов</div>' +
+                    '<div style="cursor:pointer;padding:10px;border-radius:6px;background:#fff;border:1px solid #e0e0e0" onclick="selectPage(\'ref_nomenclature\')">📋 Создать номенклатуру</div>' +
+                    '<div style="cursor:pointer;padding:10px;border-radius:6px;background:#fff;border:1px solid #e0e0e0" onclick="selectPage(\'ref_org\')">🏢 Реквизиты организации</div>' +
+                    '</div></div></div>';
+            }
             const nomCount = db.trade && db.trade.nomenclature ? db.trade.nomenclature.length : 0;
             const empCount = db.trade && db.trade.employees ? db.trade.employees.length : 0;
 
@@ -1782,49 +2039,77 @@
                 else if (isOut) accBalances[d.account] -= (d.sum || 0);
             });
 
-            // Account balance cards
+            // Account balance cards — grouped by currency
             let balanceHtml = '';
             if (db.accounts && db.accounts.length) {
-                balanceHtml = '<div class="dash-section"><h3 style="margin-bottom:12px">Остатки по счетам (KGS)</h3><div class="dash-cards">' +
-                    db.accounts.map(a => {
-                        const bal = accBalances[a.id] || 0;
-                        const color = bal > 0 ? '#2e7d32' : bal < 0 ? '#d32f2f' : '#666';
-                        return '<div class="dash-card">' +
-                            '<h3>' + esc(a.name || a.bank || 'Счёт') + '</h3>' +
-                            (a.number ? '<div class="dash-sub" style="margin-bottom:4px">' + esc(a.number) + '</div>' : '') +
-                            '<div class="dash-value" style="color:' + color + '">' + fmt(bal) + '</div>' +
-                            '<div class="dash-sub">KGS</div>' +
-                            '</div>';
-                    }).join('') +
-                    '</div></div>';
+                const getCur = (a) => { const c = (db.currencies || []).find(x => x.id === a.currency); return c ? c.code : 'KGS'; };
+                const curGroups = {};
+                db.accounts.forEach(a => {
+                    const cur = getCur(a);
+                    if (!curGroups[cur]) curGroups[cur] = [];
+                    curGroups[cur].push(a);
+                });
 
-                // Total across all accounts
-                const totalBal = Object.values(accBalances).reduce((s, v) => s + v, 0);
-                const totalColor = totalBal > 0 ? '#2e7d32' : totalBal < 0 ? '#d32f2f' : '#666';
-                balanceHtml += '<div class="dash-section" style="margin-top:8px"><div class="dash-cards">' +
-                    '<div class="dash-card" style="border-left:4px solid ' + totalColor + '">' +
-                    '<h3>Итого по всем счетам</h3>' +
-                    '<div class="dash-value" style="color:' + totalColor + '">' + fmt(totalBal) + '</div>' +
-                    '<div class="dash-sub">KGS</div></div>' +
-                    '</div></div>';
+                Object.keys(curGroups).forEach(cur => {
+                    balanceHtml += '<div class="dash-section"><h3 style="margin-bottom:12px">Остатки по счетам (' + esc(cur) + ')</h3><div class="dash-cards">' +
+                        curGroups[cur].map(a => {
+                            const bal = accBalances[a.id] || 0;
+                            const color = bal > 0 ? '#2e7d32' : bal < 0 ? '#d32f2f' : '#666';
+                            return '<div class="dash-card">' +
+                                '<h3>' + esc(a.name || a.bank || 'Счёт') + '</h3>' +
+                                (a.number ? '<div class="dash-sub" style="margin-bottom:4px">' + esc(a.number) + '</div>' : '') +
+                                '<div class="dash-value" style="color:' + color + '">' + fmt(bal) + '</div>' +
+                                '<div class="dash-sub">' + esc(cur) + '</div>' +
+                                '</div>';
+                        }).join('') +
+                        '</div></div>';
+                });
+
+                // Totals by currency
+                const totalsByCur = {};
+                db.accounts.forEach(a => {
+                    const cur = getCur(a);
+                    totalsByCur[cur] = (totalsByCur[cur] || 0) + (accBalances[a.id] || 0);
+                });
+                const curKeys = Object.keys(totalsByCur);
+                if (curKeys.length) {
+                    balanceHtml += '<div class="dash-section" style="margin-top:8px"><div class="dash-cards">' +
+                        curKeys.map(cur => {
+                            const t = totalsByCur[cur];
+                            const color = t > 0 ? '#2e7d32' : t < 0 ? '#d32f2f' : '#666';
+                            return '<div class="dash-card" style="border-left:4px solid ' + color + '">' +
+                                '<h3>Итого' + (curKeys.length > 1 ? ' (' + esc(cur) + ')' : '') + '</h3>' +
+                                '<div class="dash-value" style="color:' + color + '">' + fmt(t) + '</div>' +
+                                '<div class="dash-sub">' + esc(cur) + '</div></div>';
+                        }).join('') +
+                        '</div></div>';
+                }
             }
 
             // Recent operations (last 10)
             let recentRows = '';
             const allDocs = [];
-            (db.bankDocuments || []).forEach(d => allDocs.push({ date: d.date, type: 'Банк', desc: esc(d.contractor || d.purpose || d.type), sum: d.sum }));
-            (db.cashDocuments || []).forEach(d => allDocs.push({ date: d.date, type: 'Касса', desc: esc(d.contractor || d.purpose || d.type), sum: d.sum }));
-            if (db.trade && db.trade.docs) db.trade.docs.forEach(d => allDocs.push({ date: d.date, type: esc(d.type || 'Документ'), desc: esc(d.contractor ? (tContractor(d.contractor)||{}).name||d.contractor : (d.number||'')), sum: d.total || d.sum || 0 }));
+            (db.bankDocuments || []).forEach(d => allDocs.push({ date: d.date, type: getDocTypeLabel(d.type), desc: esc(d.contractor || d.purpose || ''), sum: d.sum, isIn: d.type === 'payment_in' }));
+            (db.cashDocuments || []).forEach(d => allDocs.push({ date: d.date, type: getDocTypeLabel(d.type), desc: esc(d.contractor || d.purpose || ''), sum: d.sum, isIn: d.type === 'pko' }));
+            if (db.trade && db.trade.docs) db.trade.docs.forEach(d => { const tt = TT[d.type]; allDocs.push({ date: d.date, type: tt ? tt.short || tt.label : d.type, desc: esc(d.contractor ? (tContractor(d.contractor)||{}).name||d.contractor : (d.number||'')), sum: d.total || d.sum || 0, isIn: tt && tt.group === 'sale' }); });
             allDocs.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
             const recent = allDocs.slice(0, 10);
             if (recent.length) {
-                recentRows = recent.map(d => '<tr><td>' + (d.date || '—') + '</td><td>' + (d.type || '') + '</td><td>' + (d.desc || '—') + '</td><td style="text-align:right">' + fmt(d.sum || 0) + '</td></tr>').join('');
+                recentRows = recent.map(d => '<tr><td>' + (d.date || '—') + '</td><td>' + (d.type || '') + '</td><td>' + (d.desc || '—') + '</td><td style="text-align:right;color:' + (d.isIn ? '#2e7d32' : '#d32f2f') + '">' + fmt(d.sum || 0) + '</td></tr>').join('');
             } else {
                 recentRows = '<tr><td colspan="4" style="text-align:center;color:#999;padding:20px">Нет документов</td></tr>';
             }
 
             return '<div style="padding:20px">' +
                 balanceHtml +
+                '<div class="dash-section" style="margin-top:16px"><h3 style="margin-bottom:12px">Быстрые действия</h3><div style="display:flex;gap:8px;flex-wrap:wrap">' +
+                '<button class="btn primary" onclick="selectPage(\'bank\');setTimeout(()=>{openCreateModal();document.getElementById(\'docType\').value=\'payment_in\';updateFormByType()},100)" style="padding:8px 14px">Входящий платёж</button>' +
+                '<button class="btn primary" onclick="selectPage(\'bank\');setTimeout(()=>{openCreateModal();document.getElementById(\'docType\').value=\'payment_out\';updateFormByType()},100)" style="padding:8px 14px">Исходящий платёж</button>' +
+                '<button class="btn" onclick="selectPage(\'cash\');setTimeout(()=>{openCreateModal();document.getElementById(\'docType\').value=\'pko\';updateFormByType()},100)" style="padding:8px 14px">ПКО</button>' +
+                '<button class="btn" onclick="selectPage(\'cash\');setTimeout(()=>{openCreateModal();document.getElementById(\'docType\').value=\'rko\';updateFormByType()},100)" style="padding:8px 14px">РКО</button>' +
+                '<button class="btn" onclick="selectPage(\'p_purchase\');setTimeout(()=>tCreate(\'purchase\'),100)" style="padding:8px 14px">Поступление</button>' +
+                '<button class="btn" onclick="selectPage(\'p_sale\');setTimeout(()=>tCreate(\'sale\'),100)" style="padding:8px 14px">Реализация</button>' +
+                '</div></div>' +
                 '<div class="dash-section" style="margin-top:16px"><h3 style="margin-bottom:12px">Сводка</h3><div class="dash-cards">' +
                 '<div class="dash-card"><h3>Банковские документы</h3><div class="dash-value">' + bankCount + '</div></div>' +
                 '<div class="dash-card"><h3>Кассовые документы</h3><div class="dash-value">' + cashCount + '</div></div>' +
@@ -1833,7 +2118,73 @@
                 '<div class="dash-card"><h3>Номенклатура</h3><div class="dash-value">' + nomCount + '</div></div>' +
                 '<div class="dash-card"><h3>Сотрудники</h3><div class="dash-value">' + empCount + '</div></div>' +
                 '</div></div>' +
+                (totalDocs > 0 ? '<div class="dash-section" style="margin-top:16px"><h3 style="margin-bottom:12px">Динамика за 6 месяцев</h3><div style="display:grid;grid-template-columns:2fr 1fr;gap:16px"><div style="background:#fff;border-radius:8px;padding:16px;border:1px solid #e0e0e0"><canvas id="dashChart" height="200"></canvas></div><div style="background:#fff;border-radius:8px;padding:16px;border:1px solid #e0e0e0"><canvas id="dashPie" height="200"></canvas></div></div></div>' : '') +
                 '<div class="dash-recent"><h3>Последние операции</h3><table><thead><tr><th>Дата</th><th>Тип</th><th>Описание</th><th style="text-align:right">Сумма</th></tr></thead><tbody>' + recentRows + '</tbody></table></div></div>';
+        }
+
+        let _dashBarChart = null, _dashPieChart = null;
+        function initDashCharts() {
+            if (typeof Chart === 'undefined') return;
+            const el = document.getElementById('dashChart');
+            const pie = document.getElementById('dashPie');
+            if (!el || !pie) return;
+            if (_dashBarChart) { _dashBarChart.destroy(); _dashBarChart = null; }
+            if (_dashPieChart) { _dashPieChart.destroy(); _dashPieChart = null; }
+
+            // Collect 6 months of income/expense data
+            const months = [];
+            const now = new Date();
+            for (let i = 5; i >= 0; i--) {
+                const d = new Date(now.getFullYear(), now.getMonth() - i, 1);
+                months.push({ y: d.getFullYear(), m: d.getMonth() + 1, label: d.toLocaleString('ru-RU', { month: 'short', year: '2-digit' }) });
+            }
+            const income = months.map(() => 0), expense = months.map(() => 0);
+            const allFin = [...(db.bankDocuments || []), ...(db.cashDocuments || [])];
+            allFin.forEach(doc => {
+                if (!doc.date) return;
+                const dd = new Date(doc.date);
+                const idx = months.findIndex(m => m.y === dd.getFullYear() && m.m === dd.getMonth() + 1);
+                if (idx < 0) return;
+                if (doc.type === 'payment_in' || doc.type === 'pko') income[idx] += doc.sum || 0;
+                else if (doc.type === 'payment_out' || doc.type === 'rko') expense[idx] += doc.sum || 0;
+            });
+            if (db.trade && db.trade.docs) db.trade.docs.filter(d => d.status === 'posted').forEach(doc => {
+                if (!doc.date) return;
+                const dd = new Date(doc.date);
+                const idx = months.findIndex(m => m.y === dd.getFullYear() && m.m === dd.getMonth() + 1);
+                if (idx < 0) return;
+                const tt = TT[doc.type];
+                if (tt && tt.group === 'sale') income[idx] += doc.total || 0;
+                else if (tt && tt.group === 'purchase') expense[idx] += doc.total || 0;
+            });
+
+            _dashBarChart = new Chart(el, {
+                type: 'bar',
+                data: {
+                    labels: months.map(m => m.label),
+                    datasets: [
+                        { label: 'Доходы', data: income, backgroundColor: 'rgba(46,125,50,0.7)', borderRadius: 4 },
+                        { label: 'Расходы', data: expense, backgroundColor: 'rgba(211,47,47,0.7)', borderRadius: 4 }
+                    ]
+                },
+                options: { responsive: true, plugins: { legend: { position: 'bottom' } }, scales: { y: { beginAtZero: true, ticks: { callback: v => v >= 1000 ? (v / 1000).toFixed(0) + 'k' : v } } } }
+            });
+
+            // Pie — expense by article
+            const byArticle = {};
+            allFin.filter(d => d.type === 'payment_out' || d.type === 'rko').forEach(d => {
+                const art = d.article ? ((db.articles || []).find(a => a.id === d.article) || {}).name || 'Прочее' : 'Без статьи';
+                byArticle[art] = (byArticle[art] || 0) + (d.sum || 0);
+            });
+            const pieLabels = Object.keys(byArticle).slice(0, 8);
+            const pieData = pieLabels.map(k => byArticle[k]);
+            const pieColors = ['#2196f3', '#ff9800', '#4caf50', '#9c27b0', '#f44336', '#009688', '#795548', '#607d8b'];
+
+            _dashPieChart = new Chart(pie, {
+                type: 'doughnut',
+                data: { labels: pieLabels, datasets: [{ data: pieData, backgroundColor: pieColors.slice(0, pieLabels.length) }] },
+                options: { responsive: true, plugins: { legend: { position: 'bottom', labels: { font: { size: 11 } } }, title: { display: true, text: 'Расходы по статьям' } } }
+            });
         }
 
         function fmt(n) { return Number(n || 0).toLocaleString('ru-RU', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); }
@@ -1842,7 +2193,7 @@
         let _searchResults = [];
         function doGlobalSearch() {
             const q = (document.getElementById('globalSearch').value || '').trim().toLowerCase();
-            if (!q) return;
+            if (!q) { showToast('Введите текст для поиска'); document.getElementById('globalSearch').focus(); return; }
             _searchResults = [];
             // Search bank docs
             (db.bankDocuments || []).forEach(d => {
@@ -1925,7 +2276,7 @@
             dd.className = 'notif-dropdown open';
             const notifs = getNotifications();
             dd.innerHTML = '<div style="padding:12px 16px;font-weight:600;border-bottom:1px solid #eee">Уведомления</div>' +
-                notifs.map(n => '<div class="notif-item"><div class="notif-title">' + n.title + '</div><div>' + n.text + '</div><div class="notif-time">' + n.time + '</div></div>').join('');
+                notifs.map(n => '<div class="notif-item"><div class="notif-title">' + esc(n.title) + '</div><div>' + esc(n.text) + '</div><div class="notif-time">' + esc(n.time) + '</div></div>').join('');
             btn.style.position = 'relative';
             btn.appendChild(dd);
             setTimeout(() => document.addEventListener('click', function closeNotif(e) { if (!dd.contains(e.target) && e.target !== btn) { dd.classList.remove('open'); document.removeEventListener('click', closeNotif); } }), 10);
@@ -1997,7 +2348,7 @@
             const msg = document.getElementById('passMsg');
             if (!oldP || !newP1 || !newP2) { msg.innerHTML = '<span style="color:#d32f2f">Заполните все поля</span>'; return; }
             if (newP1 !== newP2) { msg.innerHTML = '<span style="color:#d32f2f">Пароли не совпадают</span>'; return; }
-            if (newP1.length < 4) { msg.innerHTML = '<span style="color:#d32f2f">Минимум 4 символа</span>'; return; }
+            if (newP1.length < 6) { msg.innerHTML = '<span style="color:#d32f2f">Минимум 6 символов</span>'; return; }
             msg.innerHTML = '<span style="color:#999">Сохранение...</span>';
             const oldHash = await _sha256(oldP);
             const newHash = await _sha256(newP1);
@@ -2091,8 +2442,8 @@
                 msgEl.innerHTML = '<span style="color:#d32f2f">Заполните все поля</span>';
                 return;
             }
-            if (pass.length < 4) {
-                msgEl.innerHTML = '<span style="color:#d32f2f">Пароль минимум 4 символа</span>';
+            if (pass.length < 6) {
+                msgEl.innerHTML = '<span style="color:#d32f2f">Пароль минимум 6 символов</span>';
                 return;
             }
 
@@ -2170,7 +2521,7 @@
             const commits = await DbSync.getHistory(20);
             if (!commits.length) { el.innerHTML = '<p style="color:#999">История пуста</p>'; return; }
             el.innerHTML = '<table class="table-container"><thead><tr><th>Дата</th><th>Описание</th><th>Действие</th></tr></thead><tbody>' +
-                commits.map(c => '<tr><td>' + new Date(c.commit.author.date).toLocaleString('ru-RU') + '</td><td>' + (c.commit.message || '') + '</td><td><button class="btn" onclick="restoreFromCommit(\'' + c.sha + '\')">Восстановить</button></td></tr>').join('') +
+                commits.map(c => '<tr><td>' + esc(new Date(c.commit.author.date).toLocaleString('ru-RU')) + '</td><td>' + esc(c.commit.message || '') + '</td><td><button class="btn" onclick="restoreFromCommit(\'' + esc(c.sha) + '\')">Восстановить</button></td></tr>').join('') +
                 '</tbody></table>';
         }
 
@@ -2216,15 +2567,24 @@
             });
         }
 
+        function nextDocNumber(prefix, docs) {
+            let max = 0;
+            docs.forEach(d => { const m = String(d.number).match(/(\d+)$/); if (m) max = Math.max(max, parseInt(m[1])); });
+            return prefix + '-' + String(max + 1).padStart(4, '0');
+        }
         function openCreateModal() {
             editingId = null;
             const group = currentPage === 'cash' ? 'cash' : 'bank';
             document.getElementById('modalTitle').textContent = group === 'cash' ? 'Создать кассовый документ' : 'Создать банковский документ';
             document.getElementById('documentForm').reset();
             setTypeOptions(group);
-            document.getElementById('docType').value = group === 'cash' ? 'pko' : 'payment_out';
+            const defType = group === 'cash' ? 'pko' : 'payment_out';
+            document.getElementById('docType').value = defType;
             const today = new Date().toISOString().split('T')[0];
             document.getElementById('docDate').value = today;
+            const prefix = group === 'cash' ? (defType === 'pko' ? 'ПКО' : 'РКО') : 'ПП';
+            const list = group === 'cash' ? db.cashDocuments : db.bankDocuments;
+            document.getElementById('docNumber').value = nextDocNumber(prefix, list);
             document.getElementById('documentModal').classList.add('active');
             updateFormByType();
         }
@@ -2241,6 +2601,7 @@
             document.getElementById('modalTitle').textContent = 'Редактировать документ';
             setTypeOptions(CASH_TYPES.includes(doc.type) ? 'cash' : 'bank');
             document.getElementById('docType').value = doc.type;
+            updateFormByType();
             document.getElementById('docNumber').value = doc.number;
             document.getElementById('docDate').value = doc.date;
             document.getElementById('docStatus').value = doc.status;
@@ -2252,7 +2613,6 @@
             document.getElementById('docRate').value = doc.rate || 1;
             document.getElementById('docPurpose').value = doc.purpose || '';
             document.getElementById('docNote').value = doc.note || '';
-            updateFormByType();
             document.getElementById('documentModal').classList.add('active');
         }
 
@@ -2263,8 +2623,13 @@
                 return;
             }
 
+            const sumVal = parseFloat(document.getElementById('docSum').value);
+            if (isNaN(sumVal) || sumVal <= 0) { alert('Сумма должна быть положительным числом'); return; }
+            const rateVal = parseFloat(document.getElementById('docRate').value) || 1;
+            if (rateVal <= 0) { alert('Курс должен быть положительным числом'); return; }
+
             const doc = {
-                id: editingId || '_' + Date.now(),
+                id: editingId || uid(),
                 type: document.getElementById('docType').value,
                 number: document.getElementById('docNumber').value,
                 date: document.getElementById('docDate').value,
@@ -2273,8 +2638,8 @@
                 contractor: document.getElementById('docContractor').value,
                 article: document.getElementById('docArticle').value,
                 currency: document.getElementById('docCurrency').value,
-                sum: parseFloat(document.getElementById('docSum').value),
-                rate: parseFloat(document.getElementById('docRate').value) || 1,
+                sum: sumVal,
+                rate: rateVal,
                 purpose: document.getElementById('docPurpose').value,
                 note: document.getElementById('docNote').value,
                 created: new Date().toISOString()
@@ -2301,8 +2666,12 @@
         }
 
         function deleteDoc(id) {
-            if (!confirm('Удалить документ?')) return;
             const found = db.bankDocuments.find(d=>d.id===id) || db.cashDocuments.find(d=>d.id===id);
+            if (found && found.status === 'posted') {
+                if (!confirm('Документ проведён! Удаление отменит проводки. Продолжить?')) return;
+            } else {
+                if (!confirm('Удалить документ?')) return;
+            }
             db.bankDocuments = db.bankDocuments.filter(d => d.id !== id);
             db.cashDocuments = db.cashDocuments.filter(d => d.id !== id);
             logActivity('Удаление документа', found ? (found.type + ' ' + found.number) : id);
@@ -2312,63 +2681,165 @@
         }
 
         function updateFormByType() {
-            // Form can be extended based on type
+            const type = document.getElementById('docType').value;
+            const isCash = CASH_TYPES.includes(type);
+            const accountSelect = document.getElementById('docAccount');
+            const filtered = db.accounts.filter(a => isCash ? a.type === 'cash' : a.type !== 'cash');
+            const current = accountSelect.value;
+            accountSelect.innerHTML = '<option value="">Выбрать...</option>' +
+                filtered.map(a => `<option value="${esc(a.id)}">${esc(a.name)}</option>`).join('');
+            if (filtered.find(a => a.id === current)) accountSelect.value = current;
+            // Filter articles by type
+            const artSelect = document.getElementById('docArticle');
+            const artFiltered = db.articles.filter(a => isCash ? true : true); // show all articles
+            const currentArt = artSelect.value;
+            artSelect.innerHTML = '<option value="">Выбрать...</option>' +
+                artFiltered.map(a => `<option value="${esc(a.id)}">${esc(a.name)}</option>`).join('');
+            if (artFiltered.find(a => a.id === currentArt)) artSelect.value = currentArt;
         }
 
+        function amountInWords(n) {
+            n = Math.abs(Number(n || 0));
+            const units = ['','один','два','три','четыре','пять','шесть','семь','восемь','девять'];
+            const teens = ['десять','одиннадцать','двенадцать','тринадцать','четырнадцать','пятнадцать','шестнадцать','семнадцать','восемнадцать','девятнадцать'];
+            const tens = ['','','двадцать','тридцать','сорок','пятьдесят','шестьдесят','семьдесят','восемьдесят','девяносто'];
+            const hundreds = ['','сто','двести','триста','четыреста','пятьсот','шестьсот','семьсот','восемьсот','девятьсот'];
+            const intPart = Math.floor(n);
+            const kopPart = Math.round((n - intPart) * 100);
+            if (intPart === 0) return 'ноль сом ' + String(kopPart).padStart(2,'0') + ' тыйын';
+            function group(num) {
+                let r = '';
+                r += hundreds[Math.floor(num / 100)];
+                const rem = num % 100;
+                if (rem >= 10 && rem < 20) { r += (r ? ' ' : '') + teens[rem - 10]; }
+                else { if (tens[Math.floor(rem / 10)]) r += (r ? ' ' : '') + tens[Math.floor(rem / 10)]; if (units[rem % 10]) r += (r ? ' ' : '') + units[rem % 10]; }
+                return r;
+            }
+            let result = '';
+            const millions = Math.floor(intPart / 1000000);
+            const thousands = Math.floor((intPart % 1000000) / 1000);
+            const rest = intPart % 1000;
+            if (millions) result += group(millions) + ' млн ';
+            if (thousands) result += group(thousands) + ' тыс. ';
+            if (rest || !result) result += group(rest);
+            result = result.trim();
+            result = result.charAt(0).toUpperCase() + result.slice(1);
+            return result + ' сом ' + String(kopPart).padStart(2,'0') + ' тыйын';
+        }
         function printDoc(id) {
             const doc = [...db.bankDocuments, ...db.cashDocuments].find(d => d.id === id);
             if (!doc) return;
+            const org = db.trade ? db.trade.org : {};
+            const acc = db.accounts ? db.accounts.find(a => a.id === doc.account) : null;
+            const bankInfo = acc && db.banks ? db.banks.find(b => b.name === acc.bank) : null;
+            const css = `body{font-family:'Times New Roman',serif;font-size:12px;margin:20px}
+                table{border-collapse:collapse;width:100%}td,th{border:1px solid #000;padding:4px 6px;font-size:11px}
+                .nob,.nob td,.nob th{border:none}.center{text-align:center}.right{text-align:right}
+                .title{font-size:14px;font-weight:bold;text-align:center;margin:10px 0}
+                .line{border-bottom:1px solid #000;min-width:150px;display:inline-block;margin:0 4px}
+                .small{font-size:9px;color:#666}.cut{border-top:1px dashed #000;margin:15px 0}
+                @media print{body{margin:10px}}`;
+            let html = '';
 
-            const printHtml = `
-                <html>
-                <head>
-                    <style>
-                        body { font-family: Arial, sans-serif; margin: 40px; }
-                        .header { border-bottom: 2px solid #000; padding-bottom: 20px; margin-bottom: 30px; }
-                        .title { font-size: 18px; font-weight: bold; }
-                        .content { margin: 20px 0; }
-                        .row { display: flex; margin: 10px 0; }
-                        .label { width: 150px; font-weight: bold; }
-                        .footer { margin-top: 50px; display: flex; gap: 100px; }
-                        .signature { border-top: 1px solid #000; width: 150px; text-align: center; margin-top: 40px; }
-                    </style>
-                </head>
-                <body>
-                    <div class="header">
-                        <div class="title">${getDocTypeLabel(doc.type)}</div>
-                    </div>
-                    <div class="content">
-                        <div class="row"><div class="label">Номер:</div><div>${doc.number}</div></div>
-                        <div class="row"><div class="label">Дата:</div><div>${formatDate(doc.date)}</div></div>
-                        <div class="row"><div class="label">Сумма:</div><div>${formatAmount(doc.sum)}</div></div>
-                        <div class="row"><div class="label">Контрагент:</div><div>${doc.contractor || '-'}</div></div>
-                        <div class="row"><div class="label">Статус:</div><div>${doc.status === 'posted' ? 'Проведено' : 'Черновик'}</div></div>
-                        <div class="row"><div class="label">Назначение:</div><div>${doc.purpose || '-'}</div></div>
-                    </div>
-                    <div class="footer">
-                        <div><div class="signature">Подпись главного бухгалтера</div></div>
-                        <div><div class="signature">Подпись руководителя</div></div>
-                    </div>
-                </body>
-                </html>
-            `;
+            if (doc.type === 'pko') {
+                // Приходный кассовый ордер (унифицированная форма КО-1)
+                html = `<table class="nob" style="width:100%"><tr><td style="width:65%;vertical-align:top;padding-right:20px">
+                    <p class="small" style="text-align:right">Унифицированная форма № КО-1</p>
+                    <table class="nob"><tr><td><b>${esc(org.name || '')}</b></td><td class="right">ОКПО ________</td></tr></table>
+                    <p class="title">ПРИХОДНЫЙ КАССОВЫЙ ОРДЕР</p>
+                    <table class="nob"><tr><td>Номер документа</td><td>Дата составления</td></tr><tr><td class="center"><b>${esc(doc.number)}</b></td><td class="center"><b>${formatDate(doc.date)}</b></td></tr></table>
+                    <table style="margin-top:10px"><thead><tr><th>Дебет</th><th>Кредит</th><th>Сумма</th><th>Код целевого назначения</th></tr></thead>
+                    <tbody><tr><td class="center">50</td><td class="center">${esc((db.articles.find(a=>a.id===doc.article)||{}).name || '')}</td><td class="right">${formatAmount(doc.sum)}</td><td></td></tr></tbody></table>
+                    <p style="margin-top:10px">Принято от: <b>${esc(doc.contractor || '—')}</b></p>
+                    <p>Основание: ${esc(doc.purpose || '—')}</p>
+                    <p>Сумма: <b>${formatAmount(doc.sum)}</b> сом</p>
+                    <p><i>${amountInWords(doc.sum)}</i></p>
+                    <p>В том числе НДС: ________</p>
+                    <p>Приложение: ________</p>
+                    <table class="nob" style="margin-top:20px"><tr><td>Главный бухгалтер <span class="line"></span></td><td>Кассир <span class="line"></span></td></tr></table>
+                </td><td style="vertical-align:top;border-left:1px dashed #000;padding-left:20px">
+                    <p class="title">КВИТАНЦИЯ</p>
+                    <p>к приходному кассовому ордеру № <b>${esc(doc.number)}</b> от <b>${formatDate(doc.date)}</b></p>
+                    <p>Принято от: ${esc(doc.contractor || '—')}</p>
+                    <p>Основание: ${esc(doc.purpose || '—')}</p>
+                    <p>Сумма: <b>${formatAmount(doc.sum)}</b> сом</p>
+                    <p>В том числе НДС: ________</p>
+                    <p style="margin-top:20px">Главный бухгалтер <span class="line"></span></p>
+                    <p>Кассир <span class="line"></span></p>
+                    <p class="small" style="margin-top:10px">М.П. (штампа)</p>
+                </td></tr></table>`;
+            } else if (doc.type === 'rko') {
+                // Расходный кассовый ордер (КО-2)
+                html = `<p class="small" style="text-align:right">Унифицированная форма № КО-2</p>
+                    <table class="nob"><tr><td><b>${esc(org.name || '')}</b></td><td class="right">ОКПО ________</td></tr></table>
+                    <p class="title">РАСХОДНЫЙ КАССОВЫЙ ОРДЕР</p>
+                    <table class="nob"><tr><td>Номер документа</td><td>Дата составления</td></tr><tr><td class="center"><b>${esc(doc.number)}</b></td><td class="center"><b>${formatDate(doc.date)}</b></td></tr></table>
+                    <table style="margin-top:10px"><thead><tr><th>Дебет</th><th>Кредит</th><th>Сумма</th><th>Код целевого назначения</th></tr></thead>
+                    <tbody><tr><td class="center">${esc((db.articles.find(a=>a.id===doc.article)||{}).name || '')}</td><td class="center">50</td><td class="right">${formatAmount(doc.sum)}</td><td></td></tr></tbody></table>
+                    <p style="margin-top:10px">Выдать: <b>${esc(doc.contractor || '—')}</b></p>
+                    <p>Основание: ${esc(doc.purpose || '—')}</p>
+                    <p>Сумма: <b>${formatAmount(doc.sum)}</b> сом</p>
+                    <p><i>${amountInWords(doc.sum)}</i></p>
+                    <p>Приложение: ________</p>
+                    <table class="nob" style="margin-top:15px"><tr><td>Руководитель <span class="line"></span></td><td>Главный бухгалтер <span class="line"></span></td></tr></table>
+                    <p style="margin-top:15px">Получил: ${formatAmount(doc.sum)} сом</p>
+                    <p>По ________ выданному ________</p>
+                    <table class="nob" style="margin-top:10px"><tr><td>Подпись получателя <span class="line"></span></td><td>Дата «___» __________ 20__ г.</td></tr></table>
+                    <p style="margin-top:10px">Выдал кассир <span class="line"></span></p>`;
+            } else if (doc.type === 'payment_out' || doc.type === 'payment_in') {
+                // Платёжное поручение
+                const isOut = doc.type === 'payment_out';
+                html = `<table class="nob" style="margin-bottom:5px"><tr><td class="small">0401060</td></tr></table>
+                    <table class="nob"><tr><td style="width:50%">Поступ. в банк плат.</td><td>Списано со сч. плат.</td></tr></table>
+                    <p class="title">ПЛАТЁЖНОЕ ПОРУЧЕНИЕ № ${esc(doc.number)}</p>
+                    <table class="nob"><tr><td>Дата: <b>${formatDate(doc.date)}</b></td><td>Вид платежа: электронно</td></tr></table>
+                    <table style="margin-top:10px">
+                    <tr><td style="width:40%"><b>Плательщик</b></td><td>${isOut ? esc(org.name || '') : esc(doc.contractor || '—')}</td></tr>
+                    <tr><td>ИНН</td><td>${isOut ? esc(org.inn || '') : ''}</td></tr>
+                    <tr><td>Сч. №</td><td>${acc ? esc(acc.number || '') : ''}</td></tr>
+                    <tr><td><b>Банк плательщика</b></td><td>${acc ? esc(acc.bank || '') : ''}${bankInfo ? ', БИК ' + esc(bankInfo.bik || '') : ''}</td></tr>
+                    </table>
+                    <table style="margin-top:5px">
+                    <tr><td style="width:40%"><b>Получатель</b></td><td>${isOut ? esc(doc.contractor || '—') : esc(org.name || '')}</td></tr>
+                    <tr><td>Сч. №</td><td>${!isOut && acc ? esc(acc.number || '') : ''}</td></tr>
+                    <tr><td><b>Банк получателя</b></td><td>${!isOut && acc ? esc(acc.bank || '') : ''}</td></tr>
+                    </table>
+                    <table style="margin-top:10px"><tr><th>Сумма платежа</th><td class="right"><b>${formatAmount(doc.sum)} KGS</b></td></tr></table>
+                    <p style="margin-top:10px"><b>Назначение платежа:</b> ${esc(doc.purpose || '—')}</p>
+                    <table class="nob" style="margin-top:20px"><tr><td>Подписи</td><td><span class="line" style="min-width:200px"></span></td><td style="text-align:right">М.П.</td></tr>
+                    <tr><td></td><td><span class="line" style="min-width:200px"></span></td><td></td></tr></table>`;
+            } else {
+                html = `<p class="title">${getDocTypeLabel(doc.type)}</p>
+                    <p>Номер: <b>${esc(doc.number)}</b>. Дата: <b>${formatDate(doc.date)}</b></p>
+                    <p>Сумма: <b>${formatAmount(doc.sum)}</b></p>
+                    <p>Контрагент: ${esc(doc.contractor || '—')}</p>
+                    <p>Назначение: ${esc(doc.purpose || '—')}</p>
+                    <table class="nob" style="margin-top:30px"><tr><td>Главный бухгалтер <span class="line"></span></td><td>Руководитель <span class="line"></span></td></tr></table>`;
+            }
 
             const w = window.open();
-            w.document.write(printHtml);
+            if (!w) { alert('Браузер заблокировал всплывающее окно. Разрешите попапы для этого сайта.'); return; }
+            w.document.write(`<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Печать</title><style>${css}</style></head><body>${html}</body></html>`);
+            w.document.close();
             w.print();
-            w.close();
         }
 
         // ==================== EXPORT FUNCTIONS ====================
+        function csvSafe(v) { let s = String(v == null ? '' : v).replace(/"/g, '""'); if (/^[=+\-@\t\r]/.test(s)) s = "'" + s; return '"' + s + '"'; }
+        function xmlSafe(v) { return String(v == null ? '' : v).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
         function exportToCSV() {
             const allDocs = [...db.bankDocuments, ...db.cashDocuments];
+            const tradeDocs = db.trade && db.trade.docs ? db.trade.docs : [];
             let csv = 'Номер,Дата,Тип,Контрагент,Сумма,Статус\n';
             allDocs.forEach(d => {
-                csv += `"${d.number}","${d.date}","${getDocTypeLabel(d.type)}","${d.contractor}",${d.sum},"${d.status}"\n`;
+                csv += `${csvSafe(d.number)},${csvSafe(d.date)},${csvSafe(getDocTypeLabel(d.type))},${csvSafe(d.contractor)},${d.sum || 0},${csvSafe(d.status)}\n`;
             });
-
+            tradeDocs.forEach(d => {
+                const cName = d.contractor && db.trade.contractors ? (db.trade.contractors.find(c => c.id === d.contractor) || {}).name || '' : '';
+                csv += `${csvSafe(d.number)},${csvSafe(d.date)},${csvSafe(d.type)},${csvSafe(cName)},${d.total || 0},${csvSafe(d.status)}\n`;
+            });
             downloadFile(csv, 'documents.csv', 'text/csv');
-            showToast('Экспортировано в CSV');
+            showToast('Экспортировано в CSV (' + (allDocs.length + tradeDocs.length) + ' документов)');
         }
 
         function exportToJSON() {
@@ -2378,19 +2849,19 @@
         }
 
         function exportToXML() {
+            const allDocs = [...db.bankDocuments, ...db.cashDocuments];
+            const tradeDocs = db.trade && db.trade.docs ? db.trade.docs : [];
             let xml = '<?xml version="1.0" encoding="UTF-8"?>\n<documents>\n';
-            [...db.bankDocuments, ...db.cashDocuments].forEach(d => {
-                xml += `  <document>\n`;
-                xml += `    <number>${d.number}</number>\n`;
-                xml += `    <date>${d.date}</date>\n`;
-                xml += `    <type>${d.type}</type>\n`;
-                xml += `    <sum>${d.sum}</sum>\n`;
-                xml += `    <status>${d.status}</status>\n`;
-                xml += `  </document>\n`;
+            allDocs.forEach(d => {
+                xml += `  <document>\n    <number>${xmlSafe(d.number)}</number>\n    <date>${xmlSafe(d.date)}</date>\n    <type>${xmlSafe(d.type)}</type>\n    <contractor>${xmlSafe(d.contractor)}</contractor>\n    <sum>${d.sum || 0}</sum>\n    <status>${xmlSafe(d.status)}</status>\n  </document>\n`;
+            });
+            tradeDocs.forEach(d => {
+                const cName = d.contractor && db.trade.contractors ? (db.trade.contractors.find(c => c.id === d.contractor) || {}).name || '' : '';
+                xml += `  <document>\n    <number>${xmlSafe(d.number)}</number>\n    <date>${xmlSafe(d.date)}</date>\n    <type>${xmlSafe(d.type)}</type>\n    <contractor>${xmlSafe(cName)}</contractor>\n    <sum>${d.total || 0}</sum>\n    <status>${xmlSafe(d.status)}</status>\n  </document>\n`;
             });
             xml += '</documents>';
             downloadFile(xml, 'documents.xml', 'application/xml');
-            showToast('Экспортировано в XML');
+            showToast('Экспортировано в XML (' + (allDocs.length + tradeDocs.length) + ' документов)');
         }
 
         function performImport() {
@@ -2403,7 +2874,12 @@
                 try {
                     if (file.name.toLowerCase().endsWith('.json') || text.trim().startsWith('{')) {
                         const data = JSON.parse(text);
+                        if (typeof data !== 'object' || Array.isArray(data)) throw new Error('Неверный формат файла');
                         if (!data.bankDocuments && !data.cashDocuments && !data.trade) throw new Error('Файл не содержит данных программы');
+                        // Validate arrays
+                        if (data.bankDocuments && !Array.isArray(data.bankDocuments)) throw new Error('bankDocuments должен быть массивом');
+                        if (data.cashDocuments && !Array.isArray(data.cashDocuments)) throw new Error('cashDocuments должен быть массивом');
+                        if (data.trade && data.trade.docs && !Array.isArray(data.trade.docs)) throw new Error('trade.docs должен быть массивом');
                         if (!confirm('Заменить текущую базу данными из файла? (Отмена — добавить документы к существующим)')) {
                             (data.bankDocuments || []).forEach(d => { if (!db.bankDocuments.find(x => x.id === d.id)) db.bankDocuments.push(d); });
                             (data.cashDocuments || []).forEach(d => { if (!db.cashDocuments.find(x => x.id === d.id)) db.cashDocuments.push(d); });
@@ -2423,7 +2899,10 @@
                             const c = l.split(sep).map(x => x.replace(/^"|"$/g, '').trim());
                             if (c.length < 5) return;
                             const type = labels[c[2]] || c[2]; if (!getDocTypeLabel(type) || getDocTypeLabel(type) === type && !CASH_TYPES.concat(BANK_TYPES).includes(type)) return;
-                            const doc = { id: '_' + Date.now() + '_' + n, type, number: c[0], date: c[1], contractor: c[3], sum: parseFloat(c[4]) || 0, status: c[5] === 'posted' || c[5] === 'Проведено' ? 'posted' : 'draft', rate: 1, account: (db.accounts.find(a => a.type === (CASH_TYPES.includes(type) ? 'cash' : 'bank')) || {}).id || '', article: '', currency: (db.currencies[0] || {}).id || '', purpose: '', note: 'Импорт CSV', created: new Date().toISOString() };
+                            const sum = parseFloat(c[4]);
+                            if (isNaN(sum) || sum <= 0) return; // skip invalid amounts
+                            const dateVal = c[1]; if (!/^\d{4}-\d{2}-\d{2}$/.test(dateVal) && !/^\d{2}\.\d{2}\.\d{4}$/.test(dateVal)) return; // skip invalid dates
+                            const doc = { id: '_' + Date.now() + '_' + n, type, number: c[0], date: dateVal, contractor: c[3], sum, status: c[5] === 'posted' || c[5] === 'Проведено' ? 'posted' : 'draft', rate: 1, account: (db.accounts.find(a => a.type === (CASH_TYPES.includes(type) ? 'cash' : 'bank')) || {}).id || '', article: '', currency: (db.currencies[0] || {}).id || '', purpose: '', note: 'Импорт CSV', created: new Date().toISOString() };
                             (CASH_TYPES.includes(type) ? db.cashDocuments : db.bankDocuments).push(doc); n++;
                         });
                         if (!n) throw new Error('Не удалось распознать строки CSV');
@@ -2438,8 +2917,11 @@
 
         function tClearAll() {
             if (!confirm('Удалить ВСЕ документы (банк, касса, покупки, продажи)? Справочники останутся.')) return;
+            const total = (db.bankDocuments||[]).length + (db.cashDocuments||[]).length + (db.trade&&db.trade.docs?db.trade.docs.length:0);
+            const input = prompt('Для подтверждения введите УДАЛИТЬ (будет удалено ' + total + ' документов):');
+            if (input !== 'УДАЛИТЬ') { showToast('Удаление отменено'); return; }
             db.bankDocuments = []; db.cashDocuments = []; db.trade.docs = []; db.trade.sfCounter = { in: 0, out: 0 }; db.trade.demoSeeded = true;
-            saveData(); renderPage(); showToast('Документы удалены');
+            saveData(); renderPage(); showToast('Все документы удалены');
         }
 
         function downloadFile(content, filename, type) {
@@ -2452,15 +2934,73 @@
             URL.revokeObjectURL(url);
         }
 
+        function exportExcel(headers, rows, filename, sheetName) {
+            if (typeof XLSX === 'undefined') { showToast('Библиотека Excel не загружена'); return; }
+            const data = [headers, ...rows];
+            const ws = XLSX.utils.aoa_to_sheet(data);
+            // Auto-width columns
+            ws['!cols'] = headers.map((h, i) => {
+                let max = h.length;
+                rows.forEach(r => { const v = String(r[i] || ''); if (v.length > max) max = v.length; });
+                return { wch: Math.min(max + 2, 40) };
+            });
+            const wb = XLSX.utils.book_new();
+            XLSX.utils.book_append_sheet(wb, ws, sheetName || 'Данные');
+            XLSX.writeFile(wb, filename);
+            showToast('Экспортировано в Excel');
+        }
+
+        function exportBankExcel() {
+            let docs = db.bankDocuments.filter(d => ['payment_out', 'payment_in', 'payment_order', 'conversion', 'statement', 'directbank'].includes(d.type));
+            if (_finFilter.from) docs = docs.filter(d => d.date >= _finFilter.from);
+            if (_finFilter.to) docs = docs.filter(d => d.date <= _finFilter.to);
+            if (_finFilter.search) { const q = _finFilter.search.toLowerCase(); docs = docs.filter(d => (d.number + ' ' + (d.contractor || '') + ' ' + (d.purpose || '')).toLowerCase().includes(q)); }
+            docs.sort(docCmp);
+            const headers = ['Номер', 'Дата', 'Тип', 'Счёт', 'Контрагент', 'Назначение', 'Сумма', 'Статус'];
+            const rows = docs.map(d => [d.number, d.date, getDocTypeLabel(d.type), getAccountName(d.account), d.contractor || '', d.purpose || '', d.sum || 0, d.status === 'posted' ? 'Проведено' : 'Черновик']);
+            exportExcel(headers, rows, 'Банковские_документы.xlsx', 'Банк');
+        }
+
+        function exportCashExcel() {
+            let docs = [...db.cashDocuments];
+            if (_finFilter.from) docs = docs.filter(d => d.date >= _finFilter.from);
+            if (_finFilter.to) docs = docs.filter(d => d.date <= _finFilter.to);
+            if (_finFilter.search) { const q = _finFilter.search.toLowerCase(); docs = docs.filter(d => (d.number + ' ' + (d.contractor || '') + ' ' + (d.purpose || '')).toLowerCase().includes(q)); }
+            docs.sort(docCmp);
+            const headers = ['Номер', 'Дата', 'Тип', 'Касса', 'Контрагент', 'Назначение', 'Сумма', 'Статус'];
+            const rows = docs.map(d => [d.number, d.date, getDocTypeLabel(d.type), getAccountName(d.account), d.contractor || '', d.purpose || '', d.sum || 0, d.status === 'posted' ? 'Проведено' : 'Черновик']);
+            exportExcel(headers, rows, 'Кассовые_документы.xlsx', 'Касса');
+        }
+
+        function tExportExcel(page) {
+            const j = TRADE_JOURNALS[page];
+            const docs = tFilteredDocs(j.types);
+            const headers = ['Дата', 'Номер', 'Вид операции', 'Контрагент', 'Сумма', 'НДС', 'Состояние', 'Комментарий'];
+            const rows = docs.map(d => [d.date, d.number, d.opKind || '', tContractorName(d.contractor), d.total || 0, d.vatTotal || 0, d.status === 'posted' ? 'Проведен' : d.status === 'deleted' ? 'Удалён' : 'Записан', (d.extra && d.extra.comment) || '']);
+            exportExcel(headers, rows, j.title + '.xlsx', j.title);
+        }
+
+        function exportDebtExcel() {
+            const rows = window._lastDebtRows || [];
+            const isSale = window._lastDebtGroup === 'sale';
+            const title = isSale ? 'Задолженность покупателей' : 'Задолженность поставщикам';
+            const headers = ['Контрагент', 'ИНН', isSale ? 'Отгружено' : 'Поступило', 'Возвраты', 'Оплачено', isSale ? 'Долг покупателя' : 'Наш долг', 'Аванс', 'Последний документ', 'Просрочка (дн.)'];
+            const data = rows.map(r => [r.c.name, r.c.inn, r.charged, r.returned, r.paid, Math.max(0, r.debt), Math.max(0, -r.debt), r.lastDate || '', r.overdue || 0]);
+            exportExcel(headers, data, title + '.xlsx', title);
+        }
+
         // ==================== HELPERS ====================
         function formatDate(dateStr) {
-            return new Date(dateStr + 'T00:00').toLocaleDateString('ru-RU');
+            if (!dateStr) return '—';
+            const d = new Date(dateStr + 'T00:00');
+            return isNaN(d) ? '—' : d.toLocaleDateString('ru-RU');
         }
 
         function formatAmount(num) {
-            return Number(num || 0).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+            return Number(num || 0).toLocaleString('ru-RU', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
         }
 
+        function docCmp(a, b) { const dc = b.date.localeCompare(a.date); if (dc !== 0) return dc; const na = parseInt((String(a.number).match(/(\d+)$/) || [0, 0])[1]); const nb = parseInt((String(b.number).match(/(\d+)$/) || [0, 0])[1]); return nb - na || String(b.number).localeCompare(String(a.number)); }
         function getDocTypeLabel(type) {
             const labels = {
                 payment_out: 'Платежное поручение (исход.)',
@@ -2644,18 +3184,23 @@
         // ---------- Утилиты ----------
         function tUid() { return 't' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6); }
         function tNextNumber(type) {
-            const cnt = db.trade.docs.filter(d => d.type === type).length + 1;
-            return TT[type].prefix + '-' + String(cnt).padStart(6, '0');
+            let max = 0;
+            db.trade.docs.filter(d => d.type === type).forEach(d => {
+                const m = String(d.number).match(/(\d+)$/);
+                if (m) max = Math.max(max, parseInt(m[1]));
+            });
+            return TT[type].prefix + '-' + String(max + 1).padStart(6, '0');
         }
         function tToday() { return new Date().toISOString().split('T')[0]; }
         function esc(s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+        function uid() { return '_' + Date.now() + '_' + Math.random().toString(36).slice(2, 8); }
         function tContractor(id) { return (db.trade && db.trade.contractors || []).find(c => c.id === id); }
         function tContractorName(id) { const c = tContractor(id); return c ? c.name : '—'; }
         function tContract(id) { return db.trade.contracts.find(c => c.id === id); }
         function tContractName(id) { const c = tContract(id); return c ? (c.name + ' №' + c.number + ' от ' + formatDate(c.date)) : '—'; }
         function tNom(id) { return db.trade.nomenclature.find(n => n.id === id); }
         function tNomName(id) { const n = tNom(id); return n ? n.name : '—'; }
-        function tWh(id) { const w = db.trade.warehouses.find(x => x.id === id); return w ? w.name : '—'; }
+        function tWh(id) { const w = (db.trade.warehouses || []).find(x => x.id === id); return w ? w.name : '—'; }
         function tDocById(id) { return db.trade.docs.find(d => d.id === id); }
         function tDocTitle(d) { return d ? (TT[d.type].short + ' ' + d.number + ' от ' + formatDate(d.date)) : '—'; }
         function tVatLabel(v) { const r = VAT_RATES.find(x => x.v === Number(v)); return r ? r.l : v + '%'; }
@@ -2681,6 +3226,7 @@
             const isStock = cfgC.group === 'stock' || cfgC.group === 'prod';
             if (cfgC.hr) { tCalcHR(d); return d; }
             ['goods', 'services', 'agent', 'tara'].forEach(tab => (d[tab] || []).forEach(r => { if (isStock && tab === 'goods') r.vat = -1; tCalcRow(r, d.vatMode); total += r.total; vat += r.vatSum; sum += r.sum; }));
+            total = Math.round(total * 100) / 100; vat = Math.round(vat * 100) / 100; sum = Math.round(sum * 100) / 100;
             ['materials', 'products', 'waste'].forEach(tab => (d[tab] || []).forEach(r => { r.vat = -1; tCalcRow(r, 'in'); }));
             if (isStock) {
                 const S = (arr) => (d[arr] || []).reduce((s, r) => s + (Number(r.qty) || 0) * (Number(r.price) || 0), 0);
@@ -2734,6 +3280,9 @@
                     add('19.03', '60.01', gVat, 'НДС по приобретенным товарам');
                     services.forEach(r => add(r.account || '26', '60.01', r.total - r.vatSum, 'Услуги: ' + tNomName(r.nom)));
                     add('19.04', '60.01', sVat, 'НДС по приобретенным услугам');
+                    { const agent = (d.agent || []), aSum = agent.reduce((s, r) => s + (r.total || 0) - (r.vatSum || 0), 0), aVat = agent.reduce((s, r) => s + (r.vatSum || 0), 0);
+                      agent.forEach(r => add(r.account || '76.09', '60.01', (r.total || 0) - (r.vatSum || 0), 'Агентские услуги: ' + tNomName(r.nom)));
+                      add('19.04', '60.01', aVat, 'НДС по агентским услугам'); }
                     add('60.01', '60.02', Math.min(d.total, tPayments(d.basis || d.id).reduce((s, p) => s + p.sum, 0)), 'Зачет аванса поставщику');
                     break;
                 case 'add_expenses':
@@ -2754,11 +3303,14 @@
                 case 'commission_report':
                     add('62.01', '90.01.1', d.total, 'Выручка по отчету комиссионера'); add('90.03', '68.02', d.vatTotal, 'НДС'); add('44.01', '60.01', (d.reward || 0), 'Комиссионное вознаграждение'); add('90.02.1', '45.01', cost, 'Себестоимость отгруженных товаров'); break;
                 case 'sale_return':
-                    add('90.02.1', goodsAcc, -cost, ''); add(goodsAcc, '90.02.1', cost, 'Возврат себестоимости'); add('90.01.1', '62.01', d.total, 'Сторно выручки'); add('68.02', '90.03', d.vatTotal, 'Сторно НДС'); break;
+                    add(goodsAcc, '90.02.1', cost, 'Возврат себестоимости'); add('90.01.1', '62.01', d.total, 'Сторно выручки'); add('68.02', '90.03', d.vatTotal, 'Сторно НДС'); break;
                 case 'sale_correction':
                     add('62.01', '90.01.1', d.total, 'Корректировка выручки'); add('90.03', '68.02', d.vatTotal, 'Корректировка НДС'); break;
-                case 'retail_report':
-                    add('90.02.1', goodsAcc, cost, 'Себестоимость розничных продаж'); add('50.01', '90.01.1', Number(d.payCash) || 0, 'Розничная выручка наличными'); add('57.03', '90.01.1', Number(d.payCard) || 0, 'Оплата платежными картами'); add('90.03', '68.02', d.vatTotal, 'НДС с розничных продаж'); break;
+                case 'retail_report': {
+                    const cash = Number(d.payCash) || 0, card = Number(d.payCard) || 0, diff = Math.round((d.total - cash - card) * 100) / 100;
+                    add('90.02.1', goodsAcc, cost, 'Себестоимость розничных продаж'); add('50.01', '90.01.1', cash, 'Розничная выручка наличными'); add('57.03', '90.01.1', card, 'Оплата платежными картами');
+                    if (diff > 0.004) add('62.01', '90.01.1', diff, 'Прочие формы оплаты (разница)');
+                    add('90.03', '68.02', d.vatTotal, 'НДС с розничных продаж'); break; }
                 default: return tPostingsExtra(d);
             }
             return rows;
@@ -2791,8 +3343,8 @@
                 .filter(d => !tFilters.to || d.date <= tFilters.to)
                 .filter(d => !tFilters.contractor || d.contractor === tFilters.contractor)
                 .filter(d => !tFilters.status || d.status === tFilters.status)
-                .filter(d => !tFilters.search || (d.number + ' ' + tContractorName(d.contractor) + ' ' + (d.extra && d.extra.comment || '') + ' ' + (d.opKind || '')).toLowerCase().includes(tFilters.search.toLowerCase()))
-                .sort((a, b) => (b.date + b.number).localeCompare(a.date + a.number));
+                .filter(d => !tFilters.search || (d.number + ' ' + tContractorName(d.contractor) + ' ' + (d.extra && d.extra.comment || '') + ' ' + (d.opKind || '') + ' ' + (d.total || '') + ' ' + tWh(d.warehouse)).toLowerCase().includes(tFilters.search.toLowerCase()))
+                .sort(docCmp);
         }
 
         function renderTradeJournal(page) {
@@ -2819,6 +3371,7 @@
                 { label: 'Установить период…', action: `tFocusFilter('tfFrom')` },
                 { label: 'Найти…', action: `tFocusFilter('tfSearch')` },
                 { label: 'Отменить поиск', action: `tResetFilters()` },
+                { label: 'Экспорт в Excel', action: `tExportExcel('${page}')` },
                 { label: 'Вывести список (CSV)', action: `tExportList('${page}')` },
                 { label: 'Удалить помеченные объекты', action: `tPurgeDeleted()` }
             ];
@@ -2905,13 +3458,16 @@
             if (status === 'posted') {
                 const err = tValidate(d); if (err) { alert(err); return; }
                 tApplyPrices(d); tApplyMonthClose(d); tApplyHR(d);
+                if (d.type === 'inventory') showToast('Инвентаризация проведена. Для оформления отклонений создайте документы «Оприходование» или «Списание» на основании.');
             } else if (d.type === 'dismissal') { const e = tEmp(d.employee); if (e) { e.status = 'Работает'; e.fireDate = ''; } }
             d.status = status; saveData(); renderPage();
             showToast(status === 'posted' ? 'Документ проведен' : 'Проведение отменено');
         }
         function tToggleDelete(id) {
             const d = tDocById(id); if (!d) return;
-            d.status = d.status === 'deleted' ? 'draft' : 'deleted'; saveData(); renderPage();
+            const isDel = d.status === 'deleted';
+            if (!isDel && !confirm('Пометить документ №' + (d.number || '—') + ' на удаление?')) return;
+            d.status = isDel ? 'draft' : 'deleted'; saveData(); renderPage();
             showToast(d.status === 'deleted' ? 'Документ помечен на удаление' : 'Пометка удаления снята');
         }
         function tPurgeDeleted() {
@@ -2930,6 +3486,8 @@
             const cfg = TT[d.type];
             if (!d.number) return 'Не заполнен номер документа';
             if (!d.date) return 'Не заполнена дата документа';
+            const dup = db.trade.docs.find(x => x.id !== d.id && x.type === d.type && x.number === d.number);
+            if (dup) return 'Документ с номером «' + d.number + '» уже существует (тип: ' + TT[d.type].label + ')';
             if (!cfg.retail && !cfg.noContractor && !d.contractor) return 'Не выбран контрагент';
             if (cfg.specDoc && !d.productNom) return 'Не выбрана продукция для спецификации';
             if (cfg.assembly && !d.kitNom) return 'Не выбран комплект';
@@ -2958,7 +3516,7 @@
             const j = TRADE_JOURNALS[page];
             const docs = tFilteredDocs(j.types);
             let csv = 'Дата;Номер;Вид операции;Контрагент;Сумма;НДС;Состояние;Комментарий\n';
-            docs.forEach(d => csv += `${d.date};${d.number};${d.opKind || ''};${tContractorName(d.contractor)};${d.total};${d.vatTotal};${d.status};${(d.extra && d.extra.comment) || ''}\n`);
+            docs.forEach(d => { const safe = v => String(v==null?'':v).replace(/;/g,',').replace(/^[=+\-@]/,"'$&"); csv += `${safe(d.date)};${safe(d.number)};${safe(d.opKind)};${safe(tContractorName(d.contractor))};${d.total||0};${d.vatTotal||0};${safe(d.status)};${safe((d.extra&&d.extra.comment)||'')}\n`; });
             downloadFile('﻿' + csv, page + '.csv', 'text/csv'); showToast('Список выведен в CSV');
         }
 
@@ -3013,8 +3571,9 @@
                 const paid = tPayments(base.id).reduce((s, p) => s + p.sum, 0);
                 const rest = Math.max(0, Math.round((base.total - paid) * 100) / 100);
                 const sumStr = prompt('Сумма оплаты (остаток по документу ' + formatAmount(rest) + '):', rest || base.total); if (sumStr === null) return;
-                const doc = { id: '_' + Date.now(), type: target, number: (isBank ? 'ПП' : (target === 'pko' ? 'ПКО' : 'РКО')) + '-' + String(([...db.bankDocuments, ...db.cashDocuments].filter(x => x.type === target).length + 1)).padStart(3, '0'),
-                    date: tToday(), status: 'posted', account: acc ? acc.id : '', contractor: cname, article: art ? art.id : '', currency: cur ? cur.id : '', sum: parseFloat(sumStr) || 0, rate: 1,
+                const payNum = nextDocNumber((isBank ? 'ПП' : (target === 'pko' ? 'ПКО' : 'РКО')), [...db.bankDocuments, ...db.cashDocuments]);
+                const doc = { id: uid(), type: target, number: payNum,
+                    date: tToday(), status: 'posted', account: acc ? acc.id : '', contractor: cname, contractorId: base.contractor, article: art ? art.id : '', currency: cur ? cur.id : '', sum: parseFloat(sumStr) || 0, rate: 1,
                     purpose: 'Оплата по документу ' + tDocTitle(base) + (base.vatTotal ? ', в т.ч. НДС ' + formatAmount(base.vatTotal) : ''), note: 'Создано на основании', created: new Date().toISOString(), basis: base.id };
                 (isBank ? db.bankDocuments : db.cashDocuments).push(doc); saveData(); renderPage();
                 showToast('Создан документ: ' + getDocTypeLabel(target) + ' ' + doc.number); return;
@@ -3023,6 +3582,7 @@
             const cfg = TT[target];
             const init = { contractor: base.contractor, contract: base.contract, warehouse: base.warehouse, basis: base.id, vatMode: base.vatMode, priceType: base.priceType };
             ['goods', 'services', 'agent', 'tara'].forEach(t => { if (cfg.tabs.includes(t) && base[t]) init[t] = JSON.parse(JSON.stringify(base[t])); });
+            if (base.discount && base.type === 'customer_invoice') { const k = 1 - Number(base.discount) / 100; ['goods', 'services', 'agent'].forEach(t => (init[t] || []).forEach(r => { r.price = Math.round((r.price || 0) * k * 100) / 100; r.sum = Math.round((r.sum || 0) * k * 100) / 100; r.vatSum = Math.round((r.vatSum || 0) * k * 100) / 100; r.total = Math.round((r.total || 0) * k * 100) / 100; })); }
             if (cfg.correction) { ['goods', 'services'].forEach(t => (init[t] || []).forEach(r => { r.qtyOld = r.qty; r.priceOld = r.price; })); }
             if (target === 'add_expenses') { init.goods = (init.goods || []).map(r => ({ ...r, baseQty: r.qty, baseSum: r.sum, price: 0 })); init.services = undefined; }
             if (target === 'power_of_attorney') { init.basis = base.id; }
@@ -3067,7 +3627,7 @@
             const moreItems = [
                 { label: 'Копировать', action: `tFormSave(false);tCopy(tDoc.id)` },
                 { label: 'Отменить проведение', action: `tDoc.status='draft';tFormSave(false)` },
-                { label: 'Пометить на удаление', action: `tDoc.status='deleted';tFormSave(true)` },
+                { label: 'Пометить на удаление', action: `if(confirm('Пометить документ на удаление?')){tDoc.status='deleted';tFormSave(true)}` },
                 { sep: true },
                 { label: 'Пересчитать цены по типу цен', action: `tRefillPrices()` },
                 { label: 'Заполнить по основанию', action: `tFillFromBasis()`, disabled: !d.basis }
@@ -3394,7 +3954,7 @@
                 const g = TT[x.type].group; const isDebit = (g === 'sale' && !['sale_return'].includes(x.type)) || x.type === 'purchase_return';
                 rows.push({ date: x.date, doc: tDocTitle(x), dt: isDebit ? x.total : 0, kt: isDebit ? 0 : x.total });
             });
-            [...db.bankDocuments, ...db.cashDocuments].filter(p => p.contractor === cname && p.date >= r.from && p.date <= r.to).forEach(p => {
+            [...db.bankDocuments, ...db.cashDocuments].filter(p => (p.contractorId === d.contractor || p.contractor === cname) && p.date >= r.from && p.date <= r.to).forEach(p => {
                 const inc = ['payment_in', 'pko'].includes(p.type);
                 rows.push({ date: p.date, doc: getDocTypeLabel(p.type) + ' ' + p.number, dt: inc ? 0 : p.sum, kt: inc ? p.sum : 0 });
             });
@@ -3404,6 +3964,7 @@
         // ---------- Печатные формы ----------
         function tPrintWindow(html, title) {
             const w = window.open('', '_blank');
+            if (!w) { alert('Браузер заблокировал всплывающее окно. Разрешите попапы для этого сайта.'); return; }
             w.document.write(`<!DOCTYPE html><html><head><meta charset="UTF-8"><title>${esc(title)}</title><style>
                 body{font-family:Arial,sans-serif;margin:30px;color:#000;font-size:12px}
                 h2{font-size:16px;margin:0 0 6px} h3{font-size:13px;margin:14px 0 6px}
@@ -3452,7 +4013,7 @@
             } else if (/ТОРГ-12|Расходная накладная|Накладная на возврат/.test(form)) {
                 html = `<p class="small">Унифицированная форма № ТОРГ-12</p>${hdr('ТОВАРНАЯ НАКЛАДНАЯ')}
                 ${partyLine('Грузоотправитель', p.isSale ? org : c)}${partyLine('Грузополучатель', p.isSale ? c : org)}${partyLine('Поставщик', p.seller)}${partyLine('Плательщик', p.buyer)}
-                <p><b>Основание:</b> ${d.basis ? esc(tDocTitle(tDocById(d.basis))) : (d.contract ? esc(tContractName(d.contract)) : '—')}</p>
+                <p><b>Основание:</b> ${d.basis ? esc(tDocTitle(tDocById(d.basis))) : '—'}${d.contract ? ' <b>Договор:</b> ' + esc(tContractName(d.contract)) : ''}</p>
                 ${tGoodsTable(d, { country: false })}${tSigBlock(d, 'Отпуск груза разрешил / произвел', 'Груз принял / получил')}`;
             } else if (/Акт об оказании услуг|Акт приемки услуг/.test(form)) {
                 html = `${hdr('АКТ об оказании услуг')}<p><b>Исполнитель:</b> ${esc(p.seller.name)}, ИНН ${esc(p.seller.inn || '')}</p><p><b>Заказчик:</b> ${esc(p.buyer.name)}, ИНН ${esc(p.buyer.inn || '')}</p>
@@ -3465,7 +4026,7 @@
             } else if (/Счет-фактура|Корректировочный счет-фактура/.test(form)) {
                 const isCorr = form.includes('Корректировочный');
                 html = `${hdr(isCorr ? 'КОРРЕКТИРОВОЧНЫЙ СЧЕТ-ФАКТУРА' : 'СЧЕТ-ФАКТУРА')}${d.sf ? `<p>Номер и дата счета-фактуры: <b>№ ${esc(d.sf.number)} от ${formatDate(d.sf.date)}</b>, код вида операции ${esc(d.sf.code || '01')}</p>` : '<p style="color:#c00">Счет-фактура не выписан — выполните «Выписать счет-фактуру»</p>'}
-                ${partyLine('Продавец', p.seller)}${partyLine('Покупатель', p.buyer)}<p>К платежно-расчетному документу: ${tPayments(d.id).map(x => x.number + ' от ' + formatDate(x.date)).join(', ') || '—'}</p>
+                ${partyLine('Продавец', p.seller)}${partyLine('Покупатель', p.buyer)}<p>К платежно-расчетному документу: ${[d.id, ...db.trade.docs.filter(x => x.basis === d.id && x.status !== 'deleted').map(x => x.id)].reduce((a, id) => a.concat(tPayments(id)), []).map(x => x.number + ' от ' + formatDate(x.date)).join(', ') || '—'}</p>
                 ${tGoodsTable(d, { country: true })}<div class="sig"><div>Руководитель организации<div class="line"></div><span class="small">${esc(org.director)}</span></div><div>Главный бухгалтер<div class="line"></div><span class="small">${esc(org.accountant)}</span></div></div>`;
             } else if (/УКД|Соглашение об изменении/.test(form)) {
                 const rows = tRowsAll(d);
@@ -3510,11 +4071,11 @@
                 <p><b>1. Предмет договора.</b> Поставщик обязуется передать, а Покупатель принять и оплатить товар согласно спецификации:</p>${tGoodsTable(d)}<p><b>2. Цена и порядок расчетов.</b> Общая сумма договора составляет ${formatAmount(d.total)} сом${d.vatTotal ? ', в т.ч. НДС ' + formatAmount(d.vatTotal) : ''}. Оплата производится в течение 5 банковских дней с момента выставления счета.</p><p><b>3. Срок поставки.</b> В течение 5 рабочих дней с момента оплаты.</p>${tSigBlock(d, 'Поставщик', 'Покупатель')}`;
             } else if (/Комплект документов/.test(form)) {
                 tPrint(id, 'Товарная накладная (ТОРГ-12)'); setTimeout(() => tPrint(id, 'Счет-фактура'), 600); return;
-            } else if (tPrintExtra(d, form)) {
-                html = tPrintExtra(d, form);
+            } else { const extra = tPrintExtra(d, form); if (extra) {
+                html = extra;
             } else {
                 html = `${hdr(form)}${partyLine('Организация', org)}${c.name ? partyLine('Контрагент', c) : ''}${cfg.noSum ? '' : tGoodsTable(d)}${tSigBlock(d, 'Сдал', 'Принял')}`;
-            }
+            } }
             tPrintWindow(html, form + ' ' + d.number);
         }
         function tPrintRegistry(page) {
@@ -3546,22 +4107,30 @@
             const chargeTypes = isSale ? ['sale', 'production_services', 'commission_report', 'sale_correction'] : ['purchase', 'add_expenses', 'purchase_correction'];
             const returnTypes = isSale ? ['sale_return'] : ['purchase_return'];
             const payTypes = isSale ? ['payment_in', 'pko'] : ['payment_out', 'rko'];
+            const today = new Date().toISOString().slice(0, 10);
             const rows = db.trade.contractors.map(c => {
-                const charged = tPosted(chargeTypes).filter(d => d.contractor === c.id).reduce((s, d) => s + d.total, 0);
+                const cDocs = tPosted(chargeTypes).filter(d => d.contractor === c.id);
+                const charged = cDocs.reduce((s, d) => s + d.total, 0);
                 const returned = tPosted(returnTypes).filter(d => d.contractor === c.id).reduce((s, d) => s + d.total, 0);
                 const paid = [...db.bankDocuments, ...db.cashDocuments].filter(p => payTypes.includes(p.type) && p.contractor === c.name && tInPeriod(p)).reduce((s, p) => s + Number(p.sum || 0), 0);
                 const debt = charged - returned - paid;
-                return { c, charged, returned, paid, debt };
+                const lastDate = cDocs.length ? cDocs.sort((a, b) => b.date.localeCompare(a.date))[0].date : '';
+                const overdue = lastDate && debt > 0 ? Math.max(0, Math.floor((new Date(today) - new Date(lastDate)) / 86400000)) : 0;
+                return { c, charged, returned, paid, debt, lastDate, overdue };
             }).filter(r => r.charged || r.paid || r.returned);
             const tot = (k) => formatAmount(rows.reduce((s, r) => s + r[k], 0));
+            const overdueClass = (days) => days > 30 ? 'color:#d32f2f;font-weight:bold' : days > 14 ? 'color:#ff9800' : '';
+            const _debtGroup = group;
+            window._lastDebtRows = rows; window._lastDebtGroup = group;
             return tReportBar() + `<div id="tReport"><div class="stats">
                 <div class="stat-card"><div class="stat-label">${isSale ? 'ОТГРУЖЕНО' : 'ПОСТУПИЛО'}</div><div class="stat-value">${tot('charged')}</div></div>
                 <div class="stat-card"><div class="stat-label">ОПЛАЧЕНО</div><div class="stat-value">${tot('paid')}</div></div>
                 <div class="stat-card"><div class="stat-label">${isSale ? 'ДОЛГ ПОКУПАТЕЛЕЙ' : 'ДОЛГ ПОСТАВЩИКАМ'}</div><div class="stat-value" style="color:${rows.reduce((s, r) => s + r.debt, 0) > 0 ? '#d32f2f' : '#2e7d32'}">${tot('debt')}</div></div></div>
-            <div class="table-container"><table><thead><tr><th>Контрагент</th><th>ИНН</th><th style="text-align:right">${isSale ? 'Отгружено' : 'Поступило'}</th><th style="text-align:right">Возвраты</th><th style="text-align:right">Оплачено</th><th style="text-align:right">${isSale ? 'Долг покупателя' : 'Наш долг'}</th><th style="text-align:right">Аванс</th></tr></thead>
-            <tbody>${rows.map(r => `<tr><td><a href="#" onclick="event.preventDefault();tFilters.contractor='${r.c.id}';selectPageById('${isSale ? 'p_sale' : 'p_purchase'}')">${esc(r.c.name)}</a></td><td>${esc(r.c.inn)}</td><td class="num">${formatAmount(r.charged)}</td><td class="num">${formatAmount(r.returned)}</td><td class="num">${formatAmount(r.paid)}</td><td class="num amount ${r.debt > 0 ? 'out' : ''}">${r.debt > 0 ? formatAmount(r.debt) : '—'}</td><td class="num">${r.debt < 0 ? formatAmount(-r.debt) : '—'}</td></tr>`).join('')}
-            ${rows.length ? '' : '<tr><td colspan="7" class="empty-state">Нет данных за период</td></tr>'}</tbody>
-            <tfoot><tr><td colspan="2"><b>Итого</b></td><td class="num"><b>${tot('charged')}</b></td><td class="num"><b>${tot('returned')}</b></td><td class="num"><b>${tot('paid')}</b></td><td class="num"><b>${formatAmount(rows.reduce((s, r) => s + Math.max(0, r.debt), 0))}</b></td><td class="num"><b>${formatAmount(rows.reduce((s, r) => s + Math.max(0, -r.debt), 0))}</b></td></tr></tfoot></table></div></div>`;
+            <div style="margin-bottom:8px;text-align:right"><button class="btn" onclick="exportDebtExcel()">📥 Excel</button></div>
+            <div class="table-container"><table><thead><tr><th>Контрагент</th><th>ИНН</th><th style="text-align:right">${isSale ? 'Отгружено' : 'Поступило'}</th><th style="text-align:right">Возвраты</th><th style="text-align:right">Оплачено</th><th style="text-align:right">${isSale ? 'Долг покупателя' : 'Наш долг'}</th><th style="text-align:right">Аванс</th><th>Последний док.</th><th style="text-align:right">Просрочка</th></tr></thead>
+            <tbody>${rows.map(r => `<tr><td><a href="#" onclick="event.preventDefault();tFilters.contractor='${r.c.id}';selectPageById('${isSale ? 'p_sale' : 'p_purchase'}')">${esc(r.c.name)}</a></td><td>${esc(r.c.inn)}</td><td class="num">${formatAmount(r.charged)}</td><td class="num">${formatAmount(r.returned)}</td><td class="num">${formatAmount(r.paid)}</td><td class="num amount ${r.debt > 0 ? 'out' : ''}">${r.debt > 0 ? formatAmount(r.debt) : '—'}</td><td class="num">${r.debt < 0 ? formatAmount(-r.debt) : '—'}</td><td>${r.lastDate ? formatDate(r.lastDate) : '—'}</td><td class="num" style="${overdueClass(r.overdue)}">${r.overdue > 0 ? r.overdue + ' дн.' : '—'}</td></tr>`).join('')}
+            ${rows.length ? '' : '<tr><td colspan="9" class="empty-state">Нет данных за период</td></tr>'}</tbody>
+            <tfoot><tr><td colspan="2"><b>Итого</b></td><td class="num"><b>${tot('charged')}</b></td><td class="num"><b>${tot('returned')}</b></td><td class="num"><b>${tot('paid')}</b></td><td class="num"><b>${formatAmount(rows.reduce((s, r) => s + Math.max(0, r.debt), 0))}</b></td><td class="num"><b>${formatAmount(rows.reduce((s, r) => s + Math.max(0, -r.debt), 0))}</b></td><td colspan="2"></td></tr></tfoot></table></div></div>`;
         }
         function renderSalesReport() {
             const docs = tPosted(['sale', 'production_services', 'commission_report', 'retail_report']);
@@ -3642,12 +4211,21 @@
             const { key, id, cb } = refEdit, R = REFS[key];
             const item = id ? db.trade[key].find(x => x.id === id) : { id: tUid() };
             for (const f of R.fields) { let v = document.getElementById('rf_' + f.k).value; if (f.req && !v) { alert('Заполните поле «' + f.l.replace(' *', '') + '»'); return; } if (f.type === 'number') v = Number(v); if (['vatIncluded', 'stdDeduction', 'taxable', 'sf'].includes(f.k)) v = v === 'true'; if (['price', 'cost', 'markup'].includes(f.k)) v = Number(v) || 0; item[f.k] = v; }
+            if (item.name) { const dup = db.trade[key].find(x => x.id !== item.id && x.name && x.name.toLowerCase() === item.name.toLowerCase()); if (dup && !confirm('Элемент «' + item.name + '» уже существует в справочнике. Всё равно сохранить?')) return; }
             if (!id) db.trade[key].push(item);
             saveData(); document.getElementById('tRefModal').classList.remove('active'); showToast('Записано');
             if (cb) cb(item); else if (tIsTradePage(currentPage)) renderPage();
             if (tDoc && document.getElementById('tModal').classList.contains('active')) tRenderForm(false);
         }
         function tRefDel(key, id) {
+            const usedIn = db.trade.docs.filter(d => {
+                if (key === 'contractors' && d.contractor === id) return true;
+                if (key === 'warehouses' && (d.warehouse === id || d.warehouseTo === id)) return true;
+                if (key === 'contracts' && d.contract === id) return true;
+                if (key === 'nomenclature') { for (const t of ['goods','services','agent','tara']) { if ((d[t]||[]).some(r => r.nom === id)) return true; } }
+                return false;
+            });
+            if (usedIn.length) { alert('Нельзя удалить — элемент используется в ' + usedIn.length + ' документе(ах). Сначала удалите или измените эти документы.'); return; }
             if (!confirm('Удалить элемент справочника?')) return;
             db.trade[key] = db.trade[key].filter(x => x.id !== id); saveData(); renderPage();
         }
@@ -3693,7 +4271,26 @@
             renderPage();
         }
         // Сворачивание групп меню
-        function tToggleGroup(el) { el.classList.toggle('collapsed'); let n = el.nextElementSibling; while (n && !n.classList.contains('section-title')) { n.style.display = el.classList.contains('collapsed') ? 'none' : ''; n = n.nextElementSibling; } }
+        function tToggleGroup(el) {
+            el.classList.toggle('collapsed');
+            let n = el.nextElementSibling;
+            while (n && !n.classList.contains('section-title')) { n.style.display = el.classList.contains('collapsed') ? 'none' : ''; n = n.nextElementSibling; }
+            // Save collapsed state
+            const titles = Array.from(document.querySelectorAll('.section-title'));
+            const collapsed = titles.filter(t => t.classList.contains('collapsed')).map(t => t.textContent.trim());
+            try { localStorage.setItem('collapsed_groups', JSON.stringify(collapsed)); } catch(e) {}
+        }
+        // Restore collapsed groups on load
+        (function() {
+            try {
+                const saved = JSON.parse(localStorage.getItem('collapsed_groups') || '[]');
+                if (saved.length) {
+                    document.querySelectorAll('.section-title').forEach(el => {
+                        if (saved.includes(el.textContent.trim())) { el.classList.add('collapsed'); let n = el.nextElementSibling; while (n && !n.classList.contains('section-title')) { n.style.display = 'none'; n = n.nextElementSibling; } }
+                    });
+                }
+            } catch(e) {}
+        })();
 
         window.addEventListener('DOMContentLoaded', () => { document.querySelectorAll('.nav-item').forEach(el => { const m = (el.getAttribute('onclick') || '').match(/selectPage\('([^']+)'\)/); if (m) el.dataset.page = m[1]; }); });
 
@@ -3801,9 +4398,9 @@
                 const cfg = TT[d.type];
                 switch (d.type) {
                     case 'purchase': (d.goods || []).forEach(r => push(d, r.nom, d.warehouse, +r.qty, r.total - r.vatSum > 0 ? (r.total - r.vatSum) / r.qty : costOf(r.nom))); (d.tara || []).forEach(r => push(d, r.nom, d.warehouse, +r.qty, r.price)); break;
-                    case 'purchase_return': (d.goods || []).forEach(r => push(d, r.nom, d.warehouse, -r.qty, costOf(r.nom))); break;
+                    case 'purchase_return': (d.goods || []).forEach(r => push(d, r.nom, d.warehouse, -r.qty, r.price || costOf(r.nom))); break;
                     case 'sale': case 'retail_report': case 'commission_report': (d.goods || []).forEach(r => push(d, r.nom, d.warehouse, -r.qty, costOf(r.nom))); (d.tara || []).forEach(r => push(d, r.nom, d.warehouse, -r.qty, r.price)); break;
-                    case 'sale_return': (d.goods || []).forEach(r => push(d, r.nom, d.warehouse, +r.qty, costOf(r.nom))); break;
+                    case 'sale_return': (d.goods || []).forEach(r => push(d, r.nom, d.warehouse, +r.qty, r.price || costOf(r.nom))); break;
                     case 'stock_opening': case 'stock_in': (d.goods || []).forEach(r => push(d, r.nom, d.warehouse, +r.qty, r.price)); break;
                     case 'stock_out': (d.goods || []).forEach(r => push(d, r.nom, d.warehouse, -r.qty, r.price || costOf(r.nom))); break;
                     case 'transfer': (d.goods || []).forEach(r => { push(d, r.nom, d.warehouse, -r.qty, r.price || costOf(r.nom)); push(d, r.nom, d.warehouseTo, +r.qty, r.price || costOf(r.nom)); }); break;
@@ -4064,7 +4661,7 @@
                 case 'shift_report': (d.products || []).forEach(r => add(r.account || '43', d.costAccount || '20.01', (Number(r.qty) || 0) * (Number(r.price) || 0), 'Выпуск по плановой себестоимости: ' + tNomName(r.nom))); (d.materials || []).forEach(r => add(r.costAccount || d.costAccount || '20.01', r.account || '10.01', (Number(r.qty) || 0) * (Number(r.price) || 0), 'Списание материалов: ' + tNomName(r.nom))); (d.waste || []).forEach(r => add(r.account || '10.06', d.costAccount || '20.01', (Number(r.qty) || 0) * (Number(r.price) || 0), 'Возвратные отходы: ' + tNomName(r.nom))); break;
                 case 'to_processing': (d.materials || []).forEach(r => add('10.07', r.account || '10.01', (Number(r.qty) || 0) * (Number(r.price) || 0), 'Передача в переработку: ' + tNomName(r.nom))); break;
                 case 'from_processing': (d.materials || []).forEach(r => add(d.costAccount || '20.01', '10.07', (Number(r.qty) || 0) * (Number(r.price) || 0), 'Списание переданных материалов: ' + tNomName(r.nom))); (d.services || []).forEach(r => { add(d.costAccount || '20.01', '60.01', (r.total || 0) - (r.vatSum || 0), 'Услуги переработчика: ' + tNomName(r.nom)); add('19.04', '60.01', r.vatSum || 0, 'НДС по услугам переработки'); }); (d.products || []).forEach(r => add(r.account || '43', d.costAccount || '20.01', (Number(r.qty) || 0) * (Number(r.price) || 0), 'Выпуск из переработки: ' + tNomName(r.nom))); break;
-                case 'month_close': (d.calc || []).forEach(g => g.productList.forEach(p => add(p.corr >= 0 ? '43' : '43', '20.01', p.corr, (p.corr >= 0 ? 'Дорасчет' : 'Сторно (отриц.)') + ' себестоимости: ' + tNomName(p.nom) + ' (' + tNG(g.nomGroup) + ')'))); break;
+                case 'month_close': (d.calc || []).forEach(g => g.productList.forEach(p => { if (p.corr >= 0) add('43', '20.01', p.corr, 'Дорасчет себестоимости: ' + tNomName(p.nom) + ' (' + tNG(g.nomGroup) + ')'); else add('20.01', '43', Math.abs(p.corr), 'Сторно себестоимости: ' + tNomName(p.nom) + ' (' + tNG(g.nomGroup) + ')'); })); break;
                 default: return tPostingsHR(d);
             }
             return rows;
@@ -4175,7 +4772,7 @@
         }
         function renderStockJournal() {
             const types = Object.keys(TT).filter(t => ['stock', 'prod'].includes(TT[t].group));
-            const docs = db.trade.docs.filter(d => types.includes(d.type)).filter(d => tInPeriod(d)).sort((a, b) => (b.date + b.number).localeCompare(a.date + a.number));
+            const docs = db.trade.docs.filter(d => types.includes(d.type)).filter(d => tInPeriod(d)).sort(docCmp);
             return tReportBar() + `<div id="tReport"><div class="table-container"><table><thead><tr><th></th><th>Дата</th><th>Номер</th><th>Документ</th><th>Вид операции</th><th>Склад</th><th style="text-align:right">Сумма</th><th>Комментарий</th></tr></thead>
             <tbody>${docs.map(d => `<tr ondblclick="tOpen('${d.id}')" style="cursor:pointer"><td>${tStatusIcon(d)}</td><td>${formatDate(d.date)}</td><td><b>${esc(d.number)}</b></td><td>${esc(TT[d.type].short)}</td><td>${esc(d.opKind || '')}</td><td>${TT[d.type].warehouse ? esc(tWh(d.warehouse)) + (d.type === 'transfer' ? ' → ' + esc(tWh(d.warehouseTo)) : '') : ''}</td><td class="num">${TT[d.type].noSum ? '' : formatAmount(d.total)}</td><td>${esc((d.extra && d.extra.comment) || '')}</td></tr>`).join('')}${docs.length ? '' : '<tr><td colspan="8" class="empty-state">Документов нет</td></tr>'}</tbody></table></div></div>`;
         }
@@ -4640,7 +5237,8 @@
             const art = db.articles.find(a => a.name === 'Зарплата') || db.articles.find(a => a.type === 'out');
             const cur = db.currencies.find(c => c.code === 'KGS') || db.currencies[0];
             const list = isBank ? db.bankDocuments : db.cashDocuments;
-            const doc = { id: '_' + Date.now() + '_' + Math.random().toString(36).slice(2, 5), type: target, number: (isBank ? 'ПП' : 'РКО') + '-' + String([...db.bankDocuments, ...db.cashDocuments].filter(x => x.type === target).length + 1).padStart(3, '0'), date: tToday(), status: 'posted', account: acc ? acc.id : '', contractor: contractorName, article: art ? art.id : '', currency: cur ? cur.id : '', sum: Math.round(sum * 100) / 100, rate: 1, purpose, note: 'Создано на основании ' + tDocTitle(base), created: new Date().toISOString(), basis: base.id };
+            const payNum = nextDocNumber((isBank ? 'ПП' : 'РКО'), [...db.bankDocuments, ...db.cashDocuments]);
+            const doc = { id: '_' + Date.now() + '_' + Math.random().toString(36).slice(2, 5), type: target, number: payNum, date: tToday(), status: 'posted', account: acc ? acc.id : '', contractor: contractorName, article: art ? art.id : '', currency: cur ? cur.id : '', sum: Math.round(sum * 100) / 100, rate: 1, purpose, note: 'Создано на основании ' + tDocTitle(base), created: new Date().toISOString(), basis: base.id };
             list.push(doc); saveData(); return doc;
         }
         function tBasisHR(base, target) {
@@ -4814,13 +5412,14 @@
             const art = db.articles.find(a => a.name === (['payment_in', 'pko'].includes(type) ? 'Оплата от покупателя' : 'Оплата поставщику'));
             const cur = db.currencies.find(c => c.code === 'KGS') || db.currencies[0];
             const list = isBank ? db.bankDocuments : db.cashDocuments;
-            const doc = { id: '_' + Date.now() + '_' + list.length + Math.random().toString(36).slice(2, 5), type, number: (isBank ? 'ПП' : (type === 'pko' ? 'ПКО' : 'РКО')) + '-' + String([...db.bankDocuments, ...db.cashDocuments].filter(x => x.type === type).length + 1).padStart(3, '0'),
-                date, status: 'posted', account: acc ? acc.id : '', contractor: tContractorName(base.contractor), article: art ? art.id : '', currency: cur ? cur.id : '', sum, rate: 1,
+            const payNum = nextDocNumber((isBank ? 'ПП' : (type === 'pko' ? 'ПКО' : 'РКО')), [...db.bankDocuments, ...db.cashDocuments]);
+            const doc = { id: '_' + Date.now() + '_' + list.length + Math.random().toString(36).slice(2, 5), type, number: payNum,
+                date, status: 'posted', account: acc ? acc.id : '', contractor: tContractorName(base.contractor), contractorId: base.contractor, article: art ? art.id : '', currency: cur ? cur.id : '', sum, rate: 1,
                 purpose: 'Оплата по документу ' + tDocTitle(base) + (base.vatTotal ? ', в т.ч. НДС ' + formatAmount(base.vatTotal) : ''), note: note || 'Тестовые данные', created: new Date().toISOString(), basis: base.id };
             list.push(doc); return doc;
         }
         function tSeedDemo(force) {
-            if (!force && (db.trade.demoSeeded || db.trade.docs.length)) {
+            if (!force && (db.trade.demoSeeded || db.trade.docs.length || db.trade.noDemo)) {
                 // База уже есть, но складских/производственных демо-документов нет — дополняем
                 if (!db.trade.stockSeeded && db.trade.docs.length && !db.trade.docs.some(d => ['stock', 'prod'].includes((TT[d.type] || {}).group))) {
                     const y0 = new Date().getFullYear(), m0 = String(new Date().getMonth() + 1).padStart(2, '0');
@@ -4893,6 +5492,49 @@
             db.trade.demoSeeded = true; saveData();
             if (force) { renderPage(); showToast('Тестовые данные загружены: ' + db.trade.docs.length + ' документов'); }
         }
+
+        // ==================== KEYBOARD SHORTCUTS ====================
+        document.addEventListener('keydown', function(e) {
+            // Ignore if typing in input/textarea/select
+            const tag = (e.target.tagName || '').toLowerCase();
+            if (tag === 'input' || tag === 'textarea' || tag === 'select') {
+                if (e.key === 'Escape') e.target.blur();
+                return;
+            }
+
+            const isTrade = typeof tIsTradePage === 'function' && tIsTradePage(currentPage);
+            const isBankCash = currentPage === 'bank' || currentPage === 'cash';
+
+            if (e.key === 'F2' && isTrade && tSelected) {
+                e.preventDefault(); tOpen(tSelected);
+            } else if (e.key === 'F9' && isTrade && tSelected) {
+                e.preventDefault(); tCopy(tSelected);
+            } else if (e.key === 'Insert' && isTrade) {
+                e.preventDefault();
+                const j = TRADE_JOURNALS[currentPage];
+                if (j) tCreate(j.types[0]);
+            } else if (e.key === 'Insert' && isBankCash) {
+                e.preventDefault(); openCreateModal();
+            } else if (e.key === 'Delete' && isTrade && tSelected) {
+                e.preventDefault(); tToggleDelete(tSelected);
+            } else if (e.ctrlKey && e.key === 'f') {
+                e.preventDefault();
+                const el = document.getElementById('globalSearch') || document.getElementById('tfSearch');
+                if (el) el.focus();
+            } else if (e.ctrlKey && e.shiftKey && e.key === 'p') {
+                e.preventDefault();
+                if (isTrade && tSelected) tPrint(tSelected, TT[tDocById(tSelected).type].prints[0]);
+            } else if (e.key === 'Escape') {
+                // Close only the topmost modal (highest z-index)
+                const modals = [...document.querySelectorAll('.modal.active')];
+                if (modals.length) {
+                    const top = modals.reduce((a, b) => (parseInt(getComputedStyle(a).zIndex)||0) >= (parseInt(getComputedStyle(b).zIndex)||0) ? a : b);
+                    top.classList.remove('active');
+                }
+            } else if (e.ctrlKey && e.shiftKey && e.key === 'n' && !isTrade && (currentPage === 'bank' || currentPage === 'cash')) {
+                e.preventDefault(); openCreateModal();
+            }
+        });
 
         // ==================== STARTUP ====================
         window.addEventListener('DOMContentLoaded', init);
