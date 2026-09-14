@@ -1454,6 +1454,171 @@
         ],
         "goods": [],
         "created": "2026-09-14T04:22:35.622Z"
+      },
+      {
+        "id": "ob_stock_1",
+        "type": "stock_opening",
+        "number": "НО-С-01",
+        "date": "2026-09-14",
+        "status": "posted",
+        "warehouse": "w1",
+        "comment": "Начальные остатки товаров и материалов на складе",
+        "goods": [
+          {
+            "nom": "n1",
+            "qty": 7160,
+            "price": 0,
+            "sum": 0,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n2",
+            "qty": 1763,
+            "price": 0,
+            "sum": 0,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n3",
+            "qty": 9844,
+            "price": 0,
+            "sum": 0,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n4",
+            "qty": 239675,
+            "price": 0,
+            "sum": 0,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n5",
+            "qty": 23220,
+            "price": 0,
+            "sum": 0,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n6",
+            "qty": 24700,
+            "price": 0,
+            "sum": 0,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n7",
+            "qty": 69300,
+            "price": 0,
+            "sum": 0,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n8",
+            "qty": 50190,
+            "price": 0,
+            "sum": 0,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n9",
+            "qty": 250,
+            "price": 0,
+            "sum": 0,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n10",
+            "qty": 79.5,
+            "price": 0,
+            "sum": 0,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n11",
+            "qty": 1346.4,
+            "price": 0,
+            "sum": 0,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n12",
+            "qty": 259.2,
+            "price": 0,
+            "sum": 0,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n13",
+            "qty": 1938,
+            "price": 0,
+            "sum": 0,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n14",
+            "qty": 204.8,
+            "price": 0,
+            "sum": 0,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n15",
+            "qty": 101.8,
+            "price": 0,
+            "sum": 0,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n16",
+            "qty": 10800,
+            "price": 0,
+            "sum": 0,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n17",
+            "qty": 133.2,
+            "price": 0,
+            "sum": 0,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 0
+          }
+        ],
+        "created": "2026-09-14T04:36:34.006Z"
       }
     ],
     "org": {
@@ -1942,7 +2107,229 @@
       }
     ],
     "contracts": [],
-    "nomenclature": [],
+    "nomenclature": [
+      {
+        "id": "n1",
+        "name": "Газоблок 10/30/60 (80шт)",
+        "article": "ГБ-10",
+        "kind": "Товар",
+        "unit": "шт",
+        "vat": 12,
+        "price": 0,
+        "cost": 0,
+        "account": "41.01",
+        "country": "",
+        "nomGroup": "ng_gb"
+      },
+      {
+        "id": "n2",
+        "name": "Газоблок 15/30/60",
+        "article": "ГБ-15",
+        "kind": "Товар",
+        "unit": "шт",
+        "vat": 12,
+        "price": 0,
+        "cost": 0,
+        "account": "41.01",
+        "country": "",
+        "nomGroup": "ng_gb"
+      },
+      {
+        "id": "n3",
+        "name": "Газоблок 20/30/60 (40шт)",
+        "article": "ГБ-20",
+        "kind": "Товар",
+        "unit": "шт",
+        "vat": 12,
+        "price": 0,
+        "cost": 0,
+        "account": "41.01",
+        "country": "",
+        "nomGroup": "ng_gb"
+      },
+      {
+        "id": "n4",
+        "name": "Клей",
+        "article": "МАТ-01",
+        "kind": "Материал",
+        "unit": "кг",
+        "vat": 12,
+        "price": 0,
+        "cost": 0,
+        "account": "10.01",
+        "country": "",
+        "nomGroup": "ng_mat"
+      },
+      {
+        "id": "n5",
+        "name": "Штукатурка",
+        "article": "МАТ-02",
+        "kind": "Материал",
+        "unit": "кг",
+        "vat": 12,
+        "price": 0,
+        "cost": 0,
+        "account": "10.01",
+        "country": "",
+        "nomGroup": "ng_mat"
+      },
+      {
+        "id": "n6",
+        "name": "Цемент Реко",
+        "article": "МАТ-03",
+        "kind": "Материал",
+        "unit": "кг",
+        "vat": 12,
+        "price": 0,
+        "cost": 0,
+        "account": "10.01",
+        "country": "",
+        "nomGroup": "ng_mat"
+      },
+      {
+        "id": "n7",
+        "name": "Цемент Вест",
+        "article": "МАТ-04",
+        "kind": "Материал",
+        "unit": "кг",
+        "vat": 12,
+        "price": 0,
+        "cost": 0,
+        "account": "10.01",
+        "country": "",
+        "nomGroup": "ng_mat"
+      },
+      {
+        "id": "n8",
+        "name": "Гипс",
+        "article": "МАТ-05",
+        "kind": "Материал",
+        "unit": "кг",
+        "vat": 12,
+        "price": 0,
+        "cost": 0,
+        "account": "10.01",
+        "country": "",
+        "nomGroup": "ng_mat"
+      },
+      {
+        "id": "n9",
+        "name": "Пудра",
+        "article": "МАТ-06",
+        "kind": "Материал",
+        "unit": "кг",
+        "vat": 12,
+        "price": 0,
+        "cost": 0,
+        "account": "10.01",
+        "country": "",
+        "nomGroup": "ng_mat"
+      },
+      {
+        "id": "n10",
+        "name": "Фибра",
+        "article": "МАТ-07",
+        "kind": "Материал",
+        "unit": "кг",
+        "vat": 12,
+        "price": 0,
+        "cost": 0,
+        "account": "10.01",
+        "country": "",
+        "nomGroup": "ng_mat"
+      },
+      {
+        "id": "n11",
+        "name": "Сульфат",
+        "article": "МАТ-08",
+        "kind": "Материал",
+        "unit": "кг",
+        "vat": 12,
+        "price": 0,
+        "cost": 0,
+        "account": "10.01",
+        "country": "",
+        "nomGroup": "ng_mat"
+      },
+      {
+        "id": "n12",
+        "name": "Каустика",
+        "article": "МАТ-09",
+        "kind": "Материал",
+        "unit": "кг",
+        "vat": 12,
+        "price": 0,
+        "cost": 0,
+        "account": "10.01",
+        "country": "",
+        "nomGroup": "ng_mat"
+      },
+      {
+        "id": "n13",
+        "name": "Соль",
+        "article": "МАТ-10",
+        "kind": "Материал",
+        "unit": "кг",
+        "vat": 12,
+        "price": 0,
+        "cost": 0,
+        "account": "10.01",
+        "country": "",
+        "nomGroup": "ng_mat"
+      },
+      {
+        "id": "n14",
+        "name": "Эфир целлюлоза",
+        "article": "МАТ-11",
+        "kind": "Материал",
+        "unit": "кг",
+        "vat": 12,
+        "price": 0,
+        "cost": 0,
+        "account": "10.01",
+        "country": "",
+        "nomGroup": "ng_mat"
+      },
+      {
+        "id": "n15",
+        "name": "Эфир крахмал",
+        "article": "МАТ-12",
+        "kind": "Материал",
+        "unit": "кг",
+        "vat": 12,
+        "price": 0,
+        "cost": 0,
+        "account": "10.01",
+        "country": "",
+        "nomGroup": "ng_mat"
+      },
+      {
+        "id": "n16",
+        "name": "Микрокальцит",
+        "article": "МАТ-13",
+        "kind": "Материал",
+        "unit": "кг",
+        "vat": 12,
+        "price": 0,
+        "cost": 0,
+        "account": "10.01",
+        "country": "",
+        "nomGroup": "ng_mat"
+      },
+      {
+        "id": "n17",
+        "name": "Стекловолокно",
+        "article": "МАТ-14",
+        "kind": "Материал",
+        "unit": "кг",
+        "vat": 12,
+        "price": 0,
+        "cost": 0,
+        "account": "10.01",
+        "country": "",
+        "nomGroup": "ng_mat"
+      }
+    ],
     "warehouses": [
       {
         "id": "w1",
@@ -2003,14 +2390,14 @@
     ],
     "nomGroups": [
       {
-        "id": "ng1",
-        "name": "Компьютеры в сборе",
-        "comment": "Собственная продукция"
+        "id": "ng_gb",
+        "name": "Газоблоки",
+        "comment": "Готовая продукция"
       },
       {
-        "id": "ng2",
-        "name": "Оргтехника",
-        "comment": "Товары для перепродажи"
+        "id": "ng_mat",
+        "name": "Материалы",
+        "comment": "Сырьё и материалы"
       },
       {
         "id": "ng3",
