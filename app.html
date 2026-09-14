@@ -1142,7 +1142,6 @@
 
             initializeDefaults();
             tradeInit();
-            tSeedDemo(false);
 
             // Hide loading, show app
             document.getElementById('appLoading').style.display = 'none';
@@ -2010,10 +2009,9 @@
                 return '<div style="padding:40px;text-align:center;max-width:600px;margin:0 auto">' +
                     '<div style="font-size:64px;margin-bottom:20px">📊</div>' +
                     '<h2 style="margin-bottom:12px;color:#333">Добро пожаловать в 1s Бухгалтерия!</h2>' +
-                    '<p style="color:#666;margin-bottom:30px;line-height:1.6">База данных пуста. Вы можете начать работу с нуля или загрузить тестовые данные для ознакомления с системой.</p>' +
+                    '<p style="color:#666;margin-bottom:30px;line-height:1.6">База данных пуста. Начните работу, выбрав один из разделов ниже.</p>' +
                     '<div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">' +
-                    '<button class="btn primary" onclick="tSeedDemo(true)" style="padding:12px 24px;font-size:15px">📦 Загрузить тестовые данные</button>' +
-                    '<button class="btn" onclick="selectPage(\'bank\')" style="padding:12px 24px;font-size:15px">➕ Начать с нуля</button>' +
+                    '<button class="btn primary" onclick="selectPage(\'bank\')" style="padding:12px 24px;font-size:15px">➕ Начать работу</button>' +
                     '</div>' +
                     '<div style="margin-top:40px;text-align:left;background:#f8f9fa;border-radius:8px;padding:20px">' +
                     '<h3 style="margin-bottom:12px;font-size:15px">Быстрый старт:</h3>' +
@@ -2494,10 +2492,9 @@
                     <div id="importResult" style="margin-top:10px;color:#2e7d32"></div>
                 </div>
                 <div style="padding: 20px; margin-top: 15px;" class="table-container">
-                    <h3>Тестовые данные</h3>
-                    <p style="margin: 15px 0; color: #666;">Заполняет базу демонстрационными документами по всем разделам: счета, поступления, реализации, возвраты, корректировки, ГТД, доверенности, акты сверки, розничные продажи, оплаты через банк и кассу.</p>
+                    <h3>Управление данными</h3>
+                    <p style="margin: 15px 0; color: #666;">Очистка удалит все документы из базы данных. Справочники (контрагенты, номенклатура, счета) будут сохранены.</p>
                     <div style="display:flex;gap:10px;flex-wrap:wrap">
-                        <button class="btn primary" onclick="tSeedDemo(true)">Загрузить тестовые данные</button>
                         <button class="btn danger" onclick="tClearAll()">Очистить все документы</button>
                     </div>
                     <p style="margin-top:12px;color:#666;font-size:12px">Документов сейчас: банк — ${db.bankDocuments.length}, касса — ${db.cashDocuments.length}, покупки/продажи — ${db.trade.docs.length}.</p>
@@ -3179,6 +3176,10 @@
             t.sfCounter = t.sfCounter || { in: 0, out: 0 };
             stockInit();
             hrInit();
+            t.demoSeeded = true;
+            t.stockSeeded = true;
+            t.hrSeeded = true;
+            t.noDemo = true;
         }
 
         // ---------- Утилиты ----------
