@@ -1,5 +1,57 @@
 {
-  "bankDocuments": [],
+  "bankDocuments": [
+    {
+      "id": "ob_fin_1",
+      "type": "payment_in",
+      "number": "НО-Ф-01",
+      "date": "2026-09-14",
+      "status": "posted",
+      "account": "_3",
+      "contractor": "",
+      "contractorId": "",
+      "article": "_3",
+      "currency": "_1",
+      "sum": 545000,
+      "rate": 1,
+      "purpose": "Начальный остаток по кассе",
+      "note": "Начальный остаток",
+      "created": "2026-09-14T04:33:33.227Z"
+    },
+    {
+      "id": "ob_fin_2",
+      "type": "payment_in",
+      "number": "НО-Ф-02",
+      "date": "2026-09-14",
+      "status": "posted",
+      "account": "_2",
+      "contractor": "",
+      "contractorId": "",
+      "article": "_3",
+      "currency": "_1",
+      "sum": 1825000,
+      "rate": 1,
+      "purpose": "Начальный остаток МБанк счет",
+      "note": "Начальный остаток",
+      "created": "2026-09-14T04:33:33.228Z"
+    },
+    {
+      "id": "ob_fin_3",
+      "type": "payment_in",
+      "number": "НО-Ф-03",
+      "date": "2026-09-14",
+      "status": "posted",
+      "account": "_1",
+      "contractor": "",
+      "contractorId": "",
+      "article": "_3",
+      "currency": "_1",
+      "sum": 781065,
+      "rate": 1,
+      "purpose": "Начальный остаток на расчетном счете",
+      "note": "Начальный остаток",
+      "created": "2026-09-14T04:33:33.228Z"
+    }
+  ],
   "cashDocuments": [],
   "accounts": [
     {
@@ -10,8 +62,15 @@
       "type": "bank"
     },
     {
+      "id": "_2",
+      "name": "МБанк счет (касса)",
+      "number": "",
+      "bank": "",
+      "type": "cash"
+    },
+    {
       "id": "_3",
-      "name": "Касса офиса",
+      "name": "Наличка касса",
       "number": "",
       "bank": "",
       "type": "cash"
@@ -30,7 +89,12 @@
   "cashs": [
     {
       "id": "_1",
-      "name": "Касса офиса",
+      "name": "Наличка касса",
+      "responsible": ""
+    },
+    {
+      "id": "_2",
+      "name": "МБанк счет (касса)",
       "responsible": ""
     }
   ],
