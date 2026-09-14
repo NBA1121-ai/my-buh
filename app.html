@@ -784,13 +784,13 @@
         <aside class="sidebar" id="sidebar" role="navigation" aria-label="Главное меню">
             <div class="logo">📊 1s Бухгалтерия</div>
 
-            <div class="nav-item active" onclick="selectPage('dashboard')">📋 Главная (Дашборд)</div>
+            <div class="nav-item active finance-section" onclick="selectPage('dashboard')">📋 Главная (Дашборд)</div>
 
-            <div class="section-title" onclick="tToggleGroup(this)">Банк и касса</div>
-            <div class="nav-item" onclick="selectPage('bank')">🏦 Банковские документы</div>
-            <div class="nav-item" onclick="selectPage('cash')">💰 Кассовые документы</div>
-            <div class="nav-item" onclick="selectPage('reports')">📊 Отчеты по ДДС</div>
-            <div class="nav-item" onclick="selectPage('cashbook')">📔 Кассовая книга</div>
+            <div class="section-title finance-section" onclick="tToggleGroup(this)">Банк и касса</div>
+            <div class="nav-item finance-section" onclick="selectPage('bank')">🏦 Банковские документы</div>
+            <div class="nav-item finance-section" onclick="selectPage('cash')">💰 Кассовые документы</div>
+            <div class="nav-item finance-section" onclick="selectPage('reports')">📊 Отчеты по ДДС</div>
+            <div class="nav-item finance-section" onclick="selectPage('cashbook')">📔 Кассовая книга</div>
 
             <div class="section-title" onclick="tToggleGroup(this)">Покупки</div>
             <div class="nav-item" onclick="selectPage('p_supplier_invoice')">🧾 Счета от поставщиков</div>
@@ -1124,6 +1124,12 @@
                 if (s.role === 'admin') {
                     document.querySelectorAll('.admin-only').forEach(el => el.style.display = '');
                 }
+                // Hide finance sections for limited role
+                window._userRole = s.role || 'user';
+                if (s.role === 'limited') {
+                    document.querySelectorAll('.finance-section').forEach(el => el.style.display = 'none');
+                    currentPage = 'p_supplier_invoice';
+                }
             } catch(e) {
                 localStorage.removeItem('auth_session');
                 window.location.href = 'index.html';
@@ -1288,7 +1294,9 @@
         }
 
         // ==================== NAVIGATION ====================
+        const _financePages = ['dashboard', 'bank', 'cash', 'reports', 'cashbook'];
         function selectPage(page) {
+            if (window._userRole === 'limited' && _financePages.includes(page)) return;
             currentPage = page;
             tSelected = null;
             tFilters.search = '';
@@ -2330,7 +2338,7 @@
             let s = {};
             try { s = JSON.parse(localStorage.getItem('auth_session') || '{}'); } catch(e) {}
             return '<div style="padding:20px;max-width:500px">' +
-                '<div class="dash-card" style="margin-bottom:20px"><h3>Профиль</h3><div style="margin-top:10px"><strong>Имя:</strong> ' + (s.name || 'Пользователь') + '</div><div><strong>Роль:</strong> ' + (s.role === 'admin' ? 'Администратор' : 'Пользователь') + '</div></div>' +
+                '<div class="dash-card" style="margin-bottom:20px"><h3>Профиль</h3><div style="margin-top:10px"><strong>Имя:</strong> ' + (s.name || 'Пользователь') + '</div><div><strong>Роль:</strong> ' + (s.role === 'admin' ? 'Администратор' : s.role === 'limited' ? 'Ограниченный (без финансов)' : 'Пользователь') + '</div></div>' +
                 '<div class="dash-card"><h3>Смена пароля</h3>' +
                 '<div style="margin-top:12px"><label style="font-size:12px;color:#666">Текущий пароль</label><br><input type="password" id="oldPass" style="padding:8px;border:1px solid #ddd;border-radius:4px;width:100%;margin-bottom:10px"></div>' +
                 '<div><label style="font-size:12px;color:#666">Новый пароль</label><br><input type="password" id="newPass1" style="padding:8px;border:1px solid #ddd;border-radius:4px;width:100%;margin-bottom:10px"></div>' +
@@ -2399,6 +2407,7 @@
                             <div><label style="font-size:12px;color:#666">Роль</label><br>
                                 <select id="newUserRole" style="padding:8px;border:1px solid #ddd;border-radius:4px">
                                     <option value="user">Пользователь</option>
+                                    <option value="limited">Ограниченный (без финансов)</option>
                                     <option value="admin">Администратор</option>
                                 </select>
                             </div>
@@ -2420,7 +2429,7 @@
             if (!el) return;
             if (!_usersCache.length) { el.innerHTML = '<p style="color:#999">Нет пользователей</p>'; return; }
             el.innerHTML = '<table style="width:100%;border-collapse:collapse"><thead><tr><th style="text-align:left;padding:8px;border-bottom:2px solid #ddd">Имя</th><th style="text-align:left;padding:8px;border-bottom:2px solid #ddd">Роль</th><th style="padding:8px;border-bottom:2px solid #ddd">Действие</th></tr></thead><tbody>' +
-                _usersCache.map((u, i) => '<tr><td style="padding:8px;border-bottom:1px solid #eee">' + esc(u.name || '—') + '</td><td style="padding:8px;border-bottom:1px solid #eee">' + (u.role === 'admin' ? 'Администратор' : 'Пользователь') + '</td><td style="padding:8px;border-bottom:1px solid #eee;text-align:center">' +
+                _usersCache.map((u, i) => '<tr><td style="padding:8px;border-bottom:1px solid #eee">' + esc(u.name || '—') + '</td><td style="padding:8px;border-bottom:1px solid #eee">' + (u.role === 'admin' ? 'Администратор' : u.role === 'limited' ? 'Ограниченный' : 'Пользователь') + '</td><td style="padding:8px;border-bottom:1px solid #eee;text-align:center">' +
                     (u.role === 'admin' && _usersCache.filter(x => x.role === 'admin').length <= 1 ? '<span style="color:#999">Основной админ</span>' : '<button class="btn danger" onclick="deleteUser(' + i + ')">Удалить</button>') +
                 '</td></tr>').join('') +
                 '</tbody></table>';
