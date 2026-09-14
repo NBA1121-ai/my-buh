@@ -2,34 +2,1164 @@
   "bankDocuments": [],
   "cashDocuments": [],
   "accounts": [
-    { "id": "_1", "name": "Расчетный счет МБанк", "number": "1033220001116529", "bank": "ФИЛИАЛ \"МБАНК ПЛАЗА\" ОАО \"МБАНК\"", "type": "bank" },
-    { "id": "_3", "name": "Касса офиса", "number": "", "bank": "", "type": "cash" }
+    {
+      "id": "_1",
+      "name": "Расчетный счет МБанк",
+      "number": "1033220001116529",
+      "bank": "ФИЛИАЛ \"МБАНК ПЛАЗА\" ОАО \"МБАНК\"",
+      "type": "bank"
+    },
+    {
+      "id": "_3",
+      "name": "Касса офиса",
+      "number": "",
+      "bank": "",
+      "type": "cash"
+    }
   ],
   "banks": [
-    { "id": "_1", "name": "ФИЛИАЛ \"МБАНК ПЛАЗА\" ОАО \"МБАНК\"", "bik": "103032", "corrAccount": "", "inn": "42607201110131", "address": "г.Бишкек, пр.Чуй, 127" }
+    {
+      "id": "_1",
+      "name": "ФИЛИАЛ \"МБАНК ПЛАЗА\" ОАО \"МБАНК\"",
+      "bik": "103032",
+      "corrAccount": "",
+      "inn": "42607201110131",
+      "address": "г.Бишкек, пр.Чуй, 127"
+    }
   ],
   "cashs": [
-    { "id": "_1", "name": "Касса офиса", "responsible": "" }
+    {
+      "id": "_1",
+      "name": "Касса офиса",
+      "responsible": ""
+    }
   ],
   "currencies": [
-    { "id": "_1", "code": "KGS", "name": "Киргизский сом", "rate": 1 },
-    { "id": "_2", "code": "USD", "name": "Доллар США", "rate": 85 },
-    { "id": "_3", "code": "EUR", "name": "Евро", "rate": 92 },
-    { "id": "_4", "code": "RUB", "name": "Российский рубль", "rate": 0.9 }
+    {
+      "id": "_1",
+      "code": "KGS",
+      "name": "Киргизский сом",
+      "rate": 1
+    },
+    {
+      "id": "_2",
+      "code": "USD",
+      "name": "Доллар США",
+      "rate": 85
+    },
+    {
+      "id": "_3",
+      "code": "EUR",
+      "name": "Евро",
+      "rate": 92
+    },
+    {
+      "id": "_4",
+      "code": "RUB",
+      "name": "Российский рубль",
+      "rate": 0.9
+    }
   ],
   "articles": [
-    { "id": "_1", "name": "Оплата от покупателя", "type": "in" },
-    { "id": "_2", "name": "Возврат подотчета", "type": "in" },
-    { "id": "_3", "name": "Взнос учредителя", "type": "in" },
-    { "id": "_4", "name": "Кредит/займ", "type": "in" },
-    { "id": "_5", "name": "Оплата поставщику", "type": "out" },
-    { "id": "_6", "name": "Выдача под отчет", "type": "out" },
-    { "id": "_7", "name": "Зарплата", "type": "out" },
-    { "id": "_8", "name": "Налоги", "type": "out" },
-    { "id": "_9", "name": "Аренда", "type": "out" }
+    {
+      "id": "_1",
+      "name": "Оплата от покупателя",
+      "type": "in"
+    },
+    {
+      "id": "_2",
+      "name": "Возврат подотчета",
+      "type": "in"
+    },
+    {
+      "id": "_3",
+      "name": "Взнос учредителя",
+      "type": "in"
+    },
+    {
+      "id": "_4",
+      "name": "Кредит/займ",
+      "type": "in"
+    },
+    {
+      "id": "_5",
+      "name": "Оплата поставщику",
+      "type": "out"
+    },
+    {
+      "id": "_6",
+      "name": "Выдача под отчет",
+      "type": "out"
+    },
+    {
+      "id": "_7",
+      "name": "Зарплата",
+      "type": "out"
+    },
+    {
+      "id": "_8",
+      "name": "Налоги",
+      "type": "out"
+    },
+    {
+      "id": "_9",
+      "name": "Аренда",
+      "type": "out"
+    }
   ],
   "trade": {
-    "docs": [],
+    "docs": [
+      {
+        "id": "obc1",
+        "type": "customer_invoice",
+        "number": "НО-01",
+        "date": "2026-09-14",
+        "status": "posted",
+        "contractor": "c1",
+        "contract": "",
+        "payUntil": "",
+        "discount": 0,
+        "comment": "Начальный остаток дебиторской задолженности",
+        "currency": "KGS",
+        "total": 4960868,
+        "sum": 4960868,
+        "vatSum": 0,
+        "services": [
+          {
+            "nom": "",
+            "name": "Начальный остаток",
+            "qty": 1,
+            "price": 4960868,
+            "sum": 4960868,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 4960868
+          }
+        ],
+        "goods": [],
+        "created": "2026-09-14T04:20:54.523Z"
+      },
+      {
+        "id": "obc2",
+        "type": "customer_invoice",
+        "number": "НО-02",
+        "date": "2026-09-14",
+        "status": "posted",
+        "contractor": "c2",
+        "contract": "",
+        "payUntil": "",
+        "discount": 0,
+        "comment": "Начальный остаток дебиторской задолженности",
+        "currency": "KGS",
+        "total": 811200,
+        "sum": 811200,
+        "vatSum": 0,
+        "services": [
+          {
+            "nom": "",
+            "name": "Начальный остаток",
+            "qty": 1,
+            "price": 811200,
+            "sum": 811200,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 811200
+          }
+        ],
+        "goods": [],
+        "created": "2026-09-14T04:20:54.524Z"
+      },
+      {
+        "id": "obc3",
+        "type": "customer_invoice",
+        "number": "НО-03",
+        "date": "2026-09-14",
+        "status": "posted",
+        "contractor": "c3",
+        "contract": "",
+        "payUntil": "",
+        "discount": 0,
+        "comment": "Начальный остаток дебиторской задолженности",
+        "currency": "KGS",
+        "total": 322000,
+        "sum": 322000,
+        "vatSum": 0,
+        "services": [
+          {
+            "nom": "",
+            "name": "Начальный остаток",
+            "qty": 1,
+            "price": 322000,
+            "sum": 322000,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 322000
+          }
+        ],
+        "goods": [],
+        "created": "2026-09-14T04:20:54.524Z"
+      },
+      {
+        "id": "obc4",
+        "type": "customer_invoice",
+        "number": "НО-04",
+        "date": "2026-09-14",
+        "status": "posted",
+        "contractor": "c4",
+        "contract": "",
+        "payUntil": "",
+        "discount": 0,
+        "comment": "Начальный остаток дебиторской задолженности",
+        "currency": "KGS",
+        "total": 96000,
+        "sum": 96000,
+        "vatSum": 0,
+        "services": [
+          {
+            "nom": "",
+            "name": "Начальный остаток",
+            "qty": 1,
+            "price": 96000,
+            "sum": 96000,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 96000
+          }
+        ],
+        "goods": [],
+        "created": "2026-09-14T04:20:54.524Z"
+      },
+      {
+        "id": "obc5",
+        "type": "customer_invoice",
+        "number": "НО-05",
+        "date": "2026-09-14",
+        "status": "posted",
+        "contractor": "c5",
+        "contract": "",
+        "payUntil": "",
+        "discount": 0,
+        "comment": "Начальный остаток дебиторской задолженности",
+        "currency": "KGS",
+        "total": 200000,
+        "sum": 200000,
+        "vatSum": 0,
+        "services": [
+          {
+            "nom": "",
+            "name": "Начальный остаток",
+            "qty": 1,
+            "price": 200000,
+            "sum": 200000,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 200000
+          }
+        ],
+        "goods": [],
+        "created": "2026-09-14T04:20:54.524Z"
+      },
+      {
+        "id": "obc6",
+        "type": "customer_invoice",
+        "number": "НО-06",
+        "date": "2026-09-14",
+        "status": "posted",
+        "contractor": "c6",
+        "contract": "",
+        "payUntil": "",
+        "discount": 0,
+        "comment": "Начальный остаток дебиторской задолженности",
+        "currency": "KGS",
+        "total": 14300,
+        "sum": 14300,
+        "vatSum": 0,
+        "services": [
+          {
+            "nom": "",
+            "name": "Начальный остаток",
+            "qty": 1,
+            "price": 14300,
+            "sum": 14300,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 14300
+          }
+        ],
+        "goods": [],
+        "created": "2026-09-14T04:20:54.524Z"
+      },
+      {
+        "id": "obc7",
+        "type": "customer_invoice",
+        "number": "НО-07",
+        "date": "2026-09-14",
+        "status": "posted",
+        "contractor": "c7",
+        "contract": "",
+        "payUntil": "",
+        "discount": 0,
+        "comment": "Начальный остаток дебиторской задолженности",
+        "currency": "KGS",
+        "total": 130870,
+        "sum": 130870,
+        "vatSum": 0,
+        "services": [
+          {
+            "nom": "",
+            "name": "Начальный остаток",
+            "qty": 1,
+            "price": 130870,
+            "sum": 130870,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 130870
+          }
+        ],
+        "goods": [],
+        "created": "2026-09-14T04:20:54.524Z"
+      },
+      {
+        "id": "obc8",
+        "type": "customer_invoice",
+        "number": "НО-08",
+        "date": "2026-09-14",
+        "status": "posted",
+        "contractor": "c8",
+        "contract": "",
+        "payUntil": "",
+        "discount": 0,
+        "comment": "Начальный остаток дебиторской задолженности",
+        "currency": "KGS",
+        "total": 43050,
+        "sum": 43050,
+        "vatSum": 0,
+        "services": [
+          {
+            "nom": "",
+            "name": "Начальный остаток",
+            "qty": 1,
+            "price": 43050,
+            "sum": 43050,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 43050
+          }
+        ],
+        "goods": [],
+        "created": "2026-09-14T04:20:54.524Z"
+      },
+      {
+        "id": "obc9",
+        "type": "customer_invoice",
+        "number": "НО-09",
+        "date": "2026-09-14",
+        "status": "posted",
+        "contractor": "c9",
+        "contract": "",
+        "payUntil": "",
+        "discount": 0,
+        "comment": "Начальный остаток дебиторской задолженности",
+        "currency": "KGS",
+        "total": 83600,
+        "sum": 83600,
+        "vatSum": 0,
+        "services": [
+          {
+            "nom": "",
+            "name": "Начальный остаток",
+            "qty": 1,
+            "price": 83600,
+            "sum": 83600,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 83600
+          }
+        ],
+        "goods": [],
+        "created": "2026-09-14T04:20:54.524Z"
+      },
+      {
+        "id": "obc10",
+        "type": "customer_invoice",
+        "number": "НО-10",
+        "date": "2026-09-14",
+        "status": "posted",
+        "contractor": "c10",
+        "contract": "",
+        "payUntil": "",
+        "discount": 0,
+        "comment": "Начальный остаток дебиторской задолженности",
+        "currency": "KGS",
+        "total": 105600,
+        "sum": 105600,
+        "vatSum": 0,
+        "services": [
+          {
+            "nom": "",
+            "name": "Начальный остаток",
+            "qty": 1,
+            "price": 105600,
+            "sum": 105600,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 105600
+          }
+        ],
+        "goods": [],
+        "created": "2026-09-14T04:20:54.524Z"
+      },
+      {
+        "id": "obc11",
+        "type": "customer_invoice",
+        "number": "НО-11",
+        "date": "2026-09-14",
+        "status": "posted",
+        "contractor": "c11",
+        "contract": "",
+        "payUntil": "",
+        "discount": 0,
+        "comment": "Начальный остаток дебиторской задолженности",
+        "currency": "USD",
+        "total": 442,
+        "sum": 442,
+        "vatSum": 0,
+        "services": [
+          {
+            "nom": "",
+            "name": "Начальный остаток",
+            "qty": 1,
+            "price": 442,
+            "sum": 442,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 442
+          }
+        ],
+        "goods": [],
+        "created": "2026-09-14T04:20:54.524Z"
+      },
+      {
+        "id": "obc12",
+        "type": "customer_invoice",
+        "number": "НО-12",
+        "date": "2026-09-14",
+        "status": "posted",
+        "contractor": "c12",
+        "contract": "",
+        "payUntil": "",
+        "discount": 0,
+        "comment": "Начальный остаток дебиторской задолженности",
+        "currency": "KGS",
+        "total": 38400,
+        "sum": 38400,
+        "vatSum": 0,
+        "services": [
+          {
+            "nom": "",
+            "name": "Начальный остаток",
+            "qty": 1,
+            "price": 38400,
+            "sum": 38400,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 38400
+          }
+        ],
+        "goods": [],
+        "created": "2026-09-14T04:20:54.524Z"
+      },
+      {
+        "id": "obc13",
+        "type": "customer_invoice",
+        "number": "НО-13",
+        "date": "2026-09-14",
+        "status": "posted",
+        "contractor": "c13",
+        "contract": "",
+        "payUntil": "",
+        "discount": 0,
+        "comment": "Начальный остаток дебиторской задолженности",
+        "currency": "KGS",
+        "total": 30000,
+        "sum": 30000,
+        "vatSum": 0,
+        "services": [
+          {
+            "nom": "",
+            "name": "Начальный остаток",
+            "qty": 1,
+            "price": 30000,
+            "sum": 30000,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 30000
+          }
+        ],
+        "goods": [],
+        "created": "2026-09-14T04:20:54.524Z"
+      },
+      {
+        "id": "obc14",
+        "type": "customer_invoice",
+        "number": "НО-14",
+        "date": "2026-09-14",
+        "status": "posted",
+        "contractor": "c14",
+        "contract": "",
+        "payUntil": "",
+        "discount": 0,
+        "comment": "Начальный остаток дебиторской задолженности",
+        "currency": "KGS",
+        "total": 23200,
+        "sum": 23200,
+        "vatSum": 0,
+        "services": [
+          {
+            "nom": "",
+            "name": "Начальный остаток",
+            "qty": 1,
+            "price": 23200,
+            "sum": 23200,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 23200
+          }
+        ],
+        "goods": [],
+        "created": "2026-09-14T04:20:54.524Z"
+      },
+      {
+        "id": "obc15",
+        "type": "customer_invoice",
+        "number": "НО-15",
+        "date": "2026-09-14",
+        "status": "posted",
+        "contractor": "c15",
+        "contract": "",
+        "payUntil": "",
+        "discount": 0,
+        "comment": "Начальный остаток дебиторской задолженности",
+        "currency": "KGS",
+        "total": 68700,
+        "sum": 68700,
+        "vatSum": 0,
+        "services": [
+          {
+            "nom": "",
+            "name": "Начальный остаток",
+            "qty": 1,
+            "price": 68700,
+            "sum": 68700,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 68700
+          }
+        ],
+        "goods": [],
+        "created": "2026-09-14T04:20:54.524Z"
+      },
+      {
+        "id": "obc16",
+        "type": "customer_invoice",
+        "number": "НО-16",
+        "date": "2026-09-14",
+        "status": "posted",
+        "contractor": "c16",
+        "contract": "",
+        "payUntil": "",
+        "discount": 0,
+        "comment": "Начальный остаток дебиторской задолженности",
+        "currency": "KGS",
+        "total": 69800,
+        "sum": 69800,
+        "vatSum": 0,
+        "services": [
+          {
+            "nom": "",
+            "name": "Начальный остаток",
+            "qty": 1,
+            "price": 69800,
+            "sum": 69800,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 69800
+          }
+        ],
+        "goods": [],
+        "created": "2026-09-14T04:20:54.524Z"
+      },
+      {
+        "id": "obc17",
+        "type": "customer_invoice",
+        "number": "НО-17",
+        "date": "2026-09-14",
+        "status": "posted",
+        "contractor": "c17",
+        "contract": "",
+        "payUntil": "",
+        "discount": 0,
+        "comment": "Начальный остаток дебиторской задолженности",
+        "currency": "KGS",
+        "total": 20000,
+        "sum": 20000,
+        "vatSum": 0,
+        "services": [
+          {
+            "nom": "",
+            "name": "Начальный остаток",
+            "qty": 1,
+            "price": 20000,
+            "sum": 20000,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 20000
+          }
+        ],
+        "goods": [],
+        "created": "2026-09-14T04:20:54.524Z"
+      },
+      {
+        "id": "obc18",
+        "type": "customer_invoice",
+        "number": "НО-18",
+        "date": "2026-09-14",
+        "status": "posted",
+        "contractor": "c18",
+        "contract": "",
+        "payUntil": "",
+        "discount": 0,
+        "comment": "Начальный остаток дебиторской задолженности",
+        "currency": "KGS",
+        "total": 18000,
+        "sum": 18000,
+        "vatSum": 0,
+        "services": [
+          {
+            "nom": "",
+            "name": "Начальный остаток",
+            "qty": 1,
+            "price": 18000,
+            "sum": 18000,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 18000
+          }
+        ],
+        "goods": [],
+        "created": "2026-09-14T04:20:54.524Z"
+      },
+      {
+        "id": "obc19",
+        "type": "customer_invoice",
+        "number": "НО-19",
+        "date": "2026-09-14",
+        "status": "posted",
+        "contractor": "c19",
+        "contract": "",
+        "payUntil": "",
+        "discount": 0,
+        "comment": "Начальный остаток дебиторской задолженности",
+        "currency": "KGS",
+        "total": 10000,
+        "sum": 10000,
+        "vatSum": 0,
+        "services": [
+          {
+            "nom": "",
+            "name": "Начальный остаток",
+            "qty": 1,
+            "price": 10000,
+            "sum": 10000,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 10000
+          }
+        ],
+        "goods": [],
+        "created": "2026-09-14T04:20:54.524Z"
+      },
+      {
+        "id": "obc20",
+        "type": "customer_invoice",
+        "number": "НО-20",
+        "date": "2026-09-14",
+        "status": "posted",
+        "contractor": "c20",
+        "contract": "",
+        "payUntil": "",
+        "discount": 0,
+        "comment": "Начальный остаток дебиторской задолженности",
+        "currency": "KGS",
+        "total": 10000,
+        "sum": 10000,
+        "vatSum": 0,
+        "services": [
+          {
+            "nom": "",
+            "name": "Начальный остаток",
+            "qty": 1,
+            "price": 10000,
+            "sum": 10000,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 10000
+          }
+        ],
+        "goods": [],
+        "created": "2026-09-14T04:20:54.524Z"
+      },
+      {
+        "id": "obc21",
+        "type": "customer_invoice",
+        "number": "НО-21",
+        "date": "2026-09-14",
+        "status": "posted",
+        "contractor": "c21",
+        "contract": "",
+        "payUntil": "",
+        "discount": 0,
+        "comment": "Начальный остаток дебиторской задолженности",
+        "currency": "KGS",
+        "total": 29450,
+        "sum": 29450,
+        "vatSum": 0,
+        "services": [
+          {
+            "nom": "",
+            "name": "Начальный остаток",
+            "qty": 1,
+            "price": 29450,
+            "sum": 29450,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 29450
+          }
+        ],
+        "goods": [],
+        "created": "2026-09-14T04:20:54.524Z"
+      },
+      {
+        "id": "obc22",
+        "type": "customer_invoice",
+        "number": "НО-22",
+        "date": "2026-09-14",
+        "status": "posted",
+        "contractor": "c22",
+        "contract": "",
+        "payUntil": "",
+        "discount": 0,
+        "comment": "Начальный остаток дебиторской задолженности",
+        "currency": "KGS",
+        "total": 34162,
+        "sum": 34162,
+        "vatSum": 0,
+        "services": [
+          {
+            "nom": "",
+            "name": "Начальный остаток",
+            "qty": 1,
+            "price": 34162,
+            "sum": 34162,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 34162
+          }
+        ],
+        "goods": [],
+        "created": "2026-09-14T04:20:54.524Z"
+      },
+      {
+        "id": "obc23",
+        "type": "customer_invoice",
+        "number": "НО-23",
+        "date": "2026-09-14",
+        "status": "posted",
+        "contractor": "c23",
+        "contract": "",
+        "payUntil": "",
+        "discount": 0,
+        "comment": "Начальный остаток дебиторской задолженности",
+        "currency": "KGS",
+        "total": 14000,
+        "sum": 14000,
+        "vatSum": 0,
+        "services": [
+          {
+            "nom": "",
+            "name": "Начальный остаток",
+            "qty": 1,
+            "price": 14000,
+            "sum": 14000,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 14000
+          }
+        ],
+        "goods": [],
+        "created": "2026-09-14T04:20:54.524Z"
+      },
+      {
+        "id": "obc24",
+        "type": "customer_invoice",
+        "number": "НО-24",
+        "date": "2026-09-14",
+        "status": "posted",
+        "contractor": "c24",
+        "contract": "",
+        "payUntil": "",
+        "discount": 0,
+        "comment": "Начальный остаток дебиторской задолженности",
+        "currency": "KGS",
+        "total": 176000,
+        "sum": 176000,
+        "vatSum": 0,
+        "services": [
+          {
+            "nom": "",
+            "name": "Начальный остаток",
+            "qty": 1,
+            "price": 176000,
+            "sum": 176000,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 176000
+          }
+        ],
+        "goods": [],
+        "created": "2026-09-14T04:20:54.524Z"
+      },
+      {
+        "id": "obc25",
+        "type": "customer_invoice",
+        "number": "НО-25",
+        "date": "2026-09-14",
+        "status": "posted",
+        "contractor": "c25",
+        "contract": "",
+        "payUntil": "",
+        "discount": 0,
+        "comment": "Начальный остаток дебиторской задолженности",
+        "currency": "KGS",
+        "total": 48680,
+        "sum": 48680,
+        "vatSum": 0,
+        "services": [
+          {
+            "nom": "",
+            "name": "Начальный остаток",
+            "qty": 1,
+            "price": 48680,
+            "sum": 48680,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 48680
+          }
+        ],
+        "goods": [],
+        "created": "2026-09-14T04:20:54.524Z"
+      },
+      {
+        "id": "obc26",
+        "type": "customer_invoice",
+        "number": "НО-26",
+        "date": "2026-09-14",
+        "status": "posted",
+        "contractor": "c26",
+        "contract": "",
+        "payUntil": "",
+        "discount": 0,
+        "comment": "Начальный остаток дебиторской задолженности",
+        "currency": "KGS",
+        "total": 124500,
+        "sum": 124500,
+        "vatSum": 0,
+        "services": [
+          {
+            "nom": "",
+            "name": "Начальный остаток",
+            "qty": 1,
+            "price": 124500,
+            "sum": 124500,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 124500
+          }
+        ],
+        "goods": [],
+        "created": "2026-09-14T04:20:54.524Z"
+      },
+      {
+        "id": "obc27",
+        "type": "customer_invoice",
+        "number": "НО-27",
+        "date": "2026-09-14",
+        "status": "posted",
+        "contractor": "c27",
+        "contract": "",
+        "payUntil": "",
+        "discount": 0,
+        "comment": "Начальный остаток дебиторской задолженности",
+        "currency": "KGS",
+        "total": 261290,
+        "sum": 261290,
+        "vatSum": 0,
+        "services": [
+          {
+            "nom": "",
+            "name": "Начальный остаток",
+            "qty": 1,
+            "price": 261290,
+            "sum": 261290,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 261290
+          }
+        ],
+        "goods": [],
+        "created": "2026-09-14T04:20:54.524Z"
+      },
+      {
+        "id": "obc28",
+        "type": "customer_invoice",
+        "number": "НО-28",
+        "date": "2026-09-14",
+        "status": "posted",
+        "contractor": "c28",
+        "contract": "",
+        "payUntil": "",
+        "discount": 0,
+        "comment": "Начальный остаток дебиторской задолженности",
+        "currency": "KGS",
+        "total": 280900,
+        "sum": 280900,
+        "vatSum": 0,
+        "services": [
+          {
+            "nom": "",
+            "name": "Начальный остаток",
+            "qty": 1,
+            "price": 280900,
+            "sum": 280900,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 280900
+          }
+        ],
+        "goods": [],
+        "created": "2026-09-14T04:20:54.524Z"
+      },
+      {
+        "id": "obc29",
+        "type": "customer_invoice",
+        "number": "НО-29",
+        "date": "2026-09-14",
+        "status": "posted",
+        "contractor": "c29",
+        "contract": "",
+        "payUntil": "",
+        "discount": 0,
+        "comment": "Начальный остаток дебиторской задолженности",
+        "currency": "KGS",
+        "total": 48400,
+        "sum": 48400,
+        "vatSum": 0,
+        "services": [
+          {
+            "nom": "",
+            "name": "Начальный остаток",
+            "qty": 1,
+            "price": 48400,
+            "sum": 48400,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 48400
+          }
+        ],
+        "goods": [],
+        "created": "2026-09-14T04:20:54.524Z"
+      },
+      {
+        "id": "obc30",
+        "type": "customer_invoice",
+        "number": "НО-30",
+        "date": "2026-09-14",
+        "status": "posted",
+        "contractor": "c30",
+        "contract": "",
+        "payUntil": "",
+        "discount": 0,
+        "comment": "Начальный остаток дебиторской задолженности",
+        "currency": "KGS",
+        "total": 259700,
+        "sum": 259700,
+        "vatSum": 0,
+        "services": [
+          {
+            "nom": "",
+            "name": "Начальный остаток",
+            "qty": 1,
+            "price": 259700,
+            "sum": 259700,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 259700
+          }
+        ],
+        "goods": [],
+        "created": "2026-09-14T04:20:54.524Z"
+      },
+      {
+        "id": "obc31",
+        "type": "customer_invoice",
+        "number": "НО-31",
+        "date": "2026-09-14",
+        "status": "posted",
+        "contractor": "c31",
+        "contract": "",
+        "payUntil": "",
+        "discount": 0,
+        "comment": "Начальный остаток дебиторской задолженности",
+        "currency": "KGS",
+        "total": 152640,
+        "sum": 152640,
+        "vatSum": 0,
+        "services": [
+          {
+            "nom": "",
+            "name": "Начальный остаток",
+            "qty": 1,
+            "price": 152640,
+            "sum": 152640,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 152640
+          }
+        ],
+        "goods": [],
+        "created": "2026-09-14T04:20:54.524Z"
+      },
+      {
+        "id": "obc32",
+        "type": "customer_invoice",
+        "number": "НО-32",
+        "date": "2026-09-14",
+        "status": "posted",
+        "contractor": "c32",
+        "contract": "",
+        "payUntil": "",
+        "discount": 0,
+        "comment": "Начальный остаток дебиторской задолженности",
+        "currency": "KGS",
+        "total": 393600,
+        "sum": 393600,
+        "vatSum": 0,
+        "services": [
+          {
+            "nom": "",
+            "name": "Начальный остаток",
+            "qty": 1,
+            "price": 393600,
+            "sum": 393600,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 393600
+          }
+        ],
+        "goods": [],
+        "created": "2026-09-14T04:20:54.524Z"
+      },
+      {
+        "id": "obc33",
+        "type": "customer_invoice",
+        "number": "НО-33",
+        "date": "2026-09-14",
+        "status": "posted",
+        "contractor": "c33",
+        "contract": "",
+        "payUntil": "",
+        "discount": 0,
+        "comment": "Начальный остаток дебиторской задолженности",
+        "currency": "KGS",
+        "total": 55000,
+        "sum": 55000,
+        "vatSum": 0,
+        "services": [
+          {
+            "nom": "",
+            "name": "Начальный остаток",
+            "qty": 1,
+            "price": 55000,
+            "sum": 55000,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 55000
+          }
+        ],
+        "goods": [],
+        "created": "2026-09-14T04:20:54.524Z"
+      },
+      {
+        "id": "obc34",
+        "type": "customer_invoice",
+        "number": "НО-34",
+        "date": "2026-09-14",
+        "status": "posted",
+        "contractor": "c34",
+        "contract": "",
+        "payUntil": "",
+        "discount": 0,
+        "comment": "Начальный остаток дебиторской задолженности",
+        "currency": "KGS",
+        "total": 427450,
+        "sum": 427450,
+        "vatSum": 0,
+        "services": [
+          {
+            "nom": "",
+            "name": "Начальный остаток",
+            "qty": 1,
+            "price": 427450,
+            "sum": 427450,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 427450
+          }
+        ],
+        "goods": [],
+        "created": "2026-09-14T04:20:54.524Z"
+      },
+      {
+        "id": "obc35",
+        "type": "customer_invoice",
+        "number": "НО-35",
+        "date": "2026-09-14",
+        "status": "posted",
+        "contractor": "c35",
+        "contract": "",
+        "payUntil": "",
+        "discount": 0,
+        "comment": "Начальный остаток дебиторской задолженности",
+        "currency": "KGS",
+        "total": 55000,
+        "sum": 55000,
+        "vatSum": 0,
+        "services": [
+          {
+            "nom": "",
+            "name": "Начальный остаток",
+            "qty": 1,
+            "price": 55000,
+            "sum": 55000,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 55000
+          }
+        ],
+        "goods": [],
+        "created": "2026-09-14T04:20:54.524Z"
+      }
+    ],
     "org": {
       "name": "ОсОО \"Глобал Карго\"",
       "inn": "00108202210232",
@@ -40,70 +1170,651 @@
       "accountant": "Жаныбеков Элмырза Максатбекович",
       "okpo": ""
     },
-    "contractors": [],
+    "contractors": [
+      {
+        "id": "c1",
+        "name": "ОсОО «Премиум Хоум»",
+        "full": "ОсОО «Премиум Хоум»",
+        "inn": "",
+        "kind": "Юридическое лицо",
+        "address": "",
+        "phone": "",
+        "account": "",
+        "bank": ""
+      },
+      {
+        "id": "c2",
+        "name": "ОсОО «Беш Сары-К»",
+        "full": "ОсОО «Беш Сары-К»",
+        "inn": "",
+        "kind": "Юридическое лицо",
+        "address": "",
+        "phone": "",
+        "account": "",
+        "bank": ""
+      },
+      {
+        "id": "c3",
+        "name": "ОсОО «Авента Строй»",
+        "full": "ОсОО «Авента Строй»",
+        "inn": "",
+        "kind": "Юридическое лицо",
+        "address": "",
+        "phone": "",
+        "account": "",
+        "bank": ""
+      },
+      {
+        "id": "c4",
+        "name": "ОсОО «МонолитКапиталСтрой»",
+        "full": "ОсОО «МонолитКапиталСтрой»",
+        "inn": "",
+        "kind": "Юридическое лицо",
+        "address": "",
+        "phone": "",
+        "account": "",
+        "bank": ""
+      },
+      {
+        "id": "c5",
+        "name": "ОсОО «Хуа Руй»",
+        "full": "ОсОО «Хуа Руй»",
+        "inn": "",
+        "kind": "Юридическое лицо",
+        "address": "",
+        "phone": "",
+        "account": "",
+        "bank": ""
+      },
+      {
+        "id": "c6",
+        "name": "ИП «Болоткановна»",
+        "full": "ИП «Болоткановна»",
+        "inn": "",
+        "kind": "Индивидуальный предприниматель",
+        "address": "",
+        "phone": "",
+        "account": "",
+        "bank": ""
+      },
+      {
+        "id": "c7",
+        "name": "ОсОО СК «Мисир»",
+        "full": "ОсОО СК «Мисир»",
+        "inn": "",
+        "kind": "Юридическое лицо",
+        "address": "",
+        "phone": "",
+        "account": "",
+        "bank": ""
+      },
+      {
+        "id": "c8",
+        "name": "ИП «Гульнара ВК»",
+        "full": "ИП «Гульнара ВК»",
+        "inn": "",
+        "kind": "Индивидуальный предприниматель",
+        "address": "",
+        "phone": "",
+        "account": "",
+        "bank": ""
+      },
+      {
+        "id": "c9",
+        "name": "ИП «Сапаров Канатбек»",
+        "full": "ИП «Сапаров Канатбек»",
+        "inn": "",
+        "kind": "Индивидуальный предприниматель",
+        "address": "",
+        "phone": "",
+        "account": "",
+        "bank": ""
+      },
+      {
+        "id": "c10",
+        "name": "ОсОО «Сайрус»",
+        "full": "ОсОО «Сайрус»",
+        "inn": "",
+        "kind": "Юридическое лицо",
+        "address": "",
+        "phone": "",
+        "account": "",
+        "bank": ""
+      },
+      {
+        "id": "c11",
+        "name": "RECO BREND SEMENT",
+        "full": "RECO BREND SEMENT",
+        "inn": "",
+        "kind": "Юридическое лицо",
+        "address": "",
+        "phone": "",
+        "account": "",
+        "bank": ""
+      },
+      {
+        "id": "c12",
+        "name": "ОсОО «СтройКомплект Трейд»",
+        "full": "ОсОО «СтройКомплект Трейд»",
+        "inn": "",
+        "kind": "Юридическое лицо",
+        "address": "",
+        "phone": "",
+        "account": "",
+        "bank": ""
+      },
+      {
+        "id": "c13",
+        "name": "ОсОО «Ташболот Холдинг»",
+        "full": "ОсОО «Ташболот Холдинг»",
+        "inn": "",
+        "kind": "Юридическое лицо",
+        "address": "",
+        "phone": "",
+        "account": "",
+        "bank": ""
+      },
+      {
+        "id": "c14",
+        "name": "ОсОО «Авангард Билдинг»",
+        "full": "ОсОО «Авангард Билдинг»",
+        "inn": "",
+        "kind": "Юридическое лицо",
+        "address": "",
+        "phone": "",
+        "account": "",
+        "bank": ""
+      },
+      {
+        "id": "c15",
+        "name": "ИП Майрамбек",
+        "full": "ИП Майрамбек",
+        "inn": "",
+        "kind": "Индивидуальный предприниматель",
+        "address": "",
+        "phone": "",
+        "account": "",
+        "bank": ""
+      },
+      {
+        "id": "c16",
+        "name": "ИП Эркин",
+        "full": "ИП Эркин",
+        "inn": "",
+        "kind": "Индивидуальный предприниматель",
+        "address": "",
+        "phone": "",
+        "account": "",
+        "bank": ""
+      },
+      {
+        "id": "c17",
+        "name": "ИП Даниель",
+        "full": "ИП Даниель",
+        "inn": "",
+        "kind": "Индивидуальный предприниматель",
+        "address": "",
+        "phone": "",
+        "account": "",
+        "bank": ""
+      },
+      {
+        "id": "c18",
+        "name": "ИП Данияр",
+        "full": "ИП Данияр",
+        "inn": "",
+        "kind": "Индивидуальный предприниматель",
+        "address": "",
+        "phone": "",
+        "account": "",
+        "bank": ""
+      },
+      {
+        "id": "c19",
+        "name": "Азизбек",
+        "full": "Азизбек",
+        "inn": "",
+        "kind": "Физическое лицо",
+        "address": "",
+        "phone": "",
+        "account": "",
+        "bank": ""
+      },
+      {
+        "id": "c20",
+        "name": "Мирлан",
+        "full": "Мирлан",
+        "inn": "",
+        "kind": "Физическое лицо",
+        "address": "",
+        "phone": "",
+        "account": "",
+        "bank": ""
+      },
+      {
+        "id": "c21",
+        "name": "Мирлан штукатурка",
+        "full": "Мирлан штукатурка",
+        "inn": "",
+        "kind": "Физическое лицо",
+        "address": "",
+        "phone": "",
+        "account": "",
+        "bank": ""
+      },
+      {
+        "id": "c22",
+        "name": "Жийде",
+        "full": "Жийде",
+        "inn": "",
+        "kind": "Физическое лицо",
+        "address": "",
+        "phone": "",
+        "account": "",
+        "bank": ""
+      },
+      {
+        "id": "c23",
+        "name": "ОсОО «Бест Хаус»",
+        "full": "ОсОО «Бест Хаус»",
+        "inn": "",
+        "kind": "Юридическое лицо",
+        "address": "",
+        "phone": "",
+        "account": "",
+        "bank": ""
+      },
+      {
+        "id": "c24",
+        "name": "«АлимСтрой Капитал»",
+        "full": "«АлимСтрой Капитал»",
+        "inn": "",
+        "kind": "Юридическое лицо",
+        "address": "",
+        "phone": "",
+        "account": "",
+        "bank": ""
+      },
+      {
+        "id": "c25",
+        "name": "Арстан",
+        "full": "Арстан",
+        "inn": "",
+        "kind": "Физическое лицо",
+        "address": "",
+        "phone": "",
+        "account": "",
+        "bank": ""
+      },
+      {
+        "id": "c26",
+        "name": "ИП Халмурат",
+        "full": "ИП Халмурат",
+        "inn": "",
+        "kind": "Индивидуальный предприниматель",
+        "address": "",
+        "phone": "",
+        "account": "",
+        "bank": ""
+      },
+      {
+        "id": "c27",
+        "name": "Нурбек Хозмаг",
+        "full": "Нурбек Хозмаг",
+        "inn": "",
+        "kind": "Индивидуальный предприниматель",
+        "address": "",
+        "phone": "",
+        "account": "",
+        "bank": ""
+      },
+      {
+        "id": "c28",
+        "name": "Канимет Хозмаг",
+        "full": "Канимет Хозмаг",
+        "inn": "",
+        "kind": "Индивидуальный предприниматель",
+        "address": "",
+        "phone": "",
+        "account": "",
+        "bank": ""
+      },
+      {
+        "id": "c29",
+        "name": "Акмарал Хозмаг",
+        "full": "Акмарал Хозмаг",
+        "inn": "",
+        "kind": "Индивидуальный предприниматель",
+        "address": "",
+        "phone": "",
+        "account": "",
+        "bank": ""
+      },
+      {
+        "id": "c30",
+        "name": "Чубак цемент",
+        "full": "Чубак цемент",
+        "inn": "",
+        "kind": "Индивидуальный предприниматель",
+        "address": "",
+        "phone": "",
+        "account": "",
+        "bank": ""
+      },
+      {
+        "id": "c31",
+        "name": "Тынчтык",
+        "full": "Тынчтык",
+        "inn": "",
+        "kind": "Физическое лицо",
+        "address": "",
+        "phone": "",
+        "account": "",
+        "bank": ""
+      },
+      {
+        "id": "c32",
+        "name": "ОсОО «Баткен Курулуш»",
+        "full": "ОсОО «Баткен Курулуш»",
+        "inn": "",
+        "kind": "Юридическое лицо",
+        "address": "",
+        "phone": "",
+        "account": "",
+        "bank": ""
+      },
+      {
+        "id": "c33",
+        "name": "Адилет",
+        "full": "Адилет",
+        "inn": "",
+        "kind": "Физическое лицо",
+        "address": "",
+        "phone": "",
+        "account": "",
+        "bank": ""
+      },
+      {
+        "id": "c34",
+        "name": "Авазбек",
+        "full": "Авазбек",
+        "inn": "",
+        "kind": "Физическое лицо",
+        "address": "",
+        "phone": "",
+        "account": "",
+        "bank": ""
+      },
+      {
+        "id": "c35",
+        "name": "Сыймык",
+        "full": "Сыймык",
+        "inn": "",
+        "kind": "Физическое лицо",
+        "address": "",
+        "phone": "",
+        "account": "",
+        "bank": ""
+      }
+    ],
     "contracts": [],
     "nomenclature": [],
     "warehouses": [
-      { "id": "w1", "name": "Основной склад", "kind": "Оптовый склад", "responsible": "" },
-      { "id": "w2", "name": "Розничный магазин", "kind": "Розничный магазин", "responsible": "" }
+      {
+        "id": "w1",
+        "name": "Основной склад",
+        "kind": "Оптовый склад",
+        "responsible": ""
+      },
+      {
+        "id": "w2",
+        "name": "Розничный магазин",
+        "kind": "Розничный магазин",
+        "responsible": ""
+      }
     ],
     "priceTypes": [
-      { "id": "pt1", "name": "Оптовая", "vatIncluded": true, "markup": 20 },
-      { "id": "pt2", "name": "Закупочная", "vatIncluded": true, "markup": 0 },
-      { "id": "pt3", "name": "Розничная", "vatIncluded": true, "markup": 35 }
+      {
+        "id": "pt1",
+        "name": "Оптовая",
+        "vatIncluded": true,
+        "markup": 20
+      },
+      {
+        "id": "pt2",
+        "name": "Закупочная",
+        "vatIncluded": true,
+        "markup": 0
+      },
+      {
+        "id": "pt3",
+        "name": "Розничная",
+        "vatIncluded": true,
+        "markup": 35
+      }
     ],
-    "sfCounter": { "in": 0, "out": 0 },
+    "sfCounter": {
+      "in": 0,
+      "out": 0
+    },
     "departments": [
-      { "id": "dep1", "name": "Основной цех", "head": "", "kind": "Основное производство" },
-      { "id": "dep2", "name": "Администрация", "head": "Камбаров А.М.", "kind": "Административное" },
-      { "id": "dep3", "name": "Отдел продаж", "head": "", "kind": "Торговое" }
+      {
+        "id": "dep1",
+        "name": "Основной цех",
+        "head": "",
+        "kind": "Основное производство"
+      },
+      {
+        "id": "dep2",
+        "name": "Администрация",
+        "head": "Камбаров А.М.",
+        "kind": "Административное"
+      },
+      {
+        "id": "dep3",
+        "name": "Отдел продаж",
+        "head": "",
+        "kind": "Торговое"
+      }
     ],
     "nomGroups": [
-      { "id": "ng1", "name": "Компьютеры в сборе", "comment": "Собственная продукция" },
-      { "id": "ng2", "name": "Оргтехника", "comment": "Товары для перепродажи" },
-      { "id": "ng3", "name": "Услуги", "comment": "" }
+      {
+        "id": "ng1",
+        "name": "Компьютеры в сборе",
+        "comment": "Собственная продукция"
+      },
+      {
+        "id": "ng2",
+        "name": "Оргтехника",
+        "comment": "Товары для перепродажи"
+      },
+      {
+        "id": "ng3",
+        "name": "Услуги",
+        "comment": ""
+      }
     ],
     "costItems": [
-      { "id": "ci1", "name": "Материальные затраты", "kind": "Материальные расходы" },
-      { "id": "ci2", "name": "Оплата труда производственных рабочих", "kind": "Оплата труда" },
-      { "id": "ci3", "name": "Услуги сторонних организаций", "kind": "Прочие расходы" },
-      { "id": "ci4", "name": "Амортизация оборудования", "kind": "Амортизация" }
+      {
+        "id": "ci1",
+        "name": "Материальные затраты",
+        "kind": "Материальные расходы"
+      },
+      {
+        "id": "ci2",
+        "name": "Оплата труда производственных рабочих",
+        "kind": "Оплата труда"
+      },
+      {
+        "id": "ci3",
+        "name": "Услуги сторонних организаций",
+        "kind": "Прочие расходы"
+      },
+      {
+        "id": "ci4",
+        "name": "Амортизация оборудования",
+        "kind": "Амортизация"
+      }
     ],
     "units": [
-      { "id": "u1", "code": "796", "name": "шт", "full": "Штука" },
-      { "id": "u2", "code": "778", "name": "пач", "full": "Пачка" },
-      { "id": "u3", "code": "876", "name": "усл", "full": "Условная единица" },
-      { "id": "u4", "code": "006", "name": "м", "full": "Метр" },
-      { "id": "u5", "code": "166", "name": "кг", "full": "Килограмм" },
-      { "id": "u6", "code": "362", "name": "мес", "full": "Месяц" }
+      {
+        "id": "u1",
+        "code": "796",
+        "name": "шт",
+        "full": "Штука"
+      },
+      {
+        "id": "u2",
+        "code": "778",
+        "name": "пач",
+        "full": "Пачка"
+      },
+      {
+        "id": "u3",
+        "code": "876",
+        "name": "усл",
+        "full": "Условная единица"
+      },
+      {
+        "id": "u4",
+        "code": "006",
+        "name": "м",
+        "full": "Метр"
+      },
+      {
+        "id": "u5",
+        "code": "166",
+        "name": "кг",
+        "full": "Килограмм"
+      },
+      {
+        "id": "u6",
+        "code": "362",
+        "name": "мес",
+        "full": "Месяц"
+      }
     ],
     "positions": [],
     "schedules": [
-      { "id": "sch1", "name": "Пятидневка 40 ч", "hoursPerDay": 8, "daysPerWeek": 5 },
-      { "id": "sch2", "name": "Неполный день 20 ч", "hoursPerDay": 4, "daysPerWeek": 5 },
-      { "id": "sch3", "name": "Шестидневка 36 ч", "hoursPerDay": 6, "daysPerWeek": 6 }
+      {
+        "id": "sch1",
+        "name": "Пятидневка 40 ч",
+        "hoursPerDay": 8,
+        "daysPerWeek": 5
+      },
+      {
+        "id": "sch2",
+        "name": "Неполный день 20 ч",
+        "hoursPerDay": 4,
+        "daysPerWeek": 5
+      },
+      {
+        "id": "sch3",
+        "name": "Шестидневка 36 ч",
+        "hoursPerDay": 6,
+        "daysPerWeek": 6
+      }
     ],
     "accruals": [
-      { "id": "acc1", "name": "Оплата по окладу", "kind": "Оклад по дням", "taxable": true, "sf": true, "account": "26" },
-      { "id": "acc2", "name": "Ежемесячная премия", "kind": "Премия", "taxable": true, "sf": true, "account": "26" },
-      { "id": "acc3", "name": "Отпуск основной", "kind": "Отпуск", "taxable": true, "sf": true, "account": "26" },
-      { "id": "acc4", "name": "Больничный лист", "kind": "Больничный", "taxable": true, "sf": false, "account": "26" },
-      { "id": "acc5", "name": "Компенсация за неиспользованный отпуск", "kind": "Компенсация отпуска", "taxable": true, "sf": true, "account": "26" },
-      { "id": "acc6", "name": "Вознаграждение по договору ГПХ", "kind": "Договор ГПХ", "taxable": true, "sf": false, "account": "26" }
+      {
+        "id": "acc1",
+        "name": "Оплата по окладу",
+        "kind": "Оклад по дням",
+        "taxable": true,
+        "sf": true,
+        "account": "26"
+      },
+      {
+        "id": "acc2",
+        "name": "Ежемесячная премия",
+        "kind": "Премия",
+        "taxable": true,
+        "sf": true,
+        "account": "26"
+      },
+      {
+        "id": "acc3",
+        "name": "Отпуск основной",
+        "kind": "Отпуск",
+        "taxable": true,
+        "sf": true,
+        "account": "26"
+      },
+      {
+        "id": "acc4",
+        "name": "Больничный лист",
+        "kind": "Больничный",
+        "taxable": true,
+        "sf": false,
+        "account": "26"
+      },
+      {
+        "id": "acc5",
+        "name": "Компенсация за неиспользованный отпуск",
+        "kind": "Компенсация отпуска",
+        "taxable": true,
+        "sf": true,
+        "account": "26"
+      },
+      {
+        "id": "acc6",
+        "name": "Вознаграждение по договору ГПХ",
+        "kind": "Договор ГПХ",
+        "taxable": true,
+        "sf": false,
+        "account": "26"
+      }
     ],
     "deductions": [
-      { "id": "ded1", "name": "Подоходный налог 10%", "kind": "Подоходный налог", "account": "68.01" },
-      { "id": "ded2", "name": "Взносы в Соцфонд (работник) 10%", "kind": "Взносы в Соцфонд", "account": "69.01" },
-      { "id": "ded3", "name": "Алименты", "kind": "Алименты", "account": "76.41" },
-      { "id": "ded4", "name": "Профсоюзный взнос 1%", "kind": "Профсоюзный взнос", "account": "76.49" },
-      { "id": "ded5", "name": "Погашение займа", "kind": "Погашение займа", "account": "73.01" }
+      {
+        "id": "ded1",
+        "name": "Подоходный налог 10%",
+        "kind": "Подоходный налог",
+        "account": "68.01"
+      },
+      {
+        "id": "ded2",
+        "name": "Взносы в Соцфонд (работник) 10%",
+        "kind": "Взносы в Соцфонд",
+        "account": "69.01"
+      },
+      {
+        "id": "ded3",
+        "name": "Алименты",
+        "kind": "Алименты",
+        "account": "76.41"
+      },
+      {
+        "id": "ded4",
+        "name": "Профсоюзный взнос 1%",
+        "kind": "Профсоюзный взнос",
+        "account": "76.49"
+      },
+      {
+        "id": "ded5",
+        "name": "Погашение займа",
+        "kind": "Погашение займа",
+        "account": "73.01"
+      }
     ],
     "employees": [],
     "payroll": {
-      "incomeTax": 10, "sfEmployee": 10, "sfEmployeePF": 8, "sfEmployeeGNPF": 2,
-      "sfEmployer": 17.25, "sfEmployerPF": 15, "sfEmployerFOMS": 2, "sfEmployerFOT": 0.25,
-      "stdDeduction": 650, "dependentDeduction": 100, "minSalary": 2460, "avgMonthDays": 29.6,
-      "sickPct": 100, "costAccount26": "26", "costAccount20": "20.01", "costAccount44": "44.01"
+      "incomeTax": 10,
+      "sfEmployee": 10,
+      "sfEmployeePF": 8,
+      "sfEmployeeGNPF": 2,
+      "sfEmployer": 17.25,
+      "sfEmployerPF": 15,
+      "sfEmployerFOMS": 2,
+      "sfEmployerFOT": 0.25,
+      "stdDeduction": 650,
+      "dependentDeduction": 100,
+      "minSalary": 2460,
+      "avgMonthDays": 29.6,
+      "sickPct": 100,
+      "costAccount26": "26",
+      "costAccount20": "20.01",
+      "costAccount44": "44.01"
     },
     "demoSeeded": true,
     "stockSeeded": true,
