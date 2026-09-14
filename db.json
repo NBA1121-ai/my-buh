@@ -2465,7 +2465,36 @@
         "full": "Месяц"
       }
     ],
-    "positions": [],
+    "positions": [
+      {
+        "id": "pos1",
+        "name": "Директор",
+        "count": 1,
+        "baseSalary": 0,
+        "department": "dep2"
+      },
+      {
+        "id": "pos2",
+        "name": "Погрузчик",
+        "count": 1,
+        "baseSalary": 0,
+        "department": "dep1"
+      },
+      {
+        "id": "pos3",
+        "name": "Бригадир",
+        "count": 1,
+        "baseSalary": 0,
+        "department": "dep1"
+      },
+      {
+        "id": "pos4",
+        "name": "Охрана",
+        "count": 1,
+        "baseSalary": 0,
+        "department": "dep2"
+      }
+    ],
     "schedules": [
       {
         "id": "sch1",
@@ -2568,7 +2597,104 @@
         "account": "73.01"
       }
     ],
-    "employees": [],
+    "employees": [
+      {
+        "id": "e1",
+        "tabNo": "0001",
+        "name": "Камбаров Артур Майсалбекович",
+        "department": "dep2",
+        "position": "pos1",
+        "salary": 0,
+        "bonus": 0,
+        "schedule": "sch1",
+        "hireDate": "",
+        "fireDate": "",
+        "status": "Работает",
+        "inn": "",
+        "birth": "",
+        "gender": "М",
+        "passport": "",
+        "address": "",
+        "phone": "",
+        "account": "",
+        "stdDeduction": true,
+        "dependents": 0,
+        "deductionKind": "",
+        "deductionSum": 0
+      },
+      {
+        "id": "e2",
+        "tabNo": "0002",
+        "name": "Ясин",
+        "department": "dep1",
+        "position": "pos2",
+        "salary": 0,
+        "bonus": 0,
+        "schedule": "sch1",
+        "hireDate": "",
+        "fireDate": "",
+        "status": "Работает",
+        "inn": "",
+        "birth": "",
+        "gender": "М",
+        "passport": "",
+        "address": "",
+        "phone": "",
+        "account": "",
+        "stdDeduction": true,
+        "dependents": 0,
+        "deductionKind": "",
+        "deductionSum": 0
+      },
+      {
+        "id": "e3",
+        "tabNo": "0003",
+        "name": "Рахимов Умид",
+        "department": "dep1",
+        "position": "pos3",
+        "salary": 0,
+        "bonus": 0,
+        "schedule": "sch1",
+        "hireDate": "",
+        "fireDate": "",
+        "status": "Работает",
+        "inn": "",
+        "birth": "",
+        "gender": "М",
+        "passport": "",
+        "address": "",
+        "phone": "",
+        "account": "",
+        "stdDeduction": true,
+        "dependents": 0,
+        "deductionKind": "",
+        "deductionSum": 0
+      },
+      {
+        "id": "e4",
+        "tabNo": "0004",
+        "name": "Марипжанов Азамат",
+        "department": "dep2",
+        "position": "pos4",
+        "salary": 0,
+        "bonus": 0,
+        "schedule": "sch1",
+        "hireDate": "",
+        "fireDate": "",
+        "status": "Работает",
+        "inn": "",
+        "birth": "",
+        "gender": "М",
+        "passport": "",
+        "address": "",
+        "phone": "",
+        "account": "",
+        "stdDeduction": true,
+        "dependents": 0,
+        "deductionKind": "",
+        "deductionSum": 0
+      }
+    ],
     "payroll": {
       "incomeTax": 10,
       "sfEmployee": 10,
