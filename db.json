@@ -15,38 +15,6 @@
       "purpose": "Начальный остаток на расчетном счете",
       "note": "Начальный остаток",
       "created": "2026-09-14T04:33:33.228Z"
-    },
-    {
-      "id": "ob_fin_1",
-      "type": "payment_in",
-      "number": "НО-Ф-01",
-      "date": "2026-09-11",
-      "status": "posted",
-      "account": "",
-      "contractor": "",
-      "article": "_3",
-      "currency": "_1",
-      "sum": 545000,
-      "rate": 1,
-      "purpose": "Начальный остаток по кассе",
-      "note": "Начальный остаток",
-      "created": "2026-09-14T04:33:33.227Z"
-    },
-    {
-      "id": "ob_fin_2",
-      "type": "payment_in",
-      "number": "НО-Ф-02",
-      "date": "2026-09-11",
-      "status": "posted",
-      "account": "",
-      "contractor": "",
-      "article": "_3",
-      "currency": "_1",
-      "sum": 1825000,
-      "rate": 1,
-      "purpose": "Начальный остаток МБанк счет",
-      "note": "Начальный остаток",
-      "created": "2026-09-14T04:33:33.228Z"
     }
   ],
   "cashDocuments": [],
@@ -2874,6 +2842,18 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-15T10:39:18.000Z",
+      "user": "Администратор",
+      "action": "Удаление документа",
+      "details": "payment_in НО-Ф-01"
+    },
+    {
+      "date": "2026-09-15T10:39:15.537Z",
+      "user": "Администратор",
+      "action": "Удаление документа",
+      "details": "payment_in НО-Ф-02"
+    },
     {
       "date": "2026-09-15T09:50:42.764Z",
       "user": "Администратор",
