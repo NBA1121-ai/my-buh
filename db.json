@@ -38,11 +38,10 @@
       "id": "ob_fin_3",
       "type": "payment_in",
       "number": "НО-Ф-03",
-      "date": "2026-09-14",
+      "date": "2026-09-11",
       "status": "posted",
       "account": "_1",
       "contractor": "",
-      "contractorId": "",
       "article": "_3",
       "currency": "_1",
       "sum": 781065,
@@ -50,38 +49,6 @@
       "purpose": "Начальный остаток на расчетном счете",
       "note": "Начальный остаток",
       "created": "2026-09-14T04:33:33.228Z"
-    },
-    {
-      "id": "_1789466049359_kmd4cx",
-      "type": "payment_out",
-      "number": "ПП-0004",
-      "date": "2026-09-15",
-      "status": "draft",
-      "account": "_1",
-      "contractor": "",
-      "article": "",
-      "currency": "",
-      "sum": 1000000,
-      "rate": 1,
-      "purpose": "",
-      "note": "",
-      "created": "2026-09-15T09:54:09.360Z"
-    },
-    {
-      "id": "_1789466106550_10h58z",
-      "type": "payment_in",
-      "number": "ПП-0005",
-      "date": "2026-09-15",
-      "status": "draft",
-      "account": "_1",
-      "contractor": "",
-      "article": "",
-      "currency": "",
-      "sum": 100000,
-      "rate": 1,
-      "purpose": "",
-      "note": "",
-      "created": "2026-09-15T09:55:06.551Z"
     }
   ],
   "cashDocuments": [],
@@ -2909,6 +2876,18 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-15T09:50:17.603Z",
+      "user": "Администратор",
+      "action": "Удаление документа",
+      "details": "payment_out ПП-0004"
+    },
+    {
+      "date": "2026-09-15T09:50:15.962Z",
+      "user": "Администратор",
+      "action": "Удаление документа",
+      "details": "payment_in ПП-0005"
+    },
     {
       "date": "2026-09-15T09:54:09.368Z",
       "user": "Администратор",
