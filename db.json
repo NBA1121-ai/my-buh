@@ -17,7 +17,24 @@
       "created": "2026-09-14T04:33:33.228Z"
     }
   ],
-  "cashDocuments": [],
+  "cashDocuments": [
+    {
+      "id": "_1789468805801_no71r4",
+      "type": "pko",
+      "number": "ПКО-0001",
+      "date": "2026-09-15",
+      "status": "posted",
+      "account": "_2",
+      "contractor": "",
+      "article": "_3",
+      "currency": "_1",
+      "sum": 1825000,
+      "rate": 1,
+      "purpose": "Остатки на начало ",
+      "note": "",
+      "created": "2026-09-15T10:40:05.801Z"
+    }
+  ],
   "accounts": [
     {
       "id": "_1",
