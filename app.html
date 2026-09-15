@@ -1159,12 +1159,10 @@
 
             // Poll for changes from other devices (every 30 sec)
             DbSync.startPolling((newData) => {
-                if (confirm('Данные были изменены с другого устройства. Загрузить обновлённые данные?\n\nОК — загрузить новые данные\nОтмена — оставить текущие (ваши изменения сохранятся при следующем сохранении)')) {
-                    Object.keys(db).forEach(k => delete db[k]);
-                    Object.assign(db, newData);
-                    renderPage();
-                    showToast('Данные синхронизированы с другого устройства');
-                }
+                Object.keys(db).forEach(k => delete db[k]);
+                Object.assign(db, DB_DEFAULTS, newData);
+                renderPage();
+                showToast('Данные синхронизированы');
             });
 
             // Periodic session check (every 5 min)
@@ -1178,11 +1176,13 @@
             }, 300000);
         }
 
+        const DB_DEFAULTS = { bankDocuments: [], cashDocuments: [], accounts: [], banks: [], cashs: [], currencies: [], articles: [] };
+
         async function loadData() {
             const cloudData = await DbSync.loadData();
             if (cloudData && typeof cloudData === 'object') {
                 Object.keys(db).forEach(k => delete db[k]);
-                Object.assign(db, cloudData);
+                Object.assign(db, DB_DEFAULTS, cloudData);
             }
         }
 
@@ -1207,7 +1207,7 @@
                 try {
                     const newData = JSON.parse(e.newValue);
                     Object.keys(db).forEach(k => delete db[k]);
-                    Object.assign(db, newData);
+                    Object.assign(db, DB_DEFAULTS, newData);
                     renderPage();
                 } catch(err) {}
             }
@@ -2537,7 +2537,7 @@
             const data = await DbSync.restoreFromCommit(sha);
             if (data) {
                 Object.keys(db).forEach(k => delete db[k]);
-                Object.assign(db, data);
+                Object.assign(db, DB_DEFAULTS, data);
                 initializeDefaults();
                 tradeInit();
                 saveData();
@@ -2894,7 +2894,7 @@
                         } else {
                             delete data.exportDate; delete data.format;
                             Object.keys(db).forEach(k => delete db[k]);
-                            Object.assign(db, data);
+                            Object.assign(db, DB_DEFAULTS, data);
                             initializeDefaults(); tradeInit();
                         }
                     } else {
