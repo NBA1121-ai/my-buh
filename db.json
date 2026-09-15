@@ -39,7 +39,7 @@
       "type": "pko",
       "number": "ПКО-0002",
       "date": "2026-09-11",
-      "status": "draft",
+      "status": "posted",
       "account": "_3",
       "contractor": "",
       "article": "_3",
@@ -2875,6 +2875,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-15T10:40:53.489Z",
+      "user": "Администратор",
+      "action": "Создание документа",
+      "details": "pko ПКО-0002 на 545000"
+    },
     {
       "date": "2026-09-15T10:40:23.649Z",
       "user": "Администратор",
