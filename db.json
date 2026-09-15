@@ -1,23 +1,6 @@
 {
   "bankDocuments": [
     {
-      "id": "ob_fin_2",
-      "type": "payment_in",
-      "number": "НО-Ф-02",
-      "date": "2026-09-14",
-      "status": "posted",
-      "account": "_2",
-      "contractor": "",
-      "contractorId": "",
-      "article": "_3",
-      "currency": "_1",
-      "sum": 1825000,
-      "rate": 1,
-      "purpose": "Начальный остаток МБанк счет",
-      "note": "Начальный остаток",
-      "created": "2026-09-14T04:33:33.228Z"
-    },
-    {
       "id": "ob_fin_3",
       "type": "payment_in",
       "number": "НО-Ф-03",
@@ -48,6 +31,22 @@
       "purpose": "Начальный остаток по кассе",
       "note": "Начальный остаток",
       "created": "2026-09-14T04:33:33.227Z"
+    },
+    {
+      "id": "ob_fin_2",
+      "type": "payment_in",
+      "number": "НО-Ф-02",
+      "date": "2026-09-11",
+      "status": "posted",
+      "account": "",
+      "contractor": "",
+      "article": "_3",
+      "currency": "_1",
+      "sum": 1825000,
+      "rate": 1,
+      "purpose": "Начальный остаток МБанк счет",
+      "note": "Начальный остаток",
+      "created": "2026-09-14T04:33:33.228Z"
     }
   ],
   "cashDocuments": [],
@@ -2875,6 +2874,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-15T09:50:42.764Z",
+      "user": "Администратор",
+      "action": "Изменение документа",
+      "details": "payment_in НО-Ф-01 на 545000"
+    },
     {
       "date": "2026-09-15T09:50:31.668Z",
       "user": "Администратор",
