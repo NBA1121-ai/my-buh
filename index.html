@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self' https://api.github.com https://raw.githubusercontent.com; img-src 'self' data:;">
     <title>1s Бухгалтерия - Вход</title>
+    <link rel="manifest" href="manifest.json">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -252,6 +253,18 @@
         document.getElementById('loginInput').addEventListener('keydown', e => {
             if (e.key === 'Enter') document.getElementById('passwordInput').focus();
         });
+    </script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js').catch(() => {});
+            navigator.serviceWorker.addEventListener('message', (e) => {
+                if (e.data && e.data.type === 'CLEAR_CACHE') {
+                    localStorage.removeItem('db_cache');
+                    localStorage.removeItem('db_cache_sha');
+                    location.reload();
+                }
+            });
+        }
     </script>
 </body>
 </html>
