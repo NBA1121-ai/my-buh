@@ -6336,6 +6336,21 @@
         "account": "20.01",
         "country": "",
         "nomGroup": "ng1"
+      },
+      {
+        "id": "tmu3uk23cp365",
+        "name": "Сеткамак для газоблок (16:2.5)",
+        "article": "",
+        "kind": "Товар",
+        "unit": "",
+        "vat": 0,
+        "price": 0,
+        "cost": 0,
+        "account": "",
+        "country": "",
+        "group": "",
+        "planPrice": "",
+        "nomGroup": "ng_mat"
       }
     ],
     "warehouses": [
