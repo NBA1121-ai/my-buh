@@ -36,11 +36,10 @@
       "id": "_1789548639919_85n3l7",
       "type": "payment_in",
       "number": "ПП-0024",
-      "date": "2026-09-16",
+      "date": "2026-09-14",
       "status": "posted",
       "account": "_1",
       "contractor": "ОсОО «Беш Сары-К»",
-      "contractorId": "c2",
       "article": "_1",
       "currency": "_1",
       "sum": 607200,
@@ -7126,6 +7125,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-16T08:52:30.633Z",
+      "user": "Директор",
+      "action": "Изменение документа",
+      "details": "pko ПКО-0019 на 20000"
+    },
     {
       "date": "2026-09-16T08:52:16.233Z",
       "user": "Директор",
