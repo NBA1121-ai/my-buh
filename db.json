@@ -48,6 +48,22 @@
       "note": "Создано на основании",
       "created": "2026-09-16T08:50:39.919Z",
       "basis": "obc2"
+    },
+    {
+      "id": "_1789551918974_sxfznj",
+      "type": "payment_out",
+      "number": "ПП-0025",
+      "date": "2026-09-16",
+      "status": "posted",
+      "account": "_1",
+      "contractor": "RECO BREND SEMENT",
+      "article": "_5",
+      "currency": "_2",
+      "sum": 24114,
+      "rate": 87.5,
+      "purpose": "",
+      "note": "",
+      "created": "2026-09-16T09:45:18.974Z"
     }
   ],
   "cashDocuments": [
