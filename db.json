@@ -48,22 +48,6 @@
       "note": "Создано на основании",
       "created": "2026-09-16T08:50:39.919Z",
       "basis": "obc2"
-    },
-    {
-      "id": "_1789549210255_6gyj9j",
-      "type": "conversion",
-      "number": "ПП-0025",
-      "date": "2026-09-14",
-      "status": "posted",
-      "account": "_1",
-      "contractor": "",
-      "article": "",
-      "currency": "_1",
-      "sum": 2109975,
-      "rate": 87.5,
-      "purpose": "",
-      "note": "",
-      "created": "2026-09-16T09:00:10.255Z"
     }
   ],
   "cashDocuments": [
@@ -7141,6 +7125,18 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-16T09:01:35.959Z",
+      "user": "Директор",
+      "action": "Удаление документа",
+      "details": "conversion ПП-0025"
+    },
+    {
+      "date": "2026-09-16T09:00:10.257Z",
+      "user": "Директор",
+      "action": "Создание документа",
+      "details": "conversion ПП-0025 на 2109975"
+    },
     {
       "date": "2026-09-16T08:52:58.441Z",
       "user": "Директор",
