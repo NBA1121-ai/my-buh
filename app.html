@@ -3961,7 +3961,7 @@
         }
         function tReconRows(d) {
             const r = d.recon; const cname = tContractorName(d.contractor); const rows = [];
-            db.trade.docs.filter(x => x.contractor === d.contractor && x.status === 'posted' && x.date >= r.from && x.date <= r.to && !TT[x.type].noSum && !TT[x.type].payStatus).forEach(x => {
+            db.trade.docs.filter(x => x.contractor === d.contractor && x.status === 'posted' && x.date >= r.from && x.date <= r.to && !TT[x.type].noSum && (!TT[x.type].payStatus || x.type === 'customer_invoice')).forEach(x => {
                 const g = TT[x.type].group; const isDebit = (g === 'sale' && !['sale_return'].includes(x.type)) || x.type === 'purchase_return';
                 rows.push({ date: x.date, doc: tDocTitle(x), dt: isDebit ? x.total : 0, kt: isDebit ? 0 : x.total });
             });
