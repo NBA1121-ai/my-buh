@@ -1388,8 +1388,9 @@
             if (_finFilter.search) { const q = _finFilter.search.toLowerCase(); docs = docs.filter(d => (d.number + ' ' + (d.contractor || '') + ' ' + (d.purpose || '') + ' ' + (d.note || '') + ' ' + d.sum).toLowerCase().includes(q)); }
             docs.sort(docCmp);
 
-            const totalIn = docs.filter(d => ['payment_in'].includes(d.type)).reduce((s, d) => s + Number(d.sum || 0), 0);
-            const totalOut = docs.filter(d => ['payment_out', 'payment_order', 'conversion', 'statement', 'directbank'].includes(d.type) && d.type !== 'payment_in').reduce((s, d) => s + Number(d.sum || 0), 0);
+            const toKGS = d => Number(d.sum || 0) * (Number(d.rate) || 1);
+            const totalIn = docs.filter(d => ['payment_in'].includes(d.type)).reduce((s, d) => s + toKGS(d), 0);
+            const totalOut = docs.filter(d => ['payment_out', 'payment_order', 'conversion', 'statement', 'directbank'].includes(d.type) && d.type !== 'payment_in').reduce((s, d) => s + toKGS(d), 0);
 
             return `
                 <div class="filters" style="display:flex;gap:10px;align-items:end;margin-bottom:12px;flex-wrap:wrap">
@@ -1499,8 +1500,9 @@
 
         function renderReports() {
             const allDocs = [...db.bankDocuments, ...db.cashDocuments];
-            const totalIn = allDocs.filter(d => d.type === 'payment_in' || d.type === 'pko').reduce((s, d) => s + Number(d.sum || 0), 0);
-            const totalOut = allDocs.filter(d => d.type === 'payment_out' || d.type === 'rko').reduce((s, d) => s + Number(d.sum || 0), 0);
+            const _toKGS = d => Number(d.sum || 0) * (Number(d.rate) || 1);
+            const totalIn = allDocs.filter(d => d.type === 'payment_in' || d.type === 'pko').reduce((s, d) => s + _toKGS(d), 0);
+            const totalOut = allDocs.filter(d => d.type === 'payment_out' || d.type === 'rko').reduce((s, d) => s + _toKGS(d), 0);
             const postedDocs = allDocs.filter(d => d.status === 'posted').length;
 
             return `
@@ -2162,8 +2164,9 @@
                 const dd = new Date(doc.date);
                 const idx = months.findIndex(m => m.y === dd.getFullYear() && m.m === dd.getMonth() + 1);
                 if (idx < 0) return;
-                if (doc.type === 'payment_in' || doc.type === 'pko') income[idx] += doc.sum || 0;
-                else if (doc.type === 'payment_out' || doc.type === 'rko') expense[idx] += doc.sum || 0;
+                const sumKGS = (doc.sum || 0) * (Number(doc.rate) || 1);
+                if (doc.type === 'payment_in' || doc.type === 'pko') income[idx] += sumKGS;
+                else if (doc.type === 'payment_out' || doc.type === 'rko') expense[idx] += sumKGS;
             });
             if (db.trade && db.trade.docs) db.trade.docs.filter(d => d.status === 'posted').forEach(doc => {
                 if (!doc.date) return;
