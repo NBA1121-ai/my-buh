@@ -2247,6 +2247,19 @@
         "phone": "",
         "account": "",
         "bank": ""
+      },
+      {
+        "id": "tmu3rmh7nur4e",
+        "name": "Физ/лиц",
+        "full": "",
+        "inn": "",
+        "kind": "Физическое лицо",
+        "address": "",
+        "phone": "",
+        "email": "",
+        "account": "",
+        "bank": "",
+        "comment": ""
       }
     ],
     "contracts": [],
