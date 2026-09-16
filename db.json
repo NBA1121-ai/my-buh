@@ -1623,9 +1623,9 @@
         "type": "sale",
         "number": "РТ-000001",
         "date": "2026-09-12",
-        "status": "draft",
+        "status": "posted",
         "opKind": "Товары (накладная, УПД)",
-        "contractor": "",
+        "contractor": "tmu3rmh7nur4e",
         "contract": "",
         "warehouse": "w1",
         "basis": "",
@@ -3204,6 +3204,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-16T07:17:00.379Z",
+      "user": "Директор",
+      "action": "Изменение документа",
+      "details": "sale РТ-000001"
+    },
     {
       "date": "2026-09-16T07:16:50.699Z",
       "user": "Директор",
