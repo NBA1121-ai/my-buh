@@ -1413,7 +1413,7 @@
                                 <td>${getDocTypeLabel(d.type)}</td>
                                 <td>${getAccountName(d.account)}</td>
                                 <td>${esc(d.contractor || '-')}</td>
-                                <td class="num amount">${formatAmount(d.sum)}</td>
+                                <td class="num amount">${formatAmountCur(d.sum, d.currency)}</td>
                                 <td><span class="badge ${d.status === 'posted' ? 'posted' : 'draft'}">${d.status === 'posted' ? 'Проведено' : 'Черновик'}</span></td>
                                 <td>
                                     <div class="action-buttons">
@@ -1471,7 +1471,7 @@
                                 <td>${getDocTypeLabel(d.type)}</td>
                                 <td>${getAccountName(d.account)}</td>
                                 <td>${esc(d.contractor || '-')}</td>
-                                <td class="num amount">${formatAmount(d.sum)}</td>
+                                <td class="num amount">${formatAmountCur(d.sum, d.currency)}</td>
                                 <td><span class="badge ${d.status === 'posted' ? 'posted' : 'draft'}">${d.status === 'posted' ? 'Проведено' : 'Черновик'}</span></td>
                                 <td>
                                     <div class="action-buttons">
@@ -1532,8 +1532,8 @@
                                     <td>${esc(d.number)}</td>
                                     <td>${formatDate(d.date)}</td>
                                     <td>${esc(d.contractor || '-')}</td>
-                                    <td class="num">${isIn ? formatAmount(d.sum) : '-'}</td>
-                                    <td class="num">${!isIn && d.type !== 'payment_in' && d.type !== 'pko' ? formatAmount(d.sum) : '-'}</td>
+                                    <td class="num">${isIn ? formatAmountCur(d.sum, d.currency) : '-'}</td>
+                                    <td class="num">${!isIn && d.type !== 'payment_in' && d.type !== 'pko' ? formatAmountCur(d.sum, d.currency) : '-'}</td>
                                 </tr>
                             `;
                         }).join('')}
@@ -3005,6 +3005,15 @@
 
         function formatAmount(num) {
             return Number(num || 0).toLocaleString('ru-RU', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        }
+        function getCurrencyCode(id) {
+            const c = (db.currencies || []).find(x => x.id === id);
+            return c ? c.code : '';
+        }
+        function formatAmountCur(num, currencyId) {
+            const amt = formatAmount(num);
+            const code = getCurrencyCode(currencyId);
+            return code && code !== 'KGS' ? amt + ' ' + code : amt;
         }
 
         function docCmp(a, b) { const dc = b.date.localeCompare(a.date); if (dc !== 0) return dc; const na = parseInt((String(a.number).match(/(\d+)$/) || [0, 0])[1]); const nb = parseInt((String(b.number).match(/(\d+)$/) || [0, 0])[1]); return nb - na || String(b.number).localeCompare(String(a.number)); }
