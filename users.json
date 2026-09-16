@@ -10,5 +10,11 @@
     "pass": "9081cd2c3be53b549762ed705f94e4ddb6699682e5d3553d1665c988352ab493",
     "name": "Менеджер",
     "role": "limited"
+  },
+  {
+    "login": "ef260e9aa3c673af240d17a2660480361a8e081d1ffeca2a5ed0e3219fc18567",
+    "pass": "87274af01876341455b32d805946f272871bb42effa6604dccf28bb027afa82b",
+    "name": "Разработчик",
+    "role": "admin"
   }
 ]
