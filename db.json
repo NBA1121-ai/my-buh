@@ -6919,6 +6919,21 @@
         "group": "",
         "planPrice": "",
         "nomGroup": "ng_mat"
+      },
+      {
+        "id": "tmu3zm6ck3rxq",
+        "name": "поддон",
+        "article": "",
+        "kind": "Товар",
+        "unit": "",
+        "vat": 0,
+        "price": 0,
+        "cost": 0,
+        "account": "",
+        "country": "",
+        "group": "",
+        "planPrice": "",
+        "nomGroup": ""
       }
     ],
     "warehouses": [
