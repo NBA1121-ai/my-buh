@@ -5733,6 +5733,37 @@
         "sum": 0,
         "vatTotal": 0,
         "total": 0
+      },
+      {
+        "id": "tmu3uzg0venah",
+        "type": "customer_invoice",
+        "number": "СЧ-000036",
+        "date": "2026-09-16",
+        "status": "draft",
+        "contractor": "c31",
+        "contract": "",
+        "payUntil": "",
+        "discount": 0,
+        "comment": "Начальный остаток дебиторской задолженности",
+        "currency": "KGS",
+        "total": 152640,
+        "sum": 152640,
+        "vatSum": 0,
+        "services": [
+          {
+            "nom": "",
+            "name": "Начальный остаток",
+            "qty": 1,
+            "price": 152640,
+            "sum": 152640,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 152640
+          }
+        ],
+        "goods": [],
+        "created": "2026-09-14T04:20:54.524Z",
+        "sf": null
       }
     ],
     "org": {
