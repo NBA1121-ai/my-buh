@@ -51,7 +51,7 @@
     },
     {
       "id": "_1789551918974_sxfznj",
-      "type": "payment_out",
+      "type": "conversion",
       "number": "ПП-0025",
       "date": "2026-09-16",
       "status": "posted",
