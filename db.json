@@ -274,6 +274,22 @@
       "purpose": "ОБНАЛИЧКА ДЕНЕГ ",
       "note": "",
       "created": "2026-09-16T08:33:48.256Z"
+    },
+    {
+      "id": "_1789547913968_ap4cg1",
+      "type": "rko",
+      "number": "ПКО-0016",
+      "date": "2026-09-14",
+      "status": "posted",
+      "account": "",
+      "contractor": "Физ/лиц",
+      "article": "_6",
+      "currency": "_1",
+      "sum": 46963,
+      "rate": 1,
+      "purpose": "расход Элмырза ",
+      "note": "",
+      "created": "2026-09-16T08:38:33.968Z"
     }
   ],
   "accounts": [
