@@ -71,7 +71,7 @@
       "type": "pko",
       "number": "ПКО-0004",
       "date": "2026-09-12",
-      "status": "draft",
+      "status": "posted",
       "account": "_2",
       "contractor": "Канимет",
       "article": "_1",
@@ -6521,6 +6521,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-16T08:10:17.106Z",
+      "user": "Директор",
+      "action": "Создание документа",
+      "details": "pko ПКО-0004 на 280900"
+    },
     {
       "date": "2026-09-16T08:08:40.914Z",
       "user": "Директор",
