@@ -51,7 +51,7 @@
     },
     {
       "id": "_1789551918974_sxfznj",
-      "type": "conversion",
+      "type": "payment_out",
       "number": "ПП-0025",
       "date": "2026-09-16",
       "status": "posted",
@@ -7310,6 +7310,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-16T10:19:01.390Z",
+      "user": "Директор",
+      "action": "Изменение документа",
+      "details": "conversion ПП-0025 на 24114"
+    },
     {
       "date": "2026-09-16T09:45:26.039Z",
       "user": "Директор",
