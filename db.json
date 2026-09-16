@@ -167,7 +167,7 @@
       "type": "pko",
       "number": "ПКО-0010",
       "date": "2026-09-13",
-      "status": "draft",
+      "status": "posted",
       "account": "_2",
       "contractor": "Физ/лиц",
       "article": "_1",
@@ -6617,6 +6617,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-16T08:18:57.346Z",
+      "user": "Директор",
+      "action": "Создание документа",
+      "details": "pko ПКО-0010 на 31800"
+    },
     {
       "date": "2026-09-16T08:17:50.586Z",
       "user": "Директор",
