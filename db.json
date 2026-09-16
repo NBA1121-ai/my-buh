@@ -21,7 +21,7 @@
       "type": "payment_in",
       "number": "ПП-0004",
       "date": "2026-09-14",
-      "status": "draft",
+      "status": "posted",
       "account": "_1",
       "contractor": "Физ/лиц",
       "article": "",
@@ -6714,6 +6714,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-16T08:34:51.185Z",
+      "user": "Директор",
+      "action": "Создание документа",
+      "details": "payment_in ПП-0004 на 1545000"
+    },
     {
       "date": "2026-09-16T08:33:53.585Z",
       "user": "Директор",
