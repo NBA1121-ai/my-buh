@@ -199,7 +199,7 @@
       "type": "rko",
       "number": "ПКО-0012",
       "date": "2026-09-12",
-      "status": "draft",
+      "status": "posted",
       "account": "",
       "contractor": "Физ/лиц",
       "article": "_5",
@@ -6649,6 +6649,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-16T08:26:45.698Z",
+      "user": "Директор",
+      "action": "Создание документа",
+      "details": "rko ПКО-0012 на 7500"
+    },
     {
       "date": "2026-09-16T08:26:22.850Z",
       "user": "Директор",
