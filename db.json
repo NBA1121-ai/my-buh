@@ -31,6 +31,24 @@
       "purpose": "ПОПОЛНЕНИЕ СЧЕТА ",
       "note": "",
       "created": "2026-09-16T08:34:51.184Z"
+    },
+    {
+      "id": "_1789548639919_85n3l7",
+      "type": "payment_in",
+      "number": "ПП-0024",
+      "date": "2026-09-16",
+      "status": "posted",
+      "account": "_1",
+      "contractor": "ОсОО «Беш Сары-К»",
+      "contractorId": "c2",
+      "article": "_1",
+      "currency": "_1",
+      "sum": 607200,
+      "rate": 1,
+      "purpose": "Оплата по документу Счет покупателю НО-02 от 11.09.2026",
+      "note": "Создано на основании",
+      "created": "2026-09-16T08:50:39.919Z",
+      "basis": "obc2"
     }
   ],
   "cashDocuments": [
