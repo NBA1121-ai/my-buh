@@ -3033,7 +3033,7 @@
         "id": "tmu3se9kyjsva",
         "type": "sale",
         "number": "РТ-000011",
-        "date": "2026-09-16",
+        "date": "2026-09-13",
         "status": "posted",
         "opKind": "Товары (накладная, УПД)",
         "contractor": "tmu3rmh7nur4e",
@@ -4444,6 +4444,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-16T07:39:55.706Z",
+      "user": "Директор",
+      "action": "Изменение документа",
+      "details": "sale РТ-000011"
+    },
     {
       "date": "2026-09-16T07:37:48.298Z",
       "user": "Директор",
