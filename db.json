@@ -5813,6 +5813,155 @@
         "goods": [],
         "created": "2026-09-14T04:20:54.524Z",
         "sf": null
+      },
+      {
+        "id": "tmu3wp0auv0ca",
+        "type": "reconciliation",
+        "number": "АС-000002",
+        "date": "2026-09-16",
+        "status": "posted",
+        "opKind": "",
+        "contractor": "c2",
+        "contract": "",
+        "warehouse": "w1",
+        "basis": "",
+        "payTerm": "",
+        "settle": {
+          "acc": "62.01",
+          "adv": "62.02",
+          "offset": "Автоматически"
+        },
+        "priceType": "pt1",
+        "vatMode": "in",
+        "discount": 0,
+        "payUntil": "",
+        "invoiceStatus": "",
+        "goods": [],
+        "services": [],
+        "agent": [],
+        "tara": [],
+        "extra": {
+          "consignor": "",
+          "consignee": "",
+          "address": "",
+          "responsible": "",
+          "comment": "",
+          "signHead": "Камбаров Артур Майсалбекович",
+          "signAcc": "Жаныбеков Элмырза Максатбекович",
+          "signRelease": "",
+          "signGave": ""
+        },
+        "sf": null,
+        "gtdData": {
+          "number": "",
+          "customsValue": 0,
+          "dutyPct": 0,
+          "vatPct": 12,
+          "fee": 0,
+          "deposit": ""
+        },
+        "poa": {
+          "person": "",
+          "position": "",
+          "passport": "",
+          "validTo": ""
+        },
+        "recon": {
+          "from": "2026-01-01",
+          "to": "2026-09-16",
+          "rows": [
+            {
+              "date": "2026-09-11",
+              "doc": "Счет покупателю НО-02 от 11.09.2026",
+              "dt": 811200,
+              "kt": 0
+            },
+            {
+              "date": "2026-09-12",
+              "doc": "Реализация РТ-000003 от 12.09.2026",
+              "dt": 105600,
+              "kt": 0
+            },
+            {
+              "date": "2026-09-14",
+              "doc": "Реализация РТ-000019 от 14.09.2026",
+              "dt": 105600,
+              "kt": 0
+            },
+            {
+              "date": "2026-09-14",
+              "doc": "Платежное поручение (вход.) ПП-0024",
+              "dt": 0,
+              "kt": 607200
+            },
+            {
+              "date": "2026-09-16",
+              "doc": "Реализация РТ-000025 от 16.09.2026",
+              "dt": 105600,
+              "kt": 0
+            }
+          ],
+          "openBal": 0
+        },
+        "payCash": 0,
+        "payCard": 0,
+        "rewardPct": 10,
+        "corrKind": "",
+        "warehouseTo": "w2",
+        "kitNom": "",
+        "kitQty": 1,
+        "productNom": "",
+        "productQty": 1,
+        "specName": "",
+        "department": "dep1",
+        "costAccount": "20.01",
+        "nomGroup": "",
+        "costItem": "",
+        "materials": [],
+        "products": [],
+        "waste": [],
+        "prices": [],
+        "wip": [],
+        "inv": null,
+        "period": "",
+        "calc": null,
+        "employee": "",
+        "rows": [],
+        "absFrom": "",
+        "absTo": "",
+        "absDays": 0,
+        "avgDay": 0,
+        "avgDayManual": false,
+        "pct": "",
+        "compDays": 0,
+        "salary": "",
+        "bonus": 0,
+        "position": "",
+        "schedule": "sch1",
+        "employment": "Основное место работы",
+        "probation": 0,
+        "contractNo": "",
+        "contractDate": "",
+        "conditions": "Нормальные, полный рабочий день",
+        "reason": "",
+        "transferKind": "Постоянный",
+        "payDate": "",
+        "payWith": "С зарплатой за месяц",
+        "workYear": "",
+        "sickNo": "",
+        "clinic": "",
+        "payAccount": "",
+        "gphPerson": "",
+        "gphInn": "",
+        "gphPassport": "",
+        "gphSubject": "",
+        "gphSum": "",
+        "actDate": "",
+        "severanceMonths": 0,
+        "baseDoc": "",
+        "sum": 0,
+        "vatTotal": 0,
+        "total": 0
       }
     ],
     "org": {
@@ -7125,6 +7274,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-16T09:36:55.855Z",
+      "user": "Директор",
+      "action": "Создание документа",
+      "details": "reconciliation АС-000002"
+    },
     {
       "date": "2026-09-16T09:01:35.959Z",
       "user": "Директор",
