@@ -248,9 +248,9 @@
       "type": "rko",
       "number": "ПКО-0015",
       "date": "2026-09-13",
-      "status": "draft",
+      "status": "posted",
       "account": "_2",
-      "contractor": "",
+      "contractor": "Физ/лиц",
       "article": "_6",
       "currency": "_1",
       "sum": 1545000,
@@ -6698,6 +6698,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-16T08:33:48.257Z",
+      "user": "Директор",
+      "action": "Создание документа",
+      "details": "rko ПКО-0015 на 1545000"
+    },
     {
       "date": "2026-09-16T08:32:31.929Z",
       "user": "Директор",
