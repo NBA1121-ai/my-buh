@@ -5941,6 +5941,19 @@
         "account": "",
         "bank": "",
         "comment": ""
+      },
+      {
+        "id": "tmu3uiovs8bmz",
+        "name": "ИП МИРЛАН \"СЕТКАМАК\"",
+        "full": "",
+        "inn": "",
+        "kind": "Юридическое лицо",
+        "address": "",
+        "phone": "",
+        "email": "",
+        "account": "",
+        "bank": "",
+        "comment": ""
       }
     ],
     "contracts": [],
@@ -6714,6 +6727,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-16T08:34:55.249Z",
+      "user": "Директор",
+      "action": "Изменение документа",
+      "details": "payment_in ПП-0004 на 1545000"
+    },
     {
       "date": "2026-09-16T08:34:51.185Z",
       "user": "Директор",
