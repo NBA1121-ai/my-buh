@@ -69,7 +69,7 @@
       "id": "_1789713793505_9cfk7t",
       "type": "conversion",
       "number": "ПП-0026",
-      "date": "2026-09-18",
+      "date": "2026-09-14",
       "status": "draft",
       "account": "_1",
       "contractor": "",
@@ -7647,6 +7647,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-18T06:43:13.506Z",
+      "user": "Директор",
+      "action": "Создание документа",
+      "details": "conversion ПП-0026 на 2109975"
+    },
     {
       "date": "2026-09-18T05:59:14.455Z",
       "user": "Директор",
