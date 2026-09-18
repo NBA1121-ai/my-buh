@@ -55,7 +55,7 @@
       "number": "ПП-0025",
       "date": "2026-09-16",
       "status": "posted",
-      "account": "_1",
+      "account": "_4",
       "contractor": "RECO BREND SEMENT",
       "article": "_5",
       "currency": "_2",
@@ -7483,6 +7483,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-18T05:17:04.073Z",
+      "user": "Разработчик",
+      "action": "Изменение документа",
+      "details": "payment_out ПП-0025 на 24114"
+    },
     {
       "date": "2026-09-18T05:17:00.408Z",
       "user": "Разработчик",
