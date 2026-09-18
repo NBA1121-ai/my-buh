@@ -441,6 +441,16 @@
       "currency": "USD",
       "beneficiary": "OSOO \"GLOBAL KARGO\"",
       "inn": "00108202210232"
+    },
+    {
+      "id": "_4_usd",
+      "name": "Валютный счет МБанк (USD)",
+      "number": "1033220001116529",
+      "bank": "ОАО «Mbank», SWIFT: KYRSKG22, BIC: 103032",
+      "type": "bank",
+      "currency": "USD",
+      "beneficiary": "OSOO \"GLOBAL KARGO\"",
+      "inn": "00108202210232"
     }
   ],
   "banks": [
@@ -7647,6 +7657,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-18T06:43:28.778Z",
+      "user": "Директор",
+      "action": "Изменение документа",
+      "details": "conversion ПП-0026 на 2109975"
+    },
     {
       "date": "2026-09-18T06:43:21.866Z",
       "user": "Директор",
