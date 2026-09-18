@@ -64,6 +64,22 @@
       "purpose": "",
       "note": "",
       "created": "2026-09-16T09:45:18.974Z"
+    },
+    {
+      "id": "_1789713793505_9cfk7t",
+      "type": "conversion",
+      "number": "ПП-0026",
+      "date": "2026-09-18",
+      "status": "draft",
+      "account": "_1",
+      "contractor": "",
+      "article": "",
+      "currency": "_1",
+      "sum": 2109975,
+      "rate": 87.5,
+      "purpose": "",
+      "note": "",
+      "created": "2026-09-18T06:43:13.505Z"
     }
   ],
   "cashDocuments": [
