@@ -54,7 +54,7 @@
       "type": "payment_out",
       "number": "ПП-0025",
       "date": "2026-09-16",
-      "status": "posted",
+      "status": "draft",
       "account": "_1",
       "contractor": "RECO BREND SEMENT",
       "article": "_5",
