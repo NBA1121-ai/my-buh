@@ -83,7 +83,7 @@
     },
     {
       "id": "_1790085185949_v50sks",
-      "type": "payment_in",
+      "type": "payment_out",
       "number": "ПП-0027",
       "date": "2026-09-22",
       "status": "posted",
@@ -7673,6 +7673,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-22T13:53:45.718Z",
+      "user": "Разработчик",
+      "action": "Изменение документа",
+      "details": "payment_in ПП-0027 на 24114"
+    },
     {
       "date": "2026-09-22T13:53:30.871Z",
       "user": "Разработчик",
