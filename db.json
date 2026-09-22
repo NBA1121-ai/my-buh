@@ -80,6 +80,22 @@
       "purpose": "",
       "note": "",
       "created": "2026-09-18T06:43:13.505Z"
+    },
+    {
+      "id": "_1790085185949_v50sks",
+      "type": "conversion",
+      "number": "ПП-0027",
+      "date": "2026-09-22",
+      "status": "posted",
+      "account": "_4",
+      "contractor": "",
+      "article": "",
+      "currency": "_2",
+      "sum": 24114,
+      "rate": 87.5,
+      "purpose": "",
+      "note": "",
+      "created": "2026-09-22T13:53:05.949Z"
     }
   ],
   "cashDocuments": [
