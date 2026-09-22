@@ -1853,7 +1853,7 @@
         "type": "stock_opening",
         "number": "НО-С-01",
         "date": "2026-09-11",
-        "status": "posted",
+        "status": "deleted",
         "warehouse": "w1",
         "comment": "Начальные остатки товаров и материалов на складе",
         "goods": [
