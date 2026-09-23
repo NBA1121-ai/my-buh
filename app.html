@@ -973,12 +973,18 @@
 
                     <div class="form-row">
                         <div class="form-group">
-                            <label>Банковский счет / Касса</label>
+                            <label id="docAccountLabel">Банковский счет / Касса</label>
                             <select id="docAccount">
                                 <option value="">Выбрать...</option>
                             </select>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group" id="docAccountToGroup" style="display:none">
+                            <label>Счёт назначения (зачисление)</label>
+                            <select id="docAccountTo">
+                                <option value="">Выбрать...</option>
+                            </select>
+                        </div>
+                        <div class="form-group" id="docContractorGroup">
                             <label>Контрагент</label>
                             <input type="text" id="docContractor" placeholder="ООО Компания">
                         </div>
@@ -1425,7 +1431,7 @@
                                 <td><strong>${esc(d.number)}</strong></td>
                                 <td>${formatDate(d.date)}</td>
                                 <td>${getDocTypeLabel(d.type)}</td>
-                                <td>${getAccountName(d.account)}</td>
+                                <td>${getAccountName(d.account)}${d.type === 'conversion' && d.accountTo ? '<br><span style="font-size:11px;color:#888">\u2192 ' + getAccountName(d.accountTo) + '</span>' : ''}</td>
                                 <td>${esc(d.contractor || '-')}</td>
                                 <td class="num amount">${formatAmountCur(d.sum, d.currency, d.rate)}</td>
                                 <td><span class="badge ${d.status === 'posted' ? 'posted' : 'draft'}">${d.status === 'posted' ? 'Проведено' : 'Черновик'}</span></td>
@@ -1484,7 +1490,7 @@
                                 <td><strong>${esc(d.number)}</strong></td>
                                 <td>${formatDate(d.date)}</td>
                                 <td>${getDocTypeLabel(d.type)}</td>
-                                <td>${getAccountName(d.account)}</td>
+                                <td>${getAccountName(d.account)}${d.type === 'conversion' && d.accountTo ? '<br><span style="font-size:11px;color:#888">\u2192 ' + getAccountName(d.accountTo) + '</span>' : ''}</td>
                                 <td>${esc(d.contractor || '-')}</td>
                                 <td class="num amount">${formatAmountCur(d.sum, d.currency, d.rate)}</td>
                                 <td><span class="badge ${d.status === 'posted' ? 'posted' : 'draft'}">${d.status === 'posted' ? 'Проведено' : 'Черновик'}</span></td>
@@ -2056,10 +2062,23 @@
             const allFinDocs = [...(db.bankDocuments || []), ...(db.cashDocuments || [])];
             allFinDocs.forEach(d => {
                 if (!d.account || accBalances[d.account] === undefined) return;
-                const isIn = d.type === 'payment_in' || d.type === 'pko';
-                const isOut = d.type === 'payment_out' || d.type === 'rko';
-                if (isIn) accBalances[d.account] += (d.sum || 0);
-                else if (isOut) accBalances[d.account] -= (d.sum || 0);
+                const sum = Number(d.sum || 0);
+                const isIn = ['payment_in', 'pko'].includes(d.type);
+                const isOut = ['payment_out', 'rko', 'payment_order', 'statement', 'directbank'].includes(d.type);
+                if (isIn) accBalances[d.account] += sum;
+                else if (isOut) accBalances[d.account] -= sum;
+                // conversion: списание с исходного счёта, зачисление на целевой
+                else if (d.type === 'conversion') {
+                    accBalances[d.account] -= sum;
+                    if (d.accountTo && accBalances[d.accountTo] !== undefined) {
+                        const accFrom = (db.accounts || []).find(a => a.id === d.account);
+                        const accTo = (db.accounts || []).find(a => a.id === d.accountTo);
+                        const curFrom = accFrom ? accFrom.currency || '' : '';
+                        const curTo = accTo ? accTo.currency || '' : '';
+                        const creditSum = (curFrom === curTo) ? sum : sum * (Number(d.rate) || 1);
+                        accBalances[d.accountTo] += creditSum;
+                    }
+                }
             });
 
             // Account balance cards — grouped by currency
@@ -2630,6 +2649,7 @@
             document.getElementById('docDate').value = doc.date;
             document.getElementById('docStatus').value = doc.status;
             document.getElementById('docAccount').value = doc.account || '';
+            if (doc.accountTo) document.getElementById('docAccountTo').value = doc.accountTo;
             document.getElementById('docContractor').value = doc.contractor || '';
             document.getElementById('docArticle').value = doc.article || '';
             document.getElementById('docCurrency').value = doc.currency || '';
@@ -2653,13 +2673,23 @@
             const rateVal = parseFloat(document.getElementById('docRate').value) || 1;
             if (rateVal <= 0) { alert('Курс должен быть положительным числом'); return; }
 
+            const docType = document.getElementById('docType').value;
+            if (docType === 'conversion') {
+                const accTo = document.getElementById('docAccountTo').value;
+                const accFrom = document.getElementById('docAccount').value;
+                if (!accFrom) { alert('Выберите счёт списания'); return; }
+                if (!accTo) { alert('Выберите счёт назначения'); return; }
+                if (accFrom === accTo) { alert('Счёт списания и назначения не могут совпадать'); return; }
+            }
+
             const doc = {
                 id: editingId || uid(),
-                type: document.getElementById('docType').value,
+                type: docType,
                 number: document.getElementById('docNumber').value,
                 date: document.getElementById('docDate').value,
                 status: document.getElementById('docStatus').value,
                 account: document.getElementById('docAccount').value,
+                accountTo: docType === 'conversion' ? document.getElementById('docAccountTo').value : '',
                 contractor: document.getElementById('docContractor').value,
                 article: document.getElementById('docArticle').value,
                 currency: document.getElementById('docCurrency').value,
@@ -2708,15 +2738,33 @@
         function updateFormByType() {
             const type = document.getElementById('docType').value;
             const isCash = CASH_TYPES.includes(type);
+            const isConversion = type === 'conversion';
             const accountSelect = document.getElementById('docAccount');
             const filtered = db.accounts.filter(a => isCash ? a.type === 'cash' : a.type !== 'cash');
             const current = accountSelect.value;
             accountSelect.innerHTML = '<option value="">Выбрать...</option>' +
                 filtered.map(a => `<option value="${esc(a.id)}">${esc(a.name)}</option>`).join('');
             if (filtered.find(a => a.id === current)) accountSelect.value = current;
+            // Счёт назначения — только для конвертации
+            const accToGroup = document.getElementById('docAccountToGroup');
+            const accToSelect = document.getElementById('docAccountTo');
+            const contractorGroup = document.getElementById('docContractorGroup');
+            if (isConversion) {
+                accToGroup.style.display = '';
+                contractorGroup.style.display = 'none';
+                document.getElementById('docAccountLabel').textContent = 'Счёт списания (откуда)';
+                const currentTo = accToSelect.value;
+                accToSelect.innerHTML = '<option value="">Выбрать...</option>' +
+                    filtered.map(a => `<option value="${esc(a.id)}">${esc(a.name)}</option>`).join('');
+                if (filtered.find(a => a.id === currentTo)) accToSelect.value = currentTo;
+            } else {
+                accToGroup.style.display = 'none';
+                contractorGroup.style.display = '';
+                document.getElementById('docAccountLabel').textContent = 'Банковский счет / Касса';
+            }
             // Filter articles by type
             const artSelect = document.getElementById('docArticle');
-            const artFiltered = db.articles.filter(a => isCash ? true : true); // show all articles
+            const artFiltered = db.articles;
             const currentArt = artSelect.value;
             artSelect.innerHTML = '<option value="">Выбрать...</option>' +
                 artFiltered.map(a => `<option value="${esc(a.id)}">${esc(a.name)}</option>`).join('');
