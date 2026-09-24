@@ -7826,6 +7826,16 @@
             "sum": 0,
             "vatSum": 0,
             "total": 0
+          },
+          {
+            "nom": "tmu3uk23cp365",
+            "qty": 100,
+            "price": 0,
+            "vat": -1,
+            "account": "43",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
           }
         ],
         "created": "2026-09-24T11:14:52.386Z"
@@ -8828,12 +8838,12 @@
         "id": "tmu3uk23cp365",
         "name": "Сеткамак для газоблок (16:2.5)",
         "article": "",
-        "kind": "Материал",
+        "kind": "Продукция",
         "unit": "",
         "vat": 0,
         "price": 0,
         "cost": 0,
-        "account": "10.01",
+        "account": "43",
         "country": "",
         "group": "",
         "planPrice": "",
@@ -8967,12 +8977,12 @@
       {
         "id": "n29",
         "name": "Орг. стекло",
-        "kind": "Материал",
+        "kind": "Продукция",
         "unit": "лист",
         "vat": 0,
         "price": 0,
         "cost": 0,
-        "account": "10.01"
+        "account": "43"
       }
     ],
     "warehouses": [
