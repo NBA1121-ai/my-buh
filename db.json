@@ -1778,19 +1778,19 @@
         "payUntil": "",
         "comment": "Начальный остаток кредиторской задолженности",
         "currency": "KGS",
-        "total": 2713500,
-        "sum": 2713500,
+        "total": 962000,
+        "sum": 962000,
         "vatSum": 0,
         "services": [
           {
             "nom": "",
             "name": "Начальный остаток",
             "qty": 1,
-            "price": 2713500,
-            "sum": 2713500,
+            "price": 962000,
+            "sum": 962000,
             "vat": -1,
             "vatSum": 0,
-            "total": 2713500
+            "total": 962000
           }
         ],
         "goods": [],
@@ -1807,19 +1807,19 @@
         "payUntil": "",
         "comment": "Начальный остаток кредиторской задолженности",
         "currency": "KGS",
-        "total": 42020,
-        "sum": 42020,
+        "total": 66040,
+        "sum": 66040,
         "vatSum": 0,
         "services": [
           {
             "nom": "",
             "name": "Начальный остаток",
             "qty": 1,
-            "price": 42020,
-            "sum": 42020,
+            "price": 66040,
+            "sum": 66040,
             "vat": -1,
             "vatSum": 0,
-            "total": 42020
+            "total": 66040
           }
         ],
         "goods": [],
@@ -1836,19 +1836,19 @@
         "payUntil": "",
         "comment": "Начальный остаток кредиторской задолженности",
         "currency": "KGS",
-        "total": 55200,
-        "sum": 55200,
+        "total": 115360,
+        "sum": 115360,
         "vatSum": 0,
         "services": [
           {
             "nom": "",
             "name": "Начальный остаток",
             "qty": 1,
-            "price": 55200,
-            "sum": 55200,
+            "price": 115360,
+            "sum": 115360,
             "vat": -1,
             "vatSum": 0,
-            "total": 55200
+            "total": 115360
           }
         ],
         "goods": [],
@@ -1865,19 +1865,19 @@
         "payUntil": "",
         "comment": "Начальный остаток кредиторской задолженности",
         "currency": "KGS",
-        "total": 417155,
-        "sum": 417155,
+        "total": 609105,
+        "sum": 609105,
         "vatSum": 0,
         "services": [
           {
             "nom": "",
             "name": "Начальный остаток",
             "qty": 1,
-            "price": 417155,
-            "sum": 417155,
+            "price": 609105,
+            "sum": 609105,
             "vat": -1,
             "vatSum": 0,
-            "total": 417155
+            "total": 609105
           }
         ],
         "goods": [],
@@ -7424,6 +7424,156 @@
         ],
         "goods": [],
         "created": "2026-09-24T09:38:23.598Z"
+      },
+      {
+        "id": "obs_fix_c48",
+        "type": "supplier_invoice",
+        "number": "НОК-09",
+        "date": "2026-09-24",
+        "status": "posted",
+        "contractor": "c48",
+        "contract": "",
+        "payUntil": "",
+        "discount": 0,
+        "comment": "Начальный остаток кредиторской задолженности",
+        "currency": "KGS",
+        "total": 162000,
+        "sum": 162000,
+        "vatSum": 0,
+        "services": [
+          {
+            "nom": "",
+            "name": "Начальный остаток",
+            "qty": 1,
+            "price": 162000,
+            "sum": 162000,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 162000
+          }
+        ],
+        "goods": [],
+        "created": "2026-09-24T10:34:21.269Z"
+      },
+      {
+        "id": "obs_fix_c49",
+        "type": "supplier_invoice",
+        "number": "НОК-10",
+        "date": "2026-09-24",
+        "status": "posted",
+        "contractor": "c49",
+        "contract": "",
+        "payUntil": "",
+        "discount": 0,
+        "comment": "Начальный остаток кредиторской задолженности",
+        "currency": "KGS",
+        "total": 97000,
+        "sum": 97000,
+        "vatSum": 0,
+        "services": [
+          {
+            "nom": "",
+            "name": "Начальный остаток",
+            "qty": 1,
+            "price": 97000,
+            "sum": 97000,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 97000
+          }
+        ],
+        "goods": [],
+        "created": "2026-09-24T10:34:21.269Z"
+      },
+      {
+        "id": "obs_fix_c50",
+        "type": "supplier_invoice",
+        "number": "НОК-11",
+        "date": "2026-09-24",
+        "status": "posted",
+        "contractor": "c50",
+        "contract": "",
+        "payUntil": "",
+        "discount": 0,
+        "comment": "Начальный остаток кредиторской задолженности",
+        "currency": "KGS",
+        "total": 753525,
+        "sum": 753525,
+        "vatSum": 0,
+        "services": [
+          {
+            "nom": "",
+            "name": "Начальный остаток",
+            "qty": 1,
+            "price": 753525,
+            "sum": 753525,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 753525
+          }
+        ],
+        "goods": [],
+        "created": "2026-09-24T10:34:21.269Z"
+      },
+      {
+        "id": "obs_fix_c51",
+        "type": "supplier_invoice",
+        "number": "НОК-12",
+        "date": "2026-09-24",
+        "status": "posted",
+        "contractor": "c51",
+        "contract": "",
+        "payUntil": "",
+        "discount": 0,
+        "comment": "Начальный остаток кредиторской задолженности",
+        "currency": "KGS",
+        "total": 10100,
+        "sum": 10100,
+        "vatSum": 0,
+        "services": [
+          {
+            "nom": "",
+            "name": "Начальный остаток",
+            "qty": 1,
+            "price": 10100,
+            "sum": 10100,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 10100
+          }
+        ],
+        "goods": [],
+        "created": "2026-09-24T10:34:21.269Z"
+      },
+      {
+        "id": "obs_fix_bekko_usd",
+        "type": "supplier_invoice",
+        "number": "НОК-USD-01",
+        "date": "2026-09-24",
+        "status": "posted",
+        "contractor": "tmu3sjlbud4ja",
+        "contract": "",
+        "payUntil": "",
+        "discount": 0,
+        "comment": "Кредиторская задолженность в долларах (20 000 USD)",
+        "currency": "USD",
+        "total": 20000,
+        "sum": 20000,
+        "vatSum": 0,
+        "services": [
+          {
+            "nom": "",
+            "name": "Задолженность в USD",
+            "qty": 1,
+            "price": 20000,
+            "sum": 20000,
+            "vat": -1,
+            "vatSum": 0,
+            "total": 20000
+          }
+        ],
+        "goods": [],
+        "created": "2026-09-24T10:34:21.269Z"
       }
     ],
     "org": {
@@ -7992,6 +8142,50 @@
         "email": "",
         "contact": "",
         "comment": "Подотчетное лицо"
+      },
+      {
+        "id": "c48",
+        "name": "Ислам Песок",
+        "kind": "Физическое лицо",
+        "inn": "",
+        "address": "",
+        "phone": "",
+        "email": "",
+        "contact": "",
+        "comment": ""
+      },
+      {
+        "id": "c49",
+        "name": "Электричество",
+        "kind": "Юридическое лицо",
+        "inn": "",
+        "address": "",
+        "phone": "",
+        "email": "",
+        "contact": "",
+        "comment": ""
+      },
+      {
+        "id": "c50",
+        "name": "Умут",
+        "kind": "Физическое лицо",
+        "inn": "",
+        "address": "",
+        "phone": "",
+        "email": "",
+        "contact": "",
+        "comment": ""
+      },
+      {
+        "id": "c51",
+        "name": "Манипулятор",
+        "kind": "Юридическое лицо",
+        "inn": "",
+        "address": "",
+        "phone": "",
+        "email": "",
+        "contact": "",
+        "comment": ""
       }
     ],
     "contracts": [],
