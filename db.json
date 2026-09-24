@@ -50,22 +50,6 @@
       "basis": "obc2"
     },
     {
-      "id": "_1789551918974_sxfznj",
-      "type": "payment_out",
-      "number": "ПП-0025",
-      "date": "2026-09-16",
-      "status": "posted",
-      "account": "_4",
-      "contractor": "RECO BREND SEMENT",
-      "article": "_5",
-      "currency": "_2",
-      "sum": 24114,
-      "rate": 87.5,
-      "purpose": "",
-      "note": "",
-      "created": "2026-09-16T09:45:18.974Z"
-    },
-    {
       "id": "_1789713793505_9cfk7t",
       "type": "conversion",
       "number": "ПП-0026",
@@ -80,6 +64,23 @@
       "purpose": "",
       "note": "",
       "created": "2026-09-18T06:43:13.505Z"
+    },
+    {
+      "id": "_1789551918974_sxfznj",
+      "type": "conversion",
+      "number": "ПП-0025",
+      "date": "2026-09-16",
+      "status": "posted",
+      "account": "_4",
+      "accountTo": "_1",
+      "contractor": "RECO BREND SEMENT",
+      "article": "_5",
+      "currency": "_2",
+      "sum": 24114,
+      "rate": 87.5,
+      "purpose": "",
+      "note": "",
+      "created": "2026-09-16T09:45:18.974Z"
     }
   ],
   "cashDocuments": [
