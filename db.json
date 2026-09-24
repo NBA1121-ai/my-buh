@@ -7773,6 +7773,36 @@
             "sum": 0,
             "vatSum": 0,
             "total": 0
+          },
+          {
+            "nom": "n18",
+            "qty": 13000,
+            "price": 0,
+            "vat": -1,
+            "account": "10.01",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n19",
+            "qty": 156000,
+            "price": 0,
+            "vat": -1,
+            "account": "10.01",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n17",
+            "qty": 102,
+            "price": 0,
+            "vat": -1,
+            "account": "10.01",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
           }
         ],
         "created": "2026-09-24T11:14:52.386Z"
