@@ -7574,6 +7574,221 @@
         ],
         "goods": [],
         "created": "2026-09-24T10:34:21.269Z"
+      },
+      {
+        "id": "stock_adj_in",
+        "type": "stock_opening",
+        "number": "КОРР-ОСТ-01",
+        "date": "2026-09-24",
+        "status": "posted",
+        "warehouse": "w1",
+        "comment": "Корректировка остатков товаров и материалов на 24.09.2026",
+        "goods": [
+          {
+            "nom": "n1",
+            "qty": 13834,
+            "price": 0,
+            "vat": -1,
+            "account": "43",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n2",
+            "qty": 1691,
+            "price": 0,
+            "vat": -1,
+            "account": "43",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n3",
+            "qty": 12622,
+            "price": 0,
+            "vat": -1,
+            "account": "43",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n4",
+            "qty": 263784,
+            "price": 0,
+            "vat": -1,
+            "account": "43",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n5",
+            "qty": 38550,
+            "price": 0,
+            "vat": -1,
+            "account": "43",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n27",
+            "qty": 8520,
+            "price": 0,
+            "vat": -1,
+            "account": "43",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n7",
+            "qty": 6580,
+            "price": 0,
+            "vat": -1,
+            "account": "10.01",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n6",
+            "qty": 45500,
+            "price": 0,
+            "vat": -1,
+            "account": "10.01",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n8",
+            "qty": 45045,
+            "price": 0,
+            "vat": -1,
+            "account": "10.01",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n16",
+            "qty": 3800,
+            "price": 0,
+            "vat": -1,
+            "account": "10.01",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n13",
+            "qty": 375,
+            "price": 0,
+            "vat": -1,
+            "account": "10.01",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n9",
+            "qty": 172.5,
+            "price": 0,
+            "vat": -1,
+            "account": "10.01",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n11",
+            "qty": 786,
+            "price": 0,
+            "vat": -1,
+            "account": "10.01",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n10",
+            "qty": 72,
+            "price": 0,
+            "vat": -1,
+            "account": "10.01",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n15",
+            "qty": 11.7,
+            "price": 0,
+            "vat": -1,
+            "account": "10.01",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n23",
+            "qty": 57,
+            "price": 0,
+            "vat": -1,
+            "account": "10.01",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n28",
+            "qty": 26.5,
+            "price": 0,
+            "vat": -1,
+            "account": "10.01",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n24",
+            "qty": 81.5,
+            "price": 0,
+            "vat": -1,
+            "account": "10.01",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          }
+        ],
+        "created": "2026-09-24T11:14:52.386Z"
+      },
+      {
+        "id": "stock_adj_out",
+        "type": "stock_out",
+        "number": "КОРР-ОСТ-02",
+        "date": "2026-09-24",
+        "status": "posted",
+        "warehouse": "w1",
+        "opKind": "Корректировка остатков",
+        "comment": "Корректировка остатков товаров и материалов на 24.09.2026",
+        "goods": [
+          {
+            "nom": "n12",
+            "qty": 233,
+            "price": 0,
+            "vat": -1,
+            "account": "10.01",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          }
+        ],
+        "created": "2026-09-24T11:14:52.386Z"
       }
     ],
     "org": {
@@ -8688,6 +8903,26 @@
         "price": 0,
         "cost": 0,
         "account": "43"
+      },
+      {
+        "id": "n27",
+        "name": "Штукатурка серая",
+        "kind": "Продукция",
+        "unit": "кг",
+        "vat": 0,
+        "price": 0,
+        "cost": 0,
+        "account": "43"
+      },
+      {
+        "id": "n28",
+        "name": "Лимонная кислота",
+        "kind": "Материал",
+        "unit": "кг",
+        "vat": 0,
+        "price": 0,
+        "cost": 0,
+        "account": "10.01"
       }
     ],
     "warehouses": [
