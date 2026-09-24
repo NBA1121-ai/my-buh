@@ -10,7 +10,7 @@
       "contractor": "",
       "article": "_3",
       "currency": "_1",
-      "sum": 781065,
+      "sum": -1969269,
       "rate": 1,
       "purpose": "Начальный остаток на расчетном счете",
       "note": "Начальный остаток",
@@ -81,6 +81,70 @@
       "purpose": "",
       "note": "",
       "created": "2026-09-16T09:45:18.974Z"
+    },
+    {
+      "id": "ob_fin_mbank",
+      "type": "payment_in",
+      "number": "НО-Ф-04",
+      "date": "2026-09-11",
+      "status": "posted",
+      "account": "_2",
+      "contractor": "",
+      "article": "_3",
+      "currency": "_1",
+      "sum": 434850,
+      "rate": 1,
+      "purpose": "Начальный остаток МБанк",
+      "note": "Начальный остаток",
+      "created": "2026-09-24T09:47:41.463Z"
+    },
+    {
+      "id": "ob_fin_tynchtyk",
+      "type": "payment_in",
+      "number": "НО-Ф-05",
+      "date": "2026-09-24",
+      "status": "posted",
+      "account": "_tynchtyk",
+      "contractor": "",
+      "article": "_3",
+      "currency": "_1",
+      "sum": 1550201,
+      "rate": 1,
+      "purpose": "Остаток денег у Тынчтык",
+      "note": "Подотчетное лицо",
+      "created": "2026-09-24T09:47:41.463Z"
+    },
+    {
+      "id": "ob_fin_azim",
+      "type": "payment_in",
+      "number": "НО-Ф-06",
+      "date": "2026-09-24",
+      "status": "posted",
+      "account": "_azim",
+      "contractor": "",
+      "article": "_3",
+      "currency": "_1",
+      "sum": 325500,
+      "rate": 1,
+      "purpose": "Остаток денег у Азим Хожи",
+      "note": "Подотчетное лицо",
+      "created": "2026-09-24T09:47:41.463Z"
+    },
+    {
+      "id": "ob_fin_zhusup",
+      "type": "payment_in",
+      "number": "НО-Ф-07",
+      "date": "2026-09-24",
+      "status": "posted",
+      "account": "_zhusup",
+      "contractor": "",
+      "article": "_3",
+      "currency": "_1",
+      "sum": 4875096,
+      "rate": 1,
+      "purpose": "Остаток денег у Жусупбеков Максатбек",
+      "note": "Подотчетное лицо",
+      "created": "2026-09-24T09:47:41.463Z"
     }
   ],
   "cashDocuments": [
@@ -94,7 +158,7 @@
       "contractor": "",
       "article": "_3",
       "currency": "_1",
-      "sum": 1825000,
+      "sum": 1019695,
       "rate": 1,
       "purpose": "Остатки на начало ",
       "note": "",
@@ -452,6 +516,21 @@
       "currency": "USD",
       "beneficiary": "OSOO \"GLOBAL KARGO\"",
       "inn": "00108202210232"
+    },
+    {
+      "id": "_tynchtyk",
+      "name": "Тынчтык (подотчет)",
+      "balance": 0
+    },
+    {
+      "id": "_azim",
+      "name": "Азим Хожи (подотчет)",
+      "balance": 0
+    },
+    {
+      "id": "_zhusup",
+      "name": "Жусупбеков Максатбек (подотчет)",
+      "balance": 0
     }
   ],
   "banks": [
@@ -7891,6 +7970,28 @@
         "email": "",
         "contact": "",
         "comment": ""
+      },
+      {
+        "id": "c46",
+        "name": "Азим Хожи",
+        "kind": "Физическое лицо",
+        "inn": "",
+        "address": "",
+        "phone": "",
+        "email": "",
+        "contact": "",
+        "comment": "Подотчетное лицо"
+      },
+      {
+        "id": "c47",
+        "name": "Жусупбеков Максатбек",
+        "kind": "Физическое лицо",
+        "inn": "",
+        "address": "",
+        "phone": "",
+        "email": "",
+        "contact": "",
+        "comment": "Подотчетное лицо"
       }
     ],
     "contracts": [],
