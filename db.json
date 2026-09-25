@@ -10209,7 +10209,7 @@
         "type": "payroll",
         "number": "НЗ-000001",
         "date": "2026-09-25",
-        "status": "posted",
+        "status": "deleted",
         "opKind": "",
         "contractor": "",
         "contract": "",
@@ -12001,6 +12001,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-25T12:39:56.683Z",
+      "user": "Директор",
+      "action": "Создание документа",
+      "details": "pko ПКО-0043 на 31500"
+    },
     {
       "date": "2026-09-25T12:33:13.603Z",
       "user": "Директор",
