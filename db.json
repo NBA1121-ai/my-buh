@@ -145,6 +145,23 @@
       "purpose": "Остаток денег у Чубак цемент",
       "note": "Подотчетное лицо",
       "created": "2026-09-25T09:00:11.732Z"
+    },
+    {
+      "id": "_1790333774406_61kbvl",
+      "type": "payment_out",
+      "number": "ПП-0027",
+      "date": "2026-09-25",
+      "status": "draft",
+      "account": "_1",
+      "accountTo": "",
+      "contractor": "ОсОО Монолит Капитал Строй ",
+      "article": "_1",
+      "currency": "_1",
+      "sum": 96000.08,
+      "rate": 1,
+      "purpose": "",
+      "note": "",
+      "created": "2026-09-25T10:56:14.406Z"
     }
   ],
   "cashDocuments": [
