@@ -481,21 +481,24 @@
       "name": "Расчетный счет МБанк",
       "number": "1033220001116529",
       "bank": "ФИЛИАЛ \"МБАНК ПЛАЗА\" ОАО \"МБАНК\"",
-      "type": "bank"
+      "type": "bank",
+      "openingBalance": 207045
     },
     {
       "id": "_2",
       "name": "МБанк счет (касса)",
       "number": "",
       "bank": "",
-      "type": "cash"
+      "type": "cash",
+      "openingBalance": 434850
     },
     {
       "id": "_3",
       "name": "Наличка касса",
       "number": "",
       "bank": "",
-      "type": "cash"
+      "type": "cash",
+      "openingBalance": 917500
     },
     {
       "id": "_4",
@@ -520,17 +523,23 @@
     {
       "id": "_tynchtyk",
       "name": "Тынчтык (подотчет)",
-      "balance": 0
+      "balance": 0,
+      "openingBalance": 1550201,
+      "type": "cash"
     },
     {
       "id": "_azim",
       "name": "Азим Хожи (подотчет)",
-      "balance": 0
+      "balance": 0,
+      "openingBalance": 325500,
+      "type": "cash"
     },
     {
       "id": "_zhusup",
       "name": "Жусупбеков Максатбек (подотчет)",
-      "balance": 0
+      "balance": 0,
+      "openingBalance": 4875096,
+      "type": "cash"
     }
   ],
   "banks": [
