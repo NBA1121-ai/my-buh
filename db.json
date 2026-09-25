@@ -819,6 +819,23 @@
       "purpose": "28 ТОННА ВЕСТ ЦЕМЕНТ ОПЛАТА ФУРА 89600 СОМ ",
       "note": "",
       "created": "2026-09-25T14:08:12.506Z"
+    },
+    {
+      "id": "_1790348215686_eim5su",
+      "type": "pko",
+      "number": "ПКО-0046",
+      "date": "2026-09-25",
+      "status": "posted",
+      "account": "_2",
+      "accountTo": "",
+      "contractor": "Тынчтык ",
+      "article": "_1",
+      "currency": "_1",
+      "sum": 200000,
+      "rate": 1,
+      "purpose": "",
+      "note": "Цемент за 56тонн ",
+      "created": "2026-09-25T14:56:55.686Z"
     }
   ],
   "accounts": [
