@@ -507,6 +507,24 @@
       "note": "Создано на основании",
       "created": "2026-09-25T09:03:31.775Z",
       "basis": "obs_fix_c51"
+    },
+    {
+      "id": "_1790327072974_e19x13",
+      "type": "rko",
+      "number": "РКО-0028",
+      "date": "2026-09-25",
+      "status": "posted",
+      "account": "_2",
+      "contractor": "Умут",
+      "contractorId": "c50",
+      "article": "_5",
+      "currency": "_1",
+      "sum": 27480,
+      "rate": 1,
+      "purpose": "Оплата по документу Счет от поставщика НОК-11 от 24.09.2026",
+      "note": "Создано на основании",
+      "created": "2026-09-25T09:04:32.974Z",
+      "basis": "obs_fix_c50"
     }
   ],
   "accounts": [
