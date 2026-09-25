@@ -656,7 +656,7 @@
       "accountTo": "",
       "contractor": "ИП \"Халмурат\"",
       "article": "",
-      "currency": "",
+      "currency": "_1",
       "sum": 18200,
       "rate": 1,
       "purpose": "",
@@ -11121,6 +11121,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-25T10:29:45.370Z",
+      "user": "Директор",
+      "action": "Создание документа",
+      "details": "pko ПКО-0037 на 18200"
+    },
     {
       "date": "2026-09-25T10:28:47.939Z",
       "user": "Директор",
