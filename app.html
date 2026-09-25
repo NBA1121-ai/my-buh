@@ -1403,7 +1403,7 @@
 
             const toKGS = d => Number(d.sum || 0) * (Number(d.rate) || 1);
             const totalIn = docs.filter(d => ['payment_in'].includes(d.type)).reduce((s, d) => s + toKGS(d), 0);
-            const totalOut = docs.filter(d => ['payment_out', 'payment_order', 'conversion', 'statement', 'directbank'].includes(d.type)).reduce((s, d) => s + toKGS(d), 0);
+            const totalOut = docs.filter(d => ['payment_out', 'payment_order', 'statement', 'directbank'].includes(d.type)).reduce((s, d) => s + toKGS(d), 0);
 
             return `
                 <div class="filters" style="display:flex;gap:10px;align-items:end;margin-bottom:12px;flex-wrap:wrap">
