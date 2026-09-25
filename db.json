@@ -714,6 +714,24 @@
       "note": "Создано на основании",
       "created": "2026-09-25T10:40:35.807Z",
       "basis": "obs_fix_c48"
+    },
+    {
+      "id": "_1790335792308_olcrwd",
+      "type": "rko",
+      "number": "РКО-0040",
+      "date": "2026-09-25",
+      "status": "posted",
+      "account": "_2",
+      "contractor": "ОсОО \"ТАТ Групп\" ",
+      "contractorId": "tmugvi92ssj83",
+      "article": "_5",
+      "currency": "_1",
+      "sum": 7500,
+      "rate": 1,
+      "purpose": "Оплата по документу Поступление ПТ-000006 от 25.09.2026",
+      "note": "Создано на основании",
+      "created": "2026-09-25T11:29:52.308Z",
+      "basis": "tmugvhu8sx4ph"
     }
   ],
   "accounts": [
