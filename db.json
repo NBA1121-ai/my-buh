@@ -583,7 +583,7 @@
       "type": "rko",
       "number": "ПКО-0033",
       "date": "2026-09-25",
-      "status": "draft",
+      "status": "posted",
       "account": "_3",
       "accountTo": "",
       "contractor": "Физ/лиц",
@@ -10789,6 +10789,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-25T10:16:55.323Z",
+      "user": "Директор",
+      "action": "Создание документа",
+      "details": "rko ПКО-0033 на 2700"
+    },
     {
       "date": "2026-09-25T10:16:28.835Z",
       "user": "Директор",
