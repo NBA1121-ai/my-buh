@@ -145,6 +145,22 @@
       "purpose": "Остаток денег у Жусупбеков Максатбек",
       "note": "Подотчетное лицо",
       "created": "2026-09-24T09:47:41.463Z"
+    },
+    {
+      "id": "ob_fin_chubak",
+      "type": "payment_in",
+      "number": "НО-Ф-08",
+      "date": "2026-09-24",
+      "status": "posted",
+      "account": "_chubak",
+      "contractor": "",
+      "article": "_3",
+      "currency": "_1",
+      "sum": 138700,
+      "rate": 1,
+      "purpose": "Остаток денег у Чубак цемент",
+      "note": "Подотчетное лицо",
+      "created": "2026-09-25T09:00:11.732Z"
     }
   ],
   "cashDocuments": [
@@ -540,6 +556,15 @@
       "balance": 0,
       "openingBalance": 0,
       "type": "cash"
+    },
+    {
+      "id": "_chubak",
+      "name": "Чубак цемент (подотчет)",
+      "number": "",
+      "bank": "",
+      "type": "bank",
+      "currency": "_1",
+      "openingBalance": 0
     }
   ],
   "banks": [
