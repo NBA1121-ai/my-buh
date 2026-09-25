@@ -161,23 +161,6 @@
       "purpose": "Остаток денег у Чубак цемент",
       "note": "Подотчетное лицо",
       "created": "2026-09-25T09:00:11.732Z"
-    },
-    {
-      "id": "_1790327299006_ah3l6s",
-      "type": "payment_out",
-      "number": "ПП-0027",
-      "date": "2026-09-25",
-      "status": "posted",
-      "account": "_1",
-      "accountTo": "",
-      "contractor": "Тынчтык ",
-      "article": "_4",
-      "currency": "_1",
-      "sum": 714200,
-      "rate": 1,
-      "purpose": "",
-      "note": "",
-      "created": "2026-09-25T09:08:19.006Z"
     }
   ],
   "cashDocuments": [
@@ -9668,6 +9651,18 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-25T09:08:51.190Z",
+      "user": "Директор",
+      "action": "Удаление документа",
+      "details": "payment_out ПП-0027"
+    },
+    {
+      "date": "2026-09-25T09:08:19.008Z",
+      "user": "Директор",
+      "action": "Создание документа",
+      "details": "payment_out ПП-0027 на 714200"
+    },
     {
       "date": "2026-09-25T09:06:43.046Z",
       "user": "Директор",
