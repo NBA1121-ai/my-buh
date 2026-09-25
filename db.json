@@ -145,23 +145,6 @@
       "purpose": "Остаток денег у Чубак цемент",
       "note": "Подотчетное лицо",
       "created": "2026-09-25T09:00:11.732Z"
-    },
-    {
-      "id": "ob_fin_tynchtyk",
-      "type": "payment_in",
-      "number": "НО-Ф-05",
-      "date": "2026-09-24",
-      "status": "draft",
-      "account": "",
-      "accountTo": "",
-      "contractor": "",
-      "article": "_3",
-      "currency": "_1",
-      "sum": 1550201,
-      "rate": 1,
-      "purpose": "Остаток денег у Тынчтык",
-      "note": "Подотчетное лицо",
-      "created": "2026-09-24T09:47:41.463Z"
     }
   ],
   "cashDocuments": [
@@ -10048,6 +10031,18 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-25T10:00:43.586Z",
+      "user": "Директор",
+      "action": "Удаление документа",
+      "details": "payment_in НО-Ф-05"
+    },
+    {
+      "date": "2026-09-25T09:58:44.732Z",
+      "user": "Директор",
+      "action": "Изменение документа",
+      "details": "payment_in НО-Ф-05 на 1550201"
+    },
     {
       "date": "2026-09-25T09:57:38.018Z",
       "user": "Директор",
