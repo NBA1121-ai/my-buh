@@ -768,6 +768,23 @@
       "note": "Создано на основании",
       "created": "2026-09-25T12:34:32.288Z",
       "basis": "obs_fix_c50"
+    },
+    {
+      "id": "_1790339996680_a6jtvx",
+      "type": "pko",
+      "number": "ПКО-0043",
+      "date": "2026-09-25",
+      "status": "posted",
+      "account": "_2",
+      "accountTo": "",
+      "contractor": "Физ/лиц",
+      "article": "_1",
+      "currency": "_1",
+      "sum": 31500,
+      "rate": 1,
+      "purpose": "",
+      "note": "Рома перевел ",
+      "created": "2026-09-25T12:39:56.680Z"
     }
   ],
   "accounts": [
