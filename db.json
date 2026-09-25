@@ -560,6 +560,23 @@
       "purpose": "",
       "note": "Асилбек ака наличка ",
       "created": "2026-09-25T10:05:54.906Z"
+    },
+    {
+      "id": "_1790331388833_t5l2rx",
+      "type": "pko",
+      "number": "ПКО-0032",
+      "date": "2026-09-25",
+      "status": "posted",
+      "account": "_3",
+      "accountTo": "",
+      "contractor": "Физ/лиц",
+      "article": "_5",
+      "currency": "_1",
+      "sum": 7600,
+      "rate": 1,
+      "purpose": "",
+      "note": "",
+      "created": "2026-09-25T10:16:28.833Z"
     }
   ],
   "accounts": [
