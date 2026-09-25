@@ -148,7 +148,7 @@
     },
     {
       "id": "_1790333774406_61kbvl",
-      "type": "payment_out",
+      "type": "payment_in",
       "number": "ПП-0027",
       "date": "2026-09-25",
       "status": "posted",
