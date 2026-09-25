@@ -876,7 +876,7 @@
       "type": "pko",
       "number": "ПКО-0049",
       "date": "2026-09-25",
-      "status": "draft",
+      "status": "posted",
       "account": "",
       "accountTo": "",
       "contractor": "Канимет",
@@ -12379,6 +12379,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-25T15:10:58.511Z",
+      "user": "Директор",
+      "action": "Создание документа",
+      "details": "pko ПКО-0049 на 120999"
+    },
     {
       "date": "2026-09-25T15:10:04.432Z",
       "user": "Директор",
