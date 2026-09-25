@@ -549,7 +549,7 @@
       "type": "pko",
       "number": "ПКО-0031",
       "date": "2026-09-25",
-      "status": "draft",
+      "status": "posted",
       "account": "_3",
       "accountTo": "",
       "contractor": "Физ/лиц",
@@ -10082,6 +10082,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-25T10:05:54.907Z",
+      "user": "Директор",
+      "action": "Создание документа",
+      "details": "pko ПКО-0031 на 18000"
+    },
     {
       "date": "2026-09-25T10:04:49.796Z",
       "user": "Директор",
