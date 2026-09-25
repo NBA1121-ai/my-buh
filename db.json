@@ -611,6 +611,23 @@
       "purpose": "",
       "note": "Артур продал 3тонны\n25нал 2 мбанк ",
       "created": "2026-09-25T10:21:46.497Z"
+    },
+    {
+      "id": "_1790331840304_y8ch0w",
+      "type": "pko",
+      "number": "ПКО-0035",
+      "date": "2026-09-25",
+      "status": "posted",
+      "account": "_3",
+      "accountTo": "",
+      "contractor": "Физ/лиц",
+      "article": "_1",
+      "currency": "_1",
+      "sum": 18000,
+      "rate": 1,
+      "purpose": "",
+      "note": "Асилбек ака 18тыс нал ",
+      "created": "2026-09-25T10:24:00.304Z"
     }
   ],
   "accounts": [
