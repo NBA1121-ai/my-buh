@@ -482,7 +482,7 @@
       "number": "1033220001116529",
       "bank": "ФИЛИАЛ \"МБАНК ПЛАЗА\" ОАО \"МБАНК\"",
       "type": "bank",
-      "openingBalance": 207045
+      "openingBalance": 0
     },
     {
       "id": "_2",
@@ -490,7 +490,7 @@
       "number": "",
       "bank": "",
       "type": "cash",
-      "openingBalance": 434850
+      "openingBalance": 0
     },
     {
       "id": "_3",
@@ -498,7 +498,7 @@
       "number": "",
       "bank": "",
       "type": "cash",
-      "openingBalance": 917500
+      "openingBalance": 0
     },
     {
       "id": "_4",
@@ -524,21 +524,21 @@
       "id": "_tynchtyk",
       "name": "Тынчтык (подотчет)",
       "balance": 0,
-      "openingBalance": 1550201,
+      "openingBalance": 0,
       "type": "cash"
     },
     {
       "id": "_azim",
       "name": "Азим Хожи (подотчет)",
       "balance": 0,
-      "openingBalance": 325500,
+      "openingBalance": 0,
       "type": "cash"
     },
     {
       "id": "_zhusup",
       "name": "Жусупбеков Максатбек (подотчет)",
       "balance": 0,
-      "openingBalance": 4875096,
+      "openingBalance": 0,
       "type": "cash"
     }
   ],
