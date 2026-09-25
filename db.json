@@ -681,8 +681,8 @@
         "discount": 0,
         "comment": "Начальный остаток дебиторской задолженности",
         "currency": "KGS",
-        "total": 1087200,
-        "sum": 1087200,
+        "total": 1694400,
+        "sum": 1694400,
         "vatSum": 0,
         "services": [
           {
@@ -1401,8 +1401,8 @@
         "discount": 0,
         "comment": "Начальный остаток дебиторской задолженности",
         "currency": "KGS",
-        "total": 36200,
-        "sum": 36200,
+        "total": 56200,
+        "sum": 56200,
         "vatSum": 0,
         "services": [
           {
@@ -1504,36 +1504,6 @@
             "vat": -1,
             "vatSum": 0,
             "total": 48400
-          }
-        ],
-        "goods": [],
-        "created": "2026-09-14T04:20:54.524Z"
-      },
-      {
-        "id": "obc30",
-        "type": "customer_invoice",
-        "number": "НО-30",
-        "date": "2026-09-11",
-        "status": "posted",
-        "contractor": "c30",
-        "contract": "",
-        "payUntil": "",
-        "discount": 0,
-        "comment": "Начальный остаток дебиторской задолженности",
-        "currency": "KGS",
-        "total": 259700,
-        "sum": 259700,
-        "vatSum": 0,
-        "services": [
-          {
-            "nom": "",
-            "name": "Начальный остаток",
-            "qty": 1,
-            "price": 259700,
-            "sum": 259700,
-            "vat": -1,
-            "vatSum": 0,
-            "total": 259700
           }
         ],
         "goods": [],
@@ -1654,36 +1624,6 @@
             "vat": -1,
             "vatSum": 0,
             "total": 427450
-          }
-        ],
-        "goods": [],
-        "created": "2026-09-14T04:20:54.524Z"
-      },
-      {
-        "id": "obc35",
-        "type": "customer_invoice",
-        "number": "НО-35",
-        "date": "2026-09-11",
-        "status": "posted",
-        "contractor": "c35",
-        "contract": "",
-        "payUntil": "",
-        "discount": 0,
-        "comment": "Начальный остаток дебиторской задолженности",
-        "currency": "KGS",
-        "total": 55000,
-        "sum": 55000,
-        "vatSum": 0,
-        "services": [
-          {
-            "nom": "",
-            "name": "Начальный остаток",
-            "qty": 1,
-            "price": 55000,
-            "sum": 55000,
-            "vat": -1,
-            "vatSum": 0,
-            "total": 55000
           }
         ],
         "goods": [],
@@ -8458,17 +8398,6 @@
         "bank": ""
       },
       {
-        "id": "c30",
-        "name": "Чубак цемент",
-        "full": "Чубак цемент",
-        "inn": "",
-        "kind": "Индивидуальный предприниматель",
-        "address": "",
-        "phone": "",
-        "account": "",
-        "bank": ""
-      },
-      {
         "id": "c31",
         "name": "Тынчтык",
         "full": "Тынчтык",
@@ -8505,17 +8434,6 @@
         "id": "c34",
         "name": "Авазбек",
         "full": "Авазбек",
-        "inn": "",
-        "kind": "Физическое лицо",
-        "address": "",
-        "phone": "",
-        "account": "",
-        "bank": ""
-      },
-      {
-        "id": "c35",
-        "name": "Сыймык",
-        "full": "Сыймык",
         "inn": "",
         "kind": "Физическое лицо",
         "address": "",
