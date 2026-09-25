@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>Сброс кэша EsepOnline</title></head>
+<body style="font-family:sans-serif;text-align:center;padding:50px;">
+<h2>Сброс кэша EsepOnline...</h2>
+<div id="log" style="text-align:left;max-width:600px;margin:20px auto;padding:20px;background:#f5f5f5;border-radius:8px;"></div>
+<script>
+const log = document.getElementById('log');
+function msg(t){ log.innerHTML += '<p>'+t+'</p>'; }
+
+(async function(){
+  // 1. Clear localStorage
+  const keys = ['db_cache','db_cache_sha','db_reset','offline_pending'];
+  keys.forEach(k => { localStorage.removeItem(k); msg('✅ localStorage: удалён '+k); });
+
+  // 2. Unregister all service workers
+  if('serviceWorker' in navigator){
+    const regs = await navigator.serviceWorker.getRegistrations();
+    for(const r of regs){ await r.unregister(); msg('✅ Service Worker удалён: '+r.scope); }
+    if(!regs.length) msg('ℹ️ Service Workers не найдены');
+  }
+
+  // 3. Delete all caches
+  const cacheKeys = await caches.keys();
+  for(const k of cacheKeys){ await caches.delete(k); msg('✅ Кэш удалён: '+k); }
+  if(!cacheKeys.length) msg('ℹ️ Кэши не найдены');
+
+  msg('<br><b style="color:green">Готово! Через 3 секунды откроется сайт...</b>');
+  setTimeout(()=>{ window.location.href='https://nba1121-ai.github.io/my-buh/app.html'; }, 3000);
+})();
+</script>
+</body></html>
