@@ -879,7 +879,7 @@
       "status": "posted",
       "account": "",
       "accountTo": "",
-      "contractor": "Канимет",
+      "contractor": "Канимет Хозмаг",
       "article": "_1",
       "currency": "",
       "sum": 120999,
@@ -12379,6 +12379,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-25T15:11:02.510Z",
+      "user": "Директор",
+      "action": "Изменение документа",
+      "details": "pko ПКО-0049 на 120999"
+    },
     {
       "date": "2026-09-25T15:10:58.511Z",
       "user": "Директор",
