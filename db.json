@@ -8576,7 +8576,7 @@
         "type": "sale",
         "number": "РТ-000033",
         "date": "2026-09-25",
-        "status": "draft",
+        "status": "posted",
         "opKind": "Товары (накладная, УПД)",
         "contractor": "c26",
         "contract": "",
@@ -10214,6 +10214,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-25T10:11:03.290Z",
+      "user": "Директор",
+      "action": "Изменение документа",
+      "details": "sale РТ-000033"
+    },
     {
       "date": "2026-09-25T10:08:27.618Z",
       "user": "Директор",
