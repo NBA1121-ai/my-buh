@@ -651,7 +651,7 @@
       "type": "pko",
       "number": "ПКО-0037",
       "date": "2026-09-25",
-      "status": "draft",
+      "status": "posted",
       "account": "_2",
       "accountTo": "",
       "contractor": "ИП \"Халмурат\"",
@@ -11121,6 +11121,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-25T10:29:49.842Z",
+      "user": "Директор",
+      "action": "Изменение документа",
+      "details": "pko ПКО-0037 на 18200"
+    },
     {
       "date": "2026-09-25T10:29:45.370Z",
       "user": "Директор",
