@@ -628,6 +628,23 @@
       "purpose": "",
       "note": "",
       "created": "2026-09-25T10:16:28.833Z"
+    },
+    {
+      "id": "_1790332127936_fbrvqs",
+      "type": "pko",
+      "number": "ПКО-0036",
+      "date": "2026-09-25",
+      "status": "posted",
+      "account": "_2",
+      "accountTo": "",
+      "contractor": "",
+      "article": "",
+      "currency": "",
+      "sum": 6900,
+      "rate": 1,
+      "purpose": "",
+      "note": "4900 сом 40шт газ, 2000 от цемента 3т",
+      "created": "2026-09-25T10:28:47.936Z"
     }
   ],
   "accounts": [
@@ -11087,6 +11104,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-25T10:27:34.378Z",
+      "user": "Директор",
+      "action": "Изменение документа",
+      "details": "pko ПКО-0032 на 2700"
+    },
     {
       "date": "2026-09-25T10:24:12.674Z",
       "user": "Директор",
