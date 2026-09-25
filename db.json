@@ -509,6 +509,23 @@
       "note": "Создано на основании",
       "created": "2026-09-25T09:04:32.974Z",
       "basis": "obs_fix_c50"
+    },
+    {
+      "id": "_1790330489674_sddgmc",
+      "type": "pko",
+      "number": "ПКО-0029",
+      "date": "2026-09-25",
+      "status": "draft",
+      "account": "",
+      "accountTo": "",
+      "contractor": "Тынчтык ",
+      "article": "_2",
+      "currency": "_1",
+      "sum": 714200,
+      "rate": 1,
+      "purpose": "за цемент ",
+      "note": "",
+      "created": "2026-09-25T10:01:29.674Z"
     }
   ],
   "accounts": [
