@@ -8145,7 +8145,7 @@
         "type": "sale",
         "number": "РТ-000031",
         "date": "2026-09-25",
-        "status": "draft",
+        "status": "posted",
         "opKind": "Товары (накладная, УПД)",
         "contractor": "c40",
         "contract": "",
@@ -9783,6 +9783,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-25T09:51:51.412Z",
+      "user": "Директор",
+      "action": "Изменение документа",
+      "details": "sale РТ-000031"
+    },
     {
       "date": "2026-09-25T09:51:43.307Z",
       "user": "Директор",
