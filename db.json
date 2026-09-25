@@ -594,6 +594,23 @@
       "purpose": "",
       "note": "2 поддон и 10 меш клея ",
       "created": "2026-09-25T10:16:55.321Z"
+    },
+    {
+      "id": "_1790331706497_y3odrw",
+      "type": "pko",
+      "number": "ПКО-0034",
+      "date": "2026-09-25",
+      "status": "posted",
+      "account": "_3",
+      "accountTo": "",
+      "contractor": "Физ/лиц",
+      "article": "_1",
+      "currency": "_1",
+      "sum": 25000,
+      "rate": 1,
+      "purpose": "",
+      "note": "Артур продал 3тонны\n25нал 2 мбанк ",
+      "created": "2026-09-25T10:21:46.497Z"
     }
   ],
   "accounts": [
