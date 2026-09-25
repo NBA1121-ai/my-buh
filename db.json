@@ -515,7 +515,7 @@
       "type": "pko",
       "number": "ПКО-0029",
       "date": "2026-09-25",
-      "status": "draft",
+      "status": "posted",
       "account": "",
       "accountTo": "",
       "contractor": "Тынчтык ",
@@ -10048,6 +10048,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-25T10:01:29.676Z",
+      "user": "Директор",
+      "action": "Создание документа",
+      "details": "pko ПКО-0029 на 714200"
+    },
     {
       "date": "2026-09-25T10:00:43.586Z",
       "user": "Директор",
