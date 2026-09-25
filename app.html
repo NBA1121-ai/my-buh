@@ -6,29 +6,6 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <script>
-    // Одноразовый сброс: удаляет SW и весь кэш, затем перезагружает
-    if (!sessionStorage.getItem('cache_purged_v5')) {
-        sessionStorage.setItem('cache_purged_v5', '1');
-        localStorage.removeItem('db_cache');
-        localStorage.removeItem('db_cache_sha');
-        localStorage.removeItem('db_reset');
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.getRegistrations().then(function(regs) {
-                var p = regs.map(function(r) { return r.unregister(); });
-                return Promise.all(p);
-            }).then(function() {
-                return caches.keys();
-            }).then(function(keys) {
-                return Promise.all(keys.map(function(k) { return caches.delete(k); }));
-            }).then(function() {
-                location.reload(true);
-            });
-        } else {
-            location.reload(true);
-        }
-    }
-    </script>
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self' https://api.github.com https://raw.githubusercontent.com; img-src 'self' data:;">
     <title>EsepOnline — Облачная бухгалтерия</title>
     <link rel="manifest" href="manifest.json">
