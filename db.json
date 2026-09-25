@@ -9823,11 +9823,11 @@
           {
             "nom": "n14",
             "qty": 50,
-            "price": 263.4,
+            "price": 156,
             "vat": -1,
-            "sum": 13170,
+            "sum": 7800,
             "vatSum": 0,
-            "total": 13170,
+            "total": 7800,
             "account": "10.01",
             "content": "",
             "country": "",
@@ -9925,9 +9925,9 @@
         "actDate": "",
         "severanceMonths": 0,
         "baseDoc": "",
-        "sum": 13170,
+        "sum": 7800,
         "vatTotal": 0,
-        "total": 13170
+        "total": 7800
       }
     ],
     "org": {
@@ -11453,6 +11453,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-25T11:25:48.236Z",
+      "user": "Директор",
+      "action": "Изменение документа",
+      "details": "purchase ПТ-000006"
+    },
     {
       "date": "2026-09-25T11:25:23.940Z",
       "user": "Директор",
