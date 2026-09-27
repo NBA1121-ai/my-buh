@@ -1075,6 +1075,23 @@
       "purpose": "",
       "note": "Цемент за 56тонн ",
       "created": "2026-09-25T14:56:55.686Z"
+    },
+    {
+      "id": "_1790492668541_1qrfkk",
+      "type": "pko",
+      "number": "ПКО-0062",
+      "date": "2026-09-27",
+      "status": "posted",
+      "account": "",
+      "accountTo": "",
+      "contractor": "Тынчтык ",
+      "article": "_1",
+      "currency": "",
+      "sum": 127500,
+      "rate": 1,
+      "purpose": "Оплата за цемент 25тонна Тынчтык \n",
+      "note": "",
+      "created": "2026-09-27T07:04:28.541Z"
     }
   ],
   "accounts": [
