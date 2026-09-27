@@ -1098,7 +1098,7 @@
       "type": "rko",
       "number": "ПКО-0063",
       "date": "2026-09-27",
-      "status": "draft",
+      "status": "posted",
       "account": "_2",
       "accountTo": "",
       "contractor": "ЗАВОД РАСХОД ",
@@ -12878,6 +12878,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-27T07:59:18.039Z",
+      "user": "Директор",
+      "action": "Создание документа",
+      "details": "rko ПКО-0063 на 5500"
+    },
     {
       "date": "2026-09-27T07:04:33.423Z",
       "user": "Директор",
