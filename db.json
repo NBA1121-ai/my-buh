@@ -1082,7 +1082,7 @@
       "number": "ПКО-0062",
       "date": "2026-09-27",
       "status": "posted",
-      "account": "",
+      "account": "_2",
       "accountTo": "",
       "contractor": "Тынчтык ",
       "article": "_1",
@@ -12861,6 +12861,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-27T07:04:28.544Z",
+      "user": "Директор",
+      "action": "Создание документа",
+      "details": "pko ПКО-0062 на 127500"
+    },
     {
       "date": "2026-09-27T07:03:15.013Z",
       "user": "Директор",
