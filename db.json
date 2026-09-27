@@ -1048,7 +1048,7 @@
       "number": "ПКО-0059",
       "date": "2026-09-27",
       "status": "posted",
-      "account": "",
+      "account": "_2",
       "accountTo": "",
       "contractor": "ЭЛМЫРЗА ДОМ ",
       "article": "_6",
@@ -12827,6 +12827,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-27T06:51:29.343Z",
+      "user": "Директор",
+      "action": "Создание документа",
+      "details": "rko ПКО-0059 на 9100"
+    },
     {
       "date": "2026-09-27T06:50:05.584Z",
       "user": "Директор",
