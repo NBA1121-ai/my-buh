@@ -1230,6 +1230,24 @@
       "note": "Создано на основании",
       "created": "2026-09-27T08:40:53.477Z",
       "basis": "tmujkh7c5tcu7"
+    },
+    {
+      "id": "_1790498498917_8zg2wz",
+      "type": "pko",
+      "number": "ПКО-0071",
+      "date": "2026-09-27",
+      "status": "posted",
+      "account": "_2",
+      "contractor": "Физ/лиц",
+      "contractorId": "tmu3rmh7nur4e",
+      "article": "_1",
+      "currency": "_1",
+      "sum": 4000,
+      "rate": 1,
+      "purpose": "Оплата по документу Реализация РТ-000053 от 27.09.2026",
+      "note": "Создано на основании",
+      "created": "2026-09-27T08:41:38.917Z",
+      "basis": "tmujkjwe4nn5c"
     }
   ],
   "accounts": [
