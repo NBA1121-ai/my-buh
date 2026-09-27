@@ -1030,7 +1030,7 @@
       "type": "pko",
       "number": "ПКО-0058",
       "date": "2026-09-27",
-      "status": "draft",
+      "status": "posted",
       "account": "_2",
       "accountTo": "",
       "contractor": "Козимбек мешки тара ",
@@ -12810,6 +12810,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-27T06:50:01.424Z",
+      "user": "Директор",
+      "action": "Создание документа",
+      "details": "pko ПКО-0058 на 134068"
+    },
     {
       "date": "2026-09-27T06:48:57.176Z",
       "user": "Директор",
