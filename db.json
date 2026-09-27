@@ -12150,7 +12150,7 @@
         "id": "tmujk4jutdcen",
         "type": "sale",
         "number": "РТ-000048",
-        "date": "2026-09-27",
+        "date": "2026-09-26",
         "status": "posted",
         "opKind": "Товары (накладная, УПД)",
         "contractor": "tmu3rmh7nur4e",
@@ -13815,6 +13815,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-27T08:29:28.621Z",
+      "user": "Директор",
+      "action": "Изменение документа",
+      "details": "sale РТ-000048"
+    },
     {
       "date": "2026-09-27T08:29:23.189Z",
       "user": "Директор",
