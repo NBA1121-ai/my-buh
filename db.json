@@ -1194,6 +1194,24 @@
       "purpose": "оплата за цемент ",
       "note": "",
       "created": "2026-09-27T08:38:03.421Z"
+    },
+    {
+      "id": "_1790498372181_s8j4oe",
+      "type": "pko",
+      "number": "ПКО-0069",
+      "date": "2026-09-27",
+      "status": "posted",
+      "account": "_2",
+      "contractor": "Физ/лиц",
+      "contractorId": "tmu3rmh7nur4e",
+      "article": "_1",
+      "currency": "_1",
+      "sum": 18000,
+      "rate": 1,
+      "purpose": "Оплата по документу Реализация РТ-000052 от 27.09.2026",
+      "note": "Создано на основании",
+      "created": "2026-09-27T08:39:32.181Z",
+      "basis": "tmujkh7c5tcu7"
     }
   ],
   "accounts": [
