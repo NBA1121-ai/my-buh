@@ -1109,6 +1109,23 @@
       "purpose": "гсм КАРА СОЛЯРКА ",
       "note": "",
       "created": "2026-09-27T07:59:18.037Z"
+    },
+    {
+      "id": "_1790497923157_psjnr1",
+      "type": "pko",
+      "number": "ПКО-0064",
+      "date": "2026-09-27",
+      "status": "posted",
+      "account": "_3",
+      "accountTo": "",
+      "contractor": "Физ/лиц",
+      "article": "_1",
+      "currency": "_1",
+      "sum": 18000,
+      "rate": 1,
+      "purpose": "оплата за цемент Рома ",
+      "note": "",
+      "created": "2026-09-27T08:32:03.157Z"
     }
   ],
   "accounts": [
