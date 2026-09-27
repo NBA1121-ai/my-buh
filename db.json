@@ -1149,7 +1149,7 @@
       "type": "pko",
       "number": "ПКО-0066",
       "date": "2026-09-27",
-      "status": "draft",
+      "status": "posted",
       "account": "_3",
       "accountTo": "",
       "contractor": "Физ/лиц",
@@ -14262,6 +14262,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-27T08:33:53.183Z",
+      "user": "Директор",
+      "action": "Создание документа",
+      "details": "pko ПКО-0066 на 45000"
+    },
     {
       "date": "2026-09-27T08:33:20.951Z",
       "user": "Директор",
