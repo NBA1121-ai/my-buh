@@ -1007,6 +1007,23 @@
       "purpose": "2 МЕШОК КЛЕЙ АРТУР ПЕРЕВЕЛ ",
       "note": "",
       "created": "2026-09-27T06:26:03.637Z"
+    },
+    {
+      "id": "_1790491737173_afum1i",
+      "type": "rko",
+      "number": "ПКО-0057",
+      "date": "2026-09-27",
+      "status": "posted",
+      "account": "_2",
+      "accountTo": "",
+      "contractor": "Завод продукты ",
+      "article": "_6",
+      "currency": "_1",
+      "sum": 10310,
+      "rate": 1,
+      "purpose": "Продукты ",
+      "note": "",
+      "created": "2026-09-27T06:48:57.173Z"
     }
   ],
   "accounts": [
