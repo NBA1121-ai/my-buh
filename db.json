@@ -121,7 +121,8 @@
       "name": "Расчетный счет МБанк",
       "number": "1033220001116529",
       "bank": "ФИЛИАЛ \"МБАНК ПЛАЗА\" ОАО \"МБАНК\"",
-      "type": "bank"
+      "type": "bank",
+      "openingBalance": 207045
     },
     {
       "id": "_2",
@@ -135,17 +136,8 @@
       "name": "Наличка касса",
       "number": "",
       "bank": "",
-      "type": "cash"
-    },
-    {
-      "id": "_4",
-      "name": "Валютный счет МБанк (USD)",
-      "number": "1033220001116529",
-      "bank": "ОАО «Mbank», SWIFT: KYRSKG22, BIC: 103032",
-      "type": "bank",
-      "currency": "USD",
-      "beneficiary": "OSOO \"GLOBAL KARGO\"",
-      "inn": "00108202210232"
+      "type": "cash",
+      "openingBalance": 917500
     },
     {
       "id": "_4_usd",
@@ -160,17 +152,28 @@
     {
       "id": "_tynchtyk",
       "name": "Тынчтык (подотчет)",
-      "balance": 0
+      "openingBalance": 1550201,
+      "type": "cash"
     },
     {
       "id": "_azim",
       "name": "Азим Хожи (подотчет)",
-      "balance": 0
+      "openingBalance": 325500,
+      "type": "cash"
     },
     {
       "id": "_zhusup",
       "name": "Жусупбеков Максатбек (подотчет)",
-      "balance": 0
+      "openingBalance": 4875096,
+      "type": "cash"
+    },
+    {
+      "id": "_mbank_kgs",
+      "name": "МБанк",
+      "number": "",
+      "bank": "МБанк",
+      "type": "bank",
+      "openingBalance": 434850
     }
   ],
   "banks": [
