@@ -1486,8 +1486,8 @@
         "payUntil": "",
         "comment": "Начальный остаток кредиторской задолженности",
         "currency": "KGS",
-        "total": 609105,
-        "sum": 609105,
+        "total": 664405,
+        "sum": 664405,
         "vatSum": 0,
         "services": [
           {
@@ -2475,7 +2475,7 @@
       },
       {
         "id": "obc_fix_tmu3sjlbud4ja",
-        "type": "customer_invoice",
+        "type": "supplier_invoice",
         "number": "НО-39",
         "date": "2026-09-24",
         "status": "posted",
@@ -2483,10 +2483,10 @@
         "contract": "",
         "payUntil": "",
         "discount": 0,
-        "comment": "Корректировка начального остатка дебиторской задолженности",
-        "currency": "KGS",
-        "total": -207800,
-        "sum": 8600,
+        "comment": "Наша задолженность в USD",
+        "currency": "USD",
+        "total": 20000,
+        "sum": 20000,
         "vatSum": 0,
         "services": [
           {
