@@ -1564,6 +1564,7 @@
             const total = posted.reduce((s, d) => s + Number(d.sum || 0) * (Number(d.rate) || 1), 0);
             const pg = paginate(docs, pageKey);
             const defType = types[0];
+            const typeOpts = types.map(t => ALL_DOC_TYPES[t] ? `<option value="${t}">${ALL_DOC_TYPES[t]}</option>` : '').join('');
 
             return `
                 <div class="filters" style="display:flex;gap:10px;align-items:end;margin-bottom:12px;flex-wrap:wrap">
@@ -1572,7 +1573,7 @@
                     <div class="filter-group"><label>Поиск</label><input type="text" placeholder="Номер, контрагент..." value="${esc(_finFilter.search)}" oninput="_finFilter.search=this.value;renderPage()"></div>
                     <button class="btn" onclick="_finFilter={from:'',to:'',search:''};renderPage()">Сбросить</button>
                     <span style="flex:1"></span>
-                    <button class="btn primary" onclick="openCreateModalForType('${defType}','bank')">+ Создать</button>
+                    <button class="btn primary" onclick="openCreateModalForType('${defType}','bank');document.getElementById('docType').innerHTML='${typeOpts}';document.getElementById('docType').value='${defType}'">+ Создать</button>
                     <span style="font-size:13px;color:var(--text-secondary)">Итого: <b>${formatAmount(total)}</b> (${posted.length} док.)</span>
                 </div>
                 ${bulkBarHtml()}
@@ -1612,6 +1613,7 @@
             const posted = docs.filter(d => d.status === 'posted');
             const total = posted.reduce((s, d) => s + Number(d.sum || 0) * (Number(d.rate) || 1), 0);
             const pg = paginate(docs, pageKey);
+            const typeOpt = ALL_DOC_TYPES[type] ? `<option value="${type}">${ALL_DOC_TYPES[type]}</option>` : '';
 
             return `
                 <div class="filters" style="display:flex;gap:10px;align-items:end;margin-bottom:12px;flex-wrap:wrap">
@@ -1620,7 +1622,7 @@
                     <div class="filter-group"><label>Поиск</label><input type="text" placeholder="Номер, контрагент..." value="${esc(_finFilter.search)}" oninput="_finFilter.search=this.value;renderPage()"></div>
                     <button class="btn" onclick="_finFilter={from:'',to:'',search:''};renderPage()">Сбросить</button>
                     <span style="flex:1"></span>
-                    <button class="btn primary" onclick="openCreateModalForType('${type}','cash')">+ Создать</button>
+                    <button class="btn primary" onclick="openCreateModalForType('${type}','cash');document.getElementById('docType').innerHTML='${typeOpt}';document.getElementById('docType').value='${type}'">+ Создать</button>
                     <span style="font-size:13px;color:var(--text-secondary)">Итого: <b>${formatAmount(total)}</b> (${posted.length} док.)</span>
                 </div>
                 ${bulkBarHtml()}
@@ -2758,15 +2760,40 @@
         const BANK_TYPES = ['payment_out', 'payment_in', 'payment_order', 'internal_transfer', 'conversion', 'statement', 'directbank'];
         const CASH_TYPES = ['pko', 'rko', 'advance'];
 
-        // Показывает в списке типов только банковские или только кассовые документы
-        // internal_transfer доступен в обоих группах
-        function setTypeOptions(group) {
-            const allowed = group === 'cash' ? CASH_TYPES : BANK_TYPES;
-            Array.from(document.getElementById('docType').options).forEach(opt => {
-                const show = allowed.includes(opt.value) || opt.value === 'internal_transfer';
-                opt.hidden = !show;
-                opt.disabled = !show;
+        const ALL_DOC_TYPES = {
+            payment_out: 'Платежное поручение (исходящее)',
+            payment_in: 'Платежное поручение (входящее)',
+            payment_order: 'Платежный ордер',
+            internal_transfer: 'Перевод между счетами',
+            conversion: 'Конвертация',
+            statement: 'Выписка банка',
+            directbank: 'Выписка ДиректБанк',
+            pko: 'Приходный кассовый ордер (ПКО)',
+            rko: 'Расходный кассовый ордер (РКО)',
+            advance: 'Авансовый отчет'
+        };
+        const PAGE_TYPES = {
+            bank_in: ['payment_in'],
+            bank_out: ['payment_out', 'payment_order', 'statement', 'directbank'],
+            cash_pko: ['pko'],
+            cash_rko: ['rko']
+        };
+        function setTypeOptions(group, restrictTypes) {
+            const allowed = restrictTypes || (group === 'cash' ? CASH_TYPES : BANK_TYPES);
+            const sel = document.getElementById('docType');
+            sel.innerHTML = '';
+            allowed.forEach(t => {
+                if (ALL_DOC_TYPES[t]) {
+                    const o = document.createElement('option');
+                    o.value = t; o.textContent = ALL_DOC_TYPES[t];
+                    sel.appendChild(o);
+                }
             });
+            if (!restrictTypes && ALL_DOC_TYPES['internal_transfer']) {
+                const o = document.createElement('option');
+                o.value = 'internal_transfer'; o.textContent = ALL_DOC_TYPES['internal_transfer'];
+                sel.appendChild(o);
+            }
         }
 
         function nextDocNumber(prefix, docs) {
@@ -2779,7 +2806,8 @@
             const group = ['cash','cash_pko','cash_rko'].includes(currentPage) ? 'cash' : 'bank';
             document.getElementById('modalTitle').textContent = group === 'cash' ? 'Создать кассовый документ' : 'Создать банковский документ';
             document.getElementById('documentForm').reset();
-            setTypeOptions(group);
+            const restrict = PAGE_TYPES[currentPage] || null;
+            setTypeOptions(group, restrict);
             const defType = currentPage === 'bank_in' ? 'payment_in' : currentPage === 'bank_out' ? 'payment_out' : currentPage === 'cash_pko' ? 'pko' : currentPage === 'cash_rko' ? 'rko' : group === 'cash' ? 'pko' : 'payment_out';
             document.getElementById('docType').value = defType;
             const now = new Date();
@@ -2795,7 +2823,8 @@
             editingId = null;
             document.getElementById('modalTitle').textContent = group === 'cash' ? 'Создать кассовый документ' : 'Создать банковский документ';
             document.getElementById('documentForm').reset();
-            setTypeOptions(group);
+            const restrict = PAGE_TYPES[currentPage] || null;
+            setTypeOptions(group, restrict);
             document.getElementById('docType').value = docType;
             const now = new Date();
             document.getElementById('docDate').value = now.toISOString().split('T')[0];
