@@ -1,28 +1,28 @@
 {
   "bankDocuments": [
     {
-      "id": "ob_fin_3",
+      "id": "ob_rs",
       "type": "payment_in",
-      "number": "НО-Ф-03",
+      "number": "НО-01",
       "date": "2026-09-11",
       "status": "posted",
       "account": "_1",
       "contractor": "",
       "article": "_3",
       "currency": "_1",
-      "sum": -1969269,
+      "sum": 207045,
       "rate": 1,
-      "purpose": "Начальный остаток на расчетном счете",
+      "purpose": "Начальный остаток Р/с",
       "note": "Начальный остаток",
-      "created": "2026-09-14T04:33:33.228Z"
+      "created": "2026-09-11T00:00:00.000Z"
     },
     {
-      "id": "ob_fin_mbank",
+      "id": "ob_mbank",
       "type": "payment_in",
-      "number": "НО-Ф-04",
+      "number": "НО-02",
       "date": "2026-09-11",
       "status": "posted",
-      "account": "_2",
+      "account": "_mbank_kgs",
       "contractor": "",
       "article": "_3",
       "currency": "_1",
@@ -30,13 +30,13 @@
       "rate": 1,
       "purpose": "Начальный остаток МБанк",
       "note": "Начальный остаток",
-      "created": "2026-09-24T09:47:41.463Z"
+      "created": "2026-09-11T00:00:00.000Z"
     },
     {
-      "id": "ob_fin_tynchtyk",
+      "id": "ob_tynchtyk",
       "type": "payment_in",
-      "number": "НО-Ф-05",
-      "date": "2026-09-24",
+      "number": "НО-03",
+      "date": "2026-09-11",
       "status": "posted",
       "account": "_tynchtyk",
       "contractor": "",
@@ -44,15 +44,15 @@
       "currency": "_1",
       "sum": 1550201,
       "rate": 1,
-      "purpose": "Остаток денег у Тынчтык",
+      "purpose": "Начальный остаток Тынчтык",
       "note": "Подотчетное лицо",
-      "created": "2026-09-24T09:47:41.463Z"
+      "created": "2026-09-11T00:00:00.000Z"
     },
     {
-      "id": "ob_fin_azim",
+      "id": "ob_azim",
       "type": "payment_in",
-      "number": "НО-Ф-06",
-      "date": "2026-09-24",
+      "number": "НО-04",
+      "date": "2026-09-11",
       "status": "posted",
       "account": "_azim",
       "contractor": "",
@@ -60,15 +60,15 @@
       "currency": "_1",
       "sum": 325500,
       "rate": 1,
-      "purpose": "Остаток денег у Азим Хожи",
+      "purpose": "Начальный остаток Азим Хожи",
       "note": "Подотчетное лицо",
-      "created": "2026-09-24T09:47:41.463Z"
+      "created": "2026-09-11T00:00:00.000Z"
     },
     {
-      "id": "ob_fin_zhusup",
+      "id": "ob_zhusup",
       "type": "payment_in",
-      "number": "НО-Ф-07",
-      "date": "2026-09-24",
+      "number": "НО-05",
+      "date": "2026-09-11",
       "status": "posted",
       "account": "_zhusup",
       "contractor": "",
@@ -76,43 +76,27 @@
       "currency": "_1",
       "sum": 4875096,
       "rate": 1,
-      "purpose": "Остаток денег у Жусупбеков Максатбек",
+      "purpose": "Начальный остаток Жусупбеков",
       "note": "Подотчетное лицо",
-      "created": "2026-09-24T09:47:41.463Z"
+      "created": "2026-09-11T00:00:00.000Z"
     }
   ],
   "cashDocuments": [
     {
-      "id": "_1789468805801_no71r4",
+      "id": "ob_kassa",
       "type": "pko",
       "number": "ПКО-0001",
-      "date": "2026-09-11",
-      "status": "posted",
-      "account": "_2",
-      "contractor": "",
-      "article": "_3",
-      "currency": "_1",
-      "sum": 1019695,
-      "rate": 1,
-      "purpose": "Остатки на начало ",
-      "note": "",
-      "created": "2026-09-15T10:40:05.801Z"
-    },
-    {
-      "id": "_1789468853488_5e3qs4",
-      "type": "pko",
-      "number": "ПКО-0002",
       "date": "2026-09-11",
       "status": "posted",
       "account": "_3",
       "contractor": "",
       "article": "_3",
       "currency": "_1",
-      "sum": 545000,
+      "sum": 917500,
       "rate": 1,
-      "purpose": "Остатки на начало ",
-      "note": "",
-      "created": "2026-09-15T10:40:53.488Z"
+      "purpose": "Начальный остаток Касса",
+      "note": "Начальный остаток",
+      "created": "2026-09-11T00:00:00.000Z"
     }
   ],
   "accounts": [
@@ -121,8 +105,7 @@
       "name": "Расчетный счет МБанк",
       "number": "1033220001116529",
       "bank": "ФИЛИАЛ \"МБАНК ПЛАЗА\" ОАО \"МБАНК\"",
-      "type": "bank",
-      "openingBalance": 207045
+      "type": "bank"
     },
     {
       "id": "_2",
@@ -136,8 +119,7 @@
       "name": "Наличка касса",
       "number": "",
       "bank": "",
-      "type": "cash",
-      "openingBalance": 917500
+      "type": "cash"
     },
     {
       "id": "_4_usd",
@@ -152,19 +134,16 @@
     {
       "id": "_tynchtyk",
       "name": "Тынчтык (подотчет)",
-      "openingBalance": 1550201,
       "type": "cash"
     },
     {
       "id": "_azim",
       "name": "Азим Хожи (подотчет)",
-      "openingBalance": 325500,
       "type": "cash"
     },
     {
       "id": "_zhusup",
       "name": "Жусупбеков Максатбек (подотчет)",
-      "openingBalance": 4875096,
       "type": "cash"
     },
     {
@@ -172,8 +151,7 @@
       "name": "МБанк",
       "number": "",
       "bank": "МБанк",
-      "type": "bank",
-      "openingBalance": 434850
+      "type": "bank"
     }
   ],
   "banks": [
