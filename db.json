@@ -264,7 +264,7 @@
         "comment": "Начальный остаток дебиторской задолженности",
         "currency": "KGS",
         "total": 5754791,
-        "sum": 5754791,
+        "sum": 6368606,
         "vatSum": 0,
         "services": [
           {
@@ -294,7 +294,7 @@
         "comment": "Начальный остаток дебиторской задолженности",
         "currency": "KGS",
         "total": 1087200,
-        "sum": 1087200,
+        "sum": 1404000,
         "vatSum": 0,
         "services": [
           {
@@ -444,7 +444,7 @@
         "comment": "Начальный остаток дебиторской задолженности",
         "currency": "KGS",
         "total": 130870,
-        "sum": 130870,
+        "sum": 134170,
         "vatSum": 0,
         "services": [
           {
@@ -474,7 +474,7 @@
         "comment": "Начальный остаток дебиторской задолженности",
         "currency": "KGS",
         "total": 43170,
-        "sum": 43170,
+        "sum": 52050,
         "vatSum": 0,
         "services": [
           {
@@ -2486,7 +2486,7 @@
         "comment": "Корректировка начального остатка дебиторской задолженности",
         "currency": "KGS",
         "total": -207800,
-        "sum": -207800,
+        "sum": 8600,
         "vatSum": 0,
         "services": [
           {
@@ -2618,36 +2618,6 @@
             "vat": -1,
             "vatSum": 0,
             "total": 10100
-          }
-        ],
-        "goods": [],
-        "created": "2026-09-24T10:34:21.269Z"
-      },
-      {
-        "id": "obs_fix_bekko_usd",
-        "type": "supplier_invoice",
-        "number": "НОК-USD-01",
-        "date": "2026-09-24",
-        "status": "posted",
-        "contractor": "tmu3sjlbud4ja",
-        "contract": "",
-        "payUntil": "",
-        "discount": 0,
-        "comment": "Кредиторская задолженность в долларах (20 000 USD)",
-        "currency": "USD",
-        "total": 20000,
-        "sum": 20000,
-        "vatSum": 0,
-        "services": [
-          {
-            "nom": "",
-            "name": "Задолженность в USD",
-            "qty": 1,
-            "price": 20000,
-            "sum": 20000,
-            "vat": -1,
-            "vatSum": 0,
-            "total": 20000
           }
         ],
         "goods": [],
