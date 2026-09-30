@@ -18,23 +18,6 @@
       "time": "09:00"
     },
     {
-      "id": "ob_mbank",
-      "type": "payment_in",
-      "number": "НО-02",
-      "date": "2026-09-11",
-      "status": "posted",
-      "account": "_mbank_kgs",
-      "contractor": "",
-      "article": "_3",
-      "currency": "_1",
-      "sum": 434850,
-      "rate": 1,
-      "purpose": "Начальный остаток МБанк",
-      "note": "Начальный остаток",
-      "created": "2026-09-11T00:00:00.000Z",
-      "time": "09:00"
-    },
-    {
       "id": "ob_tynchtyk",
       "type": "payment_in",
       "number": "НО-03",
@@ -138,6 +121,24 @@
       "purpose": "ПОПОЛНЕНИЕ СЧЕТА ",
       "note": "",
       "created": "2026-09-30T06:22:16.789Z"
+    },
+    {
+      "id": "ob_mbank",
+      "type": "payment_in",
+      "number": "НО-02",
+      "date": "2026-09-11",
+      "time": "09:00",
+      "status": "draft",
+      "account": "_mbank_kgs",
+      "accountTo": "",
+      "contractor": "",
+      "article": "_3",
+      "currency": "_1",
+      "sum": 434850,
+      "rate": 1,
+      "purpose": "Начальный остаток МБанк",
+      "note": "Начальный остаток",
+      "created": "2026-09-11T00:00:00.000Z"
     }
   ],
   "cashDocuments": [
@@ -4721,6 +4722,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-30T06:36:09.934Z",
+      "user": "Директор",
+      "action": "Изменение документа",
+      "details": "pko ПКО-0003 на 714200"
+    },
     {
       "date": "2026-09-30T06:34:34.134Z",
       "user": "Директор",
