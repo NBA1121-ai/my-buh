@@ -286,6 +286,24 @@
       "note": "Создано на основании",
       "created": "2026-09-30T07:18:48.605Z",
       "basis": "tmunrxenppdx8"
+    },
+    {
+      "id": "_1790752849605_dipcz4",
+      "type": "pko",
+      "number": "ПКО-0013",
+      "date": "2026-09-29",
+      "time": "13:20",
+      "status": "draft",
+      "account": "_2",
+      "accountTo": "",
+      "contractor": "Нурбек Хозмаг",
+      "article": "_1",
+      "currency": "_1",
+      "sum": 240000,
+      "rate": 1,
+      "purpose": "оплата за цемент 50тонн",
+      "note": "",
+      "created": "2026-09-30T07:20:49.605Z"
     }
   ],
   "accounts": [
