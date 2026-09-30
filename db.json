@@ -293,7 +293,7 @@
       "number": "РКО-0014",
       "date": "2026-09-30",
       "time": "15:42",
-      "status": "posted",
+      "status": "draft",
       "account": "_2",
       "accountTo": "",
       "contractor": "Расход завод",
@@ -13516,6 +13516,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-30T09:42:54.664Z",
+      "user": "Директор",
+      "action": "Создание документа",
+      "details": "rko РКО-0014 на 565326"
+    },
     {
       "date": "2026-09-30T09:35:36.205Z",
       "user": "Директор",
