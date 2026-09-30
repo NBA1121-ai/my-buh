@@ -84,6 +84,24 @@
       "note": "Подотчетное лицо",
       "created": "2026-09-11T00:00:00.000Z",
       "time": "09:00"
+    },
+    {
+      "id": "_1790749120981_f6q0ra",
+      "type": "payment_in",
+      "number": "ПП-ВХ-0006",
+      "date": "2026-09-26",
+      "time": "12:17",
+      "status": "posted",
+      "account": "_1",
+      "accountTo": "",
+      "contractor": "ОсОО \"МонолитКапиталСтрой\" ",
+      "article": "_1",
+      "currency": "_1",
+      "sum": 96000.08,
+      "rate": 1,
+      "purpose": "",
+      "note": "",
+      "created": "2026-09-30T06:18:40.981Z"
     }
   ],
   "cashDocuments": [
@@ -3985,7 +4003,8 @@
         "vat": 0,
         "price": 0,
         "cost": 0,
-        "account": "10.01"
+        "account": "10.01",
+        "nomGroup": "ng2"
       },
       {
         "id": "n19",
@@ -3995,7 +4014,8 @@
         "vat": 0,
         "price": 0,
         "cost": 0,
-        "account": "10.01"
+        "account": "10.01",
+        "nomGroup": "ng2"
       },
       {
         "id": "n20",
@@ -4005,7 +4025,8 @@
         "vat": 0,
         "price": 0,
         "cost": 0,
-        "account": "10.01"
+        "account": "10.01",
+        "nomGroup": "ng2"
       },
       {
         "id": "n21",
@@ -4015,7 +4036,8 @@
         "vat": 0,
         "price": 0,
         "cost": 0,
-        "account": "10.01"
+        "account": "10.01",
+        "nomGroup": "ng2"
       },
       {
         "id": "n22",
@@ -4025,7 +4047,8 @@
         "vat": 0,
         "price": 0,
         "cost": 0,
-        "account": "10.01"
+        "account": "10.01",
+        "nomGroup": "ng2"
       },
       {
         "id": "n23",
@@ -4035,7 +4058,8 @@
         "vat": 0,
         "price": 0,
         "cost": 0,
-        "account": "10.01"
+        "account": "10.01",
+        "nomGroup": "ng2"
       },
       {
         "id": "n24",
@@ -4045,7 +4069,8 @@
         "vat": 0,
         "price": 0,
         "cost": 0,
-        "account": "10.01"
+        "account": "10.01",
+        "nomGroup": "ng2"
       },
       {
         "id": "n25",
@@ -4055,7 +4080,8 @@
         "vat": 0,
         "price": 0,
         "cost": 0,
-        "account": "10.01"
+        "account": "10.01",
+        "nomGroup": "ng2"
       },
       {
         "id": "n26",
@@ -4065,7 +4091,8 @@
         "vat": 0,
         "price": 0,
         "cost": 0,
-        "account": "43"
+        "account": "43",
+        "nomGroup": "ng2"
       },
       {
         "id": "n27",
@@ -4075,7 +4102,8 @@
         "vat": 0,
         "price": 0,
         "cost": 0,
-        "account": "43"
+        "account": "43",
+        "nomGroup": "ng2"
       },
       {
         "id": "n28",
@@ -4085,7 +4113,8 @@
         "vat": 0,
         "price": 0,
         "cost": 0,
-        "account": "10.01"
+        "account": "10.01",
+        "nomGroup": "ng2"
       },
       {
         "id": "n29",
@@ -4095,7 +4124,8 @@
         "vat": 0,
         "price": 0,
         "cost": 0,
-        "account": "43"
+        "account": "43",
+        "nomGroup": "ng2"
       }
     ],
     "warehouses": [
