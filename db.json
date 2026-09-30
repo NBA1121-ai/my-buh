@@ -175,6 +175,24 @@
       "purpose": "ПОПОЛНЕНИЕ СЧЕТА ",
       "note": "",
       "created": "2026-09-30T06:27:34.661Z"
+    },
+    {
+      "id": "_1790750074133_isl3ke",
+      "type": "pko",
+      "number": "ПКО-0003",
+      "date": "2026-09-30",
+      "time": "12:33",
+      "status": "draft",
+      "account": "_2",
+      "accountTo": "",
+      "contractor": "Тынчтык ",
+      "article": "_1",
+      "currency": "_1",
+      "sum": 714200,
+      "rate": 1,
+      "purpose": "ОСТАТОК ОТ ПРОДАЖ ЦЕМЕНТА ТЫНЧТЫК ",
+      "note": "",
+      "created": "2026-09-30T06:34:34.133Z"
     }
   ],
   "accounts": [
