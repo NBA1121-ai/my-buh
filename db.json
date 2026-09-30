@@ -212,6 +212,24 @@
       "purpose": "",
       "note": "",
       "created": "2026-09-30T06:37:48.149Z"
+    },
+    {
+      "id": "_1790750376501_b3678h",
+      "type": "pko",
+      "number": "ПКО-0009",
+      "date": "2026-09-30",
+      "status": "posted",
+      "account": "_2",
+      "contractor": "Тынчтык",
+      "contractorId": "c31",
+      "article": "_1",
+      "currency": "_1",
+      "sum": 285600,
+      "rate": 1,
+      "purpose": "Оплата по документу Реализация РТ-000001 от 25.09.2026",
+      "note": "Создано на основании",
+      "created": "2026-09-30T06:39:36.501Z",
+      "basis": "tmunqi1phjqs4"
     }
   ],
   "accounts": [
