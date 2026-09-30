@@ -270,24 +270,6 @@
       "basis": "tmunrxenppdx8"
     },
     {
-      "id": "_1790752849605_dipcz4",
-      "type": "pko",
-      "number": "ПКО-0013",
-      "date": "2026-09-29",
-      "time": "13:20",
-      "status": "draft",
-      "account": "_2",
-      "accountTo": "",
-      "contractor": "Нурбек Хозмаг",
-      "article": "_1",
-      "currency": "_1",
-      "sum": 240000,
-      "rate": 1,
-      "purpose": "оплата за цемент 50тонн",
-      "note": "",
-      "created": "2026-09-30T07:20:49.605Z"
-    },
-    {
       "id": "_1790761374661_zj70s1",
       "type": "rko",
       "number": "РКО-0014",
@@ -322,6 +304,24 @@
       "purpose": "оплата за цемент 14 фур / 364т",
       "note": "",
       "created": "2026-09-30T09:46:20.957Z"
+    },
+    {
+      "id": "_1790752849605_dipcz4",
+      "type": "pko",
+      "number": "ПКО-0013",
+      "date": "2026-09-29",
+      "time": "13:20",
+      "status": "draft",
+      "account": "_2",
+      "accountTo": "",
+      "contractor": "Нурбек Хозмаг",
+      "article": "_1",
+      "currency": "_1",
+      "sum": 240000,
+      "rate": 1,
+      "purpose": "оплата за цемент 50тонн",
+      "note": "",
+      "created": "2026-09-30T07:20:49.605Z"
     }
   ],
   "accounts": [
@@ -13534,6 +13534,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-30T09:46:20.959Z",
+      "user": "Директор",
+      "action": "Создание документа",
+      "details": "pko ПКО-0015 на 1856400"
+    },
     {
       "date": "2026-09-30T09:44:37.511Z",
       "user": "Директор",
