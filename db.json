@@ -102,6 +102,24 @@
       "purpose": "",
       "note": "",
       "created": "2026-09-30T06:18:40.981Z"
+    },
+    {
+      "id": "_1790749224941_2pirt1",
+      "type": "payment_in",
+      "number": "ПП-ВХ-0007",
+      "date": "2026-09-28",
+      "time": "12:19",
+      "status": "posted",
+      "account": "_1",
+      "accountTo": "",
+      "contractor": "ИП «Сапаров Канатбек»",
+      "article": "_1",
+      "currency": "_1",
+      "sum": 334400,
+      "rate": 1,
+      "purpose": "",
+      "note": "",
+      "created": "2026-09-30T06:20:24.941Z"
     }
   ],
   "cashDocuments": [
@@ -4516,5 +4534,12 @@
     "hrSeeded": true,
     "noDemo": true
   },
-  "_activityLog": []
+  "_activityLog": [
+    {
+      "date": "2026-09-30T06:18:40.982Z",
+      "user": "Директор",
+      "action": "Создание документа",
+      "details": "payment_in ПП-ВХ-0006 на 96000.08"
+    }
+  ]
 }
