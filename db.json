@@ -3954,11 +3954,11 @@
           {
             "nom": "n7",
             "qty": 50000,
-            "price": 5.1,
+            "price": 5.2,
             "vat": -1,
-            "sum": 255000,
+            "sum": 260000,
             "vatSum": 0,
-            "total": 255000,
+            "total": 260000,
             "account": "10.01",
             "content": "",
             "country": "",
@@ -4056,9 +4056,9 @@
         "actDate": "",
         "severanceMonths": 0,
         "baseDoc": "",
-        "sum": 255000,
+        "sum": 260000,
         "vatTotal": 0,
-        "total": 255000
+        "total": 260000
       },
       {
         "id": "tmunrt51pgpko",
@@ -6292,6 +6292,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-30T07:19:48.037Z",
+      "user": "Директор",
+      "action": "Изменение документа",
+      "details": "sale РТ-000004"
+    },
     {
       "date": "2026-09-30T07:18:35.293Z",
       "user": "Директор",
