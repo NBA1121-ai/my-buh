@@ -201,7 +201,7 @@
       "number": "ПКО-0004",
       "date": "2026-09-24",
       "time": "12:37",
-      "status": "draft",
+      "status": "posted",
       "account": "_2",
       "accountTo": "",
       "contractor": "",
@@ -4740,6 +4740,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-30T06:37:48.150Z",
+      "user": "Директор",
+      "action": "Создание документа",
+      "details": "pko ПКО-0004 на 414850"
+    },
     {
       "date": "2026-09-30T06:36:58.838Z",
       "user": "Директор",
