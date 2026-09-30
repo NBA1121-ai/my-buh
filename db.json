@@ -449,6 +449,24 @@
       "note": "Создано на основании",
       "created": "2026-09-30T09:57:41.645Z",
       "basis": "obs_fix_c48"
+    },
+    {
+      "id": "_1790763851077_wvy9yk",
+      "type": "pko",
+      "number": "ПКО-0021",
+      "date": "2026-09-30",
+      "time": "16:23",
+      "status": "posted",
+      "account": "_2",
+      "accountTo": "",
+      "contractor": "Физ/лиц",
+      "article": "_1",
+      "currency": "_1",
+      "sum": 11250,
+      "rate": 1,
+      "purpose": "Руслан 30 меш цемент ",
+      "note": "",
+      "created": "2026-09-30T10:24:11.077Z"
     }
   ],
   "accounts": [
@@ -13661,6 +13679,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-30T10:12:07.503Z",
+      "user": "Директор",
+      "action": "Создание документа",
+      "details": "payment_in ПП-ВХ-0011 на 65120"
+    },
     {
       "date": "2026-09-30T10:11:34.423Z",
       "user": "Директор",
