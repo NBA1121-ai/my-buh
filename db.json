@@ -121,6 +121,24 @@
       "purpose": "ПОПОЛНЕНИЕ СЧЕТА ",
       "note": "",
       "created": "2026-09-30T06:22:16.789Z"
+    },
+    {
+      "id": "_1790763055869_0kh8ty",
+      "type": "payment_in",
+      "number": "ПП-ВХ-0009",
+      "date": "2026-09-30",
+      "time": "16:09",
+      "status": "posted",
+      "account": "_1",
+      "accountTo": "",
+      "contractor": "ОсОО Аиша Холдинг",
+      "article": "_1",
+      "currency": "_1",
+      "sum": 1500000,
+      "rate": 1,
+      "purpose": "оплата за цемент ",
+      "note": "",
+      "created": "2026-09-30T10:10:55.869Z"
     }
   ],
   "cashDocuments": [
@@ -13607,6 +13625,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-30T09:57:51.559Z",
+      "user": "Директор",
+      "action": "Изменение документа",
+      "details": "rko РКО-0020 на 162000"
+    },
     {
       "date": "2026-09-30T09:56:46.629Z",
       "user": "Директор",
