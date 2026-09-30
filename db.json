@@ -121,24 +121,6 @@
       "purpose": "ПОПОЛНЕНИЕ СЧЕТА ",
       "note": "",
       "created": "2026-09-30T06:22:16.789Z"
-    },
-    {
-      "id": "ob_mbank",
-      "type": "payment_in",
-      "number": "НО-02",
-      "date": "2026-09-11",
-      "time": "09:00",
-      "status": "draft",
-      "account": "_mbank_kgs",
-      "accountTo": "",
-      "contractor": "",
-      "article": "_3",
-      "currency": "_1",
-      "sum": 434850,
-      "rate": 1,
-      "purpose": "Начальный остаток МБанк",
-      "note": "Начальный остаток",
-      "created": "2026-09-11T00:00:00.000Z"
     }
   ],
   "cashDocuments": [
@@ -13516,6 +13498,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-30T09:35:36.205Z",
+      "user": "Директор",
+      "action": "Удаление документа",
+      "details": "payment_in НО-02"
+    },
     {
       "date": "2026-09-30T08:33:27.837Z",
       "user": "Директор",
