@@ -763,7 +763,7 @@
       "date": "2026-09-25",
       "time": "17:06",
       "status": "posted",
-      "account": "",
+      "account": "_2",
       "accountTo": "",
       "contractor": "ЗАВОД РАСХОД ",
       "article": "_6",
@@ -13985,6 +13985,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-30T11:10:27.952Z",
+      "user": "Директор",
+      "action": "Создание документа",
+      "details": "rko РКО-0038 на 201958.96"
+    },
     {
       "date": "2026-09-30T11:05:24.648Z",
       "user": "Директор",
