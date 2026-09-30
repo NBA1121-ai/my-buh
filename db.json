@@ -719,6 +719,24 @@
       "purpose": "Солярка кара ",
       "note": "",
       "created": "2026-09-30T10:59:51.013Z"
+    },
+    {
+      "id": "_1790766051997_mgalbq",
+      "type": "rko",
+      "number": "РКО-0036",
+      "date": "2026-09-27",
+      "time": "17:00",
+      "status": "posted",
+      "account": "_2",
+      "accountTo": "",
+      "contractor": "Kozimbek мешки ",
+      "article": "_5",
+      "currency": "",
+      "sum": 134068.01,
+      "rate": 1,
+      "purpose": "оплата за мешки 8255меш ",
+      "note": "",
+      "created": "2026-09-30T11:00:51.997Z"
     }
   ],
   "accounts": [
@@ -13931,6 +13949,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-30T10:59:51.015Z",
+      "user": "Директор",
+      "action": "Создание документа",
+      "details": "rko РКО-0035 на 5500"
+    },
     {
       "date": "2026-09-30T10:57:54.375Z",
       "user": "Директор",
