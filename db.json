@@ -311,7 +311,7 @@
       "number": "ПКО-0013",
       "date": "2026-09-29",
       "time": "13:20",
-      "status": "draft",
+      "status": "posted",
       "account": "_2",
       "accountTo": "",
       "contractor": "Нурбек Хозмаг",
@@ -13534,6 +13534,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-30T09:47:52.815Z",
+      "user": "Директор",
+      "action": "Изменение документа",
+      "details": "pko ПКО-0013 на 240000"
+    },
     {
       "date": "2026-09-30T09:46:20.959Z",
       "user": "Директор",
