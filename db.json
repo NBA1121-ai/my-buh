@@ -3975,6 +3975,19 @@
         "email": "",
         "contact": "",
         "comment": ""
+      },
+      {
+        "id": "tmunqmzt13c15",
+        "name": "OOO LUCKY IMPORT EXPORT",
+        "full": "",
+        "inn": "",
+        "kind": "Юридическое лицо",
+        "address": "",
+        "phone": "",
+        "email": "",
+        "account": "",
+        "bank": "",
+        "comment": ""
       }
     ],
     "contracts": [],
@@ -4910,6 +4923,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-30T06:40:13.989Z",
+      "user": "Директор",
+      "action": "Изменение документа",
+      "details": "pko ПКО-0009 на 285600"
+    },
     {
       "date": "2026-09-30T06:40:04.045Z",
       "user": "Директор",
