@@ -376,6 +376,24 @@
       "purpose": "З\\п УМУТ ",
       "note": "",
       "created": "2026-09-30T09:53:27.029Z"
+    },
+    {
+      "id": "_1790762112885_087blt",
+      "type": "rko",
+      "number": "РКО-0019",
+      "date": "2026-09-25",
+      "time": "15:54",
+      "status": "posted",
+      "account": "_2",
+      "accountTo": "",
+      "contractor": "ИП ООО \"LUCKY IMPORT EXPORT\"",
+      "article": "_5",
+      "currency": "_1",
+      "sum": 162600,
+      "rate": 1,
+      "purpose": "Таможенные сборы ",
+      "note": "",
+      "created": "2026-09-30T09:55:12.885Z"
     }
   ],
   "accounts": [
@@ -13588,6 +13606,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-30T09:53:27.031Z",
+      "user": "Директор",
+      "action": "Создание документа",
+      "details": "rko РКО-0018 на 164600"
+    },
     {
       "date": "2026-09-30T09:52:28.599Z",
       "user": "Директор",
