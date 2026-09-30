@@ -701,6 +701,24 @@
       "purpose": "Продукты ",
       "note": "",
       "created": "2026-09-30T10:57:54.373Z"
+    },
+    {
+      "id": "_1790765991013_eq7on1",
+      "type": "rko",
+      "number": "РКО-0035",
+      "date": "2026-09-27",
+      "time": "16:57",
+      "status": "posted",
+      "account": "_2",
+      "accountTo": "",
+      "contractor": "Расход завод",
+      "article": "_6",
+      "currency": "",
+      "sum": 5500,
+      "rate": 1,
+      "purpose": "Солярка кара ",
+      "note": "",
+      "created": "2026-09-30T10:59:51.013Z"
     }
   ],
   "accounts": [
@@ -13913,6 +13931,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-30T10:57:54.375Z",
+      "user": "Директор",
+      "action": "Создание документа",
+      "details": "rko РКО-0034 на 10310"
+    },
     {
       "date": "2026-09-30T10:56:33.063Z",
       "user": "Директор",
