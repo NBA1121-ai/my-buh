@@ -1468,7 +1468,7 @@
         "type": "customer_invoice",
         "number": "НО-34",
         "date": "2026-09-11",
-        "status": "posted",
+        "status": "deleted",
         "contractor": "c34",
         "contract": "",
         "payUntil": "",
