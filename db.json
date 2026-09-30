@@ -286,6 +286,24 @@
       "purpose": "оплата за цемент 50тонн",
       "note": "",
       "created": "2026-09-30T07:20:49.605Z"
+    },
+    {
+      "id": "_1790761374661_zj70s1",
+      "type": "rko",
+      "number": "РКО-0014",
+      "date": "2026-09-30",
+      "time": "15:42",
+      "status": "posted",
+      "account": "_2",
+      "accountTo": "",
+      "contractor": "Расход завод",
+      "article": "_6",
+      "currency": "",
+      "sum": 565326,
+      "rate": 1,
+      "purpose": "",
+      "note": "",
+      "created": "2026-09-30T09:42:54.661Z"
     }
   ],
   "accounts": [
