@@ -7277,7 +7277,7 @@
         "type": "sale",
         "number": "РТ-000027",
         "date": "2026-09-30",
-        "status": "posted",
+        "status": "deleted",
         "opKind": "Товары (накладная, УПД)",
         "contractor": "c3",
         "contract": "",
