@@ -139,6 +139,24 @@
       "purpose": "оплата за цемент ",
       "note": "",
       "created": "2026-09-30T10:10:55.869Z"
+    },
+    {
+      "id": "_1790763094421_t1p4vb",
+      "type": "payment_in",
+      "number": "ПП-ВХ-0010",
+      "date": "2026-09-30",
+      "time": "16:11",
+      "status": "posted",
+      "account": "_1",
+      "accountTo": "",
+      "contractor": "ОсОО Авента Строй ",
+      "article": "_1",
+      "currency": "",
+      "sum": 154880,
+      "rate": 1,
+      "purpose": "",
+      "note": "",
+      "created": "2026-09-30T10:11:34.421Z"
     }
   ],
   "cashDocuments": [
@@ -13625,6 +13643,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-30T10:10:55.871Z",
+      "user": "Директор",
+      "action": "Создание документа",
+      "details": "payment_in ПП-ВХ-0009 на 1500000"
+    },
     {
       "date": "2026-09-30T09:57:51.559Z",
       "user": "Директор",
