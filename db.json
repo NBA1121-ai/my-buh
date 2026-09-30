@@ -376,6 +376,24 @@
       "purpose": "Таможенные сборы ",
       "note": "",
       "created": "2026-09-30T09:55:12.885Z"
+    },
+    {
+      "id": "_1790762261645_ulmtn8",
+      "type": "rko",
+      "number": "РКО-0020",
+      "date": "2026-09-30",
+      "status": "posted",
+      "account": "_2",
+      "contractor": "Ислам Песок",
+      "contractorId": "c48",
+      "article": "_5",
+      "currency": "_1",
+      "sum": 162000,
+      "rate": 1,
+      "purpose": "Оплата по документу Счет от поставщика НОК-09 от 24.09.2026",
+      "note": "Создано на основании",
+      "created": "2026-09-30T09:57:41.645Z",
+      "basis": "obs_fix_c48"
     }
   ],
   "accounts": [
