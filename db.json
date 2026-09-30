@@ -120,6 +120,24 @@
       "purpose": "",
       "note": "",
       "created": "2026-09-30T06:20:24.941Z"
+    },
+    {
+      "id": "_1790749336789_nsfgtr",
+      "type": "payment_in",
+      "number": "ПП-ВХ-0008",
+      "date": "2026-09-28",
+      "time": "12:21",
+      "status": "posted",
+      "account": "_1",
+      "accountTo": "",
+      "contractor": "Элмырза ",
+      "article": "",
+      "currency": "_1",
+      "sum": 1818000,
+      "rate": 1,
+      "purpose": "ПОПОЛНЕНИЕ СЧЕТА ",
+      "note": "",
+      "created": "2026-09-30T06:22:16.789Z"
     }
   ],
   "cashDocuments": [
@@ -4535,6 +4553,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-30T06:20:24.942Z",
+      "user": "Директор",
+      "action": "Создание документа",
+      "details": "payment_in ПП-ВХ-0007 на 334400"
+    },
     {
       "date": "2026-09-30T06:18:40.982Z",
       "user": "Директор",
