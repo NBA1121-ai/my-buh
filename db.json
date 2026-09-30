@@ -157,6 +157,24 @@
       "purpose": "",
       "note": "",
       "created": "2026-09-30T10:11:34.421Z"
+    },
+    {
+      "id": "_1790763127501_b5um90",
+      "type": "payment_in",
+      "number": "ПП-ВХ-0011",
+      "date": "2026-09-30",
+      "time": "16:11",
+      "status": "posted",
+      "account": "_1",
+      "accountTo": "",
+      "contractor": "ОсОО Авента Строй ",
+      "article": "_1",
+      "currency": "_1",
+      "sum": 65120,
+      "rate": 1,
+      "purpose": "",
+      "note": "",
+      "created": "2026-09-30T10:12:07.501Z"
     }
   ],
   "cashDocuments": [
@@ -13643,6 +13661,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-30T10:11:34.423Z",
+      "user": "Директор",
+      "action": "Создание документа",
+      "details": "payment_in ПП-ВХ-0010 на 154880"
+    },
     {
       "date": "2026-09-30T10:10:55.871Z",
       "user": "Директор",
