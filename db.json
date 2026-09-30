@@ -178,24 +178,6 @@
       "created": "2026-09-30T06:34:34.133Z"
     },
     {
-      "id": "_1790750268149_vd132p",
-      "type": "pko",
-      "number": "ПКО-0004",
-      "date": "2026-09-24",
-      "time": "12:37",
-      "status": "posted",
-      "account": "_2",
-      "accountTo": "",
-      "contractor": "",
-      "article": "_1",
-      "currency": "_1",
-      "sum": 414850,
-      "rate": 1,
-      "purpose": "",
-      "note": "",
-      "created": "2026-09-30T06:37:48.149Z"
-    },
-    {
       "id": "_1790750388557_2mfukq",
       "type": "pko",
       "number": "ПКО-0010",
@@ -340,6 +322,24 @@
       "purpose": "оплата за цемент 27т / остат 265200 сом",
       "note": "",
       "created": "2026-09-30T09:49:35.805Z"
+    },
+    {
+      "id": "_1790750268149_vd132p",
+      "type": "pko",
+      "number": "ПКО-0004",
+      "date": "2026-09-24",
+      "time": "12:37",
+      "status": "posted",
+      "account": "_2",
+      "accountTo": "",
+      "contractor": "",
+      "article": "_1",
+      "currency": "_1",
+      "sum": 434850,
+      "rate": 1,
+      "purpose": "",
+      "note": "",
+      "created": "2026-09-30T06:37:48.149Z"
     }
   ],
   "accounts": [
@@ -13552,6 +13552,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-30T09:49:35.807Z",
+      "user": "Директор",
+      "action": "Создание документа",
+      "details": "pko ПКО-0016 на 137700"
+    },
     {
       "date": "2026-09-30T09:47:58.567Z",
       "user": "Директор",
