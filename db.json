@@ -358,6 +358,24 @@
       "purpose": "з/п Умут ",
       "note": "",
       "created": "2026-09-30T09:52:28.597Z"
+    },
+    {
+      "id": "_1790762007029_pd3n0s",
+      "type": "rko",
+      "number": "РКО-0018",
+      "date": "2026-09-25",
+      "time": "15:52",
+      "status": "posted",
+      "account": "_2",
+      "accountTo": "",
+      "contractor": "Умут",
+      "article": "_7",
+      "currency": "_1",
+      "sum": 164600,
+      "rate": 1,
+      "purpose": "З\\п УМУТ ",
+      "note": "",
+      "created": "2026-09-30T09:53:27.029Z"
     }
   ],
   "accounts": [
@@ -13570,6 +13588,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-09-30T09:52:28.599Z",
+      "user": "Директор",
+      "action": "Создание документа",
+      "details": "rko РКО-0017 на 600000"
+    },
     {
       "date": "2026-09-30T09:50:32.919Z",
       "user": "Директор",
