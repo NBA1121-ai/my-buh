@@ -250,6 +250,24 @@
       "note": "Создано на основании",
       "created": "2026-09-30T06:39:36.501Z",
       "basis": "tmunqi1phjqs4"
+    },
+    {
+      "id": "_1790752696949_r97pdf",
+      "type": "pko",
+      "number": "ПКО-0011",
+      "date": "2026-09-30",
+      "status": "posted",
+      "account": "_2",
+      "contractor": "Акмарал Хозмаг",
+      "contractorId": "c29",
+      "article": "_1",
+      "currency": "_1",
+      "sum": 147900,
+      "rate": 1,
+      "purpose": "Оплата по документу Реализация РТ-000007 от 29.09.2026",
+      "note": "Создано на основании",
+      "created": "2026-09-30T07:18:16.949Z",
+      "basis": "tmunrvrwt9upc"
     }
   ],
   "accounts": [
