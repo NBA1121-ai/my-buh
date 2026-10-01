@@ -1438,6 +1438,24 @@
       "note": "7000 мбанк 2000 нал ",
       "created": "2026-10-01T14:48:13.488Z",
       "basis": "tmunu8yhh1vin"
+    },
+    {
+      "id": "_1790866164015_4lfuta",
+      "type": "pko",
+      "number": "ПКО-0069",
+      "date": "2026-09-28",
+      "time": "20:48",
+      "status": "posted",
+      "account": "_3",
+      "accountTo": "",
+      "contractor": "Физ/лиц",
+      "article": "_1",
+      "currency": "_1",
+      "sum": 2000,
+      "rate": 1,
+      "purpose": "",
+      "note": "7000 мбанк 2000 нал ",
+      "created": "2026-10-01T14:49:24.015Z"
     }
   ],
   "accounts": [
@@ -15062,6 +15080,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-10-01T14:48:38.914Z",
+      "user": "Администратор",
+      "action": "Изменение документа",
+      "details": "pko ПКО-0068 на 7000"
+    },
     {
       "date": "2026-10-01T14:48:12.672Z",
       "user": "Администратор",
