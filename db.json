@@ -1229,6 +1229,24 @@
       "note": "Создано на основании",
       "created": "2026-10-01T14:27:20.849Z",
       "basis": "tmuns8rl17rr3"
+    },
+    {
+      "id": "_1790864984513_fjl5fe",
+      "type": "pko",
+      "number": "ПКО-0058",
+      "date": "2026-10-01",
+      "status": "posted",
+      "account": "_2",
+      "contractor": "Физ/лиц",
+      "contractorId": "tmu3rmh7nur4e",
+      "article": "_1",
+      "currency": "_1",
+      "sum": 22500,
+      "rate": 1,
+      "purpose": "Оплата по документу Реализация РТ-000034 от 27.09.2026",
+      "note": "Создано на основании",
+      "created": "2026-10-01T14:29:44.513Z",
+      "basis": "tmuntqu8tz3bl"
     }
   ],
   "accounts": [
@@ -14853,6 +14871,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-10-01T14:29:43.360Z",
+      "user": "Администратор",
+      "action": "Изменение документа",
+      "details": "sale РТ-000034"
+    },
     {
       "date": "2026-10-01T14:27:18.433Z",
       "user": "Администратор",
