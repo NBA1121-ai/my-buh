@@ -265,6 +265,24 @@
       "purpose": "",
       "note": "оплата за микро кальцит ",
       "created": "2026-10-01T14:11:17.617Z"
+    },
+    {
+      "id": "_1790863904545_8wbb77",
+      "type": "payment_out",
+      "number": "ПП-0017",
+      "date": "2026-09-29",
+      "time": "20:11",
+      "status": "posted",
+      "account": "_1",
+      "accountTo": "",
+      "contractor": "Филиал Мбанк Плаза ОАО Мбанк ",
+      "article": "_5",
+      "currency": "_1",
+      "sum": 65,
+      "rate": 1,
+      "purpose": "",
+      "note": "Комиссия банка ",
+      "created": "2026-10-01T14:11:44.545Z"
     }
   ],
   "cashDocuments": [
@@ -14781,6 +14799,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-10-01T14:11:17.620Z",
+      "user": "Администратор",
+      "action": "Создание документа",
+      "details": "payment_out ПП-0016 на 135000"
+    },
     {
       "date": "2026-10-01T14:10:21.251Z",
       "user": "Администратор",
