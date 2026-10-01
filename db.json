@@ -12159,11 +12159,11 @@
           {
             "nom": "n3",
             "qty": 200,
-            "price": 190,
+            "price": 192.5,
             "vat": -1,
-            "sum": 38000,
+            "sum": 38500,
             "vatSum": 0,
-            "total": 38000,
+            "total": 38500,
             "account": "43",
             "content": "",
             "country": "",
@@ -12274,9 +12274,9 @@
         "actDate": "",
         "severanceMonths": 0,
         "baseDoc": "",
-        "sum": 42400,
+        "sum": 42900,
         "vatTotal": 0,
-        "total": 42400
+        "total": 42900
       },
       {
         "id": "tmunud2t9gfma",
@@ -15080,6 +15080,18 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-10-01T14:50:26.536Z",
+      "user": "Администратор",
+      "action": "Изменение документа",
+      "details": "sale РТ-000053"
+    },
+    {
+      "date": "2026-10-01T14:49:24.018Z",
+      "user": "Администратор",
+      "action": "Создание документа",
+      "details": "pko ПКО-0069 на 2000"
+    },
     {
       "date": "2026-10-01T14:48:38.914Z",
       "user": "Администратор",
