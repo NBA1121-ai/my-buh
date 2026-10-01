@@ -175,6 +175,24 @@
       "purpose": "",
       "note": "",
       "created": "2026-09-30T10:12:07.501Z"
+    },
+    {
+      "id": "_1790863404442_3fhhtt",
+      "type": "payment_in",
+      "number": "ПП-ВХ-0012",
+      "date": "2026-10-01",
+      "time": "20:02",
+      "status": "posted",
+      "account": "_4_usd",
+      "accountTo": "",
+      "contractor": "Элмырза ",
+      "article": "",
+      "currency": "_2",
+      "sum": 19677.16,
+      "rate": 87.5,
+      "purpose": "",
+      "note": "",
+      "created": "2026-10-01T14:03:24.442Z"
     }
   ],
   "cashDocuments": [
@@ -14691,6 +14709,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-10-01T13:59:52.805Z",
+      "user": "Администратор",
+      "action": "Изменение документа",
+      "details": "rko РКО-0002 на 1818000"
+    },
     {
       "date": "2026-10-01T13:59:42.236Z",
       "user": "Администратор",
