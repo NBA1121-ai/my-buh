@@ -10969,12 +10969,12 @@
         "goods": [
           {
             "nom": "n3",
-            "qty": 57,
+            "qty": 60,
             "price": 190,
             "vat": -1,
-            "sum": 10830,
+            "sum": 11400,
             "vatSum": 0,
-            "total": 10830,
+            "total": 11400,
             "account": "43",
             "content": "",
             "country": "",
@@ -11072,9 +11072,9 @@
         "actDate": "",
         "severanceMonths": 0,
         "baseDoc": "",
-        "sum": 10830,
+        "sum": 11400,
         "vatTotal": 0,
-        "total": 10830
+        "total": 11400
       },
       {
         "id": "tmunu5s1xdav5",
@@ -14947,6 +14947,18 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-10-01T14:41:34.033Z",
+      "user": "Администратор",
+      "action": "Изменение документа",
+      "details": "sale РТ-000045"
+    },
+    {
+      "date": "2026-10-01T14:37:25.555Z",
+      "user": "Администратор",
+      "action": "Изменение документа",
+      "details": "pko ПКО-0062 на 1900"
+    },
     {
       "date": "2026-10-01T14:37:08.416Z",
       "user": "Администратор",
