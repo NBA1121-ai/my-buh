@@ -247,6 +247,24 @@
       "purpose": "",
       "note": "залог поддон ",
       "created": "2026-10-01T14:10:21.249Z"
+    },
+    {
+      "id": "_1790863877617_2jkjbe",
+      "type": "payment_out",
+      "number": "ПП-0016",
+      "date": "2026-09-29",
+      "time": "20:10",
+      "status": "posted",
+      "account": "_1",
+      "accountTo": "",
+      "contractor": "ОсОО Аллмикс ",
+      "article": "_5",
+      "currency": "_1",
+      "sum": 135000,
+      "rate": 1,
+      "purpose": "",
+      "note": "оплата за микро кальцит ",
+      "created": "2026-10-01T14:11:17.617Z"
     }
   ],
   "cashDocuments": [
@@ -14763,6 +14781,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-10-01T14:10:21.251Z",
+      "user": "Администратор",
+      "action": "Создание документа",
+      "details": "payment_out ПП-0015 на 10750"
+    },
     {
       "date": "2026-10-01T14:09:29.211Z",
       "user": "Администратор",
