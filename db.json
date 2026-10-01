@@ -283,6 +283,24 @@
       "purpose": "",
       "note": "Комиссия банка ",
       "created": "2026-10-01T14:11:44.545Z"
+    },
+    {
+      "id": "_1790864193713_pb5paj",
+      "type": "payment_out",
+      "number": "ПП-0018",
+      "date": "2026-09-25",
+      "time": "20:15",
+      "status": "posted",
+      "account": "_1",
+      "accountTo": "",
+      "contractor": "Артур ",
+      "article": "_6",
+      "currency": "_1",
+      "sum": 117569,
+      "rate": 1,
+      "purpose": "",
+      "note": "Снятье наличных в банке  ",
+      "created": "2026-10-01T14:16:33.713Z"
     }
   ],
   "cashDocuments": [
@@ -14799,6 +14817,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-10-01T14:11:44.548Z",
+      "user": "Администратор",
+      "action": "Создание документа",
+      "details": "payment_out ПП-0017 на 65"
+    },
     {
       "date": "2026-10-01T14:11:17.620Z",
       "user": "Администратор",
