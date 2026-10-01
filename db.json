@@ -1213,24 +1213,6 @@
       "created": "2026-10-01T14:26:35.921Z"
     },
     {
-      "id": "_1790864840849_lss83o",
-      "type": "pko",
-      "number": "ПКО-0057",
-      "date": "2026-10-01",
-      "status": "posted",
-      "account": "_2",
-      "contractor": "Физ/лиц",
-      "contractorId": "tmu3rmh7nur4e",
-      "article": "_1",
-      "currency": "_1",
-      "sum": 31500,
-      "rate": 1,
-      "purpose": "Оплата по документу Реализация РТ-000016 от 25.09.2026",
-      "note": "Создано на основании",
-      "created": "2026-10-01T14:27:20.849Z",
-      "basis": "tmuns8rl17rr3"
-    },
-    {
       "id": "_1790864996992_bi9ftc",
       "type": "pko",
       "number": "ПКО-0059",
@@ -1413,6 +1395,25 @@
       "note": "Создано на основании",
       "created": "2026-10-01T14:46:35.688Z",
       "basis": "tmunu7lfp1jjs"
+    },
+    {
+      "id": "_1790864840849_lss83o",
+      "type": "pko",
+      "number": "ПКО-0057",
+      "date": "2026-09-28",
+      "time": "",
+      "status": "posted",
+      "account": "_2",
+      "accountTo": "",
+      "contractor": "Физ/лиц",
+      "article": "_1",
+      "currency": "_1",
+      "sum": 31500,
+      "rate": 1,
+      "purpose": "Оплата по документу Реализация РТ-000016 от 25.09.2026",
+      "note": "Создано на основании",
+      "created": "2026-10-01T14:27:20.849Z",
+      "basis": "tmuns8rl17rr3"
     }
   ],
   "accounts": [
