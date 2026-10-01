@@ -11102,11 +11102,11 @@
           {
             "nom": "n3",
             "qty": 80,
-            "price": 190,
+            "price": 196.25,
             "vat": -1,
-            "sum": 15200,
+            "sum": 15700,
             "vatSum": 0,
-            "total": 15200,
+            "total": 15700,
             "account": "43",
             "content": "",
             "country": "",
@@ -11204,9 +11204,9 @@
         "actDate": "",
         "severanceMonths": 0,
         "baseDoc": "",
-        "sum": 15200,
+        "sum": 15700,
         "vatTotal": 0,
-        "total": 15200
+        "total": 15700
       },
       {
         "id": "tmunu6n8dwwdx",
@@ -14947,6 +14947,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-10-01T14:43:41.664Z",
+      "user": "Администратор",
+      "action": "Изменение документа",
+      "details": "sale РТ-000046"
+    },
     {
       "date": "2026-10-01T14:41:34.033Z",
       "user": "Администратор",
