@@ -211,6 +211,24 @@
       "purpose": "",
       "note": "",
       "created": "2026-10-01T14:07:07.633Z"
+    },
+    {
+      "id": "_1790863752385_i7ywwv",
+      "type": "payment_out",
+      "number": "ПП-0014",
+      "date": "2026-09-28",
+      "time": "20:07",
+      "status": "posted",
+      "account": "_1",
+      "accountTo": "",
+      "contractor": "Филиал Мбанк Плаза ОАО Мбанк ",
+      "article": "_5",
+      "currency": "",
+      "sum": 3441.09,
+      "rate": 1,
+      "purpose": "",
+      "note": "Комиссия банка ",
+      "created": "2026-10-01T14:09:12.385Z"
     }
   ],
   "cashDocuments": [
@@ -14727,6 +14745,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-10-01T14:07:07.636Z",
+      "user": "Администратор",
+      "action": "Создание документа",
+      "details": "payment_out ПП-0013 на 19677.16"
+    },
     {
       "date": "2026-10-01T14:04:44.684Z",
       "user": "Администратор",
