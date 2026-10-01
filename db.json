@@ -229,6 +229,24 @@
       "purpose": "",
       "note": "",
       "created": "2026-10-01T14:07:07.633Z"
+    },
+    {
+      "id": "_1790863821249_ovqzps",
+      "type": "payment_out",
+      "number": "ПП-0015",
+      "date": "2026-09-28",
+      "time": "20:09",
+      "status": "posted",
+      "account": "_1",
+      "accountTo": "",
+      "contractor": "Артур ",
+      "article": "_6",
+      "currency": "_1",
+      "sum": 10750,
+      "rate": 1,
+      "purpose": "",
+      "note": "залог поддон ",
+      "created": "2026-10-01T14:10:21.249Z"
     }
   ],
   "cashDocuments": [
@@ -14745,6 +14763,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-10-01T14:09:29.211Z",
+      "user": "Администратор",
+      "action": "Изменение документа",
+      "details": "payment_out ПП-0013 на 19677.16"
+    },
     {
       "date": "2026-10-01T14:09:12.388Z",
       "user": "Администратор",
