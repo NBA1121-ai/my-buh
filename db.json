@@ -871,24 +871,6 @@
       "created": "2026-09-30T10:26:46.389Z"
     },
     {
-      "id": "_1790764039565_q2utbm",
-      "type": "pko",
-      "number": "ПКО-0023",
-      "date": "2026-09-30",
-      "time": "16:26",
-      "status": "posted",
-      "account": "_2",
-      "accountTo": "",
-      "contractor": "Физ/лиц",
-      "article": "_1",
-      "currency": "_1",
-      "sum": 12900,
-      "rate": 1,
-      "purpose": "12000 рома перевел ",
-      "note": "",
-      "created": "2026-09-30T10:27:19.565Z"
-    },
-    {
       "id": "_1790764063445_m29ba1",
       "type": "pko",
       "number": "ПКО-0024",
@@ -1458,24 +1440,6 @@
       "created": "2026-10-01T14:49:24.015Z"
     },
     {
-      "id": "_1790866303512_6it1zh",
-      "type": "pko",
-      "number": "ПКО-0070",
-      "date": "2026-10-01",
-      "status": "posted",
-      "account": "_2",
-      "contractor": "Физ/лиц",
-      "contractorId": "tmu3rmh7nur4e",
-      "article": "_1",
-      "currency": "_1",
-      "sum": 6750,
-      "rate": 1,
-      "purpose": "Оплата по документу Реализация РТ-000055 от 29.09.2026",
-      "note": "Создано на основании",
-      "created": "2026-10-01T14:51:43.512Z",
-      "basis": "tmunuea7hxhyt"
-    },
-    {
       "id": "_1790866340312_h3db9h",
       "type": "pko",
       "number": "ПКО-0073",
@@ -1531,6 +1495,43 @@
       "note": "Создано на основании",
       "created": "2026-10-01T14:51:52.960Z",
       "basis": "tmunud2t9gfma"
+    },
+    {
+      "id": "_1790866303512_6it1zh",
+      "type": "pko",
+      "number": "ПКО-0070",
+      "date": "2026-09-29",
+      "time": "",
+      "status": "posted",
+      "account": "_2",
+      "accountTo": "",
+      "contractor": "Физ/лиц",
+      "article": "_1",
+      "currency": "_1",
+      "sum": 6750,
+      "rate": 1,
+      "purpose": "Оплата по документу Реализация РТ-000055 от 29.09.2026",
+      "note": "Создано на основании",
+      "created": "2026-10-01T14:51:43.512Z",
+      "basis": "tmunuea7hxhyt"
+    },
+    {
+      "id": "_1790764039565_q2utbm",
+      "type": "pko",
+      "number": "ПКО-0023",
+      "date": "2026-09-30",
+      "time": "16:26",
+      "status": "posted",
+      "account": "_2",
+      "accountTo": "",
+      "contractor": "Физ/лиц",
+      "article": "_1",
+      "currency": "_1",
+      "sum": 12000,
+      "rate": 1,
+      "purpose": "12000 рома перевел ",
+      "note": "",
+      "created": "2026-09-30T10:27:19.565Z"
     }
   ],
   "accounts": [
@@ -15155,6 +15156,18 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-10-01T14:52:45.682Z",
+      "user": "Администратор",
+      "action": "Изменение документа",
+      "details": "pko ПКО-0070 на 6750"
+    },
+    {
+      "date": "2026-10-01T14:52:40.850Z",
+      "user": "Администратор",
+      "action": "Изменение документа",
+      "details": "pko ПКО-0071 на 15880"
+    },
     {
       "date": "2026-10-01T14:52:34.289Z",
       "user": "Администратор",
