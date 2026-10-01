@@ -193,6 +193,24 @@
       "purpose": "",
       "note": "",
       "created": "2026-10-01T14:03:24.442Z"
+    },
+    {
+      "id": "_1790863627633_wxdhrq",
+      "type": "payment_out",
+      "number": "ПП-0013",
+      "date": "2026-10-01",
+      "time": "20:05",
+      "status": "draft",
+      "account": "_4_usd",
+      "accountTo": "",
+      "contractor": "ИП ООО LUCKY IMPORT EXPORT ",
+      "article": "_5",
+      "currency": "_2",
+      "sum": 19677.16,
+      "rate": 87.5,
+      "purpose": "",
+      "note": "",
+      "created": "2026-10-01T14:07:07.633Z"
     }
   ],
   "cashDocuments": [
