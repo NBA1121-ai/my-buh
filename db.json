@@ -1494,24 +1494,6 @@
       "basis": "tmunud2t9gfma"
     },
     {
-      "id": "_1790866319352_oul78o",
-      "type": "pko",
-      "number": "ПКО-0072",
-      "date": "2026-10-01",
-      "status": "posted",
-      "account": "_2",
-      "contractor": "Физ/лиц",
-      "contractorId": "tmu3rmh7nur4e",
-      "article": "_1",
-      "currency": "_1",
-      "sum": 1800,
-      "rate": 1,
-      "purpose": "Оплата по документу Реализация РТ-000057 от 29.09.2026",
-      "note": "Создано на основании",
-      "created": "2026-10-01T14:51:59.352Z",
-      "basis": "tmunufgad0fdk"
-    },
-    {
       "id": "_1790866340312_h3db9h",
       "type": "pko",
       "number": "ПКО-0073",
@@ -1529,6 +1511,25 @@
       "note": "Создано на основании",
       "created": "2026-10-01T14:52:20.312Z",
       "basis": "tmunubpmlzgp9"
+    },
+    {
+      "id": "_1790866319352_oul78o",
+      "type": "pko",
+      "number": "ПКО-0072",
+      "date": "2026-09-29",
+      "time": "",
+      "status": "posted",
+      "account": "_2",
+      "accountTo": "",
+      "contractor": "Физ/лиц",
+      "article": "_1",
+      "currency": "_1",
+      "sum": 1800,
+      "rate": 1,
+      "purpose": "Оплата по документу Реализация РТ-000057 от 29.09.2026",
+      "note": "Создано на основании",
+      "created": "2026-10-01T14:51:59.352Z",
+      "basis": "tmunufgad0fdk"
     }
   ],
   "accounts": [
@@ -15153,6 +15154,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-10-01T14:52:29.234Z",
+      "user": "Администратор",
+      "action": "Изменение документа",
+      "details": "pko ПКО-0073 на 42900"
+    },
     {
       "date": "2026-10-01T14:52:19.463Z",
       "user": "Администратор",
