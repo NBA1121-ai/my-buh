@@ -1550,6 +1550,24 @@
       "note": "Создано на основании",
       "created": "2026-10-01T15:03:41.007Z",
       "basis": "tmunul1ullenz"
+    },
+    {
+      "id": "_1790867366567_ru8udz",
+      "type": "pko",
+      "number": "ПКО-0075",
+      "date": "2026-10-01",
+      "status": "posted",
+      "account": "_2",
+      "contractor": "Физ/лиц",
+      "contractorId": "tmu3rmh7nur4e",
+      "article": "_1",
+      "currency": "_1",
+      "sum": 20260,
+      "rate": 1,
+      "purpose": "Оплата по документу Реализация РТ-000064 от 30.09.2026",
+      "note": "Создано на основании",
+      "created": "2026-10-01T15:09:26.567Z",
+      "basis": "tmupo446meikg"
     }
   ],
   "accounts": [
@@ -15319,6 +15337,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-10-01T15:09:25.775Z",
+      "user": "Администратор",
+      "action": "Изменение документа",
+      "details": "sale РТ-000064"
+    },
     {
       "date": "2026-10-01T15:09:07.439Z",
       "user": "Администратор",
