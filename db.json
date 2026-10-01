@@ -853,24 +853,6 @@
       "created": "2026-09-30T10:24:11.077Z"
     },
     {
-      "id": "_1790764006389_d2rjkx",
-      "type": "pko",
-      "number": "ПКО-0022",
-      "date": "2026-09-30",
-      "time": "16:26",
-      "status": "posted",
-      "account": "_2",
-      "accountTo": "",
-      "contractor": "Физ/лиц",
-      "article": "_1",
-      "currency": "_1",
-      "sum": 20260,
-      "rate": 1,
-      "purpose": "Оплата за газоблок ",
-      "note": "",
-      "created": "2026-09-30T10:26:46.389Z"
-    },
-    {
       "id": "_1790764063445_m29ba1",
       "type": "pko",
       "number": "ПКО-0024",
@@ -1569,6 +1551,24 @@
       "note": "Создано на основании",
       "created": "2026-10-01T15:09:26.567Z",
       "basis": "tmupo446meikg"
+    },
+    {
+      "id": "_1790764006389_d2rjkx",
+      "type": "pko",
+      "number": "ПКО-0022",
+      "date": "2026-09-30",
+      "time": "16:26",
+      "status": "draft",
+      "account": "_2",
+      "accountTo": "",
+      "contractor": "Физ/лиц",
+      "article": "_1",
+      "currency": "_1",
+      "sum": 20260,
+      "rate": 1,
+      "purpose": "Оплата за газоблок ",
+      "note": "",
+      "created": "2026-09-30T10:26:46.389Z"
     }
   ],
   "accounts": [
@@ -15338,6 +15338,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-10-01T15:09:32.785Z",
+      "user": "Администратор",
+      "action": "Изменение документа",
+      "details": "pko ПКО-0075 на 20260"
+    },
     {
       "date": "2026-10-01T15:09:25.775Z",
       "user": "Администратор",
