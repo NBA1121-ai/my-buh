@@ -1359,6 +1359,24 @@
       "note": "Создано на основании",
       "created": "2026-10-01T14:45:26.200Z",
       "basis": "tmunu50xx4vj7"
+    },
+    {
+      "id": "_1790865930664_uw8pva",
+      "type": "pko",
+      "number": "ПКО-0065",
+      "date": "2026-10-01",
+      "status": "posted",
+      "account": "_2",
+      "contractor": "Физ/лиц",
+      "contractorId": "tmu3rmh7nur4e",
+      "article": "_1",
+      "currency": "_1",
+      "sum": 15700,
+      "rate": 1,
+      "purpose": "Оплата по документу Реализация РТ-000046 от 28.09.2026",
+      "note": "Создано на основании",
+      "created": "2026-10-01T14:45:30.664Z",
+      "basis": "tmunu5s1xdav5"
     }
   ],
   "accounts": [
@@ -14983,6 +15001,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-10-01T14:45:29.888Z",
+      "user": "Администратор",
+      "action": "Изменение документа",
+      "details": "sale РТ-000046"
+    },
     {
       "date": "2026-10-01T14:45:25.424Z",
       "user": "Администратор",
