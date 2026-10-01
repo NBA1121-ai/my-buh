@@ -1476,24 +1476,6 @@
       "basis": "tmunuea7hxhyt"
     },
     {
-      "id": "_1790866312960_79kv58",
-      "type": "pko",
-      "number": "ПКО-0071",
-      "date": "2026-10-01",
-      "status": "posted",
-      "account": "_2",
-      "contractor": "Физ/лиц",
-      "contractorId": "tmu3rmh7nur4e",
-      "article": "_1",
-      "currency": "_1",
-      "sum": 15880,
-      "rate": 1,
-      "purpose": "Оплата по документу Реализация РТ-000054 от 29.09.2026, в т.ч. НДС 94,29",
-      "note": "Создано на основании",
-      "created": "2026-10-01T14:51:52.960Z",
-      "basis": "tmunud2t9gfma"
-    },
-    {
       "id": "_1790866340312_h3db9h",
       "type": "pko",
       "number": "ПКО-0073",
@@ -1530,6 +1512,25 @@
       "note": "Создано на основании",
       "created": "2026-10-01T14:51:59.352Z",
       "basis": "tmunufgad0fdk"
+    },
+    {
+      "id": "_1790866312960_79kv58",
+      "type": "pko",
+      "number": "ПКО-0071",
+      "date": "2026-09-29",
+      "time": "",
+      "status": "posted",
+      "account": "_2",
+      "accountTo": "",
+      "contractor": "Физ/лиц",
+      "article": "_1",
+      "currency": "_1",
+      "sum": 15880,
+      "rate": 1,
+      "purpose": "Оплата по документу Реализация РТ-000054 от 29.09.2026, в т.ч. НДС 94,29",
+      "note": "Создано на основании",
+      "created": "2026-10-01T14:51:52.960Z",
+      "basis": "tmunud2t9gfma"
     }
   ],
   "accounts": [
@@ -15154,6 +15155,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-10-01T14:52:34.289Z",
+      "user": "Администратор",
+      "action": "Изменение документа",
+      "details": "pko ПКО-0072 на 1800"
+    },
     {
       "date": "2026-10-01T14:52:29.234Z",
       "user": "Администратор",
