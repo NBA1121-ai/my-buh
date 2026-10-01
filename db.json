@@ -12963,7 +12963,7 @@
         "type": "payroll",
         "number": "НЗ-000001",
         "date": "2026-10-01",
-        "status": "posted",
+        "status": "deleted",
         "opKind": "",
         "contractor": "",
         "contract": "",
