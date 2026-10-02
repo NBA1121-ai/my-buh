@@ -1213,7 +1213,11 @@
             let t = 0;
             for (const k in obj) {
                 if (Array.isArray(obj[k])) t += obj[k].length;
-                else if (obj[k] && typeof obj[k] === 'object' && Array.isArray(obj[k].docs)) t += obj[k].docs.length;
+                else if (obj[k] && typeof obj[k] === 'object') {
+                    for (const sk in obj[k]) {
+                        if (Array.isArray(obj[k][sk])) t += obj[k][sk].length;
+                    }
+                }
             }
             return t;
         }
@@ -1319,7 +1323,8 @@
             }
 
             populateSelects();
-            if (changed) saveData();
+            // Only save defaults if data was actually loaded from GitHub (prevents overwriting real data with template)
+            if (changed && DbSync.isDataLoaded()) saveData();
         }
 
         function populateSelects() {
