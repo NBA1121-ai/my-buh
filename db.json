@@ -319,6 +319,24 @@
       "purpose": "",
       "note": "",
       "created": "2026-10-02T12:44:05.908Z"
+    },
+    {
+      "id": "_1790945689749_ro704m",
+      "type": "payment_in",
+      "number": "ПП-ВХ-0021",
+      "date": "2026-10-01",
+      "time": "18:54",
+      "status": "posted",
+      "account": "_1",
+      "accountTo": "",
+      "contractor": "Элмырза ",
+      "article": "_11",
+      "currency": "_1",
+      "sum": 444000,
+      "rate": 1,
+      "purpose": "",
+      "note": "Возврат под отчета ",
+      "created": "2026-10-02T12:54:49.749Z"
     }
   ],
   "cashDocuments": [
