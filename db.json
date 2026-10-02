@@ -15348,9 +15348,9 @@
         "type": "sale",
         "number": "РТ-000075",
         "date": "2026-10-01",
-        "status": "draft",
+        "status": "posted",
         "opKind": "Товары (накладная, УПД)",
-        "contractor": "",
+        "contractor": "tmu3rmh7nur4e",
         "contract": "",
         "warehouse": "w1",
         "basis": "",
@@ -17205,6 +17205,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-10-02T10:33:06.192Z",
+      "user": "Разработчик",
+      "action": "Изменение документа",
+      "details": "sale РТ-000075"
+    },
     {
       "date": "2026-10-02T10:28:45.924Z",
       "user": "Разработчик",
