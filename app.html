@@ -1245,7 +1245,7 @@
                     // Protect against syncing empty data from another tab
                     const currentCount = _countDbRecords(db);
                     const newCount = _countDbRecords(newData);
-                    if (currentCount > 20 && newCount < currentCount * 0.5) {
+                    if (currentCount > 5 && newCount < currentCount * 0.5) {
                         console.error('Tab sync BLOCKED: data too small (' + currentCount + ' → ' + newCount + ')');
                         return;
                     }
@@ -3171,6 +3171,13 @@
                             (data.cashDocuments || []).forEach(d => { if (!db.cashDocuments.find(x => x.id === d.id)) db.cashDocuments.push(d); });
                             if (data.trade && data.trade.docs) data.trade.docs.forEach(d => { if (!db.trade.docs.find(x => x.id === d.id)) db.trade.docs.push(d); });
                         } else {
+                            // Protect: warn if imported file has significantly fewer records
+                            const currentSize = _countDbRecords(db);
+                            const importSize = _countDbRecords(data);
+                            if (currentSize > 10 && importSize < currentSize * 0.5) {
+                                if (!confirm('ВНИМАНИЕ: импортируемый файл содержит ' + importSize + ' записей, а текущая база — ' + currentSize + '. Продолжить замену?')) return;
+                            }
+                            try { downloadBackup(); } catch(e3) {}
                             delete data.exportDate; delete data.format;
                             Object.keys(db).forEach(k => delete db[k]);
                             Object.assign(db, DB_DEFAULTS, data);
@@ -3206,6 +3213,7 @@
             const total = (db.bankDocuments||[]).length + (db.cashDocuments||[]).length + (db.trade&&db.trade.docs?db.trade.docs.length:0);
             const input = prompt('Для подтверждения введите УДАЛИТЬ (будет удалено ' + total + ' документов):');
             if (input !== 'УДАЛИТЬ') { showToast('Удаление отменено'); return; }
+            try { downloadBackup(); } catch(e3) {}
             db.bankDocuments = []; db.cashDocuments = []; db.trade.docs = []; db.trade.sfCounter = { in: 0, out: 0 }; db.trade.demoSeeded = true;
             saveData(); renderPage(); showToast('Все документы удалены');
         }
@@ -6132,9 +6140,14 @@
             navigator.serviceWorker.register('sw.js').catch(() => {});
             navigator.serviceWorker.addEventListener('message', (e) => {
                 if (e.data && e.data.type === 'CLEAR_CACHE') {
-                    localStorage.removeItem('db_cache');
+                    // Save current data before clearing cache
+                    try {
+                        if (typeof db !== 'undefined' && typeof DbSync !== 'undefined' && DbSync.isDataLoaded()) {
+                            DbSync.forceSave(JSON.parse(JSON.stringify(db)));
+                        }
+                    } catch(e2) {}
                     localStorage.removeItem('db_cache_sha');
-                    location.reload();
+                    setTimeout(() => location.reload(), 1500);
                 }
             });
         }
