@@ -1998,7 +1998,7 @@
         "type": "sale",
         "number": "РТ-000062",
         "date": "2026-09-26",
-        "status": "posted",
+        "status": "draft",
         "opKind": "Товары (накладная, УПД)",
         "contractor": "c31",
         "contract": "",
@@ -17205,6 +17205,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-10-02T10:28:45.924Z",
+      "user": "Разработчик",
+      "action": "Создание документа",
+      "details": "pko ПКО-0090 на 20000"
+    },
     {
       "date": "2026-10-02T10:28:19.091Z",
       "user": "Разработчик",
