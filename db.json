@@ -1,5 +1,6 @@
 {
   "bankDocuments": [
+    {"id":"_1790947686551_aisha1","type":"payment_in","number":"ПП-ВХ-0023","date":"2026-10-01","time":"12:00","status":"posted","account":"_1","accountTo":"","contractor":"ОсОО «Аиша Холдинг»","article":"_1","currency":"_1","sum":1944000,"rate":1,"purpose":"Оплата согл. сч.N Цемент99999999","note":"Плат.пор. № 4984 от 01.10.2026 (по выписке МБанк)","created":"2026-10-02T13:28:06.551Z"},
     {"id":"_1790947599263_fee30a","type":"payment_out","number":"ПП-0022","date":"2026-09-30","time":"20:00","status":"posted","account":"_1","accountTo":"","contractor":"Филиал Мбанк Плаза ОАО Мбанк ","article":"_5","currency":"_1","sum":100,"rate":1,"purpose":"Комиссия за безналичный перевод по гроссу юр лиц","note":"Комиссия банка (Мем.ор. 62795527)","created":"2026-10-02T13:26:39.263Z"},
     {
       "id": "_1790944997548_ssdp3w",
