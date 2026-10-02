@@ -14877,7 +14877,7 @@
         "type": "sale",
         "number": "РТ-000070",
         "date": "2026-10-01",
-        "status": "draft",
+        "status": "posted",
         "opKind": "Товары (накладная, УПД)",
         "contractor": "c2",
         "contract": "",
@@ -21503,6 +21503,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-10-02T13:57:51.186Z",
+      "user": "Разработчик",
+      "action": "Изменение документа",
+      "details": "sale РТ-000070"
+    },
     {
       "date": "2026-10-02T13:57:48.946Z",
       "user": "Разработчик",
