@@ -1731,6 +1731,24 @@
       "purpose": "ОПЛАТА ЗА ЦЕМЕНТ ",
       "note": "",
       "created": "2026-10-02T10:13:23.854Z"
+    },
+    {
+      "id": "_1790936078767_44gwei",
+      "type": "rko",
+      "number": "РКО-0085",
+      "date": "2026-10-02",
+      "time": "16:14",
+      "status": "posted",
+      "account": "_2",
+      "accountTo": "",
+      "contractor": "АРТУР",
+      "article": "_7",
+      "currency": "_1",
+      "sum": 30000,
+      "rate": 1,
+      "purpose": "Аванс ",
+      "note": "",
+      "created": "2026-10-02T10:14:38.767Z"
     }
   ],
   "accounts": [
