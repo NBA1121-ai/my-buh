@@ -19631,6 +19631,19 @@
         "phone": "",
         "account": "",
         "bank": ""
+      },
+      {
+        "id": "tmuqy0v6jzual",
+        "name": "Улан Соль",
+        "full": "",
+        "inn": "",
+        "kind": "Юридическое лицо",
+        "address": "",
+        "phone": "",
+        "email": "",
+        "account": "",
+        "bank": "",
+        "comment": ""
       }
     ],
     "contracts": [],
