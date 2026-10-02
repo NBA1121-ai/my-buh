@@ -1821,6 +1821,24 @@
       "purpose": "Обналичка ",
       "note": "",
       "created": "2026-10-02T10:28:45.920Z"
+    },
+    {
+      "id": "_1790939490356_qitvh4",
+      "type": "rko",
+      "number": "РКО-0091",
+      "date": "2026-09-30",
+      "time": "17:09",
+      "status": "posted",
+      "account": "_2",
+      "accountTo": "",
+      "contractor": "АРТУР",
+      "article": "_6",
+      "currency": "_1",
+      "sum": 348000,
+      "rate": 1,
+      "purpose": "Обналичка ",
+      "note": "",
+      "created": "2026-10-02T11:11:30.356Z"
     }
   ],
   "accounts": [
