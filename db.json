@@ -1982,6 +1982,24 @@
       "purpose": "",
       "note": "",
       "created": "2026-10-02T13:24:36.455Z"
+    },
+    {
+      "id": "_1790948977809_7bx5kl",
+      "type": "rko",
+      "number": "РКО-0095",
+      "date": "2026-09-30",
+      "time": "19:49",
+      "status": "posted",
+      "account": "_3",
+      "accountTo": "",
+      "contractor": "хозмаг",
+      "article": "_5",
+      "currency": "_1",
+      "sum": 300,
+      "rate": 1,
+      "purpose": "",
+      "note": "Герметик ",
+      "created": "2026-10-02T13:49:37.809Z"
     }
   ],
   "accounts": [
