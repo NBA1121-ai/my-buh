@@ -12578,7 +12578,7 @@
         "type": "sale",
         "number": "РТ-000052",
         "date": "2026-09-29",
-        "status": "draft",
+        "status": "posted",
         "opKind": "Товары (накладная, УПД)",
         "contractor": "c1",
         "contract": "",
@@ -21503,6 +21503,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-10-02T13:57:55.306Z",
+      "user": "Разработчик",
+      "action": "Изменение документа",
+      "details": "sale РТ-000052"
+    },
     {
       "date": "2026-10-02T13:57:51.186Z",
       "user": "Разработчик",
