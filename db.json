@@ -19452,7 +19452,7 @@
         "type": "sale",
         "number": "РТ-000081",
         "date": "2026-10-02",
-        "status": "draft",
+        "status": "deleted",
         "opKind": "Товары (накладная, УПД)",
         "contractor": "",
         "contract": "",
