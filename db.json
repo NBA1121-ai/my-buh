@@ -1,6 +1,23 @@
 {
   "bankDocuments": [
-    {"id":"_1790944997548_ssdp3w","type":"payment_in","number":"ПП-ВХ-0019","date":"2026-10-02","time":"18:42","status":"posted","account":"_1","accountTo":"","contractor":"ОсОО «Аиша Холдинг»","article":"_1","currency":"_1","sum":719750,"rate":1,"purpose":"","created":"2026-10-02T12:43:17.548Z","note":"Восстановлен 02.10.2026 после удаления"},
+    {
+      "id": "_1790944997548_ssdp3w",
+      "type": "payment_in",
+      "number": "ПП-ВХ-0019",
+      "date": "2026-10-02",
+      "time": "18:42",
+      "status": "posted",
+      "account": "_1",
+      "accountTo": "",
+      "contractor": "ОсОО «Аиша Холдинг»",
+      "article": "_1",
+      "currency": "_1",
+      "sum": 719750,
+      "rate": 1,
+      "purpose": "",
+      "created": "2026-10-02T12:43:17.548Z",
+      "note": "Восстановлен 02.10.2026 после удаления"
+    },
     {
       "id": "ob_rs",
       "type": "payment_in",
@@ -86,24 +103,6 @@
       "purpose": "",
       "note": "",
       "created": "2026-09-30T06:18:40.981Z"
-    },
-    {
-      "id": "_1790749224941_2pirt1",
-      "type": "payment_in",
-      "number": "ПП-ВХ-0007",
-      "date": "2026-09-28",
-      "time": "12:19",
-      "status": "posted",
-      "account": "_1",
-      "accountTo": "",
-      "contractor": "ИП «Сапаров Канатбек»",
-      "article": "_1",
-      "currency": "_1",
-      "sum": 334400,
-      "rate": 1,
-      "purpose": "",
-      "note": "",
-      "created": "2026-09-30T06:20:24.941Z"
     },
     {
       "id": "_1790749336789_nsfgtr",
@@ -338,6 +337,24 @@
       "purpose": "",
       "note": "Возврат под отчета ",
       "created": "2026-10-02T12:54:49.749Z"
+    },
+    {
+      "id": "_1790749224941_2pirt1",
+      "type": "payment_in",
+      "number": "ПП-ВХ-0007",
+      "date": "2026-09-28",
+      "time": "12:19",
+      "status": "posted",
+      "account": "_1",
+      "accountTo": "",
+      "contractor": "ИП «Сапаров Канатбек»",
+      "article": "",
+      "currency": "_1",
+      "sum": 349600,
+      "rate": 1,
+      "purpose": "",
+      "note": "",
+      "created": "2026-09-30T06:20:24.941Z"
     }
   ],
   "cashDocuments": [
@@ -1912,6 +1929,24 @@
       "purpose": "Оплата по документу Реализация РТ-000080 от 02.10.2026",
       "note": "Создано на основании Реализация РТ-000080 от 02.10.2026",
       "created": "2026-10-02T11:58:26.088Z"
+    },
+    {
+      "id": "_1790947476455_iv98k5",
+      "type": "pko",
+      "number": "ПКО-0094",
+      "date": "2026-10-02",
+      "time": "19:24",
+      "status": "posted",
+      "account": "_2",
+      "accountTo": "",
+      "contractor": "Элмырза ",
+      "article": "_6",
+      "currency": "_1",
+      "sum": 15200,
+      "rate": 1,
+      "purpose": "",
+      "note": "",
+      "created": "2026-10-02T13:24:36.455Z"
     }
   ],
   "accounts": [
@@ -21027,6 +21062,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-10-02T13:23:59.979Z",
+      "user": "Разработчик",
+      "action": "Изменение документа",
+      "details": "payment_in ПП-ВХ-0007 на 349600"
+    },
     {
       "date": "2026-10-02T12:44:59.892Z",
       "user": "Разработчик",
