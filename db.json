@@ -17547,7 +17547,7 @@
         "date": "2026-10-02",
         "status": "posted",
         "opKind": "Товары (накладная, УПД)",
-        "contractor": "c25",
+        "contractor": "tmu3rmh7nur4e",
         "contract": "",
         "warehouse": "w1",
         "basis": "",
@@ -19309,6 +19309,18 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-10-02T11:58:36.280Z",
+      "user": "Разработчик",
+      "action": "Изменение документа",
+      "details": "sale РТ-000080"
+    },
+    {
+      "date": "2026-10-02T11:58:26.091Z",
+      "user": "Разработчик",
+      "action": "Создание документа",
+      "details": "pko ПКО-0093 на 950"
+    },
     {
       "date": "2026-10-02T11:58:17.320Z",
       "user": "Разработчик",
