@@ -15669,7 +15669,7 @@
         "type": "sale",
         "number": "РТ-000076",
         "date": "2026-10-01",
-        "status": "draft",
+        "status": "posted",
         "opKind": "Товары (накладная, УПД)",
         "contractor": "c1",
         "contract": "",
@@ -21503,6 +21503,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-10-02T13:57:46.514Z",
+      "user": "Разработчик",
+      "action": "Изменение документа",
+      "details": "sale РТ-000076"
+    },
     {
       "date": "2026-10-02T13:57:04.083Z",
       "user": "Разработчик",
