@@ -1641,6 +1641,24 @@
       "purpose": "Нал ",
       "note": "",
       "created": "2026-10-02T10:04:23.374Z"
+    },
+    {
+      "id": "_1790935540350_huvalw",
+      "type": "pko",
+      "number": "ПКО-0080",
+      "date": "2026-10-01",
+      "time": "16:04",
+      "status": "posted",
+      "account": "_3",
+      "accountTo": "",
+      "contractor": "Физ/лиц",
+      "article": "_1",
+      "currency": "_1",
+      "sum": 13500,
+      "rate": 1,
+      "purpose": "оплата за цемент Нал ",
+      "note": "",
+      "created": "2026-10-02T10:05:40.350Z"
     }
   ],
   "accounts": [
@@ -17007,6 +17025,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-10-02T10:04:23.377Z",
+      "user": "Разработчик",
+      "action": "Создание документа",
+      "details": "pko ПКО-0079 на 760"
+    },
     {
       "date": "2026-10-02T10:03:08.994Z",
       "user": "Разработчик",
