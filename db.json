@@ -1,5 +1,6 @@
 {
   "bankDocuments": [
+    {"id":"_1790947599263_fee30a","type":"payment_out","number":"ПП-0022","date":"2026-09-30","time":"20:00","status":"posted","account":"_1","accountTo":"","contractor":"Филиал Мбанк Плаза ОАО Мбанк ","article":"_5","currency":"_1","sum":100,"rate":1,"purpose":"Комиссия за безналичный перевод по гроссу юр лиц","note":"Комиссия банка (Мем.ор. 62795527)","created":"2026-10-02T13:26:39.263Z"},
     {
       "id": "_1790944997548_ssdp3w",
       "type": "payment_in",
@@ -22,13 +23,13 @@
       "id": "ob_rs",
       "type": "payment_in",
       "number": "НО-01",
-      "date": "2026-09-11",
+      "date": "2026-09-24",
       "status": "posted",
       "account": "_1",
       "contractor": "",
       "article": "_3",
       "currency": "_1",
-      "sum": 781065,
+      "sum": 140982.67,
       "rate": 1,
       "purpose": "Начальный остаток Р/с",
       "note": "Начальный остаток",
@@ -187,11 +188,11 @@
       "accountTo": "_4_usd",
       "contractor": "Элмырза ",
       "article": "_2",
-      "currency": "_2",
-      "sum": 19677.16,
-      "rate": 87.5,
+      "currency": "_1",
+      "sum": 1658751.5,
+      "rate": 0.011428571428571429,
       "purpose": "",
-      "note": "",
+      "note": "Конвертация KGS→USD по курсу 87.5: 1 658 751,50 KGS = 18 957,16 USD (Мем.ор. 60235210)",
       "created": "2026-10-01T14:03:24.442Z"
     },
     {
