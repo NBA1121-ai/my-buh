@@ -2018,6 +2018,24 @@
       "purpose": "Бектур программа 1с ",
       "note": "",
       "created": "2026-10-02T13:55:43.794Z"
+    },
+    {
+      "id": "_1790949634490_vbw44k",
+      "type": "pko",
+      "number": "ПКО-0097",
+      "date": "2026-10-02",
+      "time": "19:59",
+      "status": "posted",
+      "account": "_2",
+      "accountTo": "",
+      "contractor": "Физ/лиц",
+      "article": "_11",
+      "currency": "_1",
+      "sum": 27000,
+      "rate": 1,
+      "purpose": "Рома оплатил за 60меш цемента ",
+      "note": "",
+      "created": "2026-10-02T14:00:34.490Z"
     }
   ],
   "accounts": [
