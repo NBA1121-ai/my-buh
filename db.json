@@ -301,24 +301,6 @@
       "purpose": "",
       "note": "Снятье наличных в банке  ",
       "created": "2026-10-01T14:16:33.713Z"
-    },
-    {
-      "id": "_1790936038815_arizlc",
-      "type": "payment_out",
-      "number": "ПП-0019",
-      "date": "2026-10-02",
-      "time": "16:13",
-      "status": "draft",
-      "account": "_1",
-      "accountTo": "",
-      "contractor": "АРТУР",
-      "article": "_7",
-      "currency": "_1",
-      "sum": 30000,
-      "rate": 1,
-      "purpose": "АВАНС ",
-      "note": "",
-      "created": "2026-10-02T10:13:58.815Z"
     }
   ],
   "cashDocuments": [
@@ -17115,6 +17097,18 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-10-02T10:14:10.022Z",
+      "user": "Разработчик",
+      "action": "Удаление документа",
+      "details": "payment_out ПП-0019"
+    },
+    {
+      "date": "2026-10-02T10:13:58.818Z",
+      "user": "Разработчик",
+      "action": "Создание документа",
+      "details": "payment_out ПП-0019 на 30000"
+    },
     {
       "date": "2026-10-02T10:13:23.858Z",
       "user": "Разработчик",
