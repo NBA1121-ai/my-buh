@@ -319,6 +319,24 @@
       "purpose": "",
       "note": "",
       "created": "2026-10-02T12:43:17.548Z"
+    },
+    {
+      "id": "_1790945045908_odo4rb",
+      "type": "payment_out",
+      "number": "ПП-0020",
+      "date": "2026-10-02",
+      "time": "18:43",
+      "status": "posted",
+      "account": "_1",
+      "accountTo": "",
+      "contractor": "Артур",
+      "article": "_6",
+      "currency": "_1",
+      "sum": 1400000,
+      "rate": 1,
+      "purpose": "",
+      "note": "",
+      "created": "2026-10-02T12:44:05.908Z"
     }
   ],
   "cashDocuments": [
@@ -21008,6 +21026,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-10-02T12:43:17.551Z",
+      "user": "Разработчик",
+      "action": "Создание документа",
+      "details": "payment_in ПП-ВХ-0019 на 719750"
+    },
     {
       "date": "2026-10-02T12:34:49.363Z",
       "user": "Разработчик",
