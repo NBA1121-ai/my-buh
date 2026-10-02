@@ -17818,6 +17818,18 @@
             "total": 0
           },
           {
+            "nom": "n12",
+            "qty": 52.979,
+            "price": 0,
+            "account": "10.01",
+            "vat": -1,
+            "costAccount": "20.01",
+            "costItem": "ci1",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
             "nom": "n11",
             "qty": 79.5,
             "price": 0,
@@ -19801,6 +19813,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-10-02T12:27:34.826Z",
+      "user": "Разработчик",
+      "action": "Изменение документа",
+      "details": "shift_report ОПС-000001"
+    },
     {
       "date": "2026-10-02T12:27:23.274Z",
       "user": "Разработчик",
