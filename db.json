@@ -1,8 +1,58 @@
 {
   "bankDocuments": [
-    {"id":"ob_usd","type":"payment_in","number":"НО-02","date":"2026-09-24","status":"posted","account":"_4_usd","contractor":"","article":"_3","currency":"_2","sum":720,"rate":87.5,"purpose":"Начальный остаток валютный счёт (USD)","note":"Начальный остаток","created":"2026-09-24T00:00:00.000Z","time":"09:00"},
-    {"id":"_1790948041577_fee408","type":"payment_out","number":"ПП-0023","date":"2026-10-02","time":"20:00","status":"posted","account":"_1","accountTo":"","contractor":"Филиал Мбанк Плаза ОАО Мбанк ","article":"_5","currency":"_1","sum":408,"rate":1,"purpose":"Комиссия банка","note":"Комиссия банка (корректировка остатка по выписке на 02.10.2026)","created":"2026-10-02T13:34:01.577Z"},
-    {"id":"_1790947599263_fee30a","type":"payment_out","number":"ПП-0022","date":"2026-09-30","time":"20:00","status":"posted","account":"_1","accountTo":"","contractor":"Филиал Мбанк Плаза ОАО Мбанк ","article":"_5","currency":"_1","sum":100,"rate":1,"purpose":"Комиссия за безналичный перевод по гроссу юр лиц","note":"Комиссия банка (Мем.ор. 62795527)","created":"2026-10-02T13:26:39.263Z"},
+    {
+      "id": "ob_usd",
+      "type": "payment_in",
+      "number": "НО-02",
+      "date": "2026-09-24",
+      "status": "posted",
+      "account": "_4_usd",
+      "contractor": "",
+      "article": "_3",
+      "currency": "_2",
+      "sum": 720,
+      "rate": 87.5,
+      "purpose": "Начальный остаток валютный счёт (USD)",
+      "note": "Начальный остаток",
+      "created": "2026-09-24T00:00:00.000Z",
+      "time": "09:00"
+    },
+    {
+      "id": "_1790948041577_fee408",
+      "type": "payment_out",
+      "number": "ПП-0023",
+      "date": "2026-10-02",
+      "time": "20:00",
+      "status": "posted",
+      "account": "_1",
+      "accountTo": "",
+      "contractor": "Филиал Мбанк Плаза ОАО Мбанк ",
+      "article": "_5",
+      "currency": "_1",
+      "sum": 408,
+      "rate": 1,
+      "purpose": "Комиссия банка",
+      "note": "Комиссия банка (корректировка остатка по выписке на 02.10.2026)",
+      "created": "2026-10-02T13:34:01.577Z"
+    },
+    {
+      "id": "_1790947599263_fee30a",
+      "type": "payment_out",
+      "number": "ПП-0022",
+      "date": "2026-09-30",
+      "time": "20:00",
+      "status": "posted",
+      "account": "_1",
+      "accountTo": "",
+      "contractor": "Филиал Мбанк Плаза ОАО Мбанк ",
+      "article": "_5",
+      "currency": "_1",
+      "sum": 100,
+      "rate": 1,
+      "purpose": "Комиссия за безналичный перевод по гроссу юр лиц",
+      "note": "Комиссия банка (Мем.ор. 62795527)",
+      "created": "2026-10-02T13:26:39.263Z"
+    },
     {
       "id": "_1790944997548_ssdp3w",
       "type": "payment_in",
@@ -1878,24 +1928,6 @@
       "purpose": "Обналичка ",
       "note": "",
       "created": "2026-10-02T11:11:30.356Z"
-    },
-    {
-      "id": "_1790939582412_d4csjy",
-      "type": "pko",
-      "number": "ПКО-0092",
-      "date": "2026-09-30",
-      "time": "17:12",
-      "status": "draft",
-      "account": "_3",
-      "accountTo": "",
-      "contractor": "АРТУР",
-      "article": "_6",
-      "currency": "_1",
-      "sum": 348000,
-      "rate": 1,
-      "purpose": "Обналичка Артур ",
-      "note": "",
-      "created": "2026-10-02T11:13:02.412Z"
     },
     {
       "id": "_1790936170759_lq1n9j",
@@ -21065,6 +21097,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-10-02T13:41:00.097Z",
+      "user": "Разработчик",
+      "action": "Удаление документа",
+      "details": "pko ПКО-0092"
+    },
     {
       "date": "2026-10-02T13:23:59.979Z",
       "user": "Разработчик",
