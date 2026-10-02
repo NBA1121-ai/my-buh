@@ -301,6 +301,24 @@
       "purpose": "",
       "note": "Снятье наличных в банке  ",
       "created": "2026-10-01T14:16:33.713Z"
+    },
+    {
+      "id": "_1790944997548_ssdp3w",
+      "type": "payment_in",
+      "number": "ПП-ВХ-0019",
+      "date": "2026-10-02",
+      "time": "18:42",
+      "status": "posted",
+      "account": "",
+      "accountTo": "",
+      "contractor": "ОсОО «Аиша Холдинг»",
+      "article": "_11",
+      "currency": "_1",
+      "sum": 719750,
+      "rate": 1,
+      "purpose": "",
+      "note": "",
+      "created": "2026-10-02T12:43:17.548Z"
     }
   ],
   "cashDocuments": [
