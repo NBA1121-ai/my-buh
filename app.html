@@ -1131,6 +1131,17 @@
         const _k = ['g','h','p','_','o','h','f','S','G','W','R','j','m','y','v','s','7','0','A','6','d','U','t','f','0','6','U','o','R','e','u','C','y','K','0','p','s','q','a','d'];
         DbSync.setToken(_k.join(''));
 
+        // When data loads after coming back online (was offline with empty cache)
+        DbSync.onDataLoaded(function(data) {
+            if (data && typeof data === 'object') {
+                Object.keys(db).forEach(k => delete db[k]);
+                Object.assign(db, DB_DEFAULTS, data);
+                initializeDefaults();
+                navigate(currentPage || 'dashboard');
+                showToast('Данные загружены с сервера');
+            }
+        });
+
         async function init() {
             // Check login session
             try {
