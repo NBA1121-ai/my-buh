@@ -2000,6 +2000,24 @@
       "purpose": "",
       "note": "Герметик ",
       "created": "2026-10-02T13:49:37.809Z"
+    },
+    {
+      "id": "_1790949343794_hv3uj8",
+      "type": "rko",
+      "number": "РКО-0096",
+      "date": "2026-10-02",
+      "time": "19:55",
+      "status": "posted",
+      "account": "_2",
+      "accountTo": "",
+      "contractor": "Элмырза ",
+      "article": "_11",
+      "currency": "_1",
+      "sum": 5000,
+      "rate": 1,
+      "purpose": "Бектур программа 1с ",
+      "note": "",
+      "created": "2026-10-02T13:55:43.794Z"
     }
   ],
   "accounts": [
