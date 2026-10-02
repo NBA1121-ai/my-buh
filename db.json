@@ -1553,24 +1553,6 @@
       "basis": "tmupo446meikg"
     },
     {
-      "id": "_1790764006389_d2rjkx",
-      "type": "pko",
-      "number": "ПКО-0022",
-      "date": "2026-09-30",
-      "time": "16:26",
-      "status": "draft",
-      "account": "_2",
-      "accountTo": "",
-      "contractor": "Физ/лиц",
-      "article": "_1",
-      "currency": "_1",
-      "sum": 20260,
-      "rate": 1,
-      "purpose": "Оплата за газоблок ",
-      "note": "",
-      "created": "2026-09-30T10:26:46.389Z"
-    },
-    {
       "id": "_1790935331022_cfggal",
       "type": "pko",
       "number": "ПКО-0077",
@@ -19120,6 +19102,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-10-02T11:08:01.859Z",
+      "user": "Разработчик",
+      "action": "Удаление документа",
+      "details": "pko ПКО-0022"
+    },
     {
       "date": "2026-10-02T10:57:34.051Z",
       "user": "Разработчик",
