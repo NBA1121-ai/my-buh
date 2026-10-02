@@ -2319,7 +2319,7 @@
         "type": "sale",
         "number": "РТ-000063",
         "date": "2026-09-26",
-        "status": "posted",
+        "status": "draft",
         "opKind": "Товары (накладная, УПД)",
         "contractor": "c26",
         "contract": "",
