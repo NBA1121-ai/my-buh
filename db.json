@@ -303,24 +303,6 @@
       "created": "2026-10-01T14:16:33.713Z"
     },
     {
-      "id": "_1790944997548_ssdp3w",
-      "type": "payment_in",
-      "number": "ПП-ВХ-0019",
-      "date": "2026-10-02",
-      "time": "18:42",
-      "status": "posted",
-      "account": "",
-      "accountTo": "",
-      "contractor": "ОсОО «Аиша Холдинг»",
-      "article": "_11",
-      "currency": "_1",
-      "sum": 719750,
-      "rate": 1,
-      "purpose": "",
-      "note": "",
-      "created": "2026-10-02T12:43:17.548Z"
-    },
-    {
       "id": "_1790945045908_odo4rb",
       "type": "payment_out",
       "number": "ПП-0020",
@@ -21026,6 +21008,18 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-10-02T12:44:59.892Z",
+      "user": "Разработчик",
+      "action": "Удаление документа",
+      "details": "payment_in ПП-ВХ-0019"
+    },
+    {
+      "date": "2026-10-02T12:44:57.239Z",
+      "user": "Разработчик",
+      "action": "Изменение документа",
+      "details": "payment_in ПП-ВХ-0019 на 719750"
+    },
     {
       "date": "2026-10-02T12:43:17.551Z",
       "user": "Разработчик",
