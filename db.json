@@ -16284,8 +16284,8 @@
         "id": "tmuqtx2so0rvz",
         "type": "purchase",
         "number": "ПТ-000009",
-        "date": "2026-10-02",
-        "status": "draft",
+        "date": "2026-09-30",
+        "status": "posted",
         "opKind": "Товары (накладная, УПД)",
         "contractor": "c48",
         "contract": "",
@@ -17997,6 +17997,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-10-02T10:37:36.361Z",
+      "user": "Разработчик",
+      "action": "Изменение документа",
+      "details": "purchase ПТ-000009"
+    },
     {
       "date": "2026-10-02T10:37:30.729Z",
       "user": "Разработчик",
