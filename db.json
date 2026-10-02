@@ -17606,6 +17606,21 @@
         "cost": 0,
         "account": "43",
         "nomGroup": "ng2"
+      },
+      {
+        "id": "tmuqu08n53tf1",
+        "name": "Услуга Экскаватора/ Бопкет  ",
+        "article": "",
+        "kind": "Товар",
+        "unit": "",
+        "vat": 0,
+        "price": 0,
+        "cost": 0,
+        "account": "",
+        "country": "",
+        "group": "",
+        "planPrice": "",
+        "nomGroup": ""
       }
     ],
     "warehouses": [
