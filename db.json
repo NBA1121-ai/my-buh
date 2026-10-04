@@ -1966,24 +1966,6 @@
       "created": "2026-10-02T11:58:26.088Z"
     },
     {
-      "id": "_1790947476455_iv98k5",
-      "type": "pko",
-      "number": "ПКО-0094",
-      "date": "2026-10-02",
-      "time": "19:24",
-      "status": "posted",
-      "account": "_2",
-      "accountTo": "",
-      "contractor": "Элмырза ",
-      "article": "_6",
-      "currency": "_1",
-      "sum": 15200,
-      "rate": 1,
-      "purpose": "",
-      "note": "",
-      "created": "2026-10-02T13:24:36.455Z"
-    },
-    {
       "id": "_1790948977809_7bx5kl",
       "type": "rko",
       "number": "РКО-0095",
@@ -2054,6 +2036,24 @@
       "purpose": "завтра даст ",
       "note": "",
       "created": "2026-10-02T14:03:54.883Z"
+    },
+    {
+      "id": "_1790947476455_iv98k5",
+      "type": "rko",
+      "number": "ПКО-0094",
+      "date": "2026-10-02",
+      "time": "19:24",
+      "status": "posted",
+      "account": "_2",
+      "accountTo": "",
+      "contractor": "Элмырза ",
+      "article": "_6",
+      "currency": "_1",
+      "sum": 15200,
+      "rate": 1,
+      "purpose": "Артуру 10сом от реал ИП САПАРОВ ",
+      "note": "",
+      "created": "2026-10-02T13:24:36.455Z"
     }
   ],
   "accounts": [
