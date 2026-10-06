@@ -4601,7 +4601,7 @@
 
         function renderDebtReport(group) {
             const isSale = group === 'sale';
-            const chargeTypes = isSale ? ['sale', 'production_services', 'commission_report', 'sale_correction', 'customer_invoice'] : ['purchase', 'add_expenses', 'purchase_correction'];
+            const chargeTypes = isSale ? ['sale', 'production_services', 'commission_report', 'sale_correction'] : ['purchase', 'add_expenses', 'purchase_correction'];
             const returnTypes = isSale ? ['sale_return'] : ['purchase_return'];
             const payTypes = isSale ? ['payment_in', 'pko'] : ['payment_out', 'rko'];
             const today = new Date().toISOString().slice(0, 10);
@@ -6136,7 +6136,7 @@
                         const tt = TT[d.type];
                         if (!tt) return;
                         const sum = Number(d.total) || Number(d.sum) || 0;
-                        if (tt.group === 'sale' && !['sale_return','sale_correction'].includes(d.type)) sold += sum;
+                        if (tt.group === 'sale' && !['sale_return','sale_correction','customer_invoice'].includes(d.type)) sold += sum;
                         if (d.type === 'sale_return') sold -= sum;
                     });
                     (db.bankDocuments || []).filter(d => matchContractor(d.contractor, c.name) && d.type === 'payment_in' && d.date <= to).forEach(d => paid += toKGS(d));
