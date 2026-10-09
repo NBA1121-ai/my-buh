@@ -444,6 +444,24 @@
       "purpose": "за отбор цемента / 9 партии ",
       "note": "",
       "created": "2026-10-09T14:54:36.084Z"
+    },
+    {
+      "id": "_1791557729685_mfkbin",
+      "type": "payment_out",
+      "number": "ПП-0026",
+      "date": "2026-10-06",
+      "time": "20:54",
+      "status": "posted",
+      "account": "_1",
+      "accountTo": "",
+      "contractor": "ФИЛИАЛ \"МБАНК ПЛАЗА\" ОАО \"МБАНК\"",
+      "article": "_11",
+      "currency": "_1",
+      "sum": 100,
+      "rate": 1,
+      "purpose": "КОМИССИЯ ",
+      "note": "",
+      "created": "2026-10-09T14:55:29.685Z"
     }
   ],
   "cashDocuments": [
@@ -27101,6 +27119,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-10-09T14:54:36.090Z",
+      "user": "Директор",
+      "action": "Создание документа",
+      "details": "payment_out ПП-0025 на 215712"
+    },
     {
       "date": "2026-10-09T14:53:00.042Z",
       "user": "Директор",
