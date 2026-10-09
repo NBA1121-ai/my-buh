@@ -25473,8 +25473,8 @@
         "id": "tmv13xe9x9tf4",
         "type": "purchase",
         "number": "ПТ-000018",
-        "date": "2026-10-09",
-        "status": "draft",
+        "date": "2026-09-30",
+        "status": "posted",
         "opKind": "Товары (накладная, УПД)",
         "contractor": "c48",
         "contract": "",
@@ -27251,6 +27251,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-10-09T15:15:34.277Z",
+      "user": "Директор",
+      "action": "Изменение документа",
+      "details": "purchase ПТ-000018"
+    },
     {
       "date": "2026-10-09T14:54:36.090Z",
       "user": "Директор",
