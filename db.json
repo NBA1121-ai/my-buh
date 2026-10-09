@@ -2342,6 +2342,24 @@
       "purpose": "Расход Элмырза ",
       "note": "",
       "created": "2026-10-09T14:35:16.885Z"
+    },
+    {
+      "id": "_1791556550092_kf7btw",
+      "type": "rko",
+      "number": "РКО-0115",
+      "date": "2026-10-07",
+      "time": "20:35",
+      "status": "posted",
+      "account": "_2",
+      "accountTo": "",
+      "contractor": "Умут",
+      "article": "_7",
+      "currency": "_1",
+      "sum": 35000,
+      "rate": 1,
+      "purpose": "Аванс Умут ",
+      "note": "",
+      "created": "2026-10-09T14:35:50.092Z"
     }
   ],
   "accounts": [
@@ -26657,6 +26675,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-10-09T14:35:16.890Z",
+      "user": "Директор",
+      "action": "Создание документа",
+      "details": "rko РКО-0114 на 2608"
+    },
     {
       "date": "2026-10-09T14:34:14.353Z",
       "user": "Директор",
