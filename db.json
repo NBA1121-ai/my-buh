@@ -2144,6 +2144,24 @@
       "purpose": "Аванс ",
       "note": "",
       "created": "2026-10-09T14:21:40.789Z"
+    },
+    {
+      "id": "_1791555732628_c0gb1t",
+      "type": "rko",
+      "number": "РКО-0104",
+      "date": "2026-10-03",
+      "time": "20:21",
+      "status": "posted",
+      "account": "_2",
+      "accountTo": "",
+      "contractor": "Ясин ",
+      "article": "_7",
+      "currency": "",
+      "sum": 30000,
+      "rate": 1,
+      "purpose": "Аванс ",
+      "note": "",
+      "created": "2026-10-09T14:22:12.628Z"
     }
   ],
   "accounts": [
@@ -26459,6 +26477,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-10-09T14:21:40.794Z",
+      "user": "Директор",
+      "action": "Создание документа",
+      "details": "rko РКО-0103 на 2000"
+    },
     {
       "date": "2026-10-09T14:20:23.178Z",
       "user": "Директор",
