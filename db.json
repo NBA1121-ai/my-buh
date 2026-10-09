@@ -22489,7 +22489,7 @@
         "id": "tmv119jysnpdw",
         "type": "sale",
         "number": "РТ-000101",
-        "date": "2026-10-09",
+        "date": "2026-10-06",
         "status": "draft",
         "opKind": "Товары (накладная, УПД)",
         "contractor": "c1",
@@ -22509,13 +22509,13 @@
         "invoiceStatus": "",
         "goods": [
           {
-            "nom": "n3",
-            "qty": 960,
-            "price": 196.673,
+            "nom": "n1",
+            "qty": 1760,
+            "price": 98.364,
             "vat": -1,
-            "sum": 188806.08,
+            "sum": 173120.64,
             "vatSum": 0,
-            "total": 188806.08,
+            "total": 173120.64,
             "account": "43",
             "content": "",
             "country": "",
@@ -22613,9 +22613,9 @@
         "actDate": "",
         "severanceMonths": 0,
         "baseDoc": "",
-        "sum": 188806.08,
+        "sum": 173120.64,
         "vatTotal": 0,
-        "total": 188806.08
+        "total": 173120.64
       }
     ],
     "org": {
@@ -24267,6 +24267,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-10-09T14:02:29.045Z",
+      "user": "Директор",
+      "action": "Изменение документа",
+      "details": "sale РТ-000101"
+    },
     {
       "date": "2026-10-09T14:00:52.221Z",
       "user": "Директор",
