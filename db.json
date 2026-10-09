@@ -426,6 +426,24 @@
       "purpose": "пополнение счета ",
       "note": "",
       "created": "2026-10-09T14:53:00.037Z"
+    },
+    {
+      "id": "_1791557676084_wooil7",
+      "type": "payment_out",
+      "number": "ПП-0025",
+      "date": "2026-10-06",
+      "time": "20:53",
+      "status": "posted",
+      "account": "_1",
+      "accountTo": "",
+      "contractor": "Учреждение РЦ \"Сертификация",
+      "article": "_5",
+      "currency": "_1",
+      "sum": 215712,
+      "rate": 1,
+      "purpose": "за отбор цемента / 9 партии ",
+      "note": "",
+      "created": "2026-10-09T14:54:36.084Z"
     }
   ],
   "cashDocuments": [
@@ -27083,6 +27101,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-10-09T14:53:00.042Z",
+      "user": "Директор",
+      "action": "Создание документа",
+      "details": "payment_in ПП-ВХ-0024 на 760000"
+    },
     {
       "date": "2026-10-09T14:52:24.738Z",
       "user": "Директор",
