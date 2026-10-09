@@ -21790,7 +21790,7 @@
         "id": "tmv0u2umsgezw",
         "type": "sale",
         "number": "РТ-000096",
-        "date": "2026-10-05",
+        "date": "2026-10-06",
         "status": "posted",
         "opKind": "Товары (накладная, УПД)",
         "contractor": "tmu3rmh7nur4e",
@@ -23594,6 +23594,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-10-09T10:40:29.788Z",
+      "user": "Директор",
+      "action": "Изменение документа",
+      "details": "sale РТ-000096"
+    },
     {
       "date": "2026-10-09T10:40:18.860Z",
       "user": "Директор",
