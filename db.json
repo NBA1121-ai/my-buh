@@ -2306,6 +2306,24 @@
       "purpose": "Аванс Умут ",
       "note": "",
       "created": "2026-10-09T14:33:35.644Z"
+    },
+    {
+      "id": "_1791556454349_cp9vyw",
+      "type": "rko",
+      "number": "РКО-0113",
+      "date": "2026-10-06",
+      "time": "20:33",
+      "status": "posted",
+      "account": "_2",
+      "accountTo": "",
+      "contractor": "Ясин",
+      "article": "_7",
+      "currency": "_1",
+      "sum": 20710,
+      "rate": 1,
+      "purpose": "Зп Ясин ",
+      "note": "",
+      "created": "2026-10-09T14:34:14.349Z"
     }
   ],
   "accounts": [
@@ -26621,6 +26639,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-10-09T14:33:35.649Z",
+      "user": "Директор",
+      "action": "Создание документа",
+      "details": "rko РКО-0112 на 4960"
+    },
     {
       "date": "2026-10-09T14:33:05.489Z",
       "user": "Директор",
