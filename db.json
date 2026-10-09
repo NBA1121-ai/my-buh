@@ -23967,8 +23967,8 @@
         "id": "tmv11ku316dzp",
         "type": "sale",
         "number": "РТ-000112",
-        "date": "2026-10-09",
-        "status": "draft",
+        "date": "2026-10-08",
+        "status": "posted",
         "opKind": "Товары (накладная, УПД)",
         "contractor": "c26",
         "contract": "",
@@ -23988,12 +23988,12 @@
         "goods": [
           {
             "nom": "n7",
-            "qty": 1000,
+            "qty": 1250,
             "price": 9,
             "vat": -1,
-            "sum": 9000,
+            "sum": 11250,
             "vatSum": 0,
-            "total": 9000,
+            "total": 11250,
             "account": "10.01",
             "content": "",
             "country": "",
@@ -24091,9 +24091,9 @@
         "actDate": "",
         "severanceMonths": 0,
         "baseDoc": "",
-        "sum": 9000,
+        "sum": 11250,
         "vatTotal": 0,
-        "total": 9000
+        "total": 11250
       }
     ],
     "org": {
@@ -25745,6 +25745,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-10-09T14:09:51.357Z",
+      "user": "Директор",
+      "action": "Изменение документа",
+      "details": "sale РТ-000112"
+    },
     {
       "date": "2026-10-09T14:09:36.341Z",
       "user": "Директор",
