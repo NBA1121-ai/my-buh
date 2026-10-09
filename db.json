@@ -2468,6 +2468,24 @@
       "purpose": "Оплата за песок ",
       "note": "",
       "created": "2026-10-09T14:50:22.525Z"
+    },
+    {
+      "id": "_1791557544733_hq9mvv",
+      "type": "pko",
+      "number": "ПКО-0122",
+      "date": "2026-10-06",
+      "time": "20:51",
+      "status": "posted",
+      "account": "_3",
+      "accountTo": "",
+      "contractor": "Артур",
+      "article": "_6",
+      "currency": "_1",
+      "sum": 760000,
+      "rate": 1,
+      "purpose": "",
+      "note": "",
+      "created": "2026-10-09T14:52:24.733Z"
     }
   ],
   "accounts": [
@@ -27047,6 +27065,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-10-09T14:50:22.530Z",
+      "user": "Директор",
+      "action": "Создание документа",
+      "details": "rko РКО-0121 на 224000"
+    },
     {
       "date": "2026-10-09T14:49:47.109Z",
       "user": "Директор",
