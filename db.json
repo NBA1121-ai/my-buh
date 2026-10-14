@@ -26442,8 +26442,8 @@
         "id": "tmv7ignp7pfrk",
         "type": "shift_report",
         "number": "ОПС-000010",
-        "date": "2026-10-14",
-        "status": "draft",
+        "date": "2026-10-05",
+        "status": "posted",
         "opKind": "",
         "contractor": "",
         "contract": "",
@@ -26469,7 +26469,7 @@
           "consignee": "",
           "address": "",
           "responsible": "",
-          "comment": "2 станок- 30 поддон чисто ",
+          "comment": "2 станок- 4 поддон чисто 1 брак ",
           "signHead": "Камбаров Артур Майсалбекович",
           "signAcc": "Жаныбеков Элмырза Максатбекович",
           "signRelease": "",
@@ -26623,7 +26623,7 @@
         "products": [
           {
             "nom": "n1",
-            "qty": 720,
+            "qty": 96,
             "price": 0,
             "vat": -1,
             "sum": 0,
@@ -26635,7 +26635,7 @@
           },
           {
             "nom": "n3",
-            "qty": 360,
+            "qty": 48,
             "price": 0,
             "vat": -1,
             "sum": 0,
@@ -26643,6 +26643,18 @@
             "total": 0,
             "account": "43",
             "spec": "spec1",
+            "nomGroup": "ng_gb"
+          },
+          {
+            "nom": "n26",
+            "qty": 24,
+            "price": 0,
+            "vat": -1,
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0,
+            "account": "43",
+            "spec": "spec6",
             "nomGroup": "ng_gb"
           }
         ],
@@ -28340,6 +28352,12 @@
     "noDemo": true
   },
   "_activityLog": [
+    {
+      "date": "2026-10-14T02:50:00.195Z",
+      "user": "Директор",
+      "action": "Изменение документа",
+      "details": "shift_report ОПС-000010"
+    },
     {
       "date": "2026-10-14T02:48:52.515Z",
       "user": "Директор",
