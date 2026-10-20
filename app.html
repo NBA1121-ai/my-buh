@@ -1575,7 +1575,13 @@
             const sections = { bank: 'Банк', bank_in: 'Банк', bank_out: 'Банк', cash: 'Касса', cash_pko: 'Касса', cash_rko: 'Касса', reports: 'Отчёты ДДС', cashbook: 'Отчёты ДДС', articles: 'Справочники', accounts: 'Справочники', banks: 'Справочники', cashs: 'Справочники', currencies: 'Справочники', users: 'Администрирование', actlog: 'Администрирование', monthly_report: 'Сервис' };
             const bc = document.getElementById('breadcrumb');
             if (bc) bc.innerHTML = sections[currentPage] ? '<a href="#" onclick="selectPage(\'dashboard\');return false" style="color:#999;text-decoration:none">Главная</a> / ' + sections[currentPage] + ' / ' + esc(title) : '';
-            document.getElementById('content').innerHTML = pages[currentPage]();
+            console.log('[renderPage] currentPage =', currentPage, '| fn =', pages[currentPage] ? pages[currentPage].name : 'UNDEFINED');
+            try {
+                document.getElementById('content').innerHTML = pages[currentPage]();
+            } catch(e) {
+                console.error('[renderPage] ERROR rendering', currentPage, e);
+                document.getElementById('content').innerHTML = '<div class="empty-state">Ошибка отображения страницы: ' + esc(e.message) + '</div>';
+            }
             if (currentPage === 'dashboard') initDashCharts();
         }
 
@@ -1706,7 +1712,9 @@
         function renderCashRko() { return _renderCashFiltered('rko', 'cash_rko', 'Расходные кассовые ордера (РКО)', 'Нет расходных кассовых ордеров'); }
 
         function _renderBankFiltered(types, pageKey, title, emptyMsg) {
+            const allBankCount = db.bankDocuments.length;
             let docs = db.bankDocuments.filter(d => types.includes(d.type));
+            console.log('[BankFiltered]', title, '| types:', types, '| all:', allBankCount, '| filtered:', docs.length, '| doc types:', db.bankDocuments.map(d => d.type));
             if (_finFilter.from) docs = docs.filter(d => d.date >= _finFilter.from);
             if (_finFilter.to) docs = docs.filter(d => d.date <= _finFilter.to);
             if (_finFilter.search) { const q = _finFilter.search.toLowerCase(); docs = docs.filter(d => (d.number + ' ' + (d.contractor || '') + ' ' + (d.purpose || '') + ' ' + (d.note || '') + ' ' + d.sum).toLowerCase().includes(q)); }
@@ -1716,8 +1724,12 @@
             const pg = paginate(docs, pageKey);
             const defType = types[0];
             const typeOpts = types.map(t => ALL_DOC_TYPES[t] ? `<option value="${t}">${ALL_DOC_TYPES[t]}</option>` : '').join('');
+            const filterInfo = docs.length < allBankCount
+                ? `<span style="font-size:12px;color:var(--primary);margin-left:8px">(показано ${docs.length} из ${allBankCount})</span>`
+                : allBankCount > 0 ? `<span style="font-size:12px;color:var(--warning);margin-left:8px">(все ${allBankCount} док. имеют тип: ${types.map(t => ALL_DOC_TYPES[t] || t).join(', ')})</span>` : '';
 
             return `
+                <div style="margin-bottom:8px"><h3 style="margin:0;display:inline">${esc(title)}</h3>${filterInfo}</div>
                 <div class="filters" style="display:flex;gap:10px;align-items:end;margin-bottom:12px;flex-wrap:wrap">
                     <div class="filter-group"><label>Период с</label><input type="date" value="${_finFilter.from}" onchange="_finFilter.from=this.value;renderPage()"></div>
                     <div class="filter-group"><label>по</label><input type="date" value="${_finFilter.to}" onchange="_finFilter.to=this.value;renderPage()"></div>
@@ -1756,7 +1768,9 @@
         }
 
         function _renderCashFiltered(type, pageKey, title, emptyMsg) {
+            const allCashCount = db.cashDocuments.length;
             let docs = db.cashDocuments.filter(d => d.type === type);
+            console.log('[CashFiltered]', title, '| type:', type, '| all:', allCashCount, '| filtered:', docs.length, '| doc types:', db.cashDocuments.map(d => d.type));
             if (_finFilter.from) docs = docs.filter(d => d.date >= _finFilter.from);
             if (_finFilter.to) docs = docs.filter(d => d.date <= _finFilter.to);
             if (_finFilter.search) { const q = _finFilter.search.toLowerCase(); docs = docs.filter(d => (d.number + ' ' + (d.contractor || '') + ' ' + (d.purpose || '') + ' ' + (d.note || '') + ' ' + d.sum).toLowerCase().includes(q)); }
@@ -1765,8 +1779,12 @@
             const total = posted.reduce((s, d) => s + Number(d.sum || 0) * (Number(d.rate) || 1), 0);
             const pg = paginate(docs, pageKey);
             const typeOpt = ALL_DOC_TYPES[type] ? `<option value="${type}">${ALL_DOC_TYPES[type]}</option>` : '';
+            const filterInfo = docs.length < allCashCount
+                ? `<span style="font-size:12px;color:var(--primary);margin-left:8px">(показано ${docs.length} из ${allCashCount})</span>`
+                : allCashCount > 0 ? `<span style="font-size:12px;color:var(--warning);margin-left:8px">(все ${allCashCount} док. имеют тип: ${ALL_DOC_TYPES[type] || type})</span>` : '';
 
             return `
+                <div style="margin-bottom:8px"><h3 style="margin:0;display:inline">${esc(title)}</h3>${filterInfo}</div>
                 <div class="filters" style="display:flex;gap:10px;align-items:end;margin-bottom:12px;flex-wrap:wrap">
                     <div class="filter-group"><label>Период с</label><input type="date" value="${_finFilter.from}" onchange="_finFilter.from=this.value;renderPage()"></div>
                     <div class="filter-group"><label>по</label><input type="date" value="${_finFilter.to}" onchange="_finFilter.to=this.value;renderPage()"></div>
