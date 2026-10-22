@@ -1030,7 +1030,7 @@
                         </div>
                         <div class="form-group" id="docContractorGroup" style="position:relative">
                             <label>Контрагент</label>
-                            <input type="text" id="docContractor" placeholder="Начните вводить..." autocomplete="off">
+                            <input type="text" id="docContractor" placeholder="Выберите из списка..." autocomplete="off">
                             <div id="contractorDropdown" class="autocomplete-dropdown" style="display:none"></div>
                         </div>
                     </div>
@@ -1444,7 +1444,7 @@
             }
 
             function showDropdown(list, query) {
-                if (!list.length) { dropdown.style.display = 'none'; return; }
+                if (!list.length) { dropdown.innerHTML = '<div class="ac-item" style="color:var(--text-secondary);cursor:default">Не найдено</div>'; dropdown.style.display = ''; return; }
                 acIndex = -1;
                 dropdown.innerHTML = list.map((c, i) =>
                     '<div class="ac-item" data-index="' + i + '" data-name="' + esc(c.name) + '">' + highlightMatch(c.name, query) + '</div>'
@@ -1475,7 +1475,17 @@
                 showDropdown(filtered, q);
             });
 
-            input.addEventListener('blur', hideDropdown);
+            input.addEventListener('blur', function() {
+                setTimeout(() => {
+                    dropdown.style.display = 'none';
+                    const v = input.value.trim();
+                    if (!v) return;
+                    const all = getContractors();
+                    const match = all.find(c => c.name.toLowerCase() === v.toLowerCase());
+                    if (match) { input.value = match.name; }
+                    else { input.value = ''; }
+                }, 200);
+            });
 
             input.addEventListener('keydown', function(e) {
                 const items = dropdown.querySelectorAll('.ac-item');
