@@ -26701,6 +26701,958 @@
         "sum": 0,
         "vatTotal": 0,
         "total": 0
+      },
+      {
+        "id": "tmvyv8ipvyteqzn4",
+        "type": "inventory",
+        "number": "ИНВ-000001",
+        "date": "2026-10-30",
+        "status": "posted",
+        "opKind": "",
+        "contractor": "",
+        "contract": "",
+        "warehouse": "w1",
+        "basis": "",
+        "payTerm": "",
+        "settle": {
+          "acc": "62.01",
+          "adv": "62.02",
+          "offset": "Автоматически"
+        },
+        "priceType": "pt1",
+        "vatMode": "in",
+        "discount": 0,
+        "payUntil": "",
+        "invoiceStatus": "",
+        "goods": [
+          {
+            "nom": "n1",
+            "qtyAcc": 2017,
+            "qtyFact": 9647,
+            "qty": 9647,
+            "price": 0,
+            "vat": -1,
+            "account": "43",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n2",
+            "qtyAcc": 1316,
+            "qtyFact": 750,
+            "qty": 750,
+            "price": 0,
+            "vat": -1,
+            "account": "43",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n3",
+            "qtyAcc": 3943,
+            "qtyFact": 10625,
+            "qty": 10625,
+            "price": 0,
+            "vat": -1,
+            "account": "43",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n4",
+            "qtyAcc": 216725,
+            "qtyFact": 350400,
+            "qty": 350400,
+            "price": 0,
+            "vat": -1,
+            "account": "43",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n7",
+            "qtyAcc": 9440,
+            "qtyFact": 41650,
+            "qty": 41650,
+            "price": 0,
+            "vat": -1,
+            "account": "10.01",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n6",
+            "qtyAcc": 10300,
+            "qtyFact": 225125,
+            "qty": 225125,
+            "price": 0,
+            "vat": -1,
+            "account": "10.01",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n9",
+            "qtyAcc": 306.74,
+            "qtyFact": 187.6,
+            "qty": 187.6,
+            "price": 0,
+            "vat": -1,
+            "account": "10.01",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n11",
+            "qtyAcc": 860,
+            "qtyFact": 396,
+            "qty": 396,
+            "price": 0,
+            "vat": -1,
+            "account": "10.01",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n12",
+            "qtyAcc": 483.108,
+            "qtyFact": 107.5,
+            "qty": 107.5,
+            "price": 0,
+            "vat": -1,
+            "account": "10.01",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n10",
+            "qtyAcc": 159.4,
+            "qtyFact": 24,
+            "qty": 24,
+            "price": 0,
+            "vat": -1,
+            "account": "10.01",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n18",
+            "qtyAcc": 37680,
+            "qtyFact": 20000,
+            "qty": 20000,
+            "price": 0,
+            "vat": -1,
+            "account": "10.01",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n13",
+            "qtyAcc": 1806.892,
+            "qtyFact": 979.5,
+            "qty": 979.5,
+            "price": 0,
+            "vat": -1,
+            "account": "10.01",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          }
+        ],
+        "services": [],
+        "agent": [],
+        "tara": [],
+        "extra": {
+          "consignor": "",
+          "consignee": "",
+          "address": "",
+          "responsible": "",
+          "comment": "Фактические остатки на 30.10.2026",
+          "signHead": "Камбаров Артур Майсалбекович",
+          "signAcc": "Жаныбеков Элмырза Максатбекович",
+          "signRelease": "",
+          "signGave": ""
+        },
+        "sf": null,
+        "gtdData": {
+          "number": "",
+          "customsValue": 0,
+          "dutyPct": 0,
+          "vatPct": 12,
+          "fee": 0,
+          "deposit": ""
+        },
+        "poa": {
+          "person": "",
+          "position": "",
+          "passport": "",
+          "validTo": ""
+        },
+        "recon": {
+          "from": "",
+          "to": "",
+          "rows": [],
+          "openBal": 0
+        },
+        "payCash": 0,
+        "payCard": 0,
+        "rewardPct": 10,
+        "corrKind": "",
+        "sum": 0,
+        "vatTotal": 0,
+        "total": 0,
+        "time": "20:00",
+        "created": "2026-11-02T06:16:18.120Z",
+        "history": [
+          {
+            "ts": "2026-11-02T06:16:18.120Z",
+            "user": "Claude (по поручению пользователя)",
+            "action": "Создание и проведение"
+          }
+        ]
+      },
+      {
+        "id": "tmvyv8ipzxzho2vi",
+        "type": "stock_in",
+        "number": "ОП-000001",
+        "date": "2026-10-30",
+        "status": "posted",
+        "opKind": "",
+        "contractor": "",
+        "contract": "",
+        "warehouse": "w1",
+        "basis": "tmvyv8ipvyteqzn4",
+        "payTerm": "",
+        "settle": {
+          "acc": "62.01",
+          "adv": "62.02",
+          "offset": "Автоматически"
+        },
+        "priceType": "pt1",
+        "vatMode": "in",
+        "discount": 0,
+        "payUntil": "",
+        "invoiceStatus": "",
+        "goods": [
+          {
+            "nom": "n1",
+            "qty": 7630,
+            "price": 0,
+            "vat": -1,
+            "account": "43",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n3",
+            "qty": 6682,
+            "price": 0,
+            "vat": -1,
+            "account": "43",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n4",
+            "qty": 133675,
+            "price": 0,
+            "vat": -1,
+            "account": "43",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n7",
+            "qty": 32210,
+            "price": 0,
+            "vat": -1,
+            "account": "10.01",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n6",
+            "qty": 214825,
+            "price": 0,
+            "vat": -1,
+            "account": "10.01",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          }
+        ],
+        "services": [],
+        "agent": [],
+        "tara": [],
+        "extra": {
+          "consignor": "",
+          "consignee": "",
+          "address": "",
+          "responsible": "",
+          "comment": "Оприходование излишков по инвентаризации ИНВ-000001 от 30.10.2026",
+          "signHead": "Камбаров Артур Майсалбекович",
+          "signAcc": "Жаныбеков Элмырза Максатбекович",
+          "signRelease": "",
+          "signGave": ""
+        },
+        "sf": null,
+        "gtdData": {
+          "number": "",
+          "customsValue": 0,
+          "dutyPct": 0,
+          "vatPct": 12,
+          "fee": 0,
+          "deposit": ""
+        },
+        "poa": {
+          "person": "",
+          "position": "",
+          "passport": "",
+          "validTo": ""
+        },
+        "recon": {
+          "from": "",
+          "to": "",
+          "rows": [],
+          "openBal": 0
+        },
+        "payCash": 0,
+        "payCard": 0,
+        "rewardPct": 10,
+        "corrKind": "",
+        "sum": 0,
+        "vatTotal": 0,
+        "total": 0,
+        "time": "20:01",
+        "created": "2026-11-02T06:16:18.120Z",
+        "history": [
+          {
+            "ts": "2026-11-02T06:16:18.120Z",
+            "user": "Claude (по поручению пользователя)",
+            "action": "Создание и проведение"
+          }
+        ]
+      },
+      {
+        "id": "tmvyv8iq0jbniir0",
+        "type": "stock_out",
+        "number": "СП-000003",
+        "date": "2026-10-30",
+        "status": "posted",
+        "opKind": "Списание на расходы",
+        "contractor": "",
+        "contract": "",
+        "warehouse": "w1",
+        "basis": "tmvyv8ipvyteqzn4",
+        "payTerm": "",
+        "settle": {
+          "acc": "62.01",
+          "adv": "62.02",
+          "offset": "Автоматически"
+        },
+        "priceType": "pt1",
+        "vatMode": "in",
+        "discount": 0,
+        "payUntil": "",
+        "invoiceStatus": "",
+        "goods": [
+          {
+            "nom": "n2",
+            "qty": 566,
+            "price": 0,
+            "vat": -1,
+            "account": "43",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n9",
+            "qty": 119.14,
+            "price": 0,
+            "vat": -1,
+            "account": "10.01",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n11",
+            "qty": 464,
+            "price": 0,
+            "vat": -1,
+            "account": "10.01",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n12",
+            "qty": 375.608,
+            "price": 0,
+            "vat": -1,
+            "account": "10.01",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n10",
+            "qty": 135.4,
+            "price": 0,
+            "vat": -1,
+            "account": "10.01",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n18",
+            "qty": 17680,
+            "price": 0,
+            "vat": -1,
+            "account": "10.01",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n13",
+            "qty": 827.392,
+            "price": 0,
+            "vat": -1,
+            "account": "10.01",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          }
+        ],
+        "services": [],
+        "agent": [],
+        "tara": [],
+        "extra": {
+          "consignor": "",
+          "consignee": "",
+          "address": "",
+          "responsible": "",
+          "comment": "Списание недостачи по инвентаризации ИНВ-000001 от 30.10.2026",
+          "signHead": "Камбаров Артур Майсалбекович",
+          "signAcc": "Жаныбеков Элмырза Максатбекович",
+          "signRelease": "",
+          "signGave": ""
+        },
+        "sf": null,
+        "gtdData": {
+          "number": "",
+          "customsValue": 0,
+          "dutyPct": 0,
+          "vatPct": 12,
+          "fee": 0,
+          "deposit": ""
+        },
+        "poa": {
+          "person": "",
+          "position": "",
+          "passport": "",
+          "validTo": ""
+        },
+        "recon": {
+          "from": "",
+          "to": "",
+          "rows": [],
+          "openBal": 0
+        },
+        "payCash": 0,
+        "payCard": 0,
+        "rewardPct": 10,
+        "corrKind": "",
+        "sum": 0,
+        "vatTotal": 0,
+        "total": 0,
+        "time": "20:02",
+        "created": "2026-11-02T06:16:18.120Z",
+        "history": [
+          {
+            "ts": "2026-11-02T06:16:18.120Z",
+            "user": "Claude (по поручению пользователя)",
+            "action": "Создание и проведение"
+          }
+        ]
+      },
+      {
+        "id": "tmvyv8iq0yudprmb",
+        "type": "inventory",
+        "number": "ИНВ-000002",
+        "date": "2026-10-31",
+        "status": "posted",
+        "opKind": "",
+        "contractor": "",
+        "contract": "",
+        "warehouse": "w1",
+        "basis": "",
+        "payTerm": "",
+        "settle": {
+          "acc": "62.01",
+          "adv": "62.02",
+          "offset": "Автоматически"
+        },
+        "priceType": "pt1",
+        "vatMode": "in",
+        "discount": 0,
+        "payUntil": "",
+        "invoiceStatus": "",
+        "goods": [
+          {
+            "nom": "n19",
+            "qtyAcc": 390000,
+            "qtyFact": 312000,
+            "qty": 312000,
+            "price": 0,
+            "vat": -1,
+            "account": "10.01",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n28",
+            "qtyAcc": 26.5,
+            "qtyFact": 6.3,
+            "qty": 6.3,
+            "price": 0,
+            "vat": -1,
+            "account": "10.01",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n14",
+            "qtyAcc": 302.5,
+            "qtyFact": 211,
+            "qty": 211,
+            "price": 0,
+            "vat": -1,
+            "account": "10.01",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n15",
+            "qtyAcc": 111.7,
+            "qtyFact": 208,
+            "qty": 208,
+            "price": 0,
+            "vat": -1,
+            "account": "10.01",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n17",
+            "qtyAcc": 102,
+            "qtyFact": 83,
+            "qty": 83,
+            "price": 0,
+            "vat": -1,
+            "account": "10.01",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n24",
+            "qtyAcc": 81.5,
+            "qtyFact": 86.8,
+            "qty": 86.8,
+            "price": 0,
+            "vat": -1,
+            "account": "10.01",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n23",
+            "qtyAcc": 57,
+            "qtyFact": 57,
+            "qty": 57,
+            "price": 0,
+            "vat": -1,
+            "account": "10.01",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n16",
+            "qtyAcc": 26700,
+            "qtyFact": 4000,
+            "qty": 4000,
+            "price": 0,
+            "vat": -1,
+            "account": "10.01",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n5",
+            "qtyAcc": 37800,
+            "qtyFact": 51990,
+            "qty": 51990,
+            "price": 0,
+            "vat": -1,
+            "account": "43",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n27",
+            "qtyAcc": 8520,
+            "qtyFact": 28740,
+            "qty": 28740,
+            "price": 0,
+            "vat": -1,
+            "account": "43",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n8",
+            "qtyAcc": 40455.108,
+            "qtyFact": 25000,
+            "qty": 25000,
+            "price": 0,
+            "vat": -1,
+            "account": "10.01",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          }
+        ],
+        "services": [],
+        "agent": [],
+        "tara": [],
+        "extra": {
+          "consignor": "",
+          "consignee": "",
+          "address": "",
+          "responsible": "",
+          "comment": "Фактические остатки на 31.10.2026",
+          "signHead": "Камбаров Артур Майсалбекович",
+          "signAcc": "Жаныбеков Элмырза Максатбекович",
+          "signRelease": "",
+          "signGave": ""
+        },
+        "sf": null,
+        "gtdData": {
+          "number": "",
+          "customsValue": 0,
+          "dutyPct": 0,
+          "vatPct": 12,
+          "fee": 0,
+          "deposit": ""
+        },
+        "poa": {
+          "person": "",
+          "position": "",
+          "passport": "",
+          "validTo": ""
+        },
+        "recon": {
+          "from": "",
+          "to": "",
+          "rows": [],
+          "openBal": 0
+        },
+        "payCash": 0,
+        "payCard": 0,
+        "rewardPct": 10,
+        "corrKind": "",
+        "sum": 0,
+        "vatTotal": 0,
+        "total": 0,
+        "time": "20:00",
+        "created": "2026-11-02T06:16:18.124Z",
+        "history": [
+          {
+            "ts": "2026-11-02T06:16:18.124Z",
+            "user": "Claude (по поручению пользователя)",
+            "action": "Создание и проведение"
+          }
+        ]
+      },
+      {
+        "id": "tmvyv8iq3kdse8l4",
+        "type": "stock_in",
+        "number": "ОП-000002",
+        "date": "2026-10-31",
+        "status": "posted",
+        "opKind": "",
+        "contractor": "",
+        "contract": "",
+        "warehouse": "w1",
+        "basis": "tmvyv8iq0yudprmb",
+        "payTerm": "",
+        "settle": {
+          "acc": "62.01",
+          "adv": "62.02",
+          "offset": "Автоматически"
+        },
+        "priceType": "pt1",
+        "vatMode": "in",
+        "discount": 0,
+        "payUntil": "",
+        "invoiceStatus": "",
+        "goods": [
+          {
+            "nom": "n15",
+            "qty": 96.3,
+            "price": 0,
+            "vat": -1,
+            "account": "10.01",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n24",
+            "qty": 5.3,
+            "price": 0,
+            "vat": -1,
+            "account": "10.01",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n5",
+            "qty": 14190,
+            "price": 0,
+            "vat": -1,
+            "account": "43",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n27",
+            "qty": 20220,
+            "price": 0,
+            "vat": -1,
+            "account": "43",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          }
+        ],
+        "services": [],
+        "agent": [],
+        "tara": [],
+        "extra": {
+          "consignor": "",
+          "consignee": "",
+          "address": "",
+          "responsible": "",
+          "comment": "Оприходование излишков по инвентаризации ИНВ-000002 от 31.10.2026",
+          "signHead": "Камбаров Артур Майсалбекович",
+          "signAcc": "Жаныбеков Элмырза Максатбекович",
+          "signRelease": "",
+          "signGave": ""
+        },
+        "sf": null,
+        "gtdData": {
+          "number": "",
+          "customsValue": 0,
+          "dutyPct": 0,
+          "vatPct": 12,
+          "fee": 0,
+          "deposit": ""
+        },
+        "poa": {
+          "person": "",
+          "position": "",
+          "passport": "",
+          "validTo": ""
+        },
+        "recon": {
+          "from": "",
+          "to": "",
+          "rows": [],
+          "openBal": 0
+        },
+        "payCash": 0,
+        "payCard": 0,
+        "rewardPct": 10,
+        "corrKind": "",
+        "sum": 0,
+        "vatTotal": 0,
+        "total": 0,
+        "time": "20:01",
+        "created": "2026-11-02T06:16:18.124Z",
+        "history": [
+          {
+            "ts": "2026-11-02T06:16:18.124Z",
+            "user": "Claude (по поручению пользователя)",
+            "action": "Создание и проведение"
+          }
+        ]
+      },
+      {
+        "id": "tmvyv8iq4qtrwcm1",
+        "type": "stock_out",
+        "number": "СП-000004",
+        "date": "2026-10-31",
+        "status": "posted",
+        "opKind": "Списание на расходы",
+        "contractor": "",
+        "contract": "",
+        "warehouse": "w1",
+        "basis": "tmvyv8iq0yudprmb",
+        "payTerm": "",
+        "settle": {
+          "acc": "62.01",
+          "adv": "62.02",
+          "offset": "Автоматически"
+        },
+        "priceType": "pt1",
+        "vatMode": "in",
+        "discount": 0,
+        "payUntil": "",
+        "invoiceStatus": "",
+        "goods": [
+          {
+            "nom": "n19",
+            "qty": 78000,
+            "price": 0,
+            "vat": -1,
+            "account": "10.01",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n28",
+            "qty": 20.2,
+            "price": 0,
+            "vat": -1,
+            "account": "10.01",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n14",
+            "qty": 91.5,
+            "price": 0,
+            "vat": -1,
+            "account": "10.01",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n17",
+            "qty": 19,
+            "price": 0,
+            "vat": -1,
+            "account": "10.01",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n16",
+            "qty": 22700,
+            "price": 0,
+            "vat": -1,
+            "account": "10.01",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          },
+          {
+            "nom": "n8",
+            "qty": 15455.108,
+            "price": 0,
+            "vat": -1,
+            "account": "10.01",
+            "sum": 0,
+            "vatSum": 0,
+            "total": 0
+          }
+        ],
+        "services": [],
+        "agent": [],
+        "tara": [],
+        "extra": {
+          "consignor": "",
+          "consignee": "",
+          "address": "",
+          "responsible": "",
+          "comment": "Списание недостачи по инвентаризации ИНВ-000002 от 31.10.2026",
+          "signHead": "Камбаров Артур Майсалбекович",
+          "signAcc": "Жаныбеков Элмырза Максатбекович",
+          "signRelease": "",
+          "signGave": ""
+        },
+        "sf": null,
+        "gtdData": {
+          "number": "",
+          "customsValue": 0,
+          "dutyPct": 0,
+          "vatPct": 12,
+          "fee": 0,
+          "deposit": ""
+        },
+        "poa": {
+          "person": "",
+          "position": "",
+          "passport": "",
+          "validTo": ""
+        },
+        "recon": {
+          "from": "",
+          "to": "",
+          "rows": [],
+          "openBal": 0
+        },
+        "payCash": 0,
+        "payCard": 0,
+        "rewardPct": 10,
+        "corrKind": "",
+        "sum": 0,
+        "vatTotal": 0,
+        "total": 0,
+        "time": "20:02",
+        "created": "2026-11-02T06:16:18.124Z",
+        "history": [
+          {
+            "ts": "2026-11-02T06:16:18.124Z",
+            "user": "Claude (по поручению пользователя)",
+            "action": "Создание и проведение"
+          }
+        ]
       }
     ],
     "org": {
