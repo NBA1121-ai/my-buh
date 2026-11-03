@@ -28354,6 +28354,94 @@
         "account": "",
         "bank": "",
         "comment": ""
+      },
+      {
+        "id": "c_set_62_lyoq",
+        "name": "Алибек",
+        "full": "Алибек",
+        "inn": "",
+        "kind": "Физическое лицо",
+        "address": "",
+        "phone": "",
+        "account": "",
+        "bank": ""
+      },
+      {
+        "id": "c_set_64_kl8w",
+        "name": "Ислам КамАЗ",
+        "full": "Ислам КамАЗ",
+        "inn": "",
+        "kind": "Физическое лицо",
+        "address": "",
+        "phone": "",
+        "account": "",
+        "bank": ""
+      },
+      {
+        "id": "c_set_66_eo76",
+        "name": "ОсОО «TAT CHEMICAL»",
+        "full": "ОсОО «TAT CHEMICAL»",
+        "inn": "",
+        "kind": "Юридическое лицо",
+        "address": "",
+        "phone": "",
+        "account": "",
+        "bank": ""
+      },
+      {
+        "id": "c_set_68_accd",
+        "name": "РЦ Сертификация",
+        "full": "РЦ Сертификация",
+        "inn": "",
+        "kind": "Юридическое лицо",
+        "address": "",
+        "phone": "",
+        "account": "",
+        "bank": ""
+      },
+      {
+        "id": "c_set_70_io5l",
+        "name": "Стрейч пленка",
+        "full": "Стрейч пленка",
+        "inn": "",
+        "kind": "Юридическое лицо",
+        "address": "",
+        "phone": "",
+        "account": "",
+        "bank": ""
+      },
+      {
+        "id": "c_set_72_vh5j",
+        "name": "Рахат Беш Сары",
+        "full": "Рахат Беш Сары",
+        "inn": "",
+        "kind": "Физическое лицо",
+        "address": "",
+        "phone": "",
+        "account": "",
+        "bank": ""
+      },
+      {
+        "id": "c_set_74_mict",
+        "name": "Улугбек Узбекистан",
+        "full": "Улугбек Узбекистан",
+        "inn": "",
+        "kind": "Физическое лицо",
+        "address": "",
+        "phone": "",
+        "account": "",
+        "bank": ""
+      },
+      {
+        "id": "c_set_76_oilw",
+        "name": "Мешки Тара",
+        "full": "Мешки Тара",
+        "inn": "",
+        "kind": "Юридическое лицо",
+        "address": "",
+        "phone": "",
+        "account": "",
+        "bank": ""
       }
     ],
     "contracts": [],
@@ -29301,7 +29389,223 @@
     "demoSeeded": true,
     "stockSeeded": true,
     "hrSeeded": true,
-    "noDemo": true
+    "noDemo": true,
+    "settlementOpenings": [
+      {
+        "id": "so_20261102",
+        "date": "2026-11-02",
+        "comment": "По данным бухгалтерии на 02.11.2026 (USD по курсу 85)",
+        "created": "2026-11-03T07:32:19.963Z",
+        "rows": [
+          {
+            "contractor": "c31",
+            "sale": 181200,
+            "purchase": 0
+          },
+          {
+            "contractor": "c1",
+            "sale": 3870054.78,
+            "purchase": 0
+          },
+          {
+            "contractor": "tmu3sjlbud4ja",
+            "sale": 368780,
+            "purchase": 0
+          },
+          {
+            "contractor": "c44",
+            "sale": 744000,
+            "purchase": 0
+          },
+          {
+            "contractor": "c32",
+            "sale": 393600,
+            "purchase": 0
+          },
+          {
+            "contractor": "tmunugvadzwo8",
+            "sale": 36800,
+            "purchase": 0
+          },
+          {
+            "contractor": "c10",
+            "sale": 105600,
+            "purchase": 0
+          },
+          {
+            "contractor": "c9",
+            "sale": 272800,
+            "purchase": 0
+          },
+          {
+            "contractor": "c7",
+            "sale": 145170,
+            "purchase": 0
+          },
+          {
+            "contractor": "c8",
+            "sale": 29550,
+            "purchase": 0
+          },
+          {
+            "contractor": "c6",
+            "sale": 14300,
+            "purchase": 0
+          },
+          {
+            "contractor": "c12",
+            "sale": 38400,
+            "purchase": 0
+          },
+          {
+            "contractor": "c14",
+            "sale": 23200,
+            "purchase": 0
+          },
+          {
+            "contractor": "c11",
+            "sale": 37570,
+            "purchase": 0,
+            "currency": "USD",
+            "rate": 85,
+            "saleCur": 442
+          },
+          {
+            "contractor": "c13",
+            "sale": 30000,
+            "purchase": 0
+          },
+          {
+            "contractor": "c33",
+            "sale": 55000,
+            "purchase": 0
+          },
+          {
+            "contractor": "c21",
+            "sale": 21450,
+            "purchase": 0
+          },
+          {
+            "contractor": "tmuqueeqy08co",
+            "sale": 31950,
+            "purchase": 0
+          },
+          {
+            "contractor": "c22",
+            "sale": 25366,
+            "purchase": 0
+          },
+          {
+            "contractor": "c26",
+            "sale": 156140,
+            "purchase": 0
+          },
+          {
+            "contractor": "c23",
+            "sale": 14000,
+            "purchase": 0
+          },
+          {
+            "contractor": "c18",
+            "sale": 18000,
+            "purchase": 0
+          },
+          {
+            "contractor": "c16",
+            "sale": 69800,
+            "purchase": 0
+          },
+          {
+            "contractor": "c15",
+            "sale": 68700,
+            "purchase": 0
+          },
+          {
+            "contractor": "c28",
+            "sale": 166170,
+            "purchase": 0
+          },
+          {
+            "contractor": "c20",
+            "sale": 10000,
+            "purchase": 0
+          },
+          {
+            "contractor": "c19",
+            "sale": 10000,
+            "purchase": 0
+          },
+          {
+            "contractor": "c_set_62_lyoq",
+            "sale": 216000,
+            "purchase": 0
+          },
+          {
+            "contractor": "c35",
+            "sale": 55000,
+            "purchase": 0
+          },
+          {
+            "contractor": "c_set_64_kl8w",
+            "sale": 0,
+            "purchase": 228500
+          },
+          {
+            "contractor": "c42",
+            "sale": 0,
+            "purchase": 1345725
+          },
+          {
+            "contractor": "c_set_66_eo76",
+            "sale": 0,
+            "purchase": 151035
+          },
+          {
+            "contractor": "c_set_68_accd",
+            "sale": 0,
+            "purchase": 100000
+          },
+          {
+            "contractor": "c_set_70_io5l",
+            "sale": 0,
+            "purchase": 28500
+          },
+          {
+            "contractor": "c_set_72_vh5j",
+            "sale": 0,
+            "purchase": 110560
+          },
+          {
+            "contractor": "c_set_74_mict",
+            "sale": 0,
+            "purchase": 2338143.45,
+            "currency": "USD",
+            "rate": 85,
+            "purchaseCur": 27507.57
+          },
+          {
+            "contractor": "c38",
+            "sale": 0,
+            "purchase": 895000
+          },
+          {
+            "contractor": "c37",
+            "sale": 0,
+            "purchase": 131400
+          },
+          {
+            "contractor": "c40",
+            "sale": 0,
+            "purchase": 66040
+          },
+          {
+            "contractor": "c_set_76_oilw",
+            "sale": 0,
+            "purchase": -4500
+          }
+        ]
+      }
+    ]
   },
   "_activityLog": [
     {
