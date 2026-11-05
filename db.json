@@ -2613,6 +2613,15 @@
       "number": "",
       "bank": "МБанк",
       "type": "bank"
+    },
+    {
+      "id": "_3_usd",
+      "name": "Наличка касса (USD)",
+      "number": "",
+      "bank": "",
+      "type": "cash",
+      "currency": "USD",
+      "openingBalance": 0
     }
   ],
   "banks": [
@@ -34090,6 +34099,61 @@
       "user": "Директор",
       "action": "Создание документа",
       "details": "payment_in ПП-ВХ-0006 на 96000.08"
+    }
+  ],
+  "accountOpenings": [
+    {
+      "id": "ao_20261102",
+      "date": "2026-11-02",
+      "comment": "По данным бухгалтерии (USD подотчёт Азима — по курсу 87,45)",
+      "created": "2026-11-05T11:51:28.101Z",
+      "rows": [
+        {
+          "account": "_1",
+          "amount": 0,
+          "note": "Мбизнес (сом)"
+        },
+        {
+          "account": "_2",
+          "amount": 83565,
+          "note": "Мбанк"
+        },
+        {
+          "account": "_3",
+          "amount": 35000
+        },
+        {
+          "account": "_3_usd",
+          "amount": 1100,
+          "currency": "USD"
+        },
+        {
+          "account": "_4_usd",
+          "amount": 1750,
+          "currency": "USD",
+          "note": "Мбизнес (доллары)"
+        },
+        {
+          "account": "_tynchtyk",
+          "amount": 0
+        },
+        {
+          "account": "_azim",
+          "amount": 325314,
+          "amountCur": 3720,
+          "currency": "KGS",
+          "rate": 87.45,
+          "note": "3 720 $ × 87,45"
+        },
+        {
+          "account": "_zhusup",
+          "amount": 4979135
+        },
+        {
+          "account": "_mbank_kgs",
+          "amount": 0
+        }
+      ]
     }
   ]
 }
