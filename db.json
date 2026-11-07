@@ -2748,6 +2748,25 @@
       "purpose": "",
       "note": "",
       "created": "2026-11-07T06:45:57.804Z"
+    },
+    {
+      "id": "_1794034003892_fzh18g",
+      "type": "pko",
+      "number": "ПКО-0134",
+      "date": "2026-11-03",
+      "time": "12:46",
+      "status": "posted",
+      "account": "_2",
+      "accountTo": "",
+      "contractor": "Канимет Хозмаг",
+      "article": "_11",
+      "currency": "_1",
+      "sum": 166170,
+      "rate": 1,
+      "bankFee": 0,
+      "purpose": "",
+      "note": "",
+      "created": "2026-11-07T06:46:43.892Z"
     }
   ],
   "accounts": [
@@ -33426,6 +33445,12 @@
     ]
   },
   "_activityLog": [
+    {
+      "date": "2026-11-07T06:45:57.814Z",
+      "user": "Директор",
+      "action": "Создание документа",
+      "details": "pko ПКО-0133 на 116000"
+    },
     {
       "date": "2026-11-07T06:45:30.790Z",
       "user": "Директор",
