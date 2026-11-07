@@ -32544,6 +32544,21 @@
         "group": "",
         "planPrice": "",
         "nomGroup": ""
+      },
+      {
+        "id": "tmw6120hfwhbv",
+        "name": "Брокеркские услуги / Таможенные Расходы ",
+        "article": "",
+        "kind": "Услуга",
+        "unit": "",
+        "vat": 0,
+        "price": 0,
+        "cost": 0,
+        "account": "",
+        "country": "",
+        "group": "",
+        "planPrice": "",
+        "nomGroup": "ng3"
       }
     ],
     "warehouses": [
@@ -33151,6 +33166,12 @@
     ]
   },
   "_activityLog": [
+    {
+      "date": "2026-11-07T06:25:51.421Z",
+      "user": "Директор",
+      "action": "Создание документа",
+      "details": "rko РКО-0127 на 20034"
+    },
     {
       "date": "2026-11-07T05:50:48.689Z",
       "user": "Директор",
