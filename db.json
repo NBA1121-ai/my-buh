@@ -2767,6 +2767,25 @@
       "purpose": "",
       "note": "",
       "created": "2026-11-07T06:46:43.892Z"
+    },
+    {
+      "id": "_1794034104772_t4u4ky",
+      "type": "pko",
+      "number": "ПКО-0135",
+      "date": "2026-11-03",
+      "time": "12:47",
+      "status": "posted",
+      "account": "_2",
+      "accountTo": "",
+      "contractor": "ИП Халмурат",
+      "article": "_11",
+      "currency": "_1",
+      "sum": 30000,
+      "rate": 1,
+      "bankFee": 0,
+      "purpose": "",
+      "note": "",
+      "created": "2026-11-07T06:48:24.772Z"
     }
   ],
   "accounts": [
@@ -33445,6 +33464,12 @@
     ]
   },
   "_activityLog": [
+    {
+      "date": "2026-11-07T06:46:43.901Z",
+      "user": "Директор",
+      "action": "Создание документа",
+      "details": "pko ПКО-0134 на 166170"
+    },
     {
       "date": "2026-11-07T06:45:57.814Z",
       "user": "Директор",
