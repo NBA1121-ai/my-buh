@@ -2731,25 +2731,6 @@
       "created": "2026-11-07T06:45:30.780Z"
     },
     {
-      "id": "_1794033957804_lwdv7l",
-      "type": "pko",
-      "number": "ПКО-0133",
-      "date": "2026-11-03",
-      "time": "12:45",
-      "status": "draft",
-      "account": "_2",
-      "accountTo": "",
-      "contractor": "Алибек",
-      "article": "_11",
-      "currency": "",
-      "sum": 116000,
-      "rate": 1,
-      "bankFee": 0,
-      "purpose": "",
-      "note": "",
-      "created": "2026-11-07T06:45:57.804Z"
-    },
-    {
       "id": "_1794034003892_fzh18g",
       "type": "pko",
       "number": "ПКО-0134",
@@ -2786,6 +2767,25 @@
       "purpose": "",
       "note": "",
       "created": "2026-11-07T06:48:24.772Z"
+    },
+    {
+      "id": "_1794033957804_lwdv7l",
+      "type": "pko",
+      "number": "ПКО-0133",
+      "date": "2026-11-03",
+      "time": "12:45",
+      "status": "posted",
+      "account": "_2",
+      "accountTo": "",
+      "contractor": "Алибек",
+      "article": "_11",
+      "currency": "",
+      "sum": 116000,
+      "rate": 1,
+      "bankFee": 0,
+      "purpose": "",
+      "note": "",
+      "created": "2026-11-07T06:45:57.804Z"
     }
   ],
   "accounts": [
@@ -33464,6 +33464,12 @@
     ]
   },
   "_activityLog": [
+    {
+      "date": "2026-11-07T06:48:24.780Z",
+      "user": "Директор",
+      "action": "Создание документа",
+      "details": "pko ПКО-0135 на 30000"
+    },
     {
       "date": "2026-11-07T06:46:43.901Z",
       "user": "Директор",
