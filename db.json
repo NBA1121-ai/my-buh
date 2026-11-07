@@ -2691,6 +2691,25 @@
       "purpose": "",
       "note": "",
       "created": "2026-11-07T06:41:36.715Z"
+    },
+    {
+      "id": "_1794033832699_ylbq4h",
+      "type": "pko",
+      "number": "ПКО-0131",
+      "date": "2026-11-02",
+      "time": "12:43",
+      "status": "posted",
+      "account": "_2",
+      "accountTo": "",
+      "contractor": "Физ/лиц",
+      "article": "",
+      "currency": "_1",
+      "sum": 19000,
+      "rate": 1,
+      "bankFee": 0,
+      "purpose": "",
+      "note": "",
+      "created": "2026-11-07T06:43:52.700Z"
     }
   ],
   "accounts": [
@@ -33369,6 +33388,12 @@
     ]
   },
   "_activityLog": [
+    {
+      "date": "2026-11-07T06:43:11.093Z",
+      "user": "Директор",
+      "action": "Изменение документа",
+      "details": "pko ПКО-0130 на 17000"
+    },
     {
       "date": "2026-11-07T06:41:36.726Z",
       "user": "Директор",
