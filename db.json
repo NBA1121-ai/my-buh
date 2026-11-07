@@ -2682,7 +2682,7 @@
       "status": "posted",
       "account": "_2",
       "accountTo": "",
-      "contractor": "Физ/лиц",
+      "contractor": "ИП Халмурат",
       "article": "_11",
       "currency": "",
       "sum": 17000,
@@ -33369,6 +33369,12 @@
     ]
   },
   "_activityLog": [
+    {
+      "date": "2026-11-07T06:41:36.726Z",
+      "user": "Директор",
+      "action": "Создание документа",
+      "details": "pko ПКО-0130 на 17000"
+    },
     {
       "date": "2026-11-07T06:41:09.157Z",
       "user": "Директор",
