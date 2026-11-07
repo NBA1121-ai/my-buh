@@ -2712,25 +2712,6 @@
       "created": "2026-11-07T06:43:52.700Z"
     },
     {
-      "id": "_1794033930780_jwp0ag",
-      "type": "pko",
-      "number": "ПКО-0132",
-      "date": "2026-11-03",
-      "time": "12:45",
-      "status": "draft",
-      "account": "_2",
-      "accountTo": "",
-      "contractor": "ИП Халмурат",
-      "article": "_11",
-      "currency": "_1",
-      "sum": 50000,
-      "rate": 1,
-      "bankFee": 0,
-      "purpose": "",
-      "note": "",
-      "created": "2026-11-07T06:45:30.780Z"
-    },
-    {
       "id": "_1794034003892_fzh18g",
       "type": "pko",
       "number": "ПКО-0134",
@@ -2786,6 +2767,25 @@
       "purpose": "",
       "note": "",
       "created": "2026-11-07T06:45:57.804Z"
+    },
+    {
+      "id": "_1794033930780_jwp0ag",
+      "type": "pko",
+      "number": "ПКО-0132",
+      "date": "2026-11-03",
+      "time": "12:45",
+      "status": "posted",
+      "account": "_2",
+      "accountTo": "",
+      "contractor": "ИП Халмурат",
+      "article": "_11",
+      "currency": "_1",
+      "sum": 50000,
+      "rate": 1,
+      "bankFee": 0,
+      "purpose": "",
+      "note": "",
+      "created": "2026-11-07T06:45:30.780Z"
     }
   ],
   "accounts": [
@@ -33464,6 +33464,12 @@
     ]
   },
   "_activityLog": [
+    {
+      "date": "2026-11-07T06:48:38.573Z",
+      "user": "Директор",
+      "action": "Изменение документа",
+      "details": "pko ПКО-0133 на 116000"
+    },
     {
       "date": "2026-11-07T06:48:24.780Z",
       "user": "Директор",
