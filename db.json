@@ -32283,6 +32283,19 @@
         "phone": "",
         "account": "",
         "bank": ""
+      },
+      {
+        "id": "tmweloz3eac16",
+        "name": "ОсОО «Смарт Спэйс»",
+        "full": "ОсОО «Смарт Спэйс»",
+        "inn": "02304201910042",
+        "kind": "Юридическое лицо",
+        "address": "",
+        "phone": "",
+        "email": "",
+        "account": "",
+        "bank": "",
+        "comment": ""
       }
     ],
     "contracts": [],
