@@ -31500,7 +31500,7 @@
         "type": "customer_invoice",
         "number": "СЧ-000041",
         "date": "2026-11-13",
-        "status": "draft",
+        "status": "posted",
         "opKind": "",
         "contractor": "tmweloz3eac16",
         "contract": "",
