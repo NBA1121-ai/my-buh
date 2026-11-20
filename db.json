@@ -38806,7 +38806,7 @@
         "date": "2026-11-18",
         "status": "posted",
         "opKind": "Товары (накладная, УПД)",
-        "contractor": "c26",
+        "contractor": "tmu3rmh7nur4e",
         "contract": "",
         "warehouse": "w1",
         "basis": "",
@@ -40941,6 +40941,12 @@
     ]
   },
   "_activityLog": [
+    {
+      "date": "2026-11-20T06:35:21.793Z",
+      "user": "Директор",
+      "action": "Изменение документа",
+      "details": "sale РТ-000182"
+    },
     {
       "date": "2026-11-20T06:35:16.961Z",
       "user": "Директор",
@@ -43934,12 +43940,6 @@
       "user": "Директор",
       "action": "Создание документа",
       "details": "customer_invoice СЧ-000039"
-    },
-    {
-      "date": "2026-09-30T07:17:52.893Z",
-      "user": "Директор",
-      "action": "Создание документа",
-      "details": "sale РТ-000007"
     }
   ],
   "accountOpenings": [
