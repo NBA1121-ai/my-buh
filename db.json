@@ -32050,8 +32050,8 @@
         "id": "tmwoj9hxubgnk",
         "type": "shift_report",
         "number": "ОПС-000016",
-        "date": "2026-11-20",
-        "status": "draft",
+        "date": "2026-11-04",
+        "status": "posted",
         "opKind": "",
         "contractor": "",
         "contract": "",
@@ -32077,7 +32077,7 @@
           "consignee": "",
           "address": "",
           "responsible": "",
-          "comment": "",
+          "comment": "239 мешок штукатурка ",
           "signHead": "Камбаров Артур Майсалбекович",
           "signAcc": "",
           "signRelease": "",
@@ -34391,6 +34391,12 @@
     ]
   },
   "_activityLog": [
+    {
+      "date": "2026-11-20T05:26:47.387Z",
+      "user": "Директор",
+      "action": "Изменение документа",
+      "details": "shift_report ОПС-000016"
+    },
     {
       "date": "2026-11-20T05:26:16.332Z",
       "user": "Директор",
