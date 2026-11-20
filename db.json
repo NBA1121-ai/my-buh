@@ -33002,6 +33002,21 @@
         "group": "",
         "planPrice": "",
         "nomGroup": "ng3"
+      },
+      {
+        "id": "tmwoiqaltksc1",
+        "name": "Штукатурка серая ",
+        "article": "",
+        "kind": "Продукция",
+        "unit": "",
+        "vat": 0,
+        "price": 0,
+        "cost": 0,
+        "account": "43",
+        "country": "",
+        "group": "",
+        "planPrice": "",
+        "nomGroup": ""
       }
     ],
     "warehouses": [
